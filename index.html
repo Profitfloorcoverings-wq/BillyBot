@@ -1,216 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TradieBrain — Quotes in Seconds. Not Hours.</title>
-  <meta name="description" content="TradieBrain turns job info into ready-to-send quotes automatically for tradespeople." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradieBrain – Effortless Quotes for Trades</title>
   <style>
-    :root{
-      --blue1:#2563EB; --blue2:#3B82F6;
-      --orange1:#F97316; --orange2:#FB923C;
-      --navy:#0F172A; --muted:#64748B;
-      --panel:#F8FAFC; --radius:18px;
-      --shadow:0 10px 30px rgba(2,6,23,.08);
-      --max:1140px;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0a3d62, #1e90ff);
+      color: #fff;
+      text-align: center;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;font-family:Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--navy);background:#fff}
-    a{text-decoration:none;color:inherit}
-    .container{max-width:var(--max);margin:0 auto;padding:24px}
-    .btn{display:inline-block;background:linear-gradient(135deg,var(--orange1),var(--orange2));color:#fff;
-         padding:14px 28px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:.2s}
-    .btn:hover{transform:translateY(-2px);opacity:.95}
-
-    /* Header */
-    header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
-           border-bottom:1px solid #e5e7eb;z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .logo{display:flex;gap:10px;align-items:center;font-weight:800;font-size:20px}
-    .logo-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--blue1),var(--blue2))}
-    .links{display:flex;gap:26px;align-items:center}
-    .hamburger{display:none;border:1px solid #e5e7eb;border-radius:10px;padding:10px;cursor:pointer}
-    .hamburger span{display:block;width:22px;height:2px;background:#0F172A;margin:4px 0}
-
-    /* Hero */
-    .hero{padding:72px 0;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;text-align:center}
-    .hero h1{font-size:56px;line-height:1.05;margin:0 0 16px}
-    .hero p{font-size:22px;color:#e2e8f0;max-width:760px;margin:0 auto 26px}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px}
-    .badge{background:rgba(255,255,255,.1);color:#fff;padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px}
-    .demo{background:#fff;border-radius:var(--radius);height:380px;box-shadow:var(--shadow);
-          display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;margin-top:28px}
-
-    /* Sections */
-    .section{padding:80px 0}
-    .section h2{text-align:center;font-size:36px;margin:0 0 10px}
-    .section p.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 44px}
-
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);text-align:center}
-
-    .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .step{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);text-align:center}
-    .step-num{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue1),var(--blue2));
-              color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px}
-
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .price{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);text-align:center;position:relative}
-    .price.pop{border:2px solid var(--blue1)}
-    .price.pop:after{content:"Most Popular";position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-                     background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;padding:6px 14px;border-radius:999px;
-                     font-size:12px;font-weight:700}
-    .money{font-size:44px;font-weight:800;margin:10px 0}
-
-    .cta{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-radius:var(--radius);padding:44px;text-align:center}
-    .cta h3{margin:0 0 14px;font-size:30px}
-
-    footer{padding:36px 0;color:var(--muted);text-align:center}
-
-    /* ====== Mobile tweaks ====== */
-    @media (max-width: 1024px){
-      .grid,.how-steps,.pricing{grid-template-columns:1fr 1fr}
+    header {
+      padding: 20px;
+      background: #0a3d62;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    @media (max-width: 768px){
-      .container{padding:18px}
-      .links{display:none}
-      .hamburger{display:block}
-      .hero{padding:56px 0}
-      .hero h1{font-size:34px}
-      .hero p{font-size:16px}
-      .btn{width:100%;text-align:center}
-      .demo{height:240px}
-      .grid,.how-steps,.pricing{grid-template-columns:1fr;gap:18px}
-      .section{padding:60px 0}
-      .section h2{font-size:28px}
-      .money{font-size:34px}
-      .cta{padding:28px}
-      .cta h3{font-size:24px}
-      .mobile-menu{display:block}
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #fff;
     }
-    @media (max-width: 420px){
-      .hero h1{font-size:28px}
-      .hero p{font-size:15px}
-      .badge{font-size:12px}
+    header .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1e90ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
     }
-    @media (prefers-reduced-motion: reduce){
-      .btn:hover{transform:none}
+    h1 {
+      font-size: 2.5em;
+      margin: 20px 0 10px;
     }
-
-    /* Mobile menu panel */
-    .mobile-menu{display:none;background:#fff;border-top:1px solid #e5e7eb}
-    .mobile-menu a{display:block;padding:14px 18px;border-bottom:1px solid #eef2f7}
-    .mobile-cta{padding:14px 18px}
+    h2 {
+      font-size: 1.8em;
+      margin: 20px 0 10px;
+    }
+    p {
+      font-size: 1.1em;
+      margin: 10px auto;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 15px;
+      background: #fff;
+      color: #0a3d62;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #dcdcdc;
+    }
+    .pricing {
+      background: #fff;
+      color: #0a3d62;
+      padding: 40px 20px;
+      margin-top: 40px;
+      border-radius: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pricing h2 {
+      color: #0a3d62;
+    }
+    .pricing-plan {
+      margin: 20px 0;
+      padding: 20px;
+      border: 2px solid #0a3d62;
+      border-radius: 12px;
+    }
+    .pricing-plan h3 {
+      margin-top: 0;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+      background: #0a3d62;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav">
-      <div class="logo"><span class="logo-mark"></span> TradieBrain</div>
-      <nav class="links">
-        <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a class="btn" href="#start">Start Free Trial</a>
-      </nav>
-      <button class="hamburger" aria-label="Open menu" id="menuBtn">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#features">Features</a>
-      <a href="#how">How it works</a>
-      <a href="#pricing">Pricing</a>
-      <div class="mobile-cta"><a class="btn" href="#start" style="width:100%;display:block;text-align:center;">Start Free Trial</a></div>
+    <div class="logo">
+      <div class="logo-icon">⚙️</div>
+      TradieBrain
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Quotes in Seconds. Not Hours.</h1>
-        <p>TradieBrain turns job info (photos, notes, voice) into <strong>ready-to-send quotes automatically</strong>. Built for busy trades who hate paperwork.</p>
-        <a class="btn" href="#start">Start Free Trial</a>
-        <div class="badges">
-          <span class="badge">Save 10+ hrs/week</span>
-          <span class="badge">Professional branded quotes</span>
-          <span class="badge">Win more jobs</span>
-        </div>
-        <div class="demo">[ Demo video / screenshot here ]</div>
-      </div>
+    <h1>Effortless Quotes. Built in Your Software.</h1>
+    <p>TradieBrain builds your quotes directly inside your preferred platform like <strong>Sage, Xero, QuickBooks</strong> — so you never have to switch systems.</p>
+    <p><strong>Completely hands-free.</strong> Send job info once and get professional quotes back instantly.</p>
+
+    <a href="#pricing" class="btn">Start Free Trial</a>
+
+    <section>
+      <h2>Why Tradies Love It</h2>
+      <p>✅ Save hours every week</p>
+      <p>✅ Quotes built in your usual quoting/accounting software</p>
+      <p>✅ Win more jobs with branded, accurate quotes</p>
+      <p>✅ Never lose money from incorrect pricing</p>
     </section>
 
-    <section id="features" class="section">
-      <h2>Why Trades Love TradieBrain</h2>
-      <p class="sub">Built for floor layers, sparkies, plumbers, and builders. No more late-night quoting.</p>
-      <div class="container grid">
-        <div class="card"><h3>Save Hours Weekly</h3><p>No more evenings lost to admin. Get quotes done instantly.</p></div>
-        <div class="card"><h3>Look Professional</h3><p>Polished, branded quotes that make you stand out and win trust.</p></div>
-        <div class="card"><h3>Works With Your Trade</h3><p>Input via SMS, WhatsApp, or photos — whatever is fastest.</p></div>
-      </div>
+    <section>
+      <h2>Works With Your Trade</h2>
+      <p>Built for floor layers, sparkies, plumbers, carpenters, and more.</p>
+      <p>Input via SMS, WhatsApp, email, or photos — whatever suits you.</p>
+      <p>Send job info: photos of handwritten notes, phone notes, or voice memos. AI builds the quote using <strong>your supplier pricing</strong> and <strong>your pricing logic</strong>.</p>
+      <p><strong>Accurate, consistent pricing EVERY time with 99% less effort.</strong></p>
     </section>
 
-    <section id="how" class="section" style="background:var(--panel)">
-      <h2>How It Works</h2>
-      <p class="sub">3 simple steps to faster quoting and more wins.</p>
-      <div class="container how-steps">
-        <div class="step"><div class="step-num">1</div><h4>Send job info</h4><p>Photos, notes, or voice memo.</p></div>
-        <div class="step"><div class="step-num">2</div><h4>AI builds the quote</h4><p>Accurate, consistent pricing every time.</p></div>
-        <div class="step"><div class="step-num">3</div><h4>Send in seconds</h4><p>Deliver to your customer and secure the job instantly.</p></div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
+    <section id="pricing" class="pricing">
       <h2>Simple Pricing</h2>
-      <p class="sub">Start free. Cancel anytime. No hidden fees.</p>
-      <div class="container pricing">
-        <div class="price">
-          <h3>Free Trial</h3>
-          <div class="money">7 Days</div>
-          <p>Full access. Get your first quotes out today.</p>
-        </div>
-        <div class="price pop">
-          <h3>Starter</h3>
-          <div class="money">£99/mo</div>
-          <p>50 quotes / month<br>Email + SMS support<br>Basic integrations</p>
-          <p><a class="btn" href="#start" style="width:100%;display:block;">Choose Starter</a></p>
-        </div>
-        <div class="price">
-          <h3>Pro</h3>
-          <div class="money">£149/mo</div>
-          <p>Unlimited quotes<br>Priority support<br>Advanced automations</p>
-        </div>
+      <div class="pricing-plan">
+        <h3>Starter</h3>
+        <p>Up to 20 quotes / month</p>
+        <p><strong>£99 / month</strong></p>
+        <a href="#" class="btn">Start Free Trial</a>
       </div>
-    </section>
-
-    <section class="section" id="start">
-      <div class="container">
-        <div class="cta">
-          <h3>Start saving time today.</h3>
-          <a class="btn" href="#" style="width:100%;max-width:340px">Start Free Trial</a>
-        </div>
+      <div class="pricing-plan">
+        <h3>Pro</h3>
+        <p>25+ quotes / month</p>
+        <p><strong>£199 / month</strong></p>
+        <a href="#" class="btn">Start Free Trial</a>
       </div>
+      <p><em>7 Day Free Trial – full access, no card details required.</em></p>
     </section>
   </main>
 
-  <footer>© <span id="year"></span> TradieBrain. All rights reserved.</footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile menu toggle
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
-    btn?.addEventListener('click', () => {
-      const visible = getComputedStyle(menu).display !== 'none';
-      menu.style.display = visible ? 'none' : 'block';
-      btn.setAttribute('aria-expanded', String(!visible));
-    });
-
-    // Close menu when clicking a link (mobile)
-    menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => (menu.style.display='none')));
-  </script>
+  <footer>
+    © 2025 TradieBrain. All rights reserved.
+  </footer>
 </body>
 </html>
