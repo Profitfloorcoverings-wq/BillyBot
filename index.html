@@ -1,151 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TradieBrain – Effortless Quotes for Trades</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TradieBrain — Effortless Quotes in Your Software</title>
+  <meta name="description" content="TradieBrain turns job info into ready-to-send quotes automatically for tradespeople — built directly in Sage, Xero, QuickBooks and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0a3d62, #1e90ff);
-      color: #fff;
-      text-align: center;
+    :root{
+      --blue1:#2563EB; --blue2:#3B82F6;
+      --orange1:#F97316; --orange2:#FB923C;
+      --navy:#0F172A; --muted:#64748B;
+      --panel:#F8FAFC; --panel2:#F1F5F9;
+      --radius:18px; --shadow:0 10px 30px rgba(2,6,23,.08);
+      --max:1140px;
     }
-    header {
-      padding: 20px;
-      background: #0a3d62;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#fff;color:var(--navy);font-family:Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:0 auto;padding:24px}
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--orange1),var(--orange2));color:#fff;
+         padding:14px 28px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:.2s}
+    .btn:hover{transform:translateY(-2px);opacity:.96}
+
+    /* Header */
+    header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+           border-bottom:1px solid #e5e7eb;z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:800;font-size:20px}
+    .logo-mark{width:28px;height:28px;border-radius:8px;
+               background:linear-gradient(135deg,var(--blue1),var(--blue2));
+               display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700}
+    .links{display:flex;gap:26px;align-items:center}
+    .hamburger{display:none;border:1px solid #e5e7eb;border-radius:10px;padding:10px;background:#fff;cursor:pointer}
+    .hamburger span{display:block;width:22px;height:2px;background:#0F172A;margin:4px 0}
+
+    /* Hero */
+    .hero{padding:82px 0;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;text-align:center}
+    .hero h1{font-size:56px;line-height:1.05;margin:0 0 16px}
+    .hero p{font-size:22px;color:#e2e8f0;max-width:760px;margin:0 auto 26px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+    .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px}
+    .demo{background:#fff;border-radius:var(--radius);height:380px;box-shadow:var(--shadow);
+          display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;margin-top:28px}
+
+    /* Generic sections */
+    .section{padding:96px 0}
+    .section h2{text-align:center;font-size:36px;margin:0 0 12px}
+    .section p.sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 50px}
+
+    /* Features */
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .card{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);text-align:center}
+
+    /* How */
+    .how{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .step{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);text-align:center}
+    .n{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;
+       display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px}
+
+    /* Testimonials */
+    .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .quote{background:#fff;border-left:6px solid var(--blue1);border-radius:14px;padding:22px 24px 22px 22px;box-shadow:var(--shadow)}
+    .who{color:var(--muted);font-size:14px;margin-top:8px}
+
+    /* Stats */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+    .stat{background:#fff;border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+    .stat b{font-size:28px}
+
+    /* Pricing */
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .price{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);text-align:center;position:relative}
+    .price.pop{border:2px solid var(--blue1)}
+    .price.pop:after{content:"Most Popular";position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+                     background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700}
+    .money{font-size:44px;font-weight:800;margin:10px 0}
+
+    /* Lead form */
+    .lead{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-radius:var(--radius);padding:42px}
+    .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;margin-top:16px}
+    .form input,.form select{width:100%;padding:14px 12px;border-radius:12px;border:1px solid #e5e7eb}
+    .form button{border:0}
+    .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
+    footer{padding:40px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media(max-width:1024px){
+      .grid3,.how,.pricing,.testis{grid-template-columns:1fr 1fr}
+      .stats{grid-template-columns:1fr 1fr}
     }
-    header .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #fff;
+    @media(max-width:768px){
+      .container{padding:18px}
+      .links{display:none}
+      .hamburger{display:block}
+      .hero{padding:64px 0}
+      .hero h1{font-size:36px}
+      .hero p{font-size:16px}
+      .demo{height:240px}
+      .section{padding:72px 0}
+      .grid3,.how,.pricing,.testis{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr 1fr}
+      .form{grid-template-columns:1fr}
+      .btn{width:100%;text-align:center}
     }
-    header .logo-icon {
-      width: 40px;
-      height: 40px;
-      background: #1e90ff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
+    @media(max-width:420px){
+      .hero h1{font-size:30px}
+      .hero p{font-size:15px}
     }
-    h1 {
-      font-size: 2.5em;
-      margin: 20px 0 10px;
+    @media (prefers-reduced-motion: reduce){
+      .btn:hover{transform:none}
     }
-    h2 {
-      font-size: 1.8em;
-      margin: 20px 0 10px;
-    }
-    p {
-      font-size: 1.1em;
-      margin: 10px auto;
-      max-width: 700px;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      margin: 15px;
-      background: #fff;
-      color: #0a3d62;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: #dcdcdc;
-    }
-    .pricing {
-      background: #fff;
-      color: #0a3d62;
-      padding: 40px 20px;
-      margin-top: 40px;
-      border-radius: 20px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .pricing h2 {
-      color: #0a3d62;
-    }
-    .pricing-plan {
-      margin: 20px 0;
-      padding: 20px;
-      border: 2px solid #0a3d62;
-      border-radius: 12px;
-    }
-    .pricing-plan h3 {
-      margin-top: 0;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 0.9em;
-      background: #0a3d62;
-    }
+
+    /* Mobile menu */
+    .mobile{display:none;background:#fff;border-top:1px solid #e5e7eb}
+    .mobile a{display:block;padding:14px 18px;border-bottom:1px solid #edf2f7}
+    .mobile .mobile-cta{padding:14px 18px}
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="logo">
-      <div class="logo-icon">⚙️</div>
-      TradieBrain
+    <div class="container nav">
+      <div class="logo"><span class="logo-mark">⚒️</span> TradieBrain</div>
+      <nav class="links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a class="btn" href="#lead">Start Free Trial</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" id="menuBtn"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile" id="mobileMenu" aria-label="Mobile">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <div class="mobile-cta"><a class="btn" href="#lead" style="width:100%;display:block;text-align:center;">Start Free Trial</a></div>
     </div>
   </header>
 
   <main>
-    <h1>Effortless Quotes. Built in Your Software.</h1>
-    <p>TradieBrain builds your quotes directly inside your preferred platform like <strong>Sage, Xero, QuickBooks</strong> — so you never have to switch systems.</p>
-    <p><strong>Completely hands-free.</strong> Send job info once and get professional quotes back instantly.</p>
-
-    <a href="#pricing" class="btn">Start Free Trial</a>
-
-    <section>
-      <h2>Why Tradies Love It</h2>
-      <p>✅ Save hours every week</p>
-      <p>✅ Quotes built in your usual quoting/accounting software</p>
-      <p>✅ Win more jobs with branded, accurate quotes</p>
-      <p>✅ Never lose money from incorrect pricing</p>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Effortless Quotes. Built in Your Software.</h1>
+        <p>TradieBrain builds your quotes directly inside <strong>Sage, Xero, QuickBooks</strong> and more. Completely hands-free, with consistent pricing every time.</p>
+        <a class="btn" href="#lead">Start Free Trial</a>
+        <div class="badges">
+          <span class="badge">⏱ Save hours every week</span>
+          <span class="badge">💼 Quotes built in your usual software</span>
+          <span class="badge">🏆 Win more jobs</span>
+          <span class="badge">✅ Never lose money from incorrect quotes</span>
+        </div>
+        <div class="demo">Demo video / screenshot placeholder</div>
+      </div>
     </section>
 
-    <section>
-      <h2>Works With Your Trade</h2>
-      <p>Built for floor layers, sparkies, plumbers, carpenters, and more.</p>
-      <p>Input via SMS, WhatsApp, email, or photos — whatever suits you.</p>
-      <p>Send job info: photos of handwritten notes, phone notes, or voice memos. AI builds the quote using <strong>your supplier pricing</strong> and <strong>your pricing logic</strong>.</p>
-      <p><strong>Accurate, consistent pricing EVERY time with 99% less effort.</strong></p>
+    <!-- Features -->
+    <section id="features" class="section">
+      <h2>Why trades love TradieBrain</h2>
+      <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night quoting.</p>
+      <div class="container grid3">
+        <div class="card"><h3>Save hours weekly</h3><p>No more admin at night. Quotes in minutes.</p></div>
+        <div class="card"><h3>Quotes in your system</h3><p>Generated directly inside your quoting/accounting software.</p></div>
+        <div class="card"><h3>Works the way you do</h3><p>Send photos, notes or voice — whatever’s fastest.</p></div>
+      </div>
     </section>
 
-    <section id="pricing" class="pricing">
-      <h2>Simple Pricing</h2>
-      <div class="pricing-plan">
-        <h3>Starter</h3>
-        <p>Up to 20 quotes / month</p>
-        <p><strong>£99 / month</strong></p>
-        <a href="#" class="btn">Start Free Trial</a>
+    <!-- How it works -->
+    <section id="how" class="section" style="background:var(--panel)">
+      <h2>How it works</h2>
+      <p class="sub">Input job info any way you like. Get back a perfect quote.</p>
+      <div class="container how">
+        <div class="step"><div class="n">1</div><h3>Send job info</h3><p>SMS, WhatsApp, email, photos, or voice memo.</p></div>
+        <div class="step"><div class="n">2</div><h3>AI builds the quote</h3><p>Using your supplier pricing + pricing logic. Accurate every time.</p></div>
+        <div class="step"><div class="n">3</div><h3>Send in seconds</h3><p>Deliver to your customer and secure the job effortlessly.</p></div>
       </div>
-      <div class="pricing-plan">
-        <h3>Pro</h3>
-        <p>25+ quotes / month</p>
-        <p><strong>£199 / month</strong></p>
-        <a href="#" class="btn">Start Free Trial</a>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <h2>Loved by busy tradies</h2>
+      <p class="sub">Real comments from early users (placeholders — swap with your first 3–5 customers).</p>
+      <div class="container testis">
+        <div class="quote">“Cut my quoting time from 3 hours a night to 10 minutes a week.”<div class="who">— Floor layer</div></div>
+        <div class="quote">“Looks more professional than what I used to send. Win rate’s up.”<div class="who">— Electrician</div></div>
+        <div class="quote">“I finally keep up with enquiries. No more backlog.”<div class="who">— Plumber</div></div>
       </div>
-      <p><em>7 Day Free Trial – full access, no card details required.</em></p>
+    </section>
+
+    <!-- Stats band -->
+    <section class="section" style="background:var(--panel2)">
+      <div class="container stats">
+        <div class="stat"><b>Hours saved</b><div class="muted">every single week</div></div>
+        <div class="stat"><b>2–5×</b><div class="muted">faster response</div></div>
+        <div class="stat"><b>+18%</b><div class="muted">win rate (early)</div></div>
+        <div class="stat"><b>0 code</b><div class="muted">set-up required</div></div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <h2>Simple pricing</h2>
+      <p class="sub">Start free. Cancel anytime. No hidden fees.</p>
+      <div class="container pricing">
+        <div class="price">
+          <h3>Free Trial</h3>
+          <div class="money">7 Days</div>
+          <p>Full access. Get your first quotes out today. No card required.</p>
+        </div>
+        <div class="price pop">
+          <h3>Starter</h3>
+          <div class="money">£99/mo</div>
+          <p>Up to 20 quotes / month<br>Email + SMS support<br>Core integrations</p>
+          <p><a class="btn" href="#lead">Choose Starter</a></p>
+        </div>
+        <div class="price">
+          <h3>Pro</h3>
+          <div class="money">£199/mo</div>
+          <p>25+ quotes / month<br>Priority support<br>Advanced automations</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead capture -->
+    <section id="lead" class="section">
+      <div class="container lead">
+        <h2 style="text-align:center;margin:0 0 8px">Start your free trial</h2>
+        <p class="sub" style="color:#cbd5e1;margin-bottom:18px">No credit card required.</p>
+
+        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label class="hidden" for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" required>
+          <label class="hidden" for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Your email" required>
+          <label class="hidden" for="trade">Trade</label>
+          <select id="trade" name="trade" required>
+            <option value="">Your trade</option>
+            <option value="flooring">Flooring</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical</option>
+            <option value="carpentry">Carpentry</option>
+            <option value="other">Other</option>
+          </select>
+          <button class="btn" type="submit" aria-label="Start free trial">Start Free Trial</button>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
+        </form>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="container" style="display:flex;justify-content:center">
+        <a class="btn" href="#lead" style="min-width:260px;text-align:center">Get Started — Free</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    © 2025 TradieBrain. All rights reserved.
-  </footer>
+  <footer>© <span id="year"></span> TradieBrain. All rights reserved.</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => {
+      const open = getComputedStyle(menu).display !== 'none';
+      menu.style.display = open ? 'none' : 'block';
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+    menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => (menu.style.display='none')));
+  </script>
 </body>
 </html>
