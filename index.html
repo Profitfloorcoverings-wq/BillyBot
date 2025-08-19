@@ -7,69 +7,122 @@
   <meta name="description" content="TradieBrain turns job info into ready-to-send quotes automatically for tradespeople." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --blue1:#2563EB;
-      --blue2:#3B82F6;
-      --orange1:#F97316;
-      --orange2:#FB923C;
-      --navy:#0F172A;
-      --muted:#64748B;
-      --bg:#FFFFFF;
-      --panel:#F8FAFC;
-      --radius:18px;
-      --shadow:0 10px 30px rgba(2, 6, 23, 0.08);
+    :root{
+      --blue1:#2563EB; --blue2:#3B82F6;
+      --orange1:#F97316; --orange2:#FB923C;
+      --navy:#0F172A; --muted:#64748B;
+      --panel:#F8FAFC; --radius:18px;
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+      --max:1140px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--navy);font-family:Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-    a{text-decoration:none}
-    .container{max-width:1140px;margin:0 auto;padding:24px}
-    .btn{display:inline-block;background:linear-gradient(135deg,var(--orange1),var(--orange2));color:#fff;padding:14px 28px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:.2s}
+    html,body{margin:0;font-family:Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--navy);background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:var(--max);margin:0 auto;padding:24px}
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--orange1),var(--orange2));color:#fff;
+         padding:14px 28px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:.2s}
     .btn:hover{transform:translateY(-2px);opacity:.95}
-    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between}
+
+    /* Header */
+    header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+           border-bottom:1px solid #e5e7eb;z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .logo{display:flex;gap:10px;align-items:center;font-weight:800;font-size:20px}
     .logo-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--blue1),var(--blue2))}
-    .nav-links{display:flex;gap:26px;align-items:center}
-    .hero{padding:100px 0;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;text-align:center}
-    .hero h1{font-size:56px;line-height:1.05;margin:0 0 20px}
-    .hero p{font-size:22px;color:#e2e8f0;margin:0 0 32px;max-width:760px;margin-left:auto;margin-right:auto}
-    .badges{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:22px}
-    .badge{background:rgba(255,255,255,.1);color:#fff;padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px}
-    .demo{background:#fff;border-radius:var(--radius);height:400px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;margin-top:40px}
-    .section{padding:100px 0}
-    .section h2{text-align:center;font-size:36px;margin:0 0 14px}
-    .section p.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 50px}
+    .links{display:flex;gap:26px;align-items:center}
+    .hamburger{display:none;border:1px solid #e5e7eb;border-radius:10px;padding:10px;cursor:pointer}
+    .hamburger span{display:block;width:22px;height:2px;background:#0F172A;margin:4px 0}
+
+    /* Hero */
+    .hero{padding:72px 0;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;text-align:center}
+    .hero h1{font-size:56px;line-height:1.05;margin:0 0 16px}
+    .hero p{font-size:22px;color:#e2e8f0;max-width:760px;margin:0 auto 26px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+    .badge{background:rgba(255,255,255,.1);color:#fff;padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px}
+    .demo{background:#fff;border-radius:var(--radius);height:380px;box-shadow:var(--shadow);
+          display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;margin-top:28px}
+
+    /* Sections */
+    .section{padding:80px 0}
+    .section h2{text-align:center;font-size:36px;margin:0 0 10px}
+    .section p.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 44px}
+
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);text-align:center}
-    .card h3{margin:0 0 12px}
+    .card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);text-align:center}
+
     .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .step{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);text-align:center}
-    .step-num{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 14px}
+    .step{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);text-align:center}
+    .step-num{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue1),var(--blue2));
+              color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px}
+
     .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .price{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);text-align:center;position:relative}
+    .price{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);text-align:center;position:relative}
     .price.pop{border:2px solid var(--blue1)}
-    .price.pop:after{content:\"Most Popular\";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700}
-    .money{font-size:44px;font-weight:800;margin:12px 0}
-    .cta{background:linear-gradient(135deg,var(--navy),#1e293b);color:#fff;border-radius:var(--radius);padding:60px;text-align:center}
-    .cta h3{margin:0 0 20px;font-size:32px}
-    footer{padding:40px 0;color:var(--muted);text-align:center}
-    @media(max-width:900px){
-      .grid,.how-steps,.pricing{grid-template-columns:1fr}
-      .hero h1{font-size:38px}
-      .hero p{font-size:18px}
+    .price.pop:after{content:"Most Popular";position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+                     background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;padding:6px 14px;border-radius:999px;
+                     font-size:12px;font-weight:700}
+    .money{font-size:44px;font-weight:800;margin:10px 0}
+
+    .cta{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-radius:var(--radius);padding:44px;text-align:center}
+    .cta h3{margin:0 0 14px;font-size:30px}
+
+    footer{padding:36px 0;color:var(--muted);text-align:center}
+
+    /* ====== Mobile tweaks ====== */
+    @media (max-width: 1024px){
+      .grid,.how-steps,.pricing{grid-template-columns:1fr 1fr}
     }
+    @media (max-width: 768px){
+      .container{padding:18px}
+      .links{display:none}
+      .hamburger{display:block}
+      .hero{padding:56px 0}
+      .hero h1{font-size:34px}
+      .hero p{font-size:16px}
+      .btn{width:100%;text-align:center}
+      .demo{height:240px}
+      .grid,.how-steps,.pricing{grid-template-columns:1fr;gap:18px}
+      .section{padding:60px 0}
+      .section h2{font-size:28px}
+      .money{font-size:34px}
+      .cta{padding:28px}
+      .cta h3{font-size:24px}
+      .mobile-menu{display:block}
+    }
+    @media (max-width: 420px){
+      .hero h1{font-size:28px}
+      .hero p{font-size:15px}
+      .badge{font-size:12px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .btn:hover{transform:none}
+    }
+
+    /* Mobile menu panel */
+    .mobile-menu{display:none;background:#fff;border-top:1px solid #e5e7eb}
+    .mobile-menu a{display:block;padding:14px 18px;border-bottom:1px solid #eef2f7}
+    .mobile-cta{padding:14px 18px}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
       <div class="logo"><span class="logo-mark"></span> TradieBrain</div>
-      <nav class="nav-links">
+      <nav class="links">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
         <a href="#pricing">Pricing</a>
         <a class="btn" href="#start">Start Free Trial</a>
       </nav>
+      <button class="hamburger" aria-label="Open menu" id="menuBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <div class="mobile-cta"><a class="btn" href="#start" style="width:100%;display:block;text-align:center;">Start Free Trial</a></div>
     </div>
   </header>
 
@@ -84,13 +137,13 @@
           <span class="badge">Professional branded quotes</span>
           <span class="badge">Win more jobs</span>
         </div>
-        <div class="demo">[ Demo video or screenshot here ]</div>
+        <div class="demo">[ Demo video / screenshot here ]</div>
       </div>
     </section>
 
     <section id="features" class="section">
       <h2>Why Trades Love TradieBrain</h2>
-      <p class="sub">Built from the ground up for floor layers, sparkies, plumbers, and builders. No more late-night quoting.</p>
+      <p class="sub">Built for floor layers, sparkies, plumbers, and builders. No more late-night quoting.</p>
       <div class="container grid">
         <div class="card"><h3>Save Hours Weekly</h3><p>No more evenings lost to admin. Get quotes done instantly.</p></div>
         <div class="card"><h3>Look Professional</h3><p>Polished, branded quotes that make you stand out and win trust.</p></div>
@@ -121,7 +174,7 @@
           <h3>Starter</h3>
           <div class="money">£99/mo</div>
           <p>50 quotes / month<br>Email + SMS support<br>Basic integrations</p>
-          <p><a class="btn" href="#start">Choose Starter</a></p>
+          <p><a class="btn" href="#start" style="width:100%;display:block;">Choose Starter</a></p>
         </div>
         <div class="price">
           <h3>Pro</h3>
@@ -135,15 +188,29 @@
       <div class="container">
         <div class="cta">
           <h3>Start saving time today.</h3>
-          <a class="btn" href="#">Start Free Trial</a>
+          <a class="btn" href="#" style="width:100%;max-width:340px">Start Free Trial</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    © <span id="year"></span> TradieBrain. All rights reserved.
-  </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <footer>© <span id="year"></span> TradieBrain. All rights reserved.</footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => {
+      const visible = getComputedStyle(menu).display !== 'none';
+      menu.style.display = visible ? 'none' : 'block';
+      btn.setAttribute('aria-expanded', String(!visible));
+    });
+
+    // Close menu when clicking a link (mobile)
+    menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => (menu.style.display='none')));
+  </script>
 </body>
 </html>
