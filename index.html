@@ -109,39 +109,47 @@
       .hero h1{font-size:30px}
       .hero p{font-size:15px}
     }
-    /* ===== Spacing polish (safe overrides) ===== */
-.nav{ gap:32px; padding:12px 0; }
-.logo svg{ width:36px; height:36px; }   /* logo a touch bigger */
-.links{ gap:36px; }
+    /* ===== Spacing polish v2 (stronger changes) ===== */
 
-.hero{ padding:108px 0 96px; }          /* more air in hero */
-.hero h1{ margin:0 0 18px; letter-spacing:-0.3px; }
-.hero p{ margin:0 auto 32px; }
-.hero .btn{ margin-top:6px; }
-.badges{ margin-top:26px; gap:12px; }
-.demo{ margin-top:36px; border-radius:22px; }
+/* Header breathing room */
+.nav{ gap:40px; padding:18px 0; }
+.logo svg{ width:38px; height:38px; }
+.links{ gap:40px; }
 
-.section{ padding:104px 0; }            /* more vertical rhythm */
-.grid3,.how,.pricing,.testis{ gap:32px; }
-.card,.step,.price{ padding:32px; }      /* room inside cards */
+/* Constrain hero content width and add extra air */
+.hero{ padding:140px 0 120px; }
+.hero .container{ max-width: 980px; }      /* keeps lines a nicer length */
+.hero h1{ margin:0 0 26px; letter-spacing:-0.2px; line-height:1.05; }
+.hero p{ margin:0 auto 30px; }
+.hero .btn{ margin-top:12px; padding:16px 32px; }
+.badges{ margin-top:32px; gap:14px; }
+.badge{ padding:10px 14px; }
+.demo{ margin-top:48px; height:420px; border-radius:26px; }
 
-.lead{ padding:56px 48px; }              /* form panel breathes */
-.form{ gap:24px; margin-top:28px; }      /* less squashed form */
-.form input,.form select{ padding:18px 14px; font-size:16px; }
+/* Section rhythm */
+.section{ padding:112px 0; }
+.grid3,.how,.pricing,.testis{ gap:34px; }
+.card,.step,.price{ padding:34px; }
 
-/* Tablet & down */
+/* Form panel breathing room */
+.lead{ padding:64px 56px; }
+.form{ gap:26px; margin-top:34px; }
+.form input,.form select{ padding:18px 16px; font-size:16px; }
+
+/* Tablet */
 @media (max-width:1024px){
-  .grid3,.how,.pricing,.testis{ gap:24px; }
+  .grid3,.how,.pricing,.testis{ gap:26px; }
+  .lead{ padding:48px 32px; }
 }
 
 /* Mobile */
 @media (max-width:768px){
-  .hero{ padding:72px 0; }
-  .hero h1{ margin-bottom:12px; }
+  .hero{ padding:84px 0 72px; }
+  .hero h1{ margin-bottom:14px; }
   .hero p{ margin-bottom:22px; }
-  .section{ padding:76px 0; }
-  .lead{ padding:32px 20px; }
-  .form{ gap:14px; }
+  .section{ padding:84px 0; }
+  .lead{ padding:36px 20px; }
+  .form{ gap:16px; }
 }
 
   </style>
