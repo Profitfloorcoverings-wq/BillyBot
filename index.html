@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TradieBrain — Effortless Quotes in Your Software</title>
-  <meta name="description" content="TradieBrain turns job info into ready-to-send quotes automatically for tradespeople — built directly in Sage, Xero, QuickBooks and more." />
+  <title>TradieBrain — Quotes in Seconds. Not Hours.</title>
+  <meta name="description" content="TradieBrain turns job info into ready-to-send quotes automatically for tradespeople." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -28,12 +28,10 @@
     /* Header */
     header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
            border-bottom:1px solid #e5e7eb;z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
     .logo{display:flex;gap:10px;align-items:center;font-weight:800;font-size:20px}
-    .logo-mark{width:28px;height:28px;border-radius:8px;
-               background:linear-gradient(135deg,var(--blue1),var(--blue2));
-               display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700}
-    .links{display:flex;gap:26px;align-items:center}
+    .logo svg{width:32px;height:32px;fill:url(#bluegrad)}
+    .links{display:flex;gap:32px;align-items:center}
     .hamburger{display:none;border:1px solid #e5e7eb;border-radius:10px;padding:10px;background:#fff;cursor:pointer}
     .hamburger span{display:block;width:22px;height:2px;background:#0F172A;margin:4px 0}
 
@@ -46,7 +44,7 @@
     .demo{background:#fff;border-radius:var(--radius);height:380px;box-shadow:var(--shadow);
           display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;margin-top:28px}
 
-    /* Generic sections */
+    /* Sections */
     .section{padding:96px 0}
     .section h2{text-align:center;font-size:36px;margin:0 0 12px}
     .section p.sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 50px}
@@ -81,8 +79,8 @@
 
     /* Lead form */
     .lead{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-radius:var(--radius);padding:42px}
-    .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;margin-top:16px}
-    .form input,.form select{width:100%;padding:14px 12px;border-radius:12px;border:1px solid #e5e7eb}
+    .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:20px;margin-top:24px}
+    .form input,.form select{width:100%;padding:16px 14px;border-radius:12px;border:1px solid #e5e7eb;font-size:16px}
     .form button{border:0}
     .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 
@@ -111,21 +109,21 @@
       .hero h1{font-size:30px}
       .hero p{font-size:15px}
     }
-    @media (prefers-reduced-motion: reduce){
-      .btn:hover{transform:none}
-    }
-
-    /* Mobile menu */
-    .mobile{display:none;background:#fff;border-top:1px solid #e5e7eb}
-    .mobile a{display:block;padding:14px 18px;border-bottom:1px solid #edf2f7}
-    .mobile .mobile-cta{padding:14px 18px}
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="container nav">
-      <div class="logo"><span class="logo-mark">⚒️</span> TradieBrain</div>
+      <div class="logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="bluegrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient></defs>
+          <path d="M12 2C7 2 3 6 3 11v4h18v-4c0-5-4-9-9-9zm-7 14v2h14v-2H5z"/>
+        </svg>
+        TradieBrain
+      </div>
       <nav class="links" aria-label="Primary">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
@@ -146,14 +144,13 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Effortless Quotes. Built in Your Software.</h1>
-        <p>TradieBrain builds your quotes directly inside <strong>Sage, Xero, QuickBooks</strong> and more. Completely hands-free, with consistent pricing every time.</p>
+        <h1>Quotes in seconds. Not hours.</h1>
+        <p>Stop wasting evenings pricing jobs. TradieBrain turns your job info into <strong>ready-to-send quotes</strong> automatically.</p>
         <a class="btn" href="#lead">Start Free Trial</a>
         <div class="badges">
-          <span class="badge">⏱ Save hours every week</span>
-          <span class="badge">💼 Quotes built in your usual software</span>
-          <span class="badge">🏆 Win more jobs</span>
-          <span class="badge">✅ Never lose money from incorrect quotes</span>
+          <span class="badge">Save hours every week</span>
+          <span class="badge">Quotes built in your usual quoting software</span>
+          <span class="badge">Win more jobs</span>
         </div>
         <div class="demo">Demo video / screenshot placeholder</div>
       </div>
@@ -162,10 +159,10 @@
     <!-- Features -->
     <section id="features" class="section">
       <h2>Why trades love TradieBrain</h2>
-      <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night quoting.</p>
+      <p class="sub">Built for floor layers, sparkies, plumbers, carpenters and more. No more late-night quoting.</p>
       <div class="container grid3">
         <div class="card"><h3>Save hours weekly</h3><p>No more admin at night. Quotes in minutes.</p></div>
-        <div class="card"><h3>Quotes in your system</h3><p>Generated directly inside your quoting/accounting software.</p></div>
+        <div class="card"><h3>Never lose money</h3><p>Accurate pricing means no costly mistakes.</p></div>
         <div class="card"><h3>Works the way you do</h3><p>Send photos, notes or voice — whatever’s fastest.</p></div>
       </div>
     </section>
@@ -173,32 +170,11 @@
     <!-- How it works -->
     <section id="how" class="section" style="background:var(--panel)">
       <h2>How it works</h2>
-      <p class="sub">Input job info any way you like. Get back a perfect quote.</p>
+      <p class="sub">3 simple steps to faster quoting and more wins.</p>
       <div class="container how">
-        <div class="step"><div class="n">1</div><h3>Send job info</h3><p>SMS, WhatsApp, email, photos, or voice memo.</p></div>
-        <div class="step"><div class="n">2</div><h3>AI builds the quote</h3><p>Using your supplier pricing + pricing logic. Accurate every time.</p></div>
-        <div class="step"><div class="n">3</div><h3>Send in seconds</h3><p>Deliver to your customer and secure the job effortlessly.</p></div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section">
-      <h2>Loved by busy tradies</h2>
-      <p class="sub">Real comments from early users (placeholders — swap with your first 3–5 customers).</p>
-      <div class="container testis">
-        <div class="quote">“Cut my quoting time from 3 hours a night to 10 minutes a week.”<div class="who">— Floor layer</div></div>
-        <div class="quote">“Looks more professional than what I used to send. Win rate’s up.”<div class="who">— Electrician</div></div>
-        <div class="quote">“I finally keep up with enquiries. No more backlog.”<div class="who">— Plumber</div></div>
-      </div>
-    </section>
-
-    <!-- Stats band -->
-    <section class="section" style="background:var(--panel2)">
-      <div class="container stats">
-        <div class="stat"><b>Hours saved</b><div class="muted">every single week</div></div>
-        <div class="stat"><b>2–5×</b><div class="muted">faster response</div></div>
-        <div class="stat"><b>+18%</b><div class="muted">win rate (early)</div></div>
-        <div class="stat"><b>0 code</b><div class="muted">set-up required</div></div>
+        <div class="step"><div class="n">1</div><h3>Send job info</h3><p>Photos of handwritten notes, phone notes, or voice memo.</p></div>
+        <div class="step"><div class="n">2</div><h3>AI builds the quote</h3><p>Accurate, consistent pricing in Sage, Xero and more.</p></div>
+        <div class="step"><div class="n">3</div><h3>Send in seconds</h3><p>Deliver to your customer and secure the job with no effort.</p></div>
       </div>
     </section>
 
@@ -210,18 +186,20 @@
         <div class="price">
           <h3>Free Trial</h3>
           <div class="money">7 Days</div>
-          <p>Full access. Get your first quotes out today. No card required.</p>
+          <p>Full access. Get your first quotes out today.<br>No card details required.</p>
+          <p><a class="btn" href="#lead">Start Free Trial</a></p>
         </div>
         <div class="price pop">
           <h3>Starter</h3>
           <div class="money">£99/mo</div>
-          <p>Up to 20 quotes / month<br>Email + SMS support<br>Core integrations</p>
+          <p>Up to 20 quotes / month<br>Email + SMS support<br>Basic integrations</p>
           <p><a class="btn" href="#lead">Choose Starter</a></p>
         </div>
         <div class="price">
           <h3>Pro</h3>
           <div class="money">£199/mo</div>
           <p>25+ quotes / month<br>Priority support<br>Advanced automations</p>
+          <p><a class="btn" href="#lead">Choose Pro</a></p>
         </div>
       </div>
     </section>
@@ -229,9 +207,10 @@
     <!-- Lead capture -->
     <section id="lead" class="section">
       <div class="container lead">
-        <h2 style="text-align:center;margin:0 0 8px">Start your free trial</h2>
-        <p class="sub" style="color:#cbd5e1;margin-bottom:18px">No credit card required.</p>
+        <h2 style="text-align:center;margin:0 0 12px">Start your free trial</h2>
+        <p class="sub" style="color:#cbd5e1;margin-bottom:24px">No credit card required.</p>
 
+        <!-- Replace YOUR_FORM_ID -->
         <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <label class="hidden" for="name">Name</label>
           <input id="name" name="name" placeholder="Your name" required>
@@ -249,13 +228,6 @@
           <button class="btn" type="submit" aria-label="Start free trial">Start Free Trial</button>
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
         </form>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="section">
-      <div class="container" style="display:flex;justify-content:center">
-        <a class="btn" href="#lead" style="min-width:260px;text-align:center">Get Started — Free</a>
       </div>
     </section>
   </main>
