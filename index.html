@@ -1,4 +1,149 @@
-<!doctype html>
-<title>TB test</title>
-<h1>It works 🎉</h1>
-<p>If you can read this, GitHub Pages is pointing to this file correctly.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TradieBrain — Quotes in Seconds. Not Hours.</title>
+  <meta name="description" content="TradieBrain turns job info into ready-to-send quotes automatically for tradespeople." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue1:#2563EB;
+      --blue2:#3B82F6;
+      --orange1:#F97316;
+      --orange2:#FB923C;
+      --navy:#0F172A;
+      --muted:#64748B;
+      --bg:#FFFFFF;
+      --panel:#F8FAFC;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(2, 6, 23, 0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--navy);font-family:Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{text-decoration:none}
+    .container{max-width:1140px;margin:0 auto;padding:24px}
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--orange1),var(--orange2));color:#fff;padding:14px 28px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:.2s}
+    .btn:hover{transform:translateY(-2px);opacity:.95}
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:800;font-size:20px}
+    .logo-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--blue1),var(--blue2))}
+    .nav-links{display:flex;gap:26px;align-items:center}
+    .hero{padding:100px 0;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;text-align:center}
+    .hero h1{font-size:56px;line-height:1.05;margin:0 0 20px}
+    .hero p{font-size:22px;color:#e2e8f0;margin:0 0 32px;max-width:760px;margin-left:auto;margin-right:auto}
+    .badges{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+    .badge{background:rgba(255,255,255,.1);color:#fff;padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px}
+    .demo{background:#fff;border-radius:var(--radius);height:400px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;margin-top:40px}
+    .section{padding:100px 0}
+    .section h2{text-align:center;font-size:36px;margin:0 0 14px}
+    .section p.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 50px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);text-align:center}
+    .card h3{margin:0 0 12px}
+    .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .step{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);text-align:center}
+    .step-num{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 14px}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .price{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);text-align:center;position:relative}
+    .price.pop{border:2px solid var(--blue1)}
+    .price.pop:after{content:\"Most Popular\";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700}
+    .money{font-size:44px;font-weight:800;margin:12px 0}
+    .cta{background:linear-gradient(135deg,var(--navy),#1e293b);color:#fff;border-radius:var(--radius);padding:60px;text-align:center}
+    .cta h3{margin:0 0 20px;font-size:32px}
+    footer{padding:40px 0;color:var(--muted);text-align:center}
+    @media(max-width:900px){
+      .grid,.how-steps,.pricing{grid-template-columns:1fr}
+      .hero h1{font-size:38px}
+      .hero p{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo"><span class="logo-mark"></span> TradieBrain</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a class="btn" href="#start">Start Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Quotes in Seconds. Not Hours.</h1>
+        <p>TradieBrain turns job info (photos, notes, voice) into <strong>ready-to-send quotes automatically</strong>. Built for busy trades who hate paperwork.</p>
+        <a class="btn" href="#start">Start Free Trial</a>
+        <div class="badges">
+          <span class="badge">Save 10+ hrs/week</span>
+          <span class="badge">Professional branded quotes</span>
+          <span class="badge">Win more jobs</span>
+        </div>
+        <div class="demo">[ Demo video or screenshot here ]</div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Why Trades Love TradieBrain</h2>
+      <p class="sub">Built from the ground up for floor layers, sparkies, plumbers, and builders. No more late-night quoting.</p>
+      <div class="container grid">
+        <div class="card"><h3>Save Hours Weekly</h3><p>No more evenings lost to admin. Get quotes done instantly.</p></div>
+        <div class="card"><h3>Look Professional</h3><p>Polished, branded quotes that make you stand out and win trust.</p></div>
+        <div class="card"><h3>Works With Your Trade</h3><p>Input via SMS, WhatsApp, or photos — whatever is fastest.</p></div>
+      </div>
+    </section>
+
+    <section id="how" class="section" style="background:var(--panel)">
+      <h2>How It Works</h2>
+      <p class="sub">3 simple steps to faster quoting and more wins.</p>
+      <div class="container how-steps">
+        <div class="step"><div class="step-num">1</div><h4>Send job info</h4><p>Photos, notes, or voice memo.</p></div>
+        <div class="step"><div class="step-num">2</div><h4>AI builds the quote</h4><p>Accurate, consistent pricing every time.</p></div>
+        <div class="step"><div class="step-num">3</div><h4>Send in seconds</h4><p>Deliver to your customer and secure the job instantly.</p></div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <h2>Simple Pricing</h2>
+      <p class="sub">Start free. Cancel anytime. No hidden fees.</p>
+      <div class="container pricing">
+        <div class="price">
+          <h3>Free Trial</h3>
+          <div class="money">7 Days</div>
+          <p>Full access. Get your first quotes out today.</p>
+        </div>
+        <div class="price pop">
+          <h3>Starter</h3>
+          <div class="money">£99/mo</div>
+          <p>50 quotes / month<br>Email + SMS support<br>Basic integrations</p>
+          <p><a class="btn" href="#start">Choose Starter</a></p>
+        </div>
+        <div class="price">
+          <h3>Pro</h3>
+          <div class="money">£149/mo</div>
+          <p>Unlimited quotes<br>Priority support<br>Advanced automations</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="start">
+      <div class="container">
+        <div class="cta">
+          <h3>Start saving time today.</h3>
+          <a class="btn" href="#">Start Free Trial</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> TradieBrain. All rights reserved.
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
