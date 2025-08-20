@@ -3,143 +3,187 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TradieBrain — Effortless Quotes in Seconds.</title>
-  <meta name="description" content="TradieBrain turns job notes into perfect quotes within your preferred platform like Sage, QuickBooks or Xero." />
+  <title>TradieBrain — Effortless Quotes in Seconds</title>
+  <meta name="description" content="TradieBrain turns job notes into perfect quotes inside Sage, QuickBooks or Xero — hands-free, accurate, and fast." />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --blue1:#2563EB; --blue2:#3B82F6;
-      --orange1:#F97316; --orange2:#FB923C;
-      --navy:#0F172A; --muted:#64748B;
-      --panel:#F8FAFC; --panel2:#F1F5F9;
-      --radius:18px; --shadow:0 10px 30px rgba(2,6,23,.08);
-      --max:1140px;
+      /* Brand */
+      --brand1:#2563EB; --brand2:#3B82F6;
+      --accent1:#F97316; --accent2:#FB923C;
+
+      /* Surfaces / text */
+      --bg:#0B0F1A;
+      --bg2:#0F1526;
+      --card:#0F172A;
+      --text:#E6ECF9;
+      --muted:#98A3B8;
+      --line:rgba(255,255,255,.08);
+
+      /* Layout */
+      --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.35);
+      --max:1120px;
     }
+
     *{box-sizing:border-box}
-    html,body{margin:0;background:#fff;color:var(--navy);font-family:Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    a{text-decoration:none;color:inherit}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
-    .container{max-width:var(--max);margin:0 auto;padding:24px}
-    .btn{display:inline-block;background:linear-gradient(135deg,var(--orange1),var(--orange2));color:#fff;
-         padding:14px 28px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:.2s}
-    .btn:hover{transform:translateY(-2px);opacity:.96}
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px}
 
-    /* Header */
-    header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
-           border-bottom:1px solid #e5e7eb;z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .logo{display:flex;gap:12px;align-items:center;font-weight:800;font-size:20px}
-    .logo svg{width:40px;height:40px;display:inline-block;vertical-align:middle}
-    .links{display:flex;gap:32px;align-items:center}
-    .hamburger{display:none;border:1px solid #e5e7eb;border-radius:10px;padding:10px;background:#fff;cursor:pointer}
-    .hamburger span{display:block;width:22px;height:2px;background:#0F172A;margin:4px 0}
+    /* Glass header */
+    header{
+      position:sticky;top:0;z-index:100;
+      background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));
+      backdrop-filter:saturate(140%) blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      height:76px;
+      display:flex;align-items:center;justify-content:space-between;gap:28px;
+    }
+    .logo{display:flex;align-items:center;gap:12px;font:800 20px Sora,Inter;}
+    .logo svg{width:38px;height:38px;display:inline-block}
+    .links{display:flex;gap:28px;align-items:center}
+    .links a{color:var(--muted);font-weight:600}
+    .links a:hover{color:var(--text)}
+    .btn{
+      display:inline-block;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      color:#0B0F1A;border:0;font-weight:800;
+      padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 
-    /* Hero */
-    .hero{padding:140px 0 120px;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;text-align:center}
-    .hero .container{max-width:980px}
-    .hero h1{font-size:56px;line-height:1.05;margin:0 0 26px;letter-spacing:-0.2px}
-    .hero p{font-size:22px;color:#e2e8f0;max-width:760px;margin:0 auto 30px}
-    .badges{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:32px}
-    .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:10px 14px;border-radius:999px;font-weight:600;font-size:13px}
-    .demo{background:#fff;border-radius:26px;height:420px;box-shadow:var(--shadow);
-          display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600;margin-top:48px}
+    /* Hero (Lovable-style gradient) */
+    .hero{
+      position:relative;overflow:hidden;text-align:center;
+      padding:120px 0 96px;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, #1B2A57 0%, transparent 60%),
+        radial-gradient(900px 600px at 50% 100%, #2D61FF33 0%, transparent 60%),
+        linear-gradient(180deg,#0B0F1A 0%, #0F1526 60%, #0B0F1A 100%);
+    }
+    .hero:before{
+      /* subtle bottom glow */
+      content:"";position:absolute;inset:auto -10% 0 -10%;height:320px;
+      background:radial-gradient(60% 120% at 50% 0%, #2E68FF33 0%, transparent 60%);
+      pointer-events:none;
+    }
+    .title{font:800 58px Sora,Inter;line-height:1.02;letter-spacing:-.4px;margin:0 0 14px}
+    .subtitle{font-size:20px;color:var(--muted);max-width:780px;margin:0 auto 26px}
+    .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+    .chips{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
+    .chip{
+      color:#CFE0FF;background:rgba(46,104,255,.09);
+      border:1px solid rgba(120,155,255,.18);
+      padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;
+    }
 
-    /* Works-with (trust row) */
-    .trust{display:flex;gap:18px;align-items:center;justify-content:center;margin-top:18px}
-    .trust-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:700}
-    .trust-logos{display:flex;gap:22px;color:rgba(255,255,255,.9);font-weight:800}
-    .trust-logos span{opacity:.9}
+    .trust{
+      display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE;
+    }
+    .trust .label{font:700 11px Inter;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+    .trust .logos{display:flex;gap:20px;font:800 14px Sora,Inter}
+
+    .demo{
+      background:linear-gradient(180deg,#0C1224,#0B0F1A);
+      border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);
+      height:420px;margin:40px auto 0;max-width:980px;
+      display:flex;align-items:center;justify-content:center;color:#8EA1C7;font-weight:600;
+    }
 
     /* Sections */
-    .section{padding:112px 0}
-    .section h2{text-align:center;font-size:36px;margin:0 0 12px}
-    .section p.sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 50px}
+    .section{padding:96px 0}
+    .section h2{font:800 36px Sora,Inter;text-align:center;margin:0 0 12px}
+    .sub{color:var(--muted);text-align:center;max-width:720px;margin:0 auto 46px}
 
-    /* Features */
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
-    .card{background:#fff;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);text-align:center}
+    /* Cards / grids */
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .card{
+      background:linear-gradient(180deg,#0F1526,#0C1221);
+      border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .card h3{font:700 18px Sora,Inter;margin:0 0 6px}
+    .card p{color:#A9B4CB}
 
-    /* How */
-    .how{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
-    .step{background:#fff;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);text-align:center}
-    .n{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;
-       display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px}
-
-    /* Testimonials */
-    .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .quote{background:#fff;border-left:6px solid var(--blue1);border-radius:14px;padding:22px 24px 22px 22px;box-shadow:var(--shadow)}
-    .who{color:var(--muted);font-size:14px;margin-top:8px}
-
-    /* Stats */
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
-    .stat{background:#fff;border-radius:14px;padding:22px;box-shadow:var(--shadow)}
-    .stat b{font-size:28px}
+    .how{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .step{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center}
+    .n{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand1),var(--brand2));color:white;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px}
 
     /* Pricing */
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
-    .price{background:#fff;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);text-align:center;position:relative}
-    .price.pop{border:2px solid var(--blue1)}
-    .price.pop:after{content:"Most Popular";position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-                     background:linear-gradient(135deg,var(--blue1),var(--blue2));color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700}
-    .money{font-size:44px;font-weight:800;margin:10px 0}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .price{
+      background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);
+      border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)
+    }
+    .price.pop{outline:2px solid #2954FF}
+    .money{font:800 42px Sora,Inter;margin:8px 0 6px}
+    .toggle{
+      display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 22px;
+      color:var(--muted);font-weight:600
+    }
+    .switch{
+      width:54px;height:30px;border-radius:999px;background:#1A2341;border:1px solid var(--line);
+      position:relative;cursor:pointer
+    }
+    .knob{
+      width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .18s ease
+    }
+    .switch.active .knob{left:27px}
 
     /* Lead form */
-    .lead{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-radius:var(--radius);padding:64px 56px}
-    .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:26px;margin-top:34px}
-    .form input,.form select{width:100%;padding:18px 16px;border-radius:12px;border:1px solid #e5e7eb;font-size:16px}
-    .form button{border:0}
+    .lead{
+      background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:20px;
+      padding:44px;color:#E8EEFF;box-shadow:var(--shadow)
+    }
+    .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:16px;margin-top:12px}
+    .form input,.form select{
+      background:#0B1225;color:#E6EEFF;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px
+    }
     .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 
-    footer{padding:40px 0;color:var(--muted);text-align:center}
+    footer{padding:42px 0;border-top:1px solid var(--line);color:#97A3BD;text-align:center}
 
     /* Responsive */
-    @media(max-width:1024px){
-      .grid3,.how,.pricing,.testis{grid-template-columns:1fr 1fr}
-      .stats{grid-template-columns:1fr 1fr}
-      .lead{padding:48px 32px}
+    @media (max-width:1024px){
+      .grid3,.how,.pricing{grid-template-columns:1fr 1fr}
     }
-    @media(max-width:768px){
-      .container{padding:18px}
+    @media (max-width:768px){
       .links{display:none}
-      .hamburger{display:block}
-      .hero{padding:84px 0 72px}
-      .hero h1{font-size:32px;line-height:1.15;margin-bottom:12px}
-      .hero p{font-size:16px;margin-bottom:20px}
-      .hero .btn{display:block;width:100%;max-width:none;padding:14px 18px;margin:14px 0 8px}
-      .badges{gap:10px;margin-top:20px}
-      .badge{font-size:13px;padding:8px 12px}
-      .section{padding:84px 0}
-      .grid3,.how,.pricing,.testis{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr 1fr}
-      .form{grid-template-columns:1fr;gap:16px}
+      .nav{height:72px}
+      .title{font-size:36px}
+      .subtitle{font-size:16px}
+      .section{padding:76px 0}
+      .grid3,.how,.pricing{grid-template-columns:1fr}
+      .form{grid-template-columns:1fr;gap:12px}
       .btn{width:100%;text-align:center}
-    }
-    @media(max-width:420px){
-      .hero h1{font-size:28px}
-      .hero p{font-size:15px}
-      .badge{font-size:12px;padding:7px 10px}
+      .demo{height:260px}
     }
   </style>
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <div class="container nav">
       <div class="logo">
-        <!-- Refined helmet + thick cog (facing right) -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" aria-hidden="true">
+        <!-- Helmet on cog (refined) -->
+        <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
-            <linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#2563EB"/>
-              <stop offset="1" stop-color="#3B82F6"/>
-            </linearGradient>
+            <linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient>
           </defs>
-          <!-- COG ring -->
+          <!-- cog ring -->
           <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
-          <!-- Teeth -->
+          <!-- teeth -->
           <g fill="url(#tbBlue)">
-            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(0 48 66)"/>
+            <rect x="45" y="34" width="6" height="14" rx="3"/>
             <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
             <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
             <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
@@ -148,109 +192,143 @@
             <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
             <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
           </g>
-          <circle cx="48" cy="66" r="8" fill="#fff"/>
-          <!-- Helmet -->
-          <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z"
-                fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
+          <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+          <!-- helmet -->
+          <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
           <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
           <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
         </svg>
-        TradieBrain
+        <span>TradieBrain</span>
       </div>
+
       <nav class="links" aria-label="Primary">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
         <a href="#pricing">Pricing</a>
         <a class="btn" href="#lead">Start Free Trial</a>
       </nav>
-      <button class="hamburger" aria-label="Open menu" id="menuBtn"><span></span><span></span><span></span></button>
+
+      <!-- (Optional) hamburger retained for later; currently decorative -->
+      <button class="btn ghost" style="display:none">Menu</button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <h1>Effortless Quotes in Seconds.</h1>
-        <p>TradieBrain turns messy job notes into <strong>perfect quotes</strong> within your preferred platform like <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="title">Effortless Quotes in Seconds.</h1>
+      <p class="subtitle">
+        TradieBrain turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform —
+        <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.
+      </p>
+
+      <div class="cta-row">
         <a class="btn" href="#lead">Start Free Trial</a>
-
-        <div class="badges">
-          <span class="badge">Save hours every week</span>
-          <span class="badge">Reclaim your evenings and weekends</span>
-          <span class="badge">Stand out from the competition</span>
-          <span class="badge">Win more jobs</span>
-        </div>
-
-        <!-- Trust row -->
-        <div class="trust" aria-label="Works with">
-          <span class="trust-label">Works with</span>
-          <div class="trust-logos">
-            <span>Sage</span><span>QuickBooks</span><span>Xero</span>
-          </div>
-        </div>
-
-        <div class="demo">Demo video / screenshot placeholder</div>
+        <a class="btn ghost" href="#pricing">See Pricing</a>
       </div>
-    </section>
 
-    <!-- Features -->
-    <section id="features" class="section">
+      <div class="chips">
+        <span class="chip">Save hours every week</span>
+        <span class="chip">Reclaim your evenings</span>
+        <span class="chip">Stand out with pro quotes</span>
+        <span class="chip">Win more jobs</span>
+      </div>
+
+      <div class="trust" aria-label="Works with">
+        <span class="label">Works with</span>
+        <div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div>
+      </div>
+
+      <div class="demo">Demo video / screenshot placeholder</div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
       <h2>Why trades love TradieBrain</h2>
-      <p class="sub">Built for floor layers, sparkies, plumbers, carpenters and more. No more late-night/weekend quoting.</p>
-      <div class="container grid3">
-        <div class="card"><h3>Save hours weekly</h3><p>No more admin at night. Quotes in minutes.</p></div>
-        <div class="card"><h3>Never lose money</h3><p>Accurate pricing means no costly mistakes.</p></div>
-        <div class="card"><h3>Works the way you do</h3><p>Send phone notes, pics of hand-written notes or job sheets, or voice notes — whatever’s fastest.</p></div>
-      </div>
-    </section>
+      <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night/weekend quoting.</p>
 
-    <!-- How it works -->
-    <section id="how" class="section" style="background:var(--panel)">
+      <div class="grid3">
+        <div class="card">
+          <h3>Save hours weekly</h3>
+          <p>No more admin at night. Quotes go out in minutes with zero hassle.</p>
+        </div>
+        <div class="card">
+          <h3>Never lose money</h3>
+          <p>Accurate pricing every time using your supplier lists and logic.</p>
+        </div>
+        <div class="card">
+          <h3>Works the way you do</h3>
+          <p>Send phone notes, photos of job sheets, or voice notes — whatever’s fastest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section" style="background:linear-gradient(180deg,#0B0F1A,#0F1526);">
+    <div class="container">
       <h2>How it works</h2>
-      <p class="sub">3 simple steps to faster quoting and more wins.</p>
-      <div class="container how">
+      <p class="sub">Three simple steps to faster quoting and more wins.</p>
+
+      <div class="how">
         <div class="step"><div class="n">1</div><h3>Send job info</h3><p>Photos of handwritten notes, phone notes, or voice memo.</p></div>
-        <div class="step"><div class="n">2</div><h3>AI builds the quote</h3><p>Accurate, consistent pricing in Sage, QuickBooks and Xero.</p></div>
+        <div class="step"><div class="n">2</div><h3>AI builds the quote</h3><p>Pricing inside Sage, QuickBooks or Xero — consistent and accurate.</p></div>
         <div class="step"><div class="n">3</div><h3>Send in seconds</h3><p>Deliver to your customer and secure the job with no effort.</p></div>
       </div>
-      <!-- Repeat CTA -->
-      <div class="container" style="text-align:center;margin-top:34px">
+
+      <div style="text-align:center;margin-top:28px">
         <a class="btn" href="#lead">Start Free Trial</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="section">
+  <!-- Pricing with monthly/annual toggle -->
+  <section id="pricing" class="section">
+    <div class="container">
       <h2>Simple pricing</h2>
       <p class="sub">Start free. Cancel anytime. No hidden fees.</p>
-      <div class="container pricing">
+
+      <div class="toggle">
+        <span>Monthly</span>
+        <div class="switch" id="planSwitch" role="switch" aria-checked="false">
+          <div class="knob"></div>
+        </div>
+        <span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span>
+      </div>
+
+      <div class="pricing">
         <div class="price">
           <h3>Free Trial</h3>
-          <div class="money">7 Days</div>
-          <p>Full access. Get your first quotes out today.<br>No card details required.</p>
+          <div class="money" data-month="7 Days" data-annual="7 Days">7 Days</div>
+          <p>Full access. Get your first quotes out today.<br>No card required.</p>
           <p><a class="btn" href="#lead">Start Free Trial</a></p>
         </div>
+
         <div class="price pop">
           <h3>Starter</h3>
-          <div class="money">£99/mo</div>
-          <p>Up to 20 quotes / month<br>Email + SMS support<br>Basic integrations</p>
+          <div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div>
+          <p>Up to 20 quotes / month<br>Email + SMS support<br>Core integrations</p>
           <p><a class="btn" href="#lead">Choose Starter</a></p>
         </div>
+
         <div class="price">
           <h3>Pro</h3>
-          <div class="money">£199/mo</div>
+          <div class="money" data-month="£199/mo" data-annual="£1,990/yr">£199/mo</div>
           <p>25+ quotes / month<br>Priority support<br>Advanced automations</p>
           <p><a class="btn" href="#lead">Choose Pro</a></p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Lead capture -->
-    <section id="lead" class="section">
-      <div class="container lead">
-        <h2 style="text-align:center;margin:0 0 12px">Start your free trial</h2>
-        <p class="sub" style="color:#cbd5e1;margin-bottom:24px">No credit card required.</p>
+  <!-- Lead capture -->
+  <section id="lead" class="section">
+    <div class="container">
+      <div class="lead">
+        <h2 style="text-align:center;margin:0 0 8px;font-family:Sora">Start your free trial</h2>
+        <p class="sub" style="margin-bottom:18px;color:#AFC3FF">No credit card required.</p>
 
         <!-- Replace YOUR_FORM_ID -->
         <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -271,21 +349,27 @@
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
         </form>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>© <span id="year"></span> TradieBrain. All rights reserved.</footer>
 
   <script>
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu'); // optional if you add one later
-    btn?.addEventListener('click', () => {
-      const open = getComputedStyle(menu).display !== 'none';
-      menu.style.display = open ? 'none' : 'block';
-      btn.setAttribute('aria-expanded', String(!open));
-    });
-    menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => (menu.style.display='none')));
+
+    // Pricing plan toggle (Monthly / Annual)
+    const sw = document.getElementById('planSwitch');
+    const monies = document.querySelectorAll('.money');
+    if (sw){
+      sw.addEventListener('click', () => {
+        const active = sw.classList.toggle('active');
+        sw.setAttribute('aria-checked', String(active));
+        monies.forEach(el => {
+          el.textContent = el.dataset[ active ? 'annual' : 'month' ];
+        });
+      });
+    }
   </script>
 </body>
 </html>
