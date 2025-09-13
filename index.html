@@ -12,165 +12,68 @@
 
   <style>
     :root{
-      /* Brand */
       --brand1:#2563EB; --brand2:#3B82F6;
       --accent1:#F97316; --accent2:#FB923C;
-
-      /* Surfaces / text */
-      --bg:#0B0F1A;
-      --bg2:#0F1526;
-      --card:#0F172A;
-      --text:#E6ECF9;
-      --muted:#98A3B8;
-      --line:rgba(255,255,255,.08);
-
-      /* Layout */
-      --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.35);
-      --max:1120px;
+      --bg:#0B0F1A; --bg2:#0F1526; --card:#0F172A;
+      --text:#E6ECF9; --muted:#98A3B8; --line:rgba(255,255,255,.08);
+      --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.35); --max:1120px;
     }
-
     *{box-sizing:border-box}
     html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .container{max-width:var(--max);margin:0 auto;padding:0 24px}
-
-    /* Glass header */
-    header{
-      position:sticky;top:0;z-index:100;
-      background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));
-      backdrop-filter:saturate(140%) blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      height:76px;
-      display:flex;align-items:center;justify-content:space-between;gap:28px;
-    }
+    header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line);}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px;}
     .logo{display:flex;align-items:center;gap:12px;font:800 20px Sora,Inter;}
-    .logo svg{width:38px;height:38px;display:inline-block}
+    .logo svg{width:38px;height:38px}
     .links{display:flex;gap:28px;align-items:center}
     .links a{color:var(--muted);font-weight:600}
     .links a:hover{color:var(--text)}
-    .btn{
-      display:inline-block;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      color:#0B0F1A;border:0;font-weight:800;
-      padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease;
-    }
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#0B0F1A;border:0;font-weight:800;padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease;}
     .btn:hover{transform:translateY(-2px)}
     .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
-
-    /* Hero (Lovable-style gradient) */
-    .hero{
-      position:relative;overflow:hidden;text-align:center;
-      padding:120px 0 96px;
-      background:
-        radial-gradient(1200px 600px at 50% -10%, #1B2A57 0%, transparent 60%),
-        radial-gradient(900px 600px at 50% 100%, #2D61FF33 0%, transparent 60%),
-        linear-gradient(180deg,#0B0F1A 0%, #0F1526 60%, #0B0F1A 100%);
-    }
-    .hero:before{
-      content:"";position:absolute;inset:auto -10% 0 -10%;height:320px;
-      background:radial-gradient(60% 120% at 50% 0%, #2E68FF33 0%, transparent 60%);
-      pointer-events:none;
-    }
+    .hero{position:relative;overflow:hidden;text-align:center;padding:120px 0 96px;background:radial-gradient(1200px 600px at 50% -10%, #1B2A57 0%, transparent 60%),radial-gradient(900px 600px at 50% 100%, #2D61FF33 0%, transparent 60%),linear-gradient(180deg,#0B0F1A 0%, #0F1526 60%, #0B0F1A 100%);}
+    .hero:before{content:"";position:absolute;inset:auto -10% 0 -10%;height:320px;background:radial-gradient(60% 120% at 50% 0%, #2E68FF33 0%, transparent 60%);}
     .title{font:800 58px Sora,Inter;line-height:1.02;letter-spacing:-.4px;margin:0 0 14px}
     .subtitle{font-size:20px;color:var(--muted);max-width:780px;margin:0 auto 26px}
     .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
     .chips{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
-    .chip{
-      color:#CFE0FF;background:rgba(46,104,255,.09);
-      border:1px solid rgba(120,155,255,.18);
-      padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;
-    }
-
-    .trust{
-      display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE;
-    }
+    .chip{color:#CFE0FF;background:rgba(46,104,255,.09);border:1px solid rgba(120,155,255,.18);padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;}
+    .trust{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE;}
     .trust .label{font:700 11px Inter;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
     .trust .logos{display:flex;gap:20px;font:800 14px Sora,Inter}
-
-    .demo{
-      background:linear-gradient(180deg,#0C1224,#0B0F1A);
-      border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);
-      height:420px;margin:40px auto 0;max-width:980px;
-      display:flex;align-items:center;justify-content:center;color:#8EA1C7;font-weight:600;
-    }
-
-    /* Sections */
+    .demo{background:linear-gradient(180deg,#0C1224,#0B0F1A);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);height:420px;margin:40px auto 0;max-width:980px;display:flex;align-items:center;justify-content:center;color:#8EA1C7;font-weight:600;}
     .section{padding:96px 0}
     .section h2{font:800 36px Sora,Inter;text-align:center;margin:0 0 12px}
     .sub{color:var(--muted);text-align:center;max-width:720px;margin:0 auto 46px}
-
-    /* Cards / grids */
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .card{
-      background:linear-gradient(180deg,#0F1526,#0C1221);
-      border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);
-      text-align:center;
-    }
+    .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center;}
     .card h3{font:700 18px Sora,Inter;margin:0 0 6px}
     .card p{color:#A9B4CB}
-
     .how{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
     .step{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center}
     .n{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand1),var(--brand2));color:white;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px}
-
-    /* Pricing */
     .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .price{
-      background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);
-      border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)
-    }
+    .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)}
     .price.pop{outline:2px solid #2954FF}
     .money{font:800 42px Sora,Inter;margin:8px 0 6px}
-    .toggle{
-      display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 22px;
-      color:var(--muted);font-weight:600
-    }
-    .switch{
-      width:54px;height:30px;border-radius:999px;background:#1A2341;border:1px solid var(--line);
-      position:relative;cursor:pointer
-    }
-    .knob{
-      width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .18s ease
-    }
+    .toggle{display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 22px;color:var(--muted);font-weight:600}
+    .switch{width:54px;height:30px;border-radius:999px;background:#1A2341;border:1px solid var(--line);position:relative;cursor:pointer}
+    .knob{width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .18s ease}
     .switch.active .knob{left:27px}
-
-    /* Lead form */
-    .lead{
-      background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:20px;
-      padding:44px;color:#E8EEFF;box-shadow:var(--shadow)
-    }
+    .lead{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:20px;padding:44px;color:#E8EEFF;box-shadow:var(--shadow)}
     .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:16px;margin-top:12px}
-    .form input{
-      background:#0B1225;color:#E6EEFF;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px
-    }
-    .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-
+    .form input{background:#0B1225;color:#E6EEFF;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px}
+    .hidden{position:absolute;left:-9999px}
     footer{padding:42px 0;border-top:1px solid var(--line);color:#97A3BD;text-align:center}
-
-    /* Responsive */
-    @media (max-width:1024px){
-      .grid3,.how,.pricing{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width:768px){
-      .links{display:none}
-      .nav{height:72px}
-      .title{font-size:36px}
-      .subtitle{font-size:16px}
-      .section{padding:76px 0}
-      .grid3,.how,.pricing{grid-template-columns:1fr}
-      .form{grid-template-columns:1fr;gap:12px}
-      .btn{width:100%;text-align:center}
-      .demo{height:260px}
-    }
+    @media (max-width:1024px){.grid3,.how,.pricing{grid-template-columns:1fr 1fr}}
+    @media (max-width:768px){.links{display:none}.nav{height:72px}.title{font-size:36px}.subtitle{font-size:16px}.section{padding:76px 0}.grid3,.how,.pricing{grid-template-columns:1fr}.form{grid-template-columns:1fr;gap:12px}.btn{width:100%}.demo{height:260px}}
   </style>
 </head>
 <body>
 
-  <!-- Header (unchanged) -->
-  ... [sections above unchanged] ...
+  <!-- Hero, Features, How it works, Pricing ... (unchanged) -->
 
   <!-- Lead capture -->
   <section id="lead" class="section">
@@ -178,9 +81,7 @@
       <div class="lead">
         <h2 style="text-align:center;margin:0 0 8px;font-family:Sora">Start your free trial</h2>
         <p class="sub" style="margin-bottom:18px;color:#AFC3FF">No credit card required.</p>
-
-        <!-- Updated form with new webhook -->
-        <form class="form" action="https://tradiebrain.app.n8n.cloud/webhook/Onboarding" method="POST">
+        <form id="onboardForm" class="form">
           <input name="business_name" placeholder="Business Name" required>
           <input name="contact_name" placeholder="Contact Name" required>
           <input type="tel" name="phone" placeholder="Phone" required>
@@ -189,9 +90,13 @@
           <input name="address_line2" placeholder="Address Line 2">
           <input name="city" placeholder="City" required>
           <input name="postcode" placeholder="Postcode" required>
-          <button class="btn" type="submit" aria-label="Start free trial">Start Free Trial</button>
+          <button class="btn" type="submit">Start Free Trial</button>
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
         </form>
+        <div id="thankYou" style="display:none;text-align:center;margin-top:20px;font-size:18px;color:#CFE0FF;">
+          Thanks! We look forward to working with you!<br>
+          You will receive a text shortly to get you onboarded.
+        </div>
       </div>
     </div>
   </section>
@@ -200,17 +105,34 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Pricing toggle
     const sw = document.getElementById('planSwitch');
     const monies = document.querySelectorAll('.money');
     if (sw){
       sw.addEventListener('click', () => {
         const active = sw.classList.toggle('active');
         sw.setAttribute('aria-checked', String(active));
-        monies.forEach(el => {
-          el.textContent = el.dataset[ active ? 'annual' : 'month' ];
-        });
+        monies.forEach(el => { el.textContent = el.dataset[ active ? 'annual' : 'month' ]; });
       });
     }
+
+    // Handle form with thank-you
+    const form = document.getElementById('onboardForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
+          method: "POST",
+          body: data
+        });
+        form.style.display = "none";
+        document.getElementById('thankYou').style.display = "block";
+      } catch (err) {
+        alert("Something went wrong, please try again.");
+      }
+    });
   </script>
 </body>
 </html>
