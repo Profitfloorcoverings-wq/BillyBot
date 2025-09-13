@@ -189,6 +189,24 @@
 </section>
 
 <style>
+/* Make all pricing cards equal height */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  align-items: stretch; /* ensures equal height */
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push button to bottom */
+}
+
+.price p:last-of-type {
+  margin-top: auto; /* keep button aligned */
+}
+
+  
 /* Force 4 columns on desktop */
 .pricing {
   display: grid;
