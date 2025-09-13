@@ -149,7 +149,7 @@
     </div>
   </section>
 
-  <!-- Pricing -->
+ <!-- Pricing -->
 <section id="pricing" class="section">
   <div class="container">
     <h2>Simple pricing</h2>
@@ -194,24 +194,17 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 26px;
-  align-items: stretch; /* ensures equal height */
+  align-items: stretch;
 }
+
 .price {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* push button to bottom */
+  justify-content: space-between;
 }
 
 .price p:last-of-type {
-  margin-top: auto; /* keep button aligned */
-}
-
-  
-/* Force 4 columns on desktop */
-.pricing {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
+  margin-top: auto;
 }
 
 /* Tablet fallback */
@@ -228,6 +221,7 @@
   }
 }
 </style>
+
 
   <!-- Lead capture -->
   <section id="lead" class="section">
