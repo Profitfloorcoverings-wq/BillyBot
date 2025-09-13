@@ -60,7 +60,7 @@
     .btn:hover{transform:translateY(-2px)}
     .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 
-    /* Hero */
+    /* Hero (Lovable-style gradient) */
     .hero{
       position:relative;overflow:hidden;text-align:center;
       padding:120px 0 96px;
@@ -124,13 +124,25 @@
     }
     .price.pop{outline:2px solid #2954FF}
     .money{font:800 42px Sora,Inter;margin:8px 0 6px}
+    .toggle{
+      display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 22px;
+      color:var(--muted);font-weight:600
+    }
+    .switch{
+      width:54px;height:30px;border-radius:999px;background:#1A2341;border:1px solid var(--line);
+      position:relative;cursor:pointer
+    }
+    .knob{
+      width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .18s ease
+    }
+    .switch.active .knob{left:27px}
 
     /* Lead form */
     .lead{
       background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:20px;
       padding:44px;color:#E8EEFF;box-shadow:var(--shadow)
     }
-    .form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+    .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:16px;margin-top:12px}
     .form input{
       background:#0B1225;color:#E6EEFF;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px
     }
@@ -139,9 +151,19 @@
     footer{padding:42px 0;border-top:1px solid var(--line);color:#97A3BD;text-align:center}
 
     /* Responsive */
+    @media (max-width:1024px){
+      .grid3,.how,.pricing{grid-template-columns:1fr 1fr}
+    }
     @media (max-width:768px){
+      .links{display:none}
+      .nav{height:72px}
+      .title{font-size:36px}
+      .subtitle{font-size:16px}
+      .section{padding:76px 0}
+      .grid3,.how,.pricing{grid-template-columns:1fr}
       .form{grid-template-columns:1fr;gap:12px}
       .btn{width:100%;text-align:center}
+      .demo{height:260px}
     }
   </style>
 </head>
@@ -151,6 +173,27 @@
   <header>
     <div class="container nav">
       <div class="logo">
+        <!-- Helmet on cog (refined) -->
+        <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient>
+          </defs>
+          <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
+          <g fill="url(#tbBlue)">
+            <rect x="45" y="34" width="6" height="14" rx="3"/>
+            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
+            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
+            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
+            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
+            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
+            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
+            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
+          </g>
+          <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+          <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
+          <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
+          <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
+        </svg>
         <span>TradieBrain</span>
       </div>
       <nav class="links" aria-label="Primary">
@@ -159,6 +202,7 @@
         <a href="#pricing">Pricing</a>
         <a class="btn" href="#lead">Start Free Trial</a>
       </nav>
+      <button class="btn ghost" style="display:none">Menu</button>
     </div>
   </header>
 
@@ -167,12 +211,23 @@
     <div class="container">
       <h1 class="title">Notes to Quotes in Seconds.</h1>
       <p class="subtitle">
-        TradieBrain turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — Sage, QuickBooks or Xero.
+        TradieBrain turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.
       </p>
       <div class="cta-row">
         <a class="btn" href="#lead">Start Free Trial</a>
         <a class="btn ghost" href="#pricing">See Pricing</a>
       </div>
+      <div class="chips">
+        <span class="chip">Save hours every week</span>
+        <span class="chip">Reclaim your evenings</span>
+        <span class="chip">Stand out with pro quotes</span>
+        <span class="chip">Win more jobs</span>
+      </div>
+      <div class="trust" aria-label="Works with">
+        <span class="label">Works with</span>
+        <div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div>
+      </div>
+      <div class="demo">Demo video / screenshot placeholder</div>
     </div>
   </section>
 
@@ -180,11 +235,11 @@
   <section id="features" class="section">
     <div class="container">
       <h2>Why trades love TradieBrain</h2>
-      <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night quoting.</p>
+      <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night/weekend quoting.</p>
       <div class="grid3">
-        <div class="card"><h3>Save hours weekly</h3><p>Quotes go out in minutes with zero hassle.</p></div>
-        <div class="card"><h3>Never lose money</h3><p>Accurate pricing every time using your supplier lists.</p></div>
-        <div class="card"><h3>Works the way you do</h3><p>Send phone notes, photos of job sheets, or voice notes.</p></div>
+        <div class="card"><h3>Save hours weekly</h3><p>No more admin at night. Quotes go out in minutes with zero hassle.</p></div>
+        <div class="card"><h3>Never lose money</h3><p>Accurate pricing every time using your supplier lists and logic.</p></div>
+        <div class="card"><h3>Works the way you do</h3><p>Send phone notes, photos of job sheets, or voice notes — whatever’s fastest.</p></div>
       </div>
     </div>
   </section>
@@ -193,53 +248,29 @@
   <section id="how" class="section" style="background:linear-gradient(180deg,#0B0F1A,#0F1526);">
     <div class="container">
       <h2>How it works</h2>
+      <p class="sub">Three simple steps to faster quoting and more wins.</p>
       <div class="how">
-        <div class="step"><div class="n">1</div><h3>Send job info</h3><p>Photos of notes or voice memo.</p></div>
-        <div class="step"><div class="n">2</div><h3>AI builds the quote</h3><p>Pricing inside Sage, QuickBooks or Xero.</p></div>
-        <div class="step"><div class="n">3</div><h3>Send in seconds</h3><p>Deliver to your customer with no effort.</p></div>
+        <div class="step"><div class="n">1</div><h3>Send job info</h3><p>Photos of handwritten notes, phone notes, or voice memo.</p></div>
+        <div class="step"><div class="n">2</div><h3>AI builds the quote</h3><p>Pricing inside Sage, QuickBooks or Xero — consistent and accurate.</p></div>
+        <div class="step"><div class="n">3</div><h3>Send in seconds</h3><p>Deliver to your customer and secure the job with no effort.</p></div>
+      </div>
+      <div style="text-align:center;margin-top:28px">
+        <a class="btn" href="#lead">Start Free Trial</a>
       </div>
     </div>
   </section>
 
-  <!-- Pricing -->
+  <!-- Pricing with monthly/annual toggle -->
   <section id="pricing" class="section">
     <div class="container">
       <h2>Simple pricing</h2>
+      <p class="sub">Start free. Cancel anytime. No hidden fees.</p>
+      <div class="toggle">
+        <span>Monthly</span>
+        <div class="switch" id="planSwitch" role="switch" aria-checked="false">
+          <div class="knob"></div>
+        </div>
+        <span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span>
+      </div>
       <div class="pricing">
-        <div class="price"><h3>Free Trial</h3><div class="money">7 Days</div><p>No card required.</p></div>
-        <div class="price pop"><h3>Starter</h3><div class="money">£99/mo</div><p>Up to 20 quotes / month.</p></div>
-        <div class="price"><h3>Pro</h3><div class="money">£199/mo</div><p>25+ quotes / month.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lead capture -->
-  <section id="lead" class="section">
-    <div class="container">
-      <div class="lead">
-        <h2 style="text-align:center;margin:0 0 8px;font-family:Sora">Start your free trial</h2>
-        <p class="sub" style="margin-bottom:18px;color:#AFC3FF">No credit card required.</p>
-
-        <!-- Form posts directly to n8n -->
-        <form class="form" action="https://tradiebrain.app.n8n.cloud/form-test/7344623e-6384-4b24-9fe4-e73b09a29578" method="POST">
-          <input name="business_name" placeholder="Business Name" required>
-          <input name="contact_name" placeholder="Contact Name" required>
-          <input type="tel" name="phone" placeholder="Phone" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input name="address_line1" placeholder="Address Line 1" required>
-          <input name="address_line2" placeholder="Address Line 2">
-          <input name="city" placeholder="City" required>
-          <input name="postcode" placeholder="Postcode" required>
-          <button class="btn" type="submit">Start Free Trial</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <footer>© <span id="year"></span> TradieBrain. All rights reserved.</footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        <div class="price"><h3>Free Trial</h3><div class="money" data-month="7 Days" data-annual="7 Days">7 Days</div><p>Full access. Get your first quotes out today.<br>No card required.</p><p><a class="btn" href="#lead">
