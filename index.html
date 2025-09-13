@@ -9,58 +9,124 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--brand1:#2563EB;--brand2:#3B82F6;--accent1:#F97316;--accent2:#FB923C;--bg:#0B0F1A;--bg2:#0F1526;--card:#0C1221;--text:#E6ECF9;--muted:#98A3B8;--line:rgba(255,255,255,.08);--radius:18px;--shadow:0 20px 60px rgba(0,0,0,.35);--max:1120px;}
+    :root {
+      --brand1:#2563EB; --brand2:#3B82F6;
+      --accent1:#F97316; --accent2:#FB923C;
+      --bg:#0B0F1A; --bg2:#0F1526; --card:#0F172A;
+      --text:#E6ECF9; --muted:#98A3B8;
+      --line:rgba(255,255,255,.08);
+      --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.35);
+      --max:1120px;
+    }
+
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+
+    /* Smooth page-wide gradient */
+    html, body {
+      margin:0;
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 40%, #0C1221 80%, #0B0F1A 100%);
+      background-attachment: fixed;
+    }
+
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .container{max-width:var(--max);margin:0 auto;padding:0 24px}
-    header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line);}
+
+    /* Header */
+    header {
+      position:sticky;top:0;z-index:100;
+      background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));
+      backdrop-filter:saturate(140%) blur(10px);
+      border-bottom:1px solid var(--line);
+    }
     .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px;}
     .logo{display:flex;align-items:center;gap:12px;font:800 20px Sora,Inter;}
     .logo svg{width:38px;height:38px;display:inline-block}
     .links{display:flex;gap:28px;align-items:center}
     .links a{color:var(--muted);font-weight:600}
     .links a:hover{color:var(--text)}
-    .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#0B0F1A;border:0;font-weight:800;padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease;}
+
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      color:#0B0F1A;border:0;font-weight:800;padding:14px 26px;border-radius:999px;
+      box-shadow:var(--shadow);transition:transform .18s ease;}
     .btn:hover{transform:translateY(-2px)}
     .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
-    .hero{position:relative;overflow:hidden;text-align:center;padding:120px 0 96px;background:radial-gradient(1200px 600px at 50% -10%, #1B2A57 0%, transparent 60%),radial-gradient(900px 600px at 50% 100%, #2D61FF33 0%, transparent 60%),linear-gradient(180deg,#0B0F1A 0%, #0F1526 100%);}
-    .hero:before{content:"";position:absolute;inset:auto -10% 0 -10%;height:320px;background:radial-gradient(60% 120% at 50% 0%, #2E68FF33 0%, transparent 60%);}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;text-align:center;padding:120px 0 96px;}
+    .hero:before{content:"";position:absolute;inset:auto -10% 0 -10%;height:320px;
+      background:radial-gradient(60% 120% at 50% 0%, #2E68FF33 0%, transparent 60%);}
     .title{font:800 58px Sora,Inter;line-height:1.02;letter-spacing:-.4px;margin:0 0 14px}
     .subtitle{font-size:20px;color:var(--muted);max-width:780px;margin:0 auto 26px}
     .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
     .chips{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
-    .chip{color:#CFE0FF;background:rgba(46,104,255,.09);border:1px solid rgba(120,155,255,.18);padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;}
+    .chip{color:#CFE0FF;background:rgba(46,104,255,.09);border:1px solid rgba(120,155,255,.18);
+      padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;}
     .trust{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE;}
     .trust .label{font:700 11px Inter;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
     .trust .logos{display:flex;gap:20px;font:800 14px Sora,Inter}
-    .demo{background:linear-gradient(180deg,#0F1526,#0B0F1A);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);height:420px;margin:40px auto 0;max-width:980px;display:flex;align-items:center;justify-content:center;color:#8EA1C7;font-weight:600;}
-    .section{padding:96px 0;background:linear-gradient(180deg,#0B0F1A 0%,#0F1526 100%);}
+    .demo{background:linear-gradient(180deg,#0C1224,#0B0F1A);border:1px solid var(--line);border-radius:22px;
+      box-shadow:var(--shadow);height:420px;margin:40px auto 0;max-width:980px;
+      display:flex;align-items:center;justify-content:center;color:#8EA1C7;font-weight:600;}
+
+    /* Sections */
+    .section{padding:96px 0;background:transparent}
     .section h2{font:800 36px Sora,Inter;text-align:center;margin:0 0 12px}
     .sub{color:var(--muted);text-align:center;max-width:720px;margin:0 auto 46px}
+
+    /* Cards */
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center;}
+    .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);
+      border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center;}
     .card h3{font:700 18px Sora,Inter;margin:0 0 6px}
     .card p{color:#A9B4CB}
+
+    /* Steps */
     .how{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-    .step{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center}
-    .n{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand1),var(--brand2));color:white;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px}
-    .pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
-    .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)}
+    .step{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);
+      border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center}
+    .n{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand1),var(--brand2));
+      color:white;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px}
+
+    /* Pricing */
+    .pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;align-items:stretch}
+    .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);
+      border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow);
+      display:flex;flex-direction:column;justify-content:space-between}
     .price.pop{outline:2px solid #2954FF}
     .money{font:800 42px Sora,Inter;margin:8px 0 6px}
+    .price p:last-of-type{margin-top:auto}
+    .price-btn{width:100%;text-align:center;min-height:44px;line-height:1.4;padding:14px 0;box-sizing:border-box}
+
     .toggle{display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 22px;color:var(--muted);font-weight:600}
     .switch{width:54px;height:30px;border-radius:999px;background:#1A2341;border:1px solid var(--line);position:relative;cursor:pointer}
     .knob{width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .18s ease}
     .switch.active .knob{left:27px}
-    .lead{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:20px;padding:44px;color:#E8EEFF;box-shadow:var(--shadow)}
+
+    /* Lead form */
+    .lead{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:20px;
+      padding:44px;color:#E8EEFF;box-shadow:var(--shadow)}
     .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:16px;margin-top:12px}
     .form input{background:#0B1225;color:#E6ECF9;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px}
     .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
+    /* Contact */
+    #contact {background:transparent}
+
     footer{padding:42px 0;border-top:1px solid var(--line);color:#97A3BD;text-align:center}
+
+    /* Responsive */
     @media (max-width:1024px){.grid3,.how,.pricing{grid-template-columns:1fr 1fr}}
-    @media (max-width:768px){.links{display:none}.nav{height:72px}.title{font-size:36px}.subtitle{font-size:16px}.section{padding:76px 0}.grid3,.how,.pricing{grid-template-columns:1fr}.form{grid-template-columns:1fr;gap:12px}.btn{width:100%}.demo{height:260px}}
+    @media (max-width:768px){
+      .links{display:none}.nav{height:72px}
+      .title{font-size:36px}.subtitle{font-size:16px}
+      .section{padding:76px 0}
+      .grid3,.how,.pricing{grid-template-columns:1fr}
+      .form{grid-template-columns:1fr;gap:12px}
+      .btn{width:100%}.demo{height:260px}
+    }
   </style>
 </head>
 <body>
@@ -68,22 +134,10 @@
   <header>
     <div class="container nav">
       <div class="logo">
-        <!-- Helmet on cog -->
         <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient>
-          </defs>
+          <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
           <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
-          <g fill="url(#tbBlue)">
-            <rect x="45" y="34" width="6" height="14" rx="3"/>
-            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
-            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
-            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
-            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
-            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
-            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
-            <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
-          </g>
+          <g fill="url(#tbBlue)"><rect x="45" y="34" width="6" height="14" rx="3"/><rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/><rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/><rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/><rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/><rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/><rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/><rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/></g>
           <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
           <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
           <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
@@ -92,11 +146,10 @@
         <span>TradieBrain</span>
       </div>
       <nav class="links" aria-label="Primary">
-        <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a>
         <a class="btn" href="#lead">Start Free Trial</a>
       </nav>
+      <button class="btn ghost" style="display:none">Menu</button>
     </div>
   </header>
 
@@ -105,20 +158,10 @@
     <div class="container">
       <h1 class="title">Notes to Quotes in Seconds.</h1>
       <p class="subtitle">TradieBrain turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
-      <div class="cta-row">
-        <a class="btn" href="#lead">Start Free Trial</a>
-        <a class="btn ghost" href="#pricing">See Pricing</a>
-      </div>
-      <div class="chips">
-        <span class="chip">Save hours every week</span>
-        <span class="chip">Reclaim your evenings</span>
-        <span class="chip">Instant quotes, happy clients</span>
-        <span class="chip">Win more jobs</span>
-      </div>
-      <div class="trust" aria-label="Works with">
-        <span class="label">Works with</span>
-        <div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div>
-      </div>
+      <div class="cta-row"><a class="btn" href="#lead">Start Free Trial</a><a class="btn ghost" href="#pricing">See Pricing</a></div>
+      <div class="chips"><span class="chip">Save hours every week</span><span class="chip">Reclaim your evenings</span><span class="chip">Instant quotes, happy clients</span><span class="chip">Win more jobs</span></div>
+      <div class="trust" aria-label="Works with"><span class="label">Works with</span><div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div></div>
+      <div class="demo">Demo video / screenshot placeholder</div>
     </div>
   </section>
 
@@ -154,36 +197,12 @@
     <div class="container">
       <h2>Simple pricing</h2>
       <p class="sub">Start free. Cancel anytime. No hidden fees.</p>
-      <div class="toggle">
-        <span>Monthly</span>
-        <div class="switch" id="planSwitch" role="switch" aria-checked="false"><div class="knob"></div></div>
-        <span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span>
-      </div>
+      <div class="toggle"><span>Monthly</span><div class="switch" id="planSwitch" role="switch" aria-checked="false"><div class="knob"></div></div><span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span></div>
       <div class="pricing">
-        <div class="price">
-          <h3>Free Trial</h3>
-          <div class="money" data-month="7 Days" data-annual="7 Days">7 Days</div>
-          <p>Full access. Get your first quotes out today.<br>No card required.</p>
-          <p><a class="btn price-btn" href="#lead">Start Free Trial</a></p>
-        </div>
-        <div class="price pop">
-          <h3>Starter</h3>
-          <div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div>
-          <p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p>
-          <p><a class="btn price-btn" href="#lead">Choose Starter</a></p>
-        </div>
-        <div class="price">
-          <h3>Pro</h3>
-          <div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div>
-          <p>10-25 quotes / month<br>Priority support<br>Advanced automations</p>
-          <p><a class="btn price-btn" href="#lead">Choose Pro</a></p>
-        </div>
-        <div class="price">
-          <h3>Unlimited</h3>
-          <div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div>
-          <p>25+ quotes / month<br>Priority support<br>Advanced automations<br><strong>Early access to new products</strong></p>
-          <p><a class="btn price-btn" href="#lead">Choose Unlimited</a></p>
-        </div>
+        <div class="price"><h3>Free Trial</h3><div class="money" data-month="7 Days" data-annual="7 Days">7 Days</div><p>Full access. Get your first quotes out today.<br>No card required.</p><p><a class="btn price-btn" href="#lead">Start Free Trial</a></p></div>
+        <div class="price pop"><h3>Starter</h3><div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div><p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p><p><a class="btn price-btn" href="#lead">Choose Starter</a></p></div>
+        <div class="price"><h3>Pro</h3><div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div><p>10-25 quotes / month<br>Priority support<br>Advanced automations</p><p><a class="btn price-btn" href="#lead">Choose Pro</a></p></div>
+        <div class="price"><h3>Unlimited</h3><div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div><p>25+ quotes / month<br>Priority support<br>Advanced automations<br><strong>Early access to new products</strong></p><p><a class="btn price-btn" href="#lead">Choose Unlimited</a></p></div>
       </div>
     </div>
   </section>
@@ -207,8 +226,7 @@
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
         </form>
         <div id="thankYou" style="display:none;text-align:center;margin-top:20px;font-size:18px;color:#CFE0FF;">
-          Thanks! We look forward to working with you!<br>
-          You will receive a text shortly to get you onboarded.
+          Thanks! We look forward to working with you!<br>You will receive a text shortly to get you onboarded.
         </div>
       </div>
     </div>
@@ -219,9 +237,7 @@
     <div class="container">
       <h2 style="text-align:center;font-family:Sora;margin-bottom:12px;">Get in Touch</h2>
       <p class="sub" style="margin-bottom:24px;color:#AFC3FF">Have questions? We’d love to hear from you.</p>
-      <div style="text-align:center;">
-        <a href="mailto:info@tradiebrain.com" class="btn">Email Us at info@tradiebrain.com</a>
-      </div>
+      <div style="text-align:center;"><a href="mailto:info@tradiebrain.com" class="btn">Email Us at info@tradiebrain.com</a></div>
     </div>
   </section>
 
@@ -244,16 +260,10 @@
       e.preventDefault();
       const data = new FormData(form);
       try {
-        await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
-          method: "POST",
-          body: data
-        });
-        form.reset();
-        form.style.display = "none";
+        await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", { method: "POST", body: data });
+        form.reset(); form.style.display = "none";
         document.getElementById('thankYou').style.display = "block";
-      } catch (err) {
-        alert("Something went wrong, please try again.");
-      }
+      } catch (err) { alert("Something went wrong, please try again."); }
     });
   </script>
 </body>
