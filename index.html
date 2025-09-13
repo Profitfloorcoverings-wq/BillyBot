@@ -149,7 +149,7 @@
     </div>
   </section>
 
- <!-- Pricing -->
+<!-- Pricing -->
 <section id="pricing" class="section">
   <div class="container">
     <h2>Simple pricing</h2>
@@ -164,25 +164,25 @@
         <h3>Free Trial</h3>
         <div class="money" data-month="7 Days" data-annual="7 Days">7 Days</div>
         <p>Full access. Get your first quotes out today.<br>No card required.</p>
-        <p><a class="btn" href="#lead">Start Free Trial</a></p>
+        <p><a class="btn price-btn" href="#lead">Start Free Trial</a></p>
       </div>
       <div class="price pop">
         <h3>Starter</h3>
         <div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div>
         <p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p>
-        <p><a class="btn" href="#lead">Choose Starter</a></p>
+        <p><a class="btn price-btn" href="#lead">Choose Starter</a></p>
       </div>
       <div class="price">
         <h3>Pro</h3>
         <div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div>
         <p>10-25 quotes / month<br>Priority support<br>Advanced automations</p>
-        <p><a class="btn" href="#lead">Choose Pro</a></p>
+        <p><a class="btn price-btn" href="#lead">Choose Pro</a></p>
       </div>
       <div class="price">
         <h3>Unlimited</h3>
         <div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div>
         <p>25+ quotes / month<br>Priority support<br>Advanced automations<br><strong>Early access to new products</strong></p>
-        <p><a class="btn" href="#lead">Choose Unlimited</a></p>
+        <p><a class="btn price-btn" href="#lead">Choose Unlimited</a></p>
       </div>
     </div>
   </div>
@@ -207,6 +207,17 @@
   margin-top: auto;
 }
 
+/* Ensure all pricing buttons match size */
+.price-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  min-height: 44px; /* consistent button height */
+  line-height: 1.4;
+  padding: 14px 0; /* force same padding */
+  box-sizing: border-box;
+}
+
 /* Tablet fallback */
 @media (max-width:1024px) {
   .pricing {
@@ -221,7 +232,6 @@
   }
 }
 </style>
-
 
   <!-- Lead capture -->
   <section id="lead" class="section">
