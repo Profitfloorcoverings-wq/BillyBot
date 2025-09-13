@@ -60,7 +60,7 @@
     .btn:hover{transform:translateY(-2px)}
     .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 
-    /* Hero (Lovable-style gradient) */
+    /* Hero */
     .hero{
       position:relative;overflow:hidden;text-align:center;
       padding:120px 0 96px;
@@ -124,18 +124,6 @@
     }
     .price.pop{outline:2px solid #2954FF}
     .money{font:800 42px Sora,Inter;margin:8px 0 6px}
-    .toggle{
-      display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 22px;
-      color:var(--muted);font-weight:600
-    }
-    .switch{
-      width:54px;height:30px;border-radius:999px;background:#1A2341;border:1px solid var(--line);
-      position:relative;cursor:pointer
-    }
-    .knob{
-      width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .18s ease
-    }
-    .switch.active .knob{left:27px}
 
     /* Lead form */
     .lead{
@@ -143,7 +131,7 @@
       padding:44px;color:#E8EEFF;box-shadow:var(--shadow)
     }
     .form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
-    .form input,.form select{
+    .form input{
       background:#0B1225;color:#E6EEFF;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px
     }
     .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -159,7 +147,71 @@
 </head>
 <body>
 
-  <!-- Header + Hero etc. ... (unchanged content above) -->
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <span>TradieBrain</span>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a class="btn" href="#lead">Start Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="title">Notes to Quotes in Seconds.</h1>
+      <p class="subtitle">
+        TradieBrain turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — Sage, QuickBooks or Xero.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="#lead">Start Free Trial</a>
+        <a class="btn ghost" href="#pricing">See Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2>Why trades love TradieBrain</h2>
+      <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night quoting.</p>
+      <div class="grid3">
+        <div class="card"><h3>Save hours weekly</h3><p>Quotes go out in minutes with zero hassle.</p></div>
+        <div class="card"><h3>Never lose money</h3><p>Accurate pricing every time using your supplier lists.</p></div>
+        <div class="card"><h3>Works the way you do</h3><p>Send phone notes, photos of job sheets, or voice notes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section" style="background:linear-gradient(180deg,#0B0F1A,#0F1526);">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="how">
+        <div class="step"><div class="n">1</div><h3>Send job info</h3><p>Photos of notes or voice memo.</p></div>
+        <div class="step"><div class="n">2</div><h3>AI builds the quote</h3><p>Pricing inside Sage, QuickBooks or Xero.</p></div>
+        <div class="step"><div class="n">3</div><h3>Send in seconds</h3><p>Deliver to your customer with no effort.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2>Simple pricing</h2>
+      <div class="pricing">
+        <div class="price"><h3>Free Trial</h3><div class="money">7 Days</div><p>No card required.</p></div>
+        <div class="price pop"><h3>Starter</h3><div class="money">£99/mo</div><p>Up to 20 quotes / month.</p></div>
+        <div class="price"><h3>Pro</h3><div class="money">£199/mo</div><p>25+ quotes / month.</p></div>
+      </div>
+    </div>
+  </section>
 
   <!-- Lead capture -->
   <section id="lead" class="section">
@@ -168,8 +220,8 @@
         <h2 style="text-align:center;margin:0 0 8px;font-family:Sora">Start your free trial</h2>
         <p class="sub" style="margin-bottom:18px;color:#AFC3FF">No credit card required.</p>
 
-        <!-- Extended form with business + address fields -->
-        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- Form posts directly to n8n -->
+        <form class="form" action="https://tradiebrain.app.n8n.cloud/form-test/7344623e-6384-4b24-9fe4-e73b09a29578" method="POST">
           <input name="business_name" placeholder="Business Name" required>
           <input name="contact_name" placeholder="Contact Name" required>
           <input type="tel" name="phone" placeholder="Phone" required>
@@ -178,16 +230,7 @@
           <input name="address_line2" placeholder="Address Line 2">
           <input name="city" placeholder="City" required>
           <input name="postcode" placeholder="Postcode" required>
-          <select name="trade" required>
-            <option value="">Your trade</option>
-            <option value="flooring">Flooring</option>
-            <option value="plumbing">Plumbing</option>
-            <option value="electrical">Electrical</option>
-            <option value="carpentry">Carpentry</option>
-            <option value="other">Other</option>
-          </select>
           <button class="btn" type="submit">Start Free Trial</button>
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
         </form>
       </div>
     </div>
