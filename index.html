@@ -150,23 +150,66 @@
   </section>
 
   <!-- Pricing -->
-  <section id="pricing" class="section">
-    <div class="container">
-      <h2>Simple pricing</h2>
-      <p class="sub">Start free. Cancel anytime. No hidden fees.</p>
-      <div class="toggle">
-        <span>Monthly</span>
-        <div class="switch" id="planSwitch" role="switch" aria-checked="false"><div class="knob"></div></div>
-        <span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span>
+<section id="pricing" class="section">
+  <div class="container">
+    <h2>Simple pricing</h2>
+    <p class="sub">Start free. Cancel anytime. No hidden fees.</p>
+    <div class="toggle">
+      <span>Monthly</span>
+      <div class="switch" id="planSwitch" role="switch" aria-checked="false"><div class="knob"></div></div>
+      <span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span>
+    </div>
+    <div class="pricing">
+      <div class="price">
+        <h3>Free Trial</h3>
+        <div class="money" data-month="7 Days" data-annual="7 Days">7 Days</div>
+        <p>Full access. Get your first quotes out today.<br>No card required.</p>
+        <p><a class="btn" href="#lead">Start Free Trial</a></p>
       </div>
-      <div class="pricing">
-        <div class="price"><h3>Free Trial</h3><div class="money" data-month="7 Days" data-annual="7 Days">7 Days</div><p>Full access. Get your first quotes out today.<br>No card required.</p><p><a class="btn" href="#lead">Start Free Trial</a></p></div>
-        <div class="price pop"><h3>Starter</h3><div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div><p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p><p><a class="btn" href="#lead">Choose Starter</a></p></div>
-        <div class="price"><h3>Pro</h3><div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div><p>10-25 quotes / month<br>Priority support<br>Advanced automations</p><p><a class="btn" href="#lead">Choose Pro</a></p></div>
-        <div class="price"><h3>Unlimited</h3><div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div><p>25+ quotes / month<br>Priority support<br>Advanced automations</p><p><a class="btn" href="#lead">Choose Unlimited</a></p></div>
+      <div class="price pop">
+        <h3>Starter</h3>
+        <div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div>
+        <p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p>
+        <p><a class="btn" href="#lead">Choose Starter</a></p>
+      </div>
+      <div class="price">
+        <h3>Pro</h3>
+        <div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div>
+        <p>10-25 quotes / month<br>Priority support<br>Advanced automations</p>
+        <p><a class="btn" href="#lead">Choose Pro</a></p>
+      </div>
+      <div class="price">
+        <h3>Unlimited</h3>
+        <div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div>
+        <p>25+ quotes / month<br>Priority support<br>Advanced automations<br><strong>First user access to new products</strong></p>
+        <p><a class="btn" href="#lead">Choose Unlimited</a></p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+/* Force 4 columns on desktop */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+/* Tablet fallback */
+@media (max-width:1024px) {
+  .pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile fallback */
+@media (max-width:768px) {
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
   <!-- Lead capture -->
   <section id="lead" class="section">
