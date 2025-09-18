@@ -162,7 +162,7 @@
     <div class="container">
       <h1 class="title">Notes to Quotes in Seconds.</h1>
       <p class="subtitle">TradieBrain turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
-      <div class="cta-row"><a class="btn ghost" href="#pricing">See Pricing</a></div>
+    <div class="cta-row"><a class="btn ghost" href="#pricing">See Pricing</a></div>
       <div class="chips"><span class="chip">Save hours every week</span><span class="chip">Reclaim your evenings</span><span class="chip">Instant quotes, happy clients</span><span class="chip">Win more jobs</span></div>
       <div class="trust" aria-label="Works with"><span class="label">Works with</span><div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div></div>
       <div class="demo">Demo video / screenshot placeholder</div>
@@ -280,6 +280,9 @@
         const active = sw.classList.toggle('active');
         sw.setAttribute('aria-checked', String(active));
         monies.forEach(el => { el.textContent = el.dataset[ active ? 'annual' : 'month' ]; });
+        // If the modal is open, keep plan_billing in sync
+        const modalOpen = document.getElementById('trialModal').classList.contains('open');
+        if (modalOpen) document.getElementById('plan_billing').value = currentBilling();
       });
     }
 
@@ -312,7 +315,7 @@
       } catch (err) {
         alert("Something went wrong, please try again.");
       } finally {
-        // Keep modal open to show the thank-you message
+        // keep modal open to show thank-you
       }
     });
   </script>
