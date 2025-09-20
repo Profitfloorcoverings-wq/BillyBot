@@ -48,10 +48,10 @@
 
       try {
         await fetch("https://tradiebrain.app.n8n.cloud/webhook/stripeOnboard", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ session_id: sessionId })
-        });
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ session_id: sessionId })
+});
       } catch (err) {
         msg.innerText = "Something went wrong setting up your account. Please contact support.";
       }
