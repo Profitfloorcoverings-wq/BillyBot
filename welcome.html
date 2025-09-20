@@ -22,23 +22,29 @@
       max-width: 500px;
       box-shadow: 0 20px 60px rgba(0,0,0,.35);
     }
+    h1 { margin-bottom: 12px; }
+    p { color: #AFC3FF; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>🎉 Welcome to TradieBrain!</h1>
-    <p id="message">We’re setting up your account now.<br>
-    You’ll get a text in the next few minutes with your onboarding steps.</p>
+    <p id="message">Loading your account setup...</p>
   </div>
 
   <script>
     async function startOnboarding() {
       const params = new URLSearchParams(window.location.search);
       const sessionId = params.get("session_id");
+
+      const msg = document.getElementById("message");
+
       if (!sessionId) {
-        document.getElementById("message").innerText = "Missing session ID.";
+        msg.innerText = "Missing session ID.";
         return;
       }
+
+      msg.innerText = "Thanks for joining TradieBrain! 🚀\nYou'll receive a text shortly to get you onboarded.";
 
       try {
         await fetch("https://tradiebrain.app.n8n.cloud/webhook/stripeOnboard", {
@@ -46,10 +52,8 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ session_id: sessionId })
         });
-        // You could also update the message after success if you want
       } catch (err) {
-        document.getElementById("message").innerText =
-          "Something went wrong setting up your account. Please contact support.";
+        msg.innerText = "Something went wrong setting up your account. Please contact support.";
       }
     }
 
