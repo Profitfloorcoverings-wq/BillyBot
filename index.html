@@ -288,6 +288,32 @@
     closeModal.addEventListener('click', () => modal.classList.remove('open'));
     modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
 
+    // --- Redirect helpers (fix) ---
+    function normalizeRedirect(raw) {
+      if (!raw) return '';
+      let u = String(raw).trim();
+      // Remove accidental leading "="
+      u = u.replace(/^=\s*/, '');
+      // If it looks like ".../=https://...", strip everything before the absolute URL
+      const idx = u.indexOf('http');
+      if (!/^https?:\/\//i.test(u) && idx > -1) u = u.slice(idx);
+      return u;
+    }
+    function go(url) {
+      try {
+        // Use URL() to validate; absolute URLs pass through unchanged
+        const target = new URL(url, window.location.origin).href;
+        // If the string already started with http(s), URL() keeps it absolute.
+        // If it was relative, this will resolve to our origin (which we don't want),
+        // so we only navigate when it is clearly absolute:
+        if (/^https?:\/\//i.test(url)) {
+          window.location.replace(target);
+          return true;
+        }
+      } catch(e) {}
+      return false;
+    }
+
     // Form submit
     const form = document.getElementById('onboardForm');
     form.addEventListener('submit', async (e) => {
@@ -296,14 +322,30 @@
       try {
         const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
           method: "POST",
-          body: data
+          body: data,
+          mode: "cors",
+          headers: { "Accept": "application/json" }
         });
-        const result = await res.json();
-        if (result.url) window.location.href = result.url;
-        else {
-          form.reset();
-          document.getElementById('thankYou').style.display = "block";
+
+        // CASE 1: Your webhook returns JSON { url: "https://checkout..." }
+        let result = null;
+        const ct = res.headers.get('content-type') || '';
+        if (ct.includes('application/json')) {
+          result = await res.json().catch(() => null);
         }
+
+        const fromJson = normalizeRedirect(result && result.url);
+        if (fromJson && go(fromJson)) return;
+
+        // CASE 2: Your webhook responded with an HTTP redirect (302/303)
+        if (res.redirected && res.url) {
+          const redirected = normalizeRedirect(res.url);
+          if (go(redirected)) return;
+        }
+
+        // Fallback: show thank-you (same behavior you had)
+        form.reset();
+        document.getElementById('thankYou').style.display = "block";
       } catch (err) {
         alert("Something went wrong, please try again.");
       } finally {
