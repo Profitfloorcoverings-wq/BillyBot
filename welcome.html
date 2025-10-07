@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to TradieBrain</title>
+  <title>Welcome to BillyBot</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -28,7 +28,7 @@
 </head>
 <body>
   <div class="card">
-    <h1>🎉 Welcome to TradieBrain!</h1>
+    <h1>🎉 Welcome to BillyBot!</h1>
     <p id="message">Loading your account setup...</p>
   </div>
 
@@ -44,10 +44,10 @@
         return;
       }
 
-      msg.innerText = "Thanks for joining TradieBrain! 🚀\nYou'll receive a text shortly to get you onboarded.";
+      msg.innerText = "Thanks for joining Billybot! 🚀\nYou'll receive a text shortly to get you onboarded.";
 
       try {
-        await fetch("https://tradiebrain.app.n8n.cloud/webhook/stripeOnboard", {
+        await fetch("https://billybot.app.n8n.cloud/webhook/stripeOnboard", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ session_id: sessionId })
