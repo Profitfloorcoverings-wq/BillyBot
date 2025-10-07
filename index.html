@@ -39,7 +39,7 @@
   .hero{text-align:center;padding:120px 0 80px}
   .title{font:800 58px Sora,Inter;line-height:1.02;margin:0 0 14px}
   .subtitle{font-size:20px;color:var(--muted);max-width:780px;margin:0 auto 26px}
-  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  .cta-row{display:flex;justify-content:center;margin-top:26px}
   .chips{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
   .chip{color:#CFE0FF;background:rgba(46,104,255,.09);border:1px solid rgba(120,155,255,.18);padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;}
   .trust{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE}
@@ -60,9 +60,8 @@
   /* Pricing */
   .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
   .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)}
-  .price.pop{outline:2px solid #2954FF}
+  .price.pop{outline:2px solid #2954FF;box-shadow:0 0 20px rgba(41,84,255,.5);}
   .money{font:800 42px Sora,Inter;margin:8px 0 6px}
-  .price p:last-of-type{margin-top:auto}
   .price-btn{width:100%;text-align:center;min-height:44px;line-height:1.4;padding:14px 0}
 
   /* Modal */
@@ -97,7 +96,7 @@
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
-      <a class="btn" href="#pricing">Start Free Trial</a>
+      <a class="btn" href="#pricing">See Pricing</a>
     </nav>
   </div>
 </header>
@@ -106,6 +105,7 @@
   <div class="container">
     <h1 class="title">Notes to Quotes in Seconds.</h1>
     <p class="subtitle">BillyBot<sup>™</sup> turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
+    <div class="cta-row"><a class="btn open-form" data-tier="starter">Start Free Trial</a></div>
     <div class="chips">
       <span class="chip">Save hours every week</span>
       <span class="chip">Reclaim your evenings</span>
@@ -148,13 +148,13 @@
     <h2>Simple pricing</h2>
     <p class="sub">7-day free trial on every plan. Cancel anytime. No hidden fees.</p>
     <div class="pricing">
-      <div class="price pop">
+      <div class="price">
         <h3>Starter</h3>
         <div class="money">£49/mo</div>
         <p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p>
         <p><button class="btn open-form" data-tier="starter">Start 7-day trial</button></p>
       </div>
-      <div class="price">
+      <div class="price pop">
         <h3>Pro</h3>
         <div class="money">£79/mo</div>
         <p>10-25 quotes / month<br>Priority support<br>Advanced automations</p>
@@ -193,15 +193,24 @@
   </div>
 </div>
 
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 style="text-align:center;font-family:Sora;margin-bottom:12px;">Get in Touch</h2>
+    <p class="sub" style="margin-bottom:24px;color:#AFC3FF">Have questions? We’d love to hear from you.</p>
+    <div style="text-align:center;">
+      <a href="mailto:info@billybot.ai" class="btn">Email Us at info@billybot.ai</a>
+    </div>
+  </div>
+</section>
+
 <footer>© <span id="year"></span> BillyBot<sup>™</sup>. All rights reserved.</footer>
 
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
-
 const modal=document.getElementById('trialModal');
 const closeModal=document.getElementById('closeModal');
 const planTierInput=document.getElementById('plan_tier');
-
 document.querySelectorAll('.open-form').forEach(btn=>{
   btn.addEventListener('click',()=>{
     planTierInput.value=btn.dataset.tier;
@@ -210,7 +219,6 @@ document.querySelectorAll('.open-form').forEach(btn=>{
 });
 closeModal.addEventListener('click',()=>modal.classList.remove('open'));
 modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
-
 const form=document.getElementById('onboardForm');
 form.addEventListener('submit',async e=>{
   e.preventDefault();
