@@ -11,27 +11,31 @@
   :root {
     --brand1:#2563EB; --brand2:#3B82F6;
     --accent1:#F97316; --accent2:#FB923C;
-    --bg:#0B0F1A; --card:#0F172A;
+    --bg:#0B0F1A; --bg2:#0F1526; --card:#0F172A;
     --text:#E6ECF9; --muted:#98A3B8;
     --line:rgba(255,255,255,.08);
-    --shadow:0 20px 60px rgba(0,0,0,.35);
+    --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.35);
+    --max:1120px;
   }
   *{box-sizing:border-box}
   html,body{margin:0;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0B0F1A 0%,#0F1526 40%,#0C1221 80%,#0B0F1A 100%);background-attachment:fixed}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
-  .container{max-width:1120px;margin:0 auto;padding:0 24px}
+  .container{max-width:var(--max);margin:0 auto;padding:0 24px}
 
+  /* Header */
   header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
   .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
   .logo{display:flex;align-items:center;gap:12px;font:800 20px Sora,Inter}
-  .logo sup{font-size:10px;position:relative;top:-6px;opacity:.8}
+  .logo sup{font-size:10px;margin-left:2px;position:relative;top:-6px;opacity:.8}
   .links{display:flex;gap:28px;align-items:center}
   .links a{color:var(--muted);font-weight:600}
   .links a:hover{color:var(--text)}
-  .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#0B0F1A;font-weight:800;padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#0B0F1A;border:0;font-weight:800;padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease}
   .btn:hover{transform:translateY(-2px)}
+  .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 
+  /* Hero */
   .hero{text-align:center;padding:120px 0 80px}
   .title{font:800 58px Sora,Inter;line-height:1.02;margin:0 0 14px}
   .subtitle{font-size:20px;color:var(--muted);max-width:780px;margin:0 auto 26px}
@@ -40,25 +44,25 @@
   .chip{color:#CFE0FF;background:rgba(46,104,255,.09);border:1px solid rgba(120,155,255,.18);padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;}
   .trust{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE}
   .trust .label{font:700 11px Inter;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+  .trust .logos{display:flex;gap:20px;font:800 14px Sora,Inter}
 
-  .section{padding:96px 0}
+  /* Sections */
+  .section{padding:96px 0;background:transparent}
   .section h2{font:800 36px Sora,Inter;text-align:center;margin:0 0 12px}
   .sub{color:var(--muted);text-align:center;max-width:720px;margin:0 auto 46px}
+
+  /* Cards */
   .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
-  .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;box-shadow:var(--shadow)}
+  .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center}
   .card h3{font:700 18px Sora,Inter;margin:0 0 6px}
   .card p{color:#A9B4CB}
 
   /* Pricing */
   .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
-  .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;box-shadow:var(--shadow)}
+  .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)}
   .price.pop{outline:2px solid #2954FF;box-shadow:0 0 20px rgba(41,84,255,.5);}
   .money{font:800 42px Sora,Inter;margin:8px 0 6px}
-  .toggle{display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 30px;color:#AFC3FF;font-weight:600}
-  .switch{width:54px;height:30px;border-radius:999px;background:linear-gradient(90deg,#2563EB,#3B82F6);border:1px solid var(--line);position:relative;cursor:pointer;transition:all .3s ease}
-  .knob{width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .25s ease}
-  .switch.active .knob{left:27px}
-  .switch.active{background:linear-gradient(90deg,#FB923C,#F97316)}
+  .price-btn{width:100%;text-align:center;min-height:44px;line-height:1.4;padding:14px 0}
 
   /* Modal */
   .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(6,10,20,.6);z-index:200}
@@ -67,9 +71,17 @@
   .form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:12px}
   .form input{background:#0B1225;color:#E6ECF9;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px;width:100%}
   .x{position:absolute;top:14px;right:18px;background:transparent;border:1px solid var(--line);color:#D3DEFF;border-radius:999px;padding:8px 12px;cursor:pointer}
+  .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 
+  /* Footer */
   footer{padding:42px 0;border-top:1px solid var(--line);color:#97A3BD;text-align:center;font-size:14px}
-  @media(max-width:768px){.links{display:none}.title{font-size:36px}.subtitle{font-size:16px}.section{padding:76px 0}.btn{width:100%}}
+
+  @media(max-width:768px){
+    .links{display:none}
+    .title{font-size:36px}.subtitle{font-size:16px}
+    .section{padding:76px 0}
+    .btn{width:100%}
+  }
 </style>
 </head>
 <body>
@@ -81,7 +93,9 @@
       <span>BillyBot<sup>™</sup></span>
     </div>
     <nav class="links">
-      <a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
       <a class="btn" href="#pricing">See Pricing</a>
     </nav>
   </div>
@@ -90,10 +104,18 @@
 <section class="hero">
   <div class="container">
     <h1 class="title">Notes to Quotes in Seconds.</h1>
-    <p class="subtitle">BillyBot<sup>™</sup> turns messy job notes into <strong>perfect quotes</strong> inside <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
+    <p class="subtitle">BillyBot<sup>™</sup> turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
     <div class="cta-row"><a class="btn open-form" data-tier="starter">Start Free Trial</a></div>
-    <div class="chips"><span class="chip">Save hours every week</span><span class="chip">Reclaim your evenings</span><span class="chip">Instant quotes, happy clients</span><span class="chip">Win more jobs</span></div>
-    <div class="trust"><span class="label">Works with</span><div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div></div>
+    <div class="chips">
+      <span class="chip">Save hours every week</span>
+      <span class="chip">Reclaim your evenings</span>
+      <span class="chip">Instant quotes, happy clients</span>
+      <span class="chip">Win more jobs</span>
+    </div>
+    <div class="trust" aria-label="Works with">
+      <span class="label">Works with</span>
+      <div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div>
+    </div>
   </div>
 </section>
 
@@ -125,17 +147,25 @@
   <div class="container">
     <h2>Simple pricing</h2>
     <p class="sub">7-day free trial on every plan. Cancel anytime. No hidden fees.</p>
-
-    <div class="toggle">
-      <span>Monthly</span>
-      <div id="planSwitch" class="switch"><div class="knob"></div></div>
-      <span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span>
-    </div>
-
     <div class="pricing">
-      <div class="price"><h3>Starter</h3><div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div><p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p><p><button class="btn open-form" data-tier="starter">Start 7-day trial</button></p></div>
-      <div class="price pop"><h3>Pro</h3><div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div><p>10-25 quotes / month<br>Priority support<br>Advanced automations</p><p><button class="btn open-form" data-tier="pro">Start 7-day trial</button></p></div>
-      <div class="price"><h3>Unlimited</h3><div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div><p>25+ quotes / month<br>Advanced automations<br>Early access to new features</p><p><button class="btn open-form" data-tier="unlimited">Start 7-day trial</button></p></div>
+      <div class="price">
+        <h3>Starter</h3>
+        <div class="money">£49/mo</div>
+        <p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p>
+        <p><button class="btn open-form" data-tier="starter">Start 7-day trial</button></p>
+      </div>
+      <div class="price pop">
+        <h3>Pro</h3>
+        <div class="money">£79/mo</div>
+        <p>10-25 quotes / month<br>Priority support<br>Advanced automations</p>
+        <p><button class="btn open-form" data-tier="pro">Start 7-day trial</button></p>
+      </div>
+      <div class="price">
+        <h3>Unlimited</h3>
+        <div class="money">£99/mo</div>
+        <p>25+ quotes / month<br>Advanced automations<br>Early access to new features</p>
+        <p><button class="btn open-form" data-tier="unlimited">Start 7-day trial</button></p>
+      </div>
     </div>
   </div>
 </section>
@@ -147,25 +177,23 @@
     <h2 style="text-align:center;margin:0 0 8px;font-family:Sora">Start your 7-day free trial</h2>
     <p class="sub" style="margin-bottom:18px;color:#AFC3FF">No credit card required.</p>
     <form id="onboardForm" class="form">
-  <!-- Hidden fields expected by n8n -->
-  <input type="hidden" name="stripe_plan_tier" id="stripe_plan_tier" value="">
-  <input type="hidden" name="stripe_plan_billing" id="stripe_plan_billing" value="">
-
-  <input name="business_name" placeholder="Business Name" required>
-  <input name="contact_name" placeholder="Contact Name" required>
-  <input type="tel" name="phone" placeholder="Phone" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input name="address_line1" placeholder="Address Line 1" required>
-  <input name="address_line2" placeholder="Address Line 2">
-  <input name="city" placeholder="City" required>
-  <input name="postcode" placeholder="Postcode" required>
-  <button class="btn" type="submit">Start 7-day trial</button>
-  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
-</form>
+      <input type="hidden" name="plan_tier" id="plan_tier" value="">
+      <input name="business_name" placeholder="Business Name" required>
+      <input name="contact_name" placeholder="Contact Name" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input name="address_line1" placeholder="Address Line 1" required>
+      <input name="address_line2" placeholder="Address Line 2">
+      <input name="city" placeholder="City" required>
+      <input name="postcode" placeholder="Postcode" required>
+      <button class="btn" type="submit">Start 7-day trial</button>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
+    </form>
     <div id="thankYou" style="display:none;text-align:center;margin-top:20px;font-size:18px;color:#CFE0FF;">Thanks! You’ll receive a text shortly to begin onboarding.</div>
   </div>
 </div>
 
+<!-- Contact -->
 <section id="contact" class="section">
   <div class="container">
     <h2 style="text-align:center;font-family:Sora;margin-bottom:12px;">Get in Touch</h2>
@@ -179,59 +207,27 @@
 <footer>© <span id="year"></span> BillyBot<sup>™</sup>. All rights reserved.</footer>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const form = document.getElementById('onboardForm');
-  const tierInput = document.getElementById('stripe_plan_tier');
-  const billingInput = document.getElementById('stripe_plan_billing');
-  const modal = document.getElementById('trialModal');
-  const closeModal = document.getElementById('closeModal');
-  const switchEl = document.getElementById('planSwitch');
-
-  function currentBilling() {
-    return switchEl && switchEl.classList.contains('active') ? 'annual' : 'monthly';
-  }
-
-  // Toggle monthly/annual
-  if (switchEl) {
-    switchEl.addEventListener('click', () => {
-      const active = switchEl.classList.toggle('active');
-      switchEl.setAttribute('aria-checked', String(active));
-      billingInput.value = currentBilling();
-    });
-  }
-
-  // Handle plan button click
-  document.querySelectorAll('.open-form').forEach(btn => {
-    btn.addEventListener('click', () => {
-      tierInput.value = btn.getAttribute('data-tier');
-      billingInput.value = currentBilling();
-      modal.classList.add('open');
-    });
+document.getElementById('year').textContent=new Date().getFullYear();
+const modal=document.getElementById('trialModal');
+const closeModal=document.getElementById('closeModal');
+const planTierInput=document.getElementById('plan_tier');
+document.querySelectorAll('.open-form').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    planTierInput.value=btn.dataset.tier;
+    modal.classList.add('open');
   });
-
-  closeModal.addEventListener('click', () => modal.classList.remove('open'));
-  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
-
-  // Submit to n8n webhook
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const data = new FormData(form);
-
-    try {
-      const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
-        method: "POST",
-        body: data
-      });
-
-      form.reset();
-      document.getElementById('thankYou').style.display = "block";
-    } catch (err) {
-      alert("Something went wrong, please try again.");
-      console.error(err);
-    }
-  });
+});
+closeModal.addEventListener('click',()=>modal.classList.remove('open'));
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+const form=document.getElementById('onboardForm');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const data=new FormData(form);
+  try{
+    const res=await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding",{method:"POST",body:data});
+    form.reset();
+    document.getElementById('thankYou').style.display="block";
+  }catch(err){alert("Something went wrong, please try again.");}
 });
 </script>
 
