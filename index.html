@@ -11,31 +11,27 @@
   :root {
     --brand1:#2563EB; --brand2:#3B82F6;
     --accent1:#F97316; --accent2:#FB923C;
-    --bg:#0B0F1A; --bg2:#0F1526; --card:#0F172A;
+    --bg:#0B0F1A; --card:#0F172A;
     --text:#E6ECF9; --muted:#98A3B8;
     --line:rgba(255,255,255,.08);
-    --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.35);
-    --max:1120px;
+    --shadow:0 20px 60px rgba(0,0,0,.35);
   }
   *{box-sizing:border-box}
   html,body{margin:0;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0B0F1A 0%,#0F1526 40%,#0C1221 80%,#0B0F1A 100%);background-attachment:fixed}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
-  .container{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .container{max-width:1120px;margin:0 auto;padding:0 24px}
 
-  /* Header */
   header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
   .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
   .logo{display:flex;align-items:center;gap:12px;font:800 20px Sora,Inter}
-  .logo sup{font-size:10px;margin-left:2px;position:relative;top:-6px;opacity:.8}
+  .logo sup{font-size:10px;position:relative;top:-6px;opacity:.8}
   .links{display:flex;gap:28px;align-items:center}
   .links a{color:var(--muted);font-weight:600}
   .links a:hover{color:var(--text)}
-  .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#0B0F1A;border:0;font-weight:800;padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#0B0F1A;font-weight:800;padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease}
   .btn:hover{transform:translateY(-2px)}
-  .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 
-  /* Hero */
   .hero{text-align:center;padding:120px 0 80px}
   .title{font:800 58px Sora,Inter;line-height:1.02;margin:0 0 14px}
   .subtitle{font-size:20px;color:var(--muted);max-width:780px;margin:0 auto 26px}
@@ -44,24 +40,25 @@
   .chip{color:#CFE0FF;background:rgba(46,104,255,.09);border:1px solid rgba(120,155,255,.18);padding:8px 14px;border-radius:999px;font-weight:600;font-size:13px;}
   .trust{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE}
   .trust .label{font:700 11px Inter;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
-  .trust .logos{display:flex;gap:20px;font:800 14px Sora,Inter}
 
-  /* Sections */
-  .section{padding:96px 0;background:transparent}
+  .section{padding:96px 0}
   .section h2{font:800 36px Sora,Inter;text-align:center;margin:0 0 12px}
   .sub{color:var(--muted);text-align:center;max-width:720px;margin:0 auto 46px}
-
-  /* Cards */
   .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
-  .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center}
+  .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;box-shadow:var(--shadow)}
   .card h3{font:700 18px Sora,Inter;margin:0 0 6px}
   .card p{color:#A9B4CB}
 
   /* Pricing */
   .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
-  .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)}
+  .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;box-shadow:var(--shadow)}
   .price.pop{outline:2px solid #2954FF;box-shadow:0 0 20px rgba(41,84,255,.5);}
   .money{font:800 42px Sora,Inter;margin:8px 0 6px}
+  .toggle{display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 30px;color:#AFC3FF;font-weight:600}
+  .switch{width:54px;height:30px;border-radius:999px;background:linear-gradient(90deg,#2563EB,#3B82F6);border:1px solid var(--line);position:relative;cursor:pointer;transition:all .3s ease}
+  .knob{width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .25s ease}
+  .switch.active .knob{left:27px}
+  .switch.active{background:linear-gradient(90deg,#FB923C,#F97316)}
 
   /* Modal */
   .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(6,10,20,.6);z-index:200}
@@ -71,14 +68,8 @@
   .form input{background:#0B1225;color:#E6ECF9;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px;width:100%}
   .x{position:absolute;top:14px;right:18px;background:transparent;border:1px solid var(--line);color:#D3DEFF;border-radius:999px;padding:8px 12px;cursor:pointer}
 
-  /* Footer */
   footer{padding:42px 0;border-top:1px solid var(--line);color:#97A3BD;text-align:center;font-size:14px}
-  @media(max-width:768px){
-    .links{display:none}
-    .title{font-size:36px}.subtitle{font-size:16px}
-    .section{padding:76px 0}
-    .btn{width:100%}
-  }
+  @media(max-width:768px){.links{display:none}.title{font-size:36px}.subtitle{font-size:16px}.section{padding:76px 0}.btn{width:100%}}
 </style>
 </head>
 <body>
@@ -90,9 +81,7 @@
       <span>BillyBot<sup>™</sup></span>
     </div>
     <nav class="links">
-      <a href="#features">Features</a>
-      <a href="#how">How it works</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a>
       <a class="btn" href="#pricing">See Pricing</a>
     </nav>
   </div>
@@ -103,16 +92,8 @@
     <h1 class="title">Notes to Quotes in Seconds.</h1>
     <p class="subtitle">BillyBot<sup>™</sup> turns messy job notes into <strong>perfect quotes</strong> inside <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
     <div class="cta-row"><a class="btn open-form" data-tier="starter">Start Free Trial</a></div>
-    <div class="chips">
-      <span class="chip">Save hours every week</span>
-      <span class="chip">Reclaim your evenings</span>
-      <span class="chip">Instant quotes, happy clients</span>
-      <span class="chip">Win more jobs</span>
-    </div>
-    <div class="trust">
-      <span class="label">Works with</span>
-      <div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div>
-    </div>
+    <div class="chips"><span class="chip">Save hours every week</span><span class="chip">Reclaim your evenings</span><span class="chip">Instant quotes, happy clients</span><span class="chip">Win more jobs</span></div>
+    <div class="trust"><span class="label">Works with</span><div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div></div>
   </div>
 </section>
 
@@ -145,11 +126,9 @@
     <h2>Simple pricing</h2>
     <p class="sub">7-day free trial on every plan. Cancel anytime. No hidden fees.</p>
 
-    <div class="toggle" style="display:flex;gap:8px;align-items:center;justify-content:center;margin-bottom:20px;color:#AFC3FF;font-weight:600">
+    <div class="toggle">
       <span>Monthly</span>
-      <div id="planSwitch" class="switch" style="width:54px;height:30px;border-radius:999px;background:#1A2341;border:1px solid var(--line);position:relative;cursor:pointer;">
-        <div class="knob" style="width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .18s ease"></div>
-      </div>
+      <div id="planSwitch" class="switch"><div class="knob"></div></div>
       <span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span>
     </div>
 
@@ -179,7 +158,6 @@
       <input name="city" placeholder="City" required>
       <input name="postcode" placeholder="Postcode" required>
       <button class="btn" type="submit">Start 7-day trial</button>
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
     </form>
     <div id="thankYou" style="display:none;text-align:center;margin-top:20px;font-size:18px;color:#CFE0FF;">Thanks! You’ll receive a text shortly to begin onboarding.</div>
   </div>
@@ -200,50 +178,46 @@
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Billing toggle
+// billing toggle
 const sw = document.getElementById('planSwitch');
 const knob = sw.querySelector('.knob');
 const monies = document.querySelectorAll('.money');
-function currentBilling() { return sw.classList.contains('active') ? 'annual' : 'monthly'; }
-
-sw.addEventListener('click', () => {
+function currentBilling(){return sw.classList.contains('active')?'annual':'monthly';}
+sw.addEventListener('click',()=>{
   sw.classList.toggle('active');
   knob.style.left = sw.classList.contains('active') ? '27px' : '3px';
-  const isAnnual = sw.classList.contains('active');
-  monies.forEach(el => el.textContent = el.dataset[isAnnual ? 'annual' : 'month']);
-  document.getElementById('plan_billing').value = currentBilling();
+  const annual = sw.classList.contains('active');
+  monies.forEach(el=>el.textContent=el.dataset[annual?'annual':'month']);
+  document.getElementById('plan_billing').value=currentBilling();
 });
 
-// Modal + form
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('trialModal');
-  const closeModal = document.getElementById('closeModal');
-  const planTierInput = document.getElementById('plan_tier');
-  const planBillingInput = document.getElementById('plan_billing');
-  const form = document.getElementById('onboardForm');
+// modal
+document.addEventListener('DOMContentLoaded',()=>{
+  const modal=document.getElementById('trialModal');
+  const closeModal=document.getElementById('closeModal');
+  const planTierInput=document.getElementById('plan_tier');
+  const planBillingInput=document.getElementById('plan_billing');
+  const form=document.getElementById('onboardForm');
 
-  document.querySelectorAll('.open-form').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tier = btn.dataset.tier;
-      planTierInput.value = tier;
-      planBillingInput.value = currentBilling();
+  document.querySelectorAll('.open-form').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      planTierInput.value=btn.dataset.tier;
+      planBillingInput.value=currentBilling();
       modal.classList.add('open');
     });
   });
 
-  closeModal.addEventListener('click', () => modal.classList.remove('open'));
-  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+  closeModal.addEventListener('click',()=>modal.classList.remove('open'));
+  modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open');});
 
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit',async e=>{
     e.preventDefault();
-    const data = new FormData(form);
-    try {
-      const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", { method: "POST", body: data });
+    const data=new FormData(form);
+    try{
+      await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding",{method:"POST",body:data});
       form.reset();
-      document.getElementById('thankYou').style.display = "block";
-    } catch (err) {
-      alert("Something went wrong, please try again.");
-    }
+      document.getElementById('thankYou').style.display="block";
+    }catch(err){alert("Something went wrong, please try again.");}
   });
 });
 </script>
