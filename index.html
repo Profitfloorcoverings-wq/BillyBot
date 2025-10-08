@@ -33,7 +33,7 @@
     /* Header */
     header {
       position:sticky;top:0;z-index:100;
-      background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));
+      background:linear-gradient(180deg,rgba(13,17,28,.9),rgba(13,17,28,.6) 70%,rgba(13,17,28,0));
       backdrop-filter:saturate(140%) blur(10px);
       border-bottom:1px solid var(--line);
     }
@@ -48,26 +48,30 @@
       box-shadow:var(--shadow);transition:transform .18s ease;}
     .btn:hover{transform:translateY(-2px)}
     /* Orange glow variant */
-.btn.glow {
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  color: #fff;
-  box-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(251, 146, 60, 0.2);
-  animation: pulseGlow 2.5s ease-in-out infinite;
-}
+    .btn.glow {
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff;
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(251, 146, 60, 0.2);
+      animation: pulseGlow 2.5s ease-in-out infinite;
+    }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 16px rgba(249, 115, 22, 0.45), 0 0 36px rgba(251, 146, 60, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 28px rgba(249, 115, 22, 0.6), 0 0 60px rgba(251, 146, 60, 0.3);
-  }
-}
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 16px rgba(249, 115, 22, 0.45), 0 0 36px rgba(251, 146, 60, 0.2);
+      }
+      50% {
+        box-shadow: 0 0 28px rgba(249, 115, 22, 0.6), 0 0 60px rgba(251, 146, 60, 0.3);
+      }
+    }
     .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
     /* Hero */
-    .hero{position:relative;overflow:hidden;text-align:center;padding:120px 0 60px;}
-    .hero:before{content:"";position:absolute;inset:auto -10% 0 -10%;height:320px;
-      background:radial-gradient(60% 120% at 50% 0%, #2E68FF33 0%, transparent 60%);}
+    .hero{position:relative;overflow:hidden;text-align:center;padding:120px 0 96px;}
+    .hero:before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(80% 120% at 50% 0%, rgba(46,104,255,0.25) 0%, transparent 70%);
+      z-index:0;
+    }
+    .hero .container{position:relative;z-index:1;}
     .title{font:800 58px Sora,Inter;line-height:1.02;letter-spacing:-.4px;margin:0 0 14px}
     .subtitle{font-size:20px;color:var(--muted);max-width:780px;margin:0 auto 26px}
     .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
@@ -77,9 +81,6 @@
     .trust{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE;}
     .trust .label{font:700 11px Inter;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
     .trust .logos{display:flex;gap:20px;font:800 14px Sora,Inter}
-    .demo{background:linear-gradient(180deg,#0C1224,#0B0F1A);border:1px solid var(--line);border-radius:22px;
-      box-shadow:var(--shadow);height:420px;margin:40px auto 0;max-width:980px;
-      display:flex;align-items:center;justify-content:center;color:#8EA1C7;font-weight:600;}
     /* Sections */
     .section{padding:96px 0;background:transparent}
     .section h2{font:800 36px Sora,Inter;text-align:center;margin:0 0 12px}
@@ -102,56 +103,52 @@
       border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow);
       display:flex;flex-direction:column;justify-content:space-between}
     .price.pop {
-  outline: 2px solid #2954FF;
-  box-shadow: 0 0 20px rgba(41, 84, 255, 0.4), 0 0 40px rgba(59, 130, 246, 0.2);
-  animation: pulseBlue 2.5s ease-in-out infinite;
-}
+      outline: 2px solid #2954FF;
+      box-shadow: 0 0 20px rgba(41, 84, 255, 0.4), 0 0 40px rgba(59, 130, 246, 0.2);
+      animation: pulseBlue 2.5s ease-in-out infinite;
+    }
 
-@keyframes pulseBlue {
-  0%, 100% {
-    box-shadow: 0 0 18px rgba(41, 84, 255, 0.45), 0 0 36px rgba(59, 130, 246, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 28px rgba(41, 84, 255, 0.6), 0 0 60px rgba(59, 130, 246, 0.3);
-  }
-}
+    @keyframes pulseBlue {
+      0%, 100% {
+        box-shadow: 0 0 18px rgba(41, 84, 255, 0.45), 0 0 36px rgba(59, 130, 246, 0.2);
+      }
+      50% {
+        box-shadow: 0 0 28px rgba(41, 84, 255, 0.6), 0 0 60px rgba(59, 130, 246, 0.3);
+      }
+    }
     .money{font:800 42px Sora,Inter;margin:8px 0 6px}
     .price p:last-of-type{margin-top:auto}
     .price-btn{width:100%;text-align:center;min-height:44px;line-height:1.4;padding:14px 0;box-sizing:border-box}
     .toggle{display:flex;gap:8px;align-items:center;justify-content:center;margin:0 auto 22px;color:var(--muted);font-weight:600}
     .switch {
-  width: 54px;
-  height: 30px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #1A2341, #233157);
-  border: 1px solid var(--line);
-  position: relative;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
-}
-
-/* Active (Annual) state — orange gradient glow */
-.switch.active {
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  box-shadow: 0 0 12px rgba(249,115,22,0.6), 0 0 24px rgba(251,146,60,0.3);
-}
-
-.knob {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  top: 2.5px;
-  left: 3px;
-  transition: all .25s ease;
-}
-
-.switch.active .knob {
-  left: 27px;
-  background: #fff8f3;
-}
+      width: 54px;
+      height: 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #1A2341, #233157);
+      border: 1px solid var(--line);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+    }
+    .switch.active {
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      box-shadow: 0 0 12px rgba(249,115,22,0.6), 0 0 24px rgba(251,146,60,0.3);
+    }
+    .knob {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      top: 2.5px;
+      left: 3px;
+      transition: all .25s ease;
+    }
+    .switch.active .knob {
+      left: 27px;
+      background: #fff8f3;
+    }
     /* Modal form */
     .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(6,10,20,.6);z-index:200}
     .modal.open{display:flex}
@@ -172,7 +169,7 @@
       .section{padding:76px 0}
       .grid3,.how,.pricing{grid-template-columns:1fr}
       .form{grid-template-columns:1fr;gap:12px}
-      .btn{width:100%}.demo{height:260px}
+      .btn{width:100%}
     }
   </style>
 </head>
@@ -194,7 +191,6 @@
       </div>
       <nav class="links" aria-label="Primary">
         <a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a>
-        <!-- Removed 'Start Free Trial' from nav -->
         <a class="btn" href="#pricing">See Pricing</a>
       </nav>
       <button class="btn ghost" style="display:none">Menu</button>
@@ -206,9 +202,7 @@
     <div class="container">
       <h1 class="title">Notes to Quotes in Seconds.</h1>
       <p class="subtitle">BillyBot™ turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
-    <div class="cta-row">
-  <a class="btn glow" href="#pricing">Start Free Trial</a>
-</div>
+      <div class="cta-row"><a class="btn glow" href="#pricing">Start Free Trial</a></div>
       <div class="chips"><span class="chip">Save hours every week</span><span class="chip">Reclaim your evenings</span><span class="chip">Instant quotes, happy clients</span><span class="chip">Win more jobs</span></div>
       <div class="trust" aria-label="Works with"><span class="label">Works with</span><div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div></div>
     </div>
@@ -237,7 +231,6 @@
         <div class="step"><div class="n">2</div><h3>Send job info</h3><p>Photos of handwritten notes, phone notes, or voice memo.</p></div>
         <div class="step"><div class="n">3</div><h3>AI builds the quote</h3><p>Quotes built in Sage, QuickBooks or Xero & sent to your customer in seconds.</p></div>
       </div>
-      <!-- Removed standalone Start Free Trial button -->
     </div>
   </section>
 
@@ -246,19 +239,22 @@
     <div class="container">
       <h2>Simple pricing</h2>
       <p class="sub">7-day free trial on every plan. Cancel anytime. No hidden fees.</p>
-      <div class="toggle"><span>Monthly</span><div class="switch" id="planSwitch" role="switch" aria-checked="false"><div class="knob"></div></div><span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span></div>
+      <div class="toggle"><span>Monthly</span><div class="switch" id="planSwitch" role="switch" aria-checked="false"><div class="knob"></div></div><span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px;box-shadow:0 0 14px rgba(126,231,135,0.4);animation:pulseSave 2.5s ease-in-out infinite;">Save 2 months</span></span></div>
       <div class="pricing">
-        <!-- Removed the separate 'Free Trial' card -->
         <div class="price"> 
-  <h3>Starter</h3>
-  <div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div>
-  ...
-</div>
-<div class="price pop">
-  <h3>Pro</h3>
-  <div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div>
-  ...
-</div>
+          <h3>Starter</h3>
+          <div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div>
+          <p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p>
+          <p style="margin-top:8px;color:#AFC3FF">Includes <strong>7-day free trial</strong></p>
+          <p><button class="btn price-btn open-form" data-tier="starter">Start 7-day trial</button></p>
+        </div>
+        <div class="price pop">
+          <h3>Pro</h3>
+          <div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div>
+          <p>10–25 quotes / month<br>Priority support<br>Advanced automations</p>
+          <p style="margin-top:8px;color:#AFC3FF">Includes <strong>7-day free trial</strong></p>
+          <p><button class="btn price-btn open-form" data-tier="pro">Start 7-day trial</button></p>
+        </div>
         <div class="price">
           <h3>Unlimited</h3>
           <div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div>
@@ -270,14 +266,13 @@
     </div>
   </section>
 
-  <!-- Modal Lead Form (hidden until a plan button is clicked) -->
+  <!-- Modal Lead Form -->
   <div id="trialModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="trialTitle">
     <div class="lead">
       <button class="x" id="closeModal" aria-label="Close">×</button>
       <h2 id="trialTitle" style="text-align:center;margin:0 0 8px;font-family:Sora">Start your 7-day free trial</h2>
       <p class="sub" style="margin-bottom:18px;color:#AFC3FF">No credit card required to begin.</p>
       <form id="onboardForm" class="form">
-        <!-- Hidden plan fields populated by JS -->
         <input type="hidden" name="plan_tier" id="plan_tier" value="">
         <input type="hidden" name="plan_billing" id="plan_billing" value="">
         <input name="business_name" placeholder="Business Name" required>
@@ -309,10 +304,7 @@
   <footer>© <span id="year"></span> BillyBot™. All rights reserved.</footer>
 
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Pricing toggle (monthly/annual)
     const sw = document.getElementById('planSwitch');
     const monies = document.querySelectorAll('.money');
     function currentBilling(){ return sw && sw.classList.contains('active') ? 'annual' : 'monthly'; }
@@ -321,47 +313,35 @@
         const active = sw.classList.toggle('active');
         sw.setAttribute('aria-checked', String(active));
         monies.forEach(el => { el.textContent = el.dataset[ active ? 'annual' : 'month' ]; });
-        // If the modal is open, keep plan_billing in sync
         const modalOpen = document.getElementById('trialModal').classList.contains('open');
         if (modalOpen) document.getElementById('plan_billing').value = currentBilling();
       });
     }
-
-    // Modal handling
     const modal = document.getElementById('trialModal');
     const closeModal = document.getElementById('closeModal');
     const planTierInput = document.getElementById('plan_tier');
     const planBillingInput = document.getElementById('plan_billing');
-
     document.querySelectorAll('.open-form').forEach(btn => {
       btn.addEventListener('click', () => {
-        const tier = btn.getAttribute('data-tier'); // starter|pro|unlimited
+        const tier = btn.getAttribute('data-tier');
         planTierInput.value = tier;
-        planBillingInput.value = currentBilling(); // monthly|annual
+        planBillingInput.value = currentBilling();
         modal.classList.add('open');
       });
     });
     closeModal.addEventListener('click', () => modal.classList.remove('open'));
     modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
-
-    // --- Redirect helpers (fix) ---
     function normalizeRedirect(raw) {
       if (!raw) return '';
       let u = String(raw).trim();
-      // Remove accidental leading "="
       u = u.replace(/^=\s*/, '');
-      // If it looks like ".../=https://...", strip everything before the absolute URL
       const idx = u.indexOf('http');
       if (!/^https?:\/\//i.test(u) && idx > -1) u = u.slice(idx);
       return u;
     }
     function go(url) {
       try {
-        // Use URL() to validate; absolute URLs pass through unchanged
         const target = new URL(url, window.location.origin).href;
-        // If the string already started with http(s), URL() keeps it absolute.
-        // If it was relative, this will resolve to our origin (which we don't want),
-        // so we only navigate when it is clearly absolute:
         if (/^https?:\/\//i.test(url)) {
           window.location.replace(target);
           return true;
@@ -369,8 +349,6 @@
       } catch(e) {}
       return false;
     }
-
-    // Form submit
     const form = document.getElementById('onboardForm');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -382,30 +360,21 @@
           mode: "cors",
           headers: { "Accept": "application/json" }
         });
-
-        // CASE 1: Your webhook returns JSON { url: "https://checkout..." }
         let result = null;
         const ct = res.headers.get('content-type') || '';
         if (ct.includes('application/json')) {
           result = await res.json().catch(() => null);
         }
-
         const fromJson = normalizeRedirect(result && result.url);
         if (fromJson && go(fromJson)) return;
-
-        // CASE 2: Your webhook responded with an HTTP redirect (302/303)
         if (res.redirected && res.url) {
           const redirected = normalizeRedirect(res.url);
           if (go(redirected)) return;
         }
-
-        // Fallback: show thank-you (same behavior you had)
         form.reset();
         document.getElementById('thankYou').style.display = "block";
       } catch (err) {
         alert("Something went wrong, please try again.");
-      } finally {
-        // keep modal open to show thank-you or redirect happens above
       }
     });
   </script>
