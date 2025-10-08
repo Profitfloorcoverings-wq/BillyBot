@@ -212,44 +212,49 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const modal = document.getElementById('trialModal');
 const closeModal = document.getElementById('closeModal');
 const planTierInput = document.getElementById('plan_tier');
-let billingType = "monthly"; // default
 
-document.querySelectorAll('.open-form').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const tier = btn.dataset.tier;
-    billingType = btn.textContent.toLowerCase().includes("annual") ? "annual" : "monthly";
-    planTierInput.value = tier; // just tier now
-    modal.classList.add('open');
-    // Store billing type separately for submission
-    modal.dataset.billing = billingType;
-  });
-});
+// === NEW: create hidden input for billing ===
+let billingInput = document.createElement('input');
+billingInput.type = 'hidden';
+billingInput.name = 'stripe_plan_billing';
+billingInput.value = 'monthly';
+form?.appendChild(billingInput); // will append once form exists
 
-closeModal.addEventListener('click', () => modal.classList.remove('open'));
-modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('onboardForm');
+  form.appendChild(billingInput);
 
-const form = document.getElementById('onboardForm');
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  const data = new FormData(form);
-
-  // === Add separate plan fields ===
-  const fullTier = planTierInput.value || '';
-  const billing = modal.dataset.billing || 'monthly';
-  data.append("stripe_plan_tier", fullTier);
-  data.append("stripe_plan_billing", billing);
-
-  try {
-    const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
-      method: "POST",
-      body: data
+  document.querySelectorAll('.open-form').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tier = btn.dataset.tier;
+      const billingType = btn.textContent.toLowerCase().includes('annual') ? 'annual' : 'monthly';
+      planTierInput.value = tier;
+      billingInput.value = billingType; // ensure always inside form
+      modal.classList.add('open');
     });
-    form.reset();
-    document.getElementById('thankYou').style.display = "block";
-  } catch (err) {
-    alert("Something went wrong, please try again.");
-    console.error(err);
-  }
+  });
+
+  closeModal.addEventListener('click', () => modal.classList.remove('open'));
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    // also send stripe_plan_tier explicitly
+    data.append('stripe_plan_tier', planTierInput.value);
+
+    try {
+      const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
+        method: "POST",
+        body: data
+      });
+      form.reset();
+      document.getElementById('thankYou').style.display = "block";
+    } catch (err) {
+      alert("Something went wrong, please try again.");
+      console.error(err);
+    }
+  });
 });
 </script>
 
