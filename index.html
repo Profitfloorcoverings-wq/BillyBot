@@ -224,7 +224,7 @@ form.addEventListener('submit',async e=>{
   e.preventDefault();
   const data=new FormData(form);
   try{
-    const res=await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding",{method:"POST",body:data});
+    const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/stripeOnboard", { method: "POST", body: data });
     form.reset();
     document.getElementById('thankYou').style.display="block";
   }catch(err){alert("Something went wrong, please try again.");}
