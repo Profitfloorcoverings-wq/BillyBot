@@ -47,7 +47,7 @@
       msg.innerText = "Thanks for joining Billybot! 🚀\nYou'll receive a text shortly to get you onboarded.";
 
       try {
-        await fetch("https://billybot.app.n8n.cloud/webhook/stripeOnboard", {
+        await fetch("https://tradiebrain.app.n8n.cloud/webhook/stripeOnboard?session_id=" + sessionId), {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ session_id: sessionId })
