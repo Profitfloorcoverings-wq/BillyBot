@@ -147,18 +147,21 @@
     <h2 style="text-align:center;margin:0 0 8px;font-family:Sora">Start your 7-day free trial</h2>
     <p class="sub" style="margin-bottom:18px;color:#AFC3FF">No credit card required.</p>
     <form id="onboardForm" class="form">
-      <input type="hidden" name="stripe_plan_tier" id="plan_tier" value="">
-      <input type="hidden" name="stripe_plan_billing" id="plan_billing" value="monthly">
-      <input name="business_name" placeholder="Business Name" required>
-      <input name="contact_name" placeholder="Contact Name" required>
-      <input type="tel" name="phone" placeholder="Phone" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input name="address_line1" placeholder="Address Line 1" required>
-      <input name="address_line2" placeholder="Address Line 2">
-      <input name="city" placeholder="City" required>
-      <input name="postcode" placeholder="Postcode" required>
-      <button class="btn" type="submit">Start 7-day trial</button>
-    </form>
+  <!-- Hidden fields expected by n8n -->
+  <input type="hidden" name="stripe_plan_tier" id="stripe_plan_tier" value="">
+  <input type="hidden" name="stripe_plan_billing" id="stripe_plan_billing" value="">
+
+  <input name="business_name" placeholder="Business Name" required>
+  <input name="contact_name" placeholder="Contact Name" required>
+  <input type="tel" name="phone" placeholder="Phone" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input name="address_line1" placeholder="Address Line 1" required>
+  <input name="address_line2" placeholder="Address Line 2">
+  <input name="city" placeholder="City" required>
+  <input name="postcode" placeholder="Postcode" required>
+  <button class="btn" type="submit">Start 7-day trial</button>
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
+</form>
     <div id="thankYou" style="display:none;text-align:center;margin-top:20px;font-size:18px;color:#CFE0FF;">Thanks! You’ll receive a text shortly to begin onboarding.</div>
   </div>
 </div>
@@ -176,48 +179,58 @@
 <footer>© <span id="year"></span> BillyBot<sup>™</sup>. All rights reserved.</footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-// billing toggle
-const sw = document.getElementById('planSwitch');
-const knob = sw.querySelector('.knob');
-const monies = document.querySelectorAll('.money');
-function currentBilling(){return sw.classList.contains('active')?'annual':'monthly';}
-sw.addEventListener('click',()=>{
-  sw.classList.toggle('active');
-  knob.style.left = sw.classList.contains('active') ? '27px' : '3px';
-  const annual = sw.classList.contains('active');
-  monies.forEach(el=>el.textContent=el.dataset[annual?'annual':'month']);
-  document.getElementById('plan_billing').value=currentBilling();
-});
+  const form = document.getElementById('onboardForm');
+  const tierInput = document.getElementById('stripe_plan_tier');
+  const billingInput = document.getElementById('stripe_plan_billing');
+  const modal = document.getElementById('trialModal');
+  const closeModal = document.getElementById('closeModal');
+  const switchEl = document.getElementById('planSwitch');
 
-// modal
-document.addEventListener('DOMContentLoaded',()=>{
-  const modal=document.getElementById('trialModal');
-  const closeModal=document.getElementById('closeModal');
-  const planTierInput=document.getElementById('plan_tier');
-  const planBillingInput=document.getElementById('plan_billing');
-  const form=document.getElementById('onboardForm');
+  function currentBilling() {
+    return switchEl && switchEl.classList.contains('active') ? 'annual' : 'monthly';
+  }
 
-  document.querySelectorAll('.open-form').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      planTierInput.value=btn.dataset.tier;
-      planBillingInput.value=currentBilling();
+  // Toggle monthly/annual
+  if (switchEl) {
+    switchEl.addEventListener('click', () => {
+      const active = switchEl.classList.toggle('active');
+      switchEl.setAttribute('aria-checked', String(active));
+      billingInput.value = currentBilling();
+    });
+  }
+
+  // Handle plan button click
+  document.querySelectorAll('.open-form').forEach(btn => {
+    btn.addEventListener('click', () => {
+      tierInput.value = btn.getAttribute('data-tier');
+      billingInput.value = currentBilling();
       modal.classList.add('open');
     });
   });
 
-  closeModal.addEventListener('click',()=>modal.classList.remove('open'));
-  modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open');});
+  closeModal.addEventListener('click', () => modal.classList.remove('open'));
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
 
-  form.addEventListener('submit',async e=>{
+  // Submit to n8n webhook
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const data=new FormData(form);
-    try{
-      await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding",{method:"POST",body:data});
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
+        method: "POST",
+        body: data
+      });
+
       form.reset();
-      document.getElementById('thankYou').style.display="block";
-    }catch(err){alert("Something went wrong, please try again.");}
+      document.getElementById('thankYou').style.display = "block";
+    } catch (err) {
+      alert("Something went wrong, please try again.");
+      console.error(err);
+    }
   });
 });
 </script>
