@@ -22,6 +22,8 @@
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   .container{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* Header */
   header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(13,17,28,.7),rgba(13,17,28,.35) 60%,rgba(13,17,28,0));backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
   .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
   .logo{display:flex;align-items:center;gap:12px;font:800 20px Sora,Inter}
@@ -32,6 +34,8 @@
   .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#0B0F1A;border:0;font-weight:800;padding:14px 26px;border-radius:999px;box-shadow:var(--shadow);transition:transform .18s ease}
   .btn:hover{transform:translateY(-2px)}
   .ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+
+  /* Hero */
   .hero{text-align:center;padding:120px 0 80px}
   .title{font:800 58px Sora,Inter;line-height:1.02;margin:0 0 14px}
   .subtitle{font-size:20px;color:var(--muted);max-width:780px;margin:0 auto 26px}
@@ -41,21 +45,40 @@
   .trust{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:18px;color:#C7D2FE}
   .trust .label{font:700 11px Inter;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
   .trust .logos{display:flex;gap:20px;font:800 14px Sora,Inter}
+
+  /* Sections */
   .section{padding:96px 0;background:transparent}
   .section h2{font:800 36px Sora,Inter;text-align:center;margin:0 0 12px}
   .sub{color:var(--muted);text-align:center;max-width:720px;margin:0 auto 46px}
+
+  /* Cards */
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+  .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center}
+  .card h3{font:700 18px Sora,Inter;margin:0 0 6px}
+  .card p{color:#A9B4CB}
+
+  /* Pricing */
   .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
   .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)}
   .price.pop{outline:2px solid #2954FF;box-shadow:0 0 20px rgba(41,84,255,.5);}
   .money{font:800 42px Sora,Inter;margin:8px 0 6px}
+
+  /* Modal */
   .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(6,10,20,.6);z-index:200}
   .modal.open{display:flex}
   .lead{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:20px;padding:44px;color:#E8EEFF;box-shadow:var(--shadow);max-width:820px;width:92%}
   .form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:12px}
   .form input{background:#0B1225;color:#E6ECF9;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px;width:100%}
   .x{position:absolute;top:14px;right:18px;background:transparent;border:1px solid var(--line);color:#D3DEFF;border-radius:999px;padding:8px 12px;cursor:pointer}
+
+  /* Footer */
   footer{padding:42px 0;border-top:1px solid var(--line);color:#97A3BD;text-align:center;font-size:14px}
-  @media(max-width:768px){.links{display:none}.title{font-size:36px}.subtitle{font-size:16px}.section{padding:76px 0}.btn{width:100%}}
+  @media(max-width:768px){
+    .links{display:none}
+    .title{font-size:36px}.subtitle{font-size:16px}
+    .section{padding:76px 0}
+    .btn{width:100%}
+  }
 </style>
 </head>
 <body>
@@ -78,10 +101,42 @@
 <section class="hero">
   <div class="container">
     <h1 class="title">Notes to Quotes in Seconds.</h1>
-    <p class="subtitle">BillyBot<sup>™</sup> turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
+    <p class="subtitle">BillyBot<sup>™</sup> turns messy job notes into <strong>perfect quotes</strong> inside <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
     <div class="cta-row"><a class="btn open-form" data-tier="starter">Start Free Trial</a></div>
-    <div class="chips"><span class="chip">Save hours every week</span><span class="chip">Reclaim your evenings</span><span class="chip">Instant quotes, happy clients</span><span class="chip">Win more jobs</span></div>
-    <div class="trust"><span class="label">Works with</span><div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div></div>
+    <div class="chips">
+      <span class="chip">Save hours every week</span>
+      <span class="chip">Reclaim your evenings</span>
+      <span class="chip">Instant quotes, happy clients</span>
+      <span class="chip">Win more jobs</span>
+    </div>
+    <div class="trust">
+      <span class="label">Works with</span>
+      <div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <div class="container">
+    <h2>Why trades love BillyBot<sup>™</sup></h2>
+    <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night/weekend quoting.</p>
+    <div class="grid3">
+      <div class="card"><h3>Save hours weekly</h3><p>No more admin at night. Quotes go out in seconds with zero hassle.</p></div>
+      <div class="card"><h3>Never lose money</h3><p>Accurate pricing every time using your supplier price lists and personal logic.</p></div>
+      <div class="card"><h3>Works the way you do</h3><p>Send phone notes, photos, or voice notes — whatever’s easiest for you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <div class="container">
+    <h2>How it works</h2>
+    <p class="sub">Three simple steps to faster quoting and more wins.</p>
+    <div class="grid3">
+      <div class="card"><h3>1. Onboard</h3><p>Answer simple questions; BillyBot<sup>™</sup> builds your pricing profile.</p></div>
+      <div class="card"><h3>2. Send job info</h3><p>Upload photos of notes, job sheets, or voice memos.</p></div>
+      <div class="card"><h3>3. AI builds the quote</h3><p>Quote generated in Sage, QuickBooks or Xero instantly.</p></div>
+    </div>
   </div>
 </section>
 
@@ -89,6 +144,15 @@
   <div class="container">
     <h2>Simple pricing</h2>
     <p class="sub">7-day free trial on every plan. Cancel anytime. No hidden fees.</p>
+
+    <div class="toggle" style="display:flex;gap:8px;align-items:center;justify-content:center;margin-bottom:20px;color:#AFC3FF;font-weight:600">
+      <span>Monthly</span>
+      <div id="planSwitch" class="switch" style="width:54px;height:30px;border-radius:999px;background:#1A2341;border:1px solid var(--line);position:relative;cursor:pointer;">
+        <div class="knob" style="width:24px;height:24px;border-radius:50%;background:white;position:absolute;top:2.5px;left:3px;transition:all .18s ease"></div>
+      </div>
+      <span>Annual <span style="color:#7EE787;background:#143019;border:1px solid #224C2B;padding:2px 8px;border-radius:999px;margin-left:6px">Save 2 months</span></span>
+    </div>
+
     <div class="pricing">
       <div class="price"><h3>Starter</h3><div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div><p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p><p><button class="btn open-form" data-tier="starter">Start 7-day trial</button></p></div>
       <div class="price pop"><h3>Pro</h3><div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div><p>10-25 quotes / month<br>Priority support<br>Advanced automations</p><p><button class="btn open-form" data-tier="pro">Start 7-day trial</button></p></div>
@@ -97,6 +161,7 @@
   </div>
 </section>
 
+<!-- Modal -->
 <div id="trialModal" class="modal">
   <div class="lead">
     <button class="x" id="closeModal">×</button>
@@ -120,15 +185,36 @@
   </div>
 </div>
 
+<section id="contact" class="section">
+  <div class="container">
+    <h2 style="text-align:center;font-family:Sora;margin-bottom:12px;">Get in Touch</h2>
+    <p class="sub" style="margin-bottom:24px;color:#AFC3FF">Have questions? We’d love to hear from you.</p>
+    <div style="text-align:center;">
+      <a href="mailto:info@billybot.ai" class="btn">Email Us at info@billybot.ai</a>
+    </div>
+  </div>
+</section>
+
 <footer>© <span id="year"></span> BillyBot<sup>™</sup>. All rights reserved.</footer>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Determine billing type via toggle (monthly/annual)
-let billingType = "monthly";
+// Billing toggle
+const sw = document.getElementById('planSwitch');
+const knob = sw.querySelector('.knob');
+const monies = document.querySelectorAll('.money');
+function currentBilling() { return sw.classList.contains('active') ? 'annual' : 'monthly'; }
 
-// Modal logic
+sw.addEventListener('click', () => {
+  sw.classList.toggle('active');
+  knob.style.left = sw.classList.contains('active') ? '27px' : '3px';
+  const isAnnual = sw.classList.contains('active');
+  monies.forEach(el => el.textContent = el.dataset[isAnnual ? 'annual' : 'month']);
+  document.getElementById('plan_billing').value = currentBilling();
+});
+
+// Modal + form
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('trialModal');
   const closeModal = document.getElementById('closeModal');
@@ -140,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const tier = btn.dataset.tier;
       planTierInput.value = tier;
-      planBillingInput.value = billingType;
+      planBillingInput.value = currentBilling();
       modal.classList.add('open');
     });
   });
@@ -152,10 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const data = new FormData(form);
     try {
-      const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
-        method: "POST",
-        body: data
-      });
+      const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", { method: "POST", body: data });
       form.reset();
       document.getElementById('thankYou').style.display = "block";
     } catch (err) {
