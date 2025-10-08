@@ -208,29 +208,42 @@
 
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
+
 const modal=document.getElementById('trialModal');
 const closeModal=document.getElementById('closeModal');
 const planTierInput=document.getElementById('plan_tier');
+
+// === NEW: billing period toggle (monthly / annual) ===
+let billingType = "monthly"; // default
+// Detect if user clicked a price that has annual in its label or class
 document.querySelectorAll('.open-form').forEach(btn=>{
   btn.addEventListener('click',()=>{
-    planTierInput.value=btn.dataset.tier;
+    const tier = btn.dataset.tier;
+    // if the button text includes "annual" or "year"
+    billingType = btn.textContent.toLowerCase().includes("annual") ? "annual" : "monthly";
+    planTierInput.value = `${tier}/${billingType}`; // e.g. pro/monthly
     modal.classList.add('open');
   });
 });
+
 closeModal.addEventListener('click',()=>modal.classList.remove('open'));
 modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+
 const form=document.getElementById('onboardForm');
 form.addEventListener('submit',async e=>{
   e.preventDefault();
   const data=new FormData(form);
   try{
     const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
-  method: "POST",
-  body: data
-});
+      method: "POST",
+      body: data
+    });
     form.reset();
     document.getElementById('thankYou').style.display="block";
-  }catch(err){alert("Something went wrong, please try again.");}
+  }catch(err){
+    alert("Something went wrong, please try again.");
+    console.error(err);
+  }
 });
 </script>
 
