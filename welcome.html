@@ -33,32 +33,30 @@
   </div>
 
   <script>
-    async function startOnboarding() {
-      const params = new URLSearchParams(window.location.search);
-      const sessionId = params.get("session_id");
+async function startOnboarding() {
+  const params = new URLSearchParams(window.location.search);
+  const sessionId = params.get("session_id");
+  const msg = document.getElementById("message");
 
-      const msg = document.getElementById("message");
+  if (!sessionId) {
+    msg.innerText = "Missing session ID.";
+    return;
+  }
 
-      if (!sessionId) {
-        msg.innerText = "Missing session ID.";
-        return;
-      }
+  msg.innerText = "Thanks for joining BillyBot! 🚀\nYou'll receive a text shortly to get you onboarded.";
 
-      msg.innerText = "Thanks for joining Billybot! 🚀\nYou'll receive a text shortly to get you onboarded.";
+  try {
+    await fetch("https://tradiebrain.app.n8n.cloud/webhook/stripeOnboard?session_id=" + sessionId, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session_id: sessionId })
+    });
 
-      try {
-        await fetch("https://tradiebrain.app.n8n.cloud/webhook/stripeOnboard?session_id=" + sessionId), {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ session_id: sessionId })
-});
-      ...
-    } catch (err) {
-      msg.innerText = "Something went wrong setting up your account. Please contact support.";
-    }
+  } catch (err) {
+    console.error(err);
+    msg.innerText = "Something went wrong setting up your account. Please contact support.";
   }
 }
 
 startOnboarding();
 </script>
-
