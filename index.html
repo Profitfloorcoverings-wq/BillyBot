@@ -44,29 +44,18 @@
   .section{padding:96px 0;background:transparent}
   .section h2{font:800 36px Sora,Inter;text-align:center;margin:0 0 12px}
   .sub{color:var(--muted);text-align:center;max-width:720px;margin:0 auto 46px}
-  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
-  .card{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);text-align:center}
-  .card h3{font:700 18px Sora,Inter;margin:0 0 6px}
-  .card p{color:#A9B4CB}
   .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
   .price{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center;position:relative;box-shadow:var(--shadow)}
   .price.pop{outline:2px solid #2954FF;box-shadow:0 0 20px rgba(41,84,255,.5);}
   .money{font:800 42px Sora,Inter;margin:8px 0 6px}
-  .price-btn{width:100%;text-align:center;min-height:44px;line-height:1.4;padding:14px 0}
   .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(6,10,20,.6);z-index:200}
   .modal.open{display:flex}
   .lead{background:linear-gradient(180deg,#0F1526,#0C1221);border:1px solid var(--line);border-radius:20px;padding:44px;color:#E8EEFF;box-shadow:var(--shadow);max-width:820px;width:92%}
   .form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:12px}
   .form input{background:#0B1225;color:#E6ECF9;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px;width:100%}
   .x{position:absolute;top:14px;right:18px;background:transparent;border:1px solid var(--line);color:#D3DEFF;border-radius:999px;padding:8px 12px;cursor:pointer}
-  .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
   footer{padding:42px 0;border-top:1px solid var(--line);color:#97A3BD;text-align:center;font-size:14px}
-  @media(max-width:768px){
-    .links{display:none}
-    .title{font-size:36px}.subtitle{font-size:16px}
-    .section{padding:76px 0}
-    .btn{width:100%}
-  }
+  @media(max-width:768px){.links{display:none}.title{font-size:36px}.subtitle{font-size:16px}.section{padding:76px 0}.btn{width:100%}}
 </style>
 </head>
 <body>
@@ -91,40 +80,8 @@
     <h1 class="title">Notes to Quotes in Seconds.</h1>
     <p class="subtitle">BillyBot<sup>™</sup> turns messy job notes into <strong>perfect quotes</strong> inside your preferred platform — <strong>Sage</strong>, <strong>QuickBooks</strong> or <strong>Xero</strong>. Hands-free, accurate, and fast.</p>
     <div class="cta-row"><a class="btn open-form" data-tier="starter">Start Free Trial</a></div>
-    <div class="chips">
-      <span class="chip">Save hours every week</span>
-      <span class="chip">Reclaim your evenings</span>
-      <span class="chip">Instant quotes, happy clients</span>
-      <span class="chip">Win more jobs</span>
-    </div>
-    <div class="trust" aria-label="Works with">
-      <span class="label">Works with</span>
-      <div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="features" class="section">
-  <div class="container">
-    <h2>Why trades love BillyBot<sup>™</sup></h2>
-    <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night/weekend quoting.</p>
-    <div class="grid3">
-      <div class="card"><h3>Save hours weekly</h3><p>No more admin at night. Quotes go out in seconds with zero hassle.</p></div>
-      <div class="card"><h3>Never lose money</h3><p>Accurate pricing every time using your supplier price lists and personal logic.</p></div>
-      <div class="card"><h3>Works the way you do</h3><p>Send phone notes, photos, or voice notes — whatever’s easiest for you.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="how" class="section">
-  <div class="container">
-    <h2>How it works</h2>
-    <p class="sub">Three simple steps to faster quoting and more wins.</p>
-    <div class="grid3">
-      <div class="card"><h3>1. Onboard</h3><p>Answer simple questions; BillyBot<sup>™</sup> builds your pricing profile.</p></div>
-      <div class="card"><h3>2. Send job info</h3><p>Upload photos of notes, job sheets, or voice memos.</p></div>
-      <div class="card"><h3>3. AI builds the quote</h3><p>Quote generated in Sage, QuickBooks or Xero instantly.</p></div>
-    </div>
+    <div class="chips"><span class="chip">Save hours every week</span><span class="chip">Reclaim your evenings</span><span class="chip">Instant quotes, happy clients</span><span class="chip">Win more jobs</span></div>
+    <div class="trust"><span class="label">Works with</span><div class="logos"><span>Sage</span><span>QuickBooks</span><span>Xero</span></div></div>
   </div>
 </section>
 
@@ -133,36 +90,21 @@
     <h2>Simple pricing</h2>
     <p class="sub">7-day free trial on every plan. Cancel anytime. No hidden fees.</p>
     <div class="pricing">
-      <div class="price">
-        <h3>Starter</h3>
-        <div class="money">£49/mo</div>
-        <p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p>
-        <p><button class="btn open-form" data-tier="starter">Start 7-day trial</button></p>
-      </div>
-      <div class="price pop">
-        <h3>Pro</h3>
-        <div class="money">£79/mo</div>
-        <p>10-25 quotes / month<br>Priority support<br>Advanced automations</p>
-        <p><button class="btn open-form" data-tier="pro">Start 7-day trial</button></p>
-      </div>
-      <div class="price">
-        <h3>Unlimited</h3>
-        <div class="money">£99/mo</div>
-        <p>25+ quotes / month<br>Advanced automations<br>Early access to new features</p>
-        <p><button class="btn open-form" data-tier="unlimited">Start 7-day trial</button></p>
-      </div>
+      <div class="price"><h3>Starter</h3><div class="money" data-month="£49/mo" data-annual="£490/yr">£49/mo</div><p>Up to 10 quotes / month<br>Email + SMS support<br>Core integrations</p><p><button class="btn open-form" data-tier="starter">Start 7-day trial</button></p></div>
+      <div class="price pop"><h3>Pro</h3><div class="money" data-month="£79/mo" data-annual="£790/yr">£79/mo</div><p>10-25 quotes / month<br>Priority support<br>Advanced automations</p><p><button class="btn open-form" data-tier="pro">Start 7-day trial</button></p></div>
+      <div class="price"><h3>Unlimited</h3><div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div><p>25+ quotes / month<br>Advanced automations<br>Early access to new features</p><p><button class="btn open-form" data-tier="unlimited">Start 7-day trial</button></p></div>
     </div>
   </div>
 </section>
 
-<!-- Modal -->
 <div id="trialModal" class="modal">
   <div class="lead">
     <button class="x" id="closeModal">×</button>
     <h2 style="text-align:center;margin:0 0 8px;font-family:Sora">Start your 7-day free trial</h2>
     <p class="sub" style="margin-bottom:18px;color:#AFC3FF">No credit card required.</p>
     <form id="onboardForm" class="form">
-      <input type="hidden" name="plan_tier" id="plan_tier" value="">
+      <input type="hidden" name="stripe_plan_tier" id="plan_tier" value="">
+      <input type="hidden" name="stripe_plan_billing" id="plan_billing" value="monthly">
       <input name="business_name" placeholder="Business Name" required>
       <input name="contact_name" placeholder="Contact Name" required>
       <input type="tel" name="phone" placeholder="Phone" required>
@@ -178,59 +120,37 @@
   </div>
 </div>
 
-<section id="contact" class="section">
-  <div class="container">
-    <h2 style="text-align:center;font-family:Sora;margin-bottom:12px;">Get in Touch</h2>
-    <p class="sub" style="margin-bottom:24px;color:#AFC3FF">Have questions? We’d love to hear from you.</p>
-    <div style="text-align:center;">
-      <a href="mailto:info@billybot.ai" class="btn">Email Us at info@billybot.ai</a>
-    </div>
-  </div>
-</section>
-
 <footer>© <span id="year"></span> BillyBot<sup>™</sup>. All rights reserved.</footer>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Determine billing type via toggle (monthly/annual)
+let billingType = "monthly";
+
+// Modal logic
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('trialModal');
   const closeModal = document.getElementById('closeModal');
   const planTierInput = document.getElementById('plan_tier');
+  const planBillingInput = document.getElementById('plan_billing');
   const form = document.getElementById('onboardForm');
 
-  // Create hidden billing input
-  const billingInput = document.createElement('input');
-  billingInput.type = 'hidden';
-  billingInput.name = 'stripe_plan_billing';
-  billingInput.value = 'monthly';
-  form.appendChild(billingInput);
-
-  // Open modal and assign plan + billing
   document.querySelectorAll('.open-form').forEach(btn => {
     btn.addEventListener('click', () => {
       const tier = btn.dataset.tier;
-      const label = btn.textContent.toLowerCase();
-      let billingType = 'monthly';
-      if (label.includes('annual') || label.includes('yearly') || label.includes('year')) {
-        billingType = 'annual';
-      }
       planTierInput.value = tier;
-      billingInput.value = billingType;
+      planBillingInput.value = billingType;
       modal.classList.add('open');
     });
   });
 
-  // Close modal
   closeModal.addEventListener('click', () => modal.classList.remove('open'));
   modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
 
-  // Submit form
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const data = new FormData(form);
-    data.append('stripe_plan_tier', planTierInput.value);
-
     try {
       const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
         method: "POST",
@@ -240,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('thankYou').style.display = "block";
     } catch (err) {
       alert("Something went wrong, please try again.");
-      console.error(err);
     }
   });
 });
