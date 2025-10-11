@@ -25,6 +25,11 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Speed up network hops used during checkout -->
+  <link rel="preconnect" href="https://checkout.stripe.com">
+  <link rel="preconnect" href="https://js.stripe.com">
+  <link rel="preconnect" href="https://tradiebrain.app.n8n.cloud">
+
   <style>
     :root {
       --brand1:#2563EB; --brand2:#3B82F6;
@@ -351,6 +356,17 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   <footer>© <span id="year"></span> BillyBot™. All rights reserved.</footer>
 
   <script>
+    // Optional: Suggest opening in browser for faster checkout when inside FB/IG in-app browser
+    (function () {
+      const ua = navigator.userAgent || '';
+      const inIAB = /FBAN|FBAV|FB_IAB|Instagram/i.test(ua);
+      if (!inIAB) return;
+      const bar = document.createElement('div');
+      bar.style.cssText = 'position:sticky;top:0;z-index:999;background:#0B1225;color:#fff;padding:10px 14px;text-align:center;border-bottom:1px solid rgba(255,255,255,.08);font:600 14px Inter;';
+      bar.innerHTML = 'For the fastest checkout, tap ••• then <strong>Open in Browser</strong>.';
+      document.body.prepend(bar);
+    })();
+
     // Set year AFTER footer exists
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -402,34 +418,88 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
       return false;
     }
 
+    // ---------- Submit handler with spinner + reassurance for FB in-app ----------
     const form = document.getElementById('onboardForm');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Instant visual feedback
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) {
+        btn.dataset.originalText = btn.textContent;
+
+        // inject spinner keyframes once
+        if (!document.getElementById('bb-spin-keyframes')) {
+          const style = document.createElement('style');
+          style.id = 'bb-spin-keyframes';
+          style.textContent = '@keyframes bbspin{from{transform:rotate(0)}to{transform:rotate(360deg)}}';
+          document.head.appendChild(style);
+        }
+
+        btn.disabled = true;
+        btn.innerHTML = 'Redirecting&nbsp;to&nbsp;Stripe&nbsp;...&nbsp;<span style="display:inline-block;width:14px;height:14px;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:bbspin .8s linear infinite;vertical-align:-2px"></span>';
+        btn.style.opacity = '0.7';
+        btn.style.cursor = 'wait';
+      }
+
+      // If FB in-app is slow, reassure after ~2s
+      let reassureTimer = setTimeout(() => {
+        if (btn) btn.innerHTML = 'Securing checkout&nbsp;… still working&nbsp;<span style="display:inline-block;width:14px;height:14px;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:bbspin .8s linear infinite;vertical-align:-2px"></span>';
+      }, 2000);
+
       const data = new FormData(form);
+
+      const fetchOpts = {
+        method: "POST",
+        body: data,
+        mode: "cors",
+        cache: "no-store",
+        headers: { "Accept": "application/json" },
+        keepalive: false
+      };
+
       try {
-        const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
-          method: "POST",
-          body: data,
-          mode: "cors",
-          headers: { "Accept": "application/json" }
-        });
+        const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", fetchOpts);
+
+        clearTimeout(reassureTimer);
+
+        // JSON { url: "https://..." } or HTTP redirect
         let result = null;
         const ct = res.headers.get('content-type') || '';
         if (ct.includes('application/json')) {
           result = await res.json().catch(() => null);
         }
+
         const fromJson = normalizeRedirect(result && result.url);
         if (fromJson && go(fromJson)) return;
+
         if (res.redirected && res.url) {
           const redirected = normalizeRedirect(res.url);
           if (go(redirected)) return;
         }
+
+        // Fallback – show thank you if no redirect provided
         form.reset();
         document.getElementById('thankYou').style.display = "block";
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = btn.dataset.originalText || "Start 7-day trial";
+          btn.style.opacity = "1";
+          btn.style.cursor = "pointer";
+        }
       } catch (err) {
+        console.error(err);
+        clearTimeout(reassureTimer);
         alert("Something went wrong, please try again.");
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = btn.dataset.originalText || "Start 7-day trial";
+          btn.style.opacity = "1";
+          btn.style.cursor = "pointer";
+        }
       }
     });
+    // --------------------------------------------------------------------
 
     // ✅ Subscribe form handler
     const subscribeForm = document.getElementById('subscribeForm');
