@@ -402,16 +402,33 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
       return false;
     }
 
-    const form = document.getElementById('onboardForm');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      try {
-        const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
-          method: "POST",
-          body: data,
-          mode: "cors",
-          headers: { "Accept": "application/json" }
+const form = document.getElementById('onboardForm');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // 🔹 Show instant feedback
+  const btn = form.querySelector('button[type="submit"]');
+  if (btn) {
+    btn.disabled = true;
+    btn.innerText = "Redirecting to Stripe...";
+    btn.style.opacity = "0.7";
+    btn.style.cursor = "wait";
+  }
+
+  const data = new FormData(form);
+  try {
+    const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
+      method: "POST",
+      body: data,
+      mode: "cors",
+      headers: { "Accept": "application/json" }
+    });
+
+    // Continue to your existing Stripe redirect logic here
+  } catch (e) {
+    console.error(e);
+  }
+});
         });
         let result = null;
         const ct = res.headers.get('content-type') || '';
