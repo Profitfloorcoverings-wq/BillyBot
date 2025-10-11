@@ -229,9 +229,9 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   <section id="features" class="section">
     <div class="container">
       <h2>Why trades love BillyBot™</h2>
-      <p class="sub">Built for floor layers — and soon every trade that’s tired of late-night quoting.</p>
+    <p class="sub">Built for floor layers — and soon every trade that’s tired of late-night quoting.</p>
       <div class="grid3">
-        <div class="card"><h3>Save hours weekly</h3><p>No more admin at night. Quotes go out in seconds with zero hassle.</p></div>
+        <div class="card><h3>Save hours weekly</h3><p>No more admin at night. Quotes go out in seconds with zero hassle.</p></div>
         <div class="card"><h3>Never lose money</h3><p>Accurate pricing every time using your supplier price lists and personal pricing logic.</p></div>
         <div class="card"><h3>Works the way you do</h3><p>Send phone notes or write a text — whatever’s easiest for you.</p></div>
       </div>
@@ -318,7 +318,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Subscribe Section (new) -->
+  <!-- Subscribe Section -->
   <section id="subscribe" class="section" style="padding:80px 0;background:transparent;border-top:1px solid var(--line)">
     <div class="container" style="text-align:center;max-width:640px;">
       <h2 style="font-family:Sora;font-weight:800;margin-bottom:10px;">Not a floor layer?</h2>
@@ -350,8 +350,8 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
 
   <footer>© <span id="year"></span> BillyBot™. All rights reserved.</footer>
 
-  <!-- Scripts (moved after footer so #year exists) -->
   <script>
+    // Set year AFTER footer exists
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const sw = document.getElementById('planSwitch');
@@ -394,7 +394,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
     function go(url) {
       try {
         const target = new URL(url, window.location.origin).href;
-        if (/^https?:\/\//i test(url)) {
+        if (/^https?:\/\//i.test(url)) {
           window.location.replace(target);
           return true;
         }
