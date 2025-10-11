@@ -12,8 +12,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '24704985755777244');
-    fbq('track', 'PageView');  // always fires
-    fbq('track', 'Lead');      // fires for conversion tracking
+    fbq('track', 'PageView'); // always track page visit
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
@@ -46,6 +45,7 @@
     p { color: #AFC3FF; }
   </style>
 </head>
+
 <body>
   <div class="card">
     <h1>🎉 Welcome to BillyBot!</h1>
@@ -58,12 +58,15 @@ async function startOnboarding() {
   const sessionId = params.get("session_id");
   const msg = document.getElementById("message");
 
-  if (!sessionId) {
-    msg.innerText = "Missing session ID.";
-    return;
-  }
+if (!sessionId) {
+  msg.innerText = "Missing session ID.";
+  return;
+}
 
-  msg.innerText = "Thanks for joining BillyBot! 🚀\nYou'll receive a text shortly to get you onboarded.";
+// ✅ Fire Meta conversion only when session_id exists
+fbq('track', 'Lead');
+
+msg.innerText = "Thanks for joining BillyBot! 🚀\nYou'll receive a text shortly to get you onboarded.";
 
   try {
     await fetch("https://tradiebrain.app.n8n.cloud/webhook/stripeOnboard?session_id=" + sessionId, {
