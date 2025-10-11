@@ -357,15 +357,6 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
 
   <script>
     // Optional: Suggest opening in browser for faster checkout when inside FB/IG in-app browser
-    (function () {
-      const ua = navigator.userAgent || '';
-      const inIAB = /FBAN|FBAV|FB_IAB|Instagram/i.test(ua);
-      if (!inIAB) return;
-      const bar = document.createElement('div');
-      bar.style.cssText = 'position:sticky;top:0;z-index:999;background:#0B1225;color:#fff;padding:10px 14px;text-align:center;border-bottom:1px solid rgba(255,255,255,.08);font:600 14px Inter;';
-      bar.innerHTML = 'For the fastest checkout, tap ••• then <strong>Open in Browser</strong>.';
-      document.body.prepend(bar);
-    })();
 
     // Set year AFTER footer exists
     document.getElementById('year').textContent = new Date().getFullYear();
