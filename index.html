@@ -229,11 +229,11 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   <section id="features" class="section">
     <div class="container">
       <h2>Why trades love BillyBot™</h2>
-      <p class="sub">Built for floor layers, sparkies, plumbers, and carpenters. No more late-night/weekend quoting.</p>
+      <p class="sub">Built for floor layers — and soon every trade that’s tired of late-night quoting.</p>
       <div class="grid3">
         <div class="card"><h3>Save hours weekly</h3><p>No more admin at night. Quotes go out in seconds with zero hassle.</p></div>
         <div class="card"><h3>Never lose money</h3><p>Accurate pricing every time using your supplier price lists and personal pricing logic.</p></div>
-        <div class="card"><h3>Works the way you do</h3><p>Send phone notes, photos of job sheets, or voice notes — whatever’s easiest for you.</p></div>
+        <div class="card"><h3>Works the way you do</h3><p>Send phone notes or write a text — whatever’s easiest for you.</p></div>
       </div>
     </div>
   </section>
@@ -245,7 +245,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
       <p class="sub">Three simple steps to faster quoting and more wins.</p>
       <div class="how">
         <div class="step"><div class="n">1</div><h3>Onboarding</h3><p>Reply to simple texts, Our AI creates your accurate pricing profile.</p></div>
-        <div class="step"><div class="n">2</div><h3>Send job info</h3><p>Photos of handwritten notes, phone notes, or voice memo.</p></div>
+        <div class="step"><div class="n">2</div><h3>Send job info</h3><p>Send job notes by text</p></div>
         <div class="step"><div class="n">3</div><h3>AI builds the quote</h3><p>Quotes built in Sage, QuickBooks or Xero & sent to your customer in seconds.</p></div>
       </div>
     </div>
@@ -275,7 +275,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
         <div class="price">
           <h3>Unlimited</h3>
           <div class="money" data-month="£99/mo" data-annual="£990/yr">£99/mo</div>
-          <p>25+ quotes / month<br>Priority support<br>Advanced automations<br><strong>Early access to new products</strong></p>
+          <p>25-50 quotes / month<br>Priority support<br>Advanced automations<br><strong>Early access to new products</strong></p>
           <p style="margin-top:8px;color:#AFC3FF">Includes <strong>7-day free trial</strong></p>
           <p><button class="btn price-btn open-form" data-tier="unlimited">Start 7-day trial</button></p>
         </div>
@@ -392,6 +392,131 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
         document.getElementById('thankYou').style.display = "block";
       } catch (err) {
         alert("Something went wrong, please try again.");
+      }
+    });
+  </script>
+    <!-- Subscribe Section -->
+  <section id="subscribe" class="section" style="padding:80px 0;background:transparent;border-top:1px solid var(--line)">
+    <div class="container" style="text-align:center;max-width:640px;">
+      <h2 style="font-family:Sora;font-weight:800;margin-bottom:10px;">Not a floor layer?</h2>
+      <p class="sub" style="margin-bottom:26px;color:#AFC3FF;">
+        Join our list to be notified once BillyBot™ is ready for your trade — whether you're a sparkie, plumber, carpenter, or painter.
+      </p>
+      <form id="subscribeForm" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <select name="trade" required
+          style="flex:1;min-width:180px;max-width:220px;padding:14px 12px;border-radius:12px;border:1px solid var(--line);background:#0B1225;color:#E6ECF9;font-size:15px;">
+          <option value="" disabled selected>Select trade</option>
+          <option value="electrician">Electrician</option>
+          <option value="plumber">Plumber</option>
+          <option value="carpenter">Carpenter</option>
+          <option value="painter">Painter & Decorator</option>
+          <option value="builder">Builder</option>
+          <option value="tiler">Tiler</option>
+          <option value="roofer">Roofer</option>
+          <option value="other">Other</option>
+        </select>
+        <input type="email" name="email" placeholder="Enter your email" required
+          style="flex:1;min-width:220px;max-width:320px;padding:14px 12px;border-radius:12px;border:1px solid var(--line);background:#0B1225;color:#E6ECF9;font-size:15px;">
+        <button type="submit" class="btn glow" style="padding:14px 26px;">Notify Me</button>
+      </form>
+      <div id="subscribeThanks" style="display:none;margin-top:18px;color:#CFE0FF;font-weight:500;">
+        Thanks! We’ll let you know as soon as BillyBot™ is ready for your trade. ⚡
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> BillyBot™. All rights reserved.</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const sw = document.getElementById('planSwitch');
+    const monies = document.querySelectorAll('.money');
+    function currentBilling(){ return sw && sw.classList.contains('active') ? 'annual' : 'monthly'; }
+    if (sw){
+      sw.addEventListener('click', () => {
+        const active = sw.classList.toggle('active');
+        sw.setAttribute('aria-checked', String(active));
+        monies.forEach(el => { el.textContent = el.dataset[ active ? 'annual' : 'month' ]; });
+        const modalOpen = document.getElementById('trialModal').classList.contains('open');
+        if (modalOpen) document.getElementById('plan_billing').value = currentBilling();
+      });
+    }
+    const modal = document.getElementById('trialModal');
+    const closeModal = document.getElementById('closeModal');
+    const planTierInput = document.getElementById('plan_tier');
+    const planBillingInput = document.getElementById('plan_billing');
+    document.querySelectorAll('.open-form').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tier = btn.getAttribute('data-tier');
+        planTierInput.value = tier;
+        planBillingInput.value = currentBilling();
+        modal.classList.add('open');
+      });
+    });
+    closeModal.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
+    function normalizeRedirect(raw) {
+      if (!raw) return '';
+      let u = String(raw).trim();
+      u = u.replace(/^=\s*/, '');
+      const idx = u.indexOf('http');
+      if (!/^https?:\/\//i.test(u) && idx > -1) u = u.slice(idx);
+      return u;
+    }
+    function go(url) {
+      try {
+        const target = new URL(url, window.location.origin).href;
+        if (/^https?:\/\//i.test(url)) {
+          window.location.replace(target);
+          return true;
+        }
+      } catch(e) {}
+      return false;
+    }
+    const form = document.getElementById('onboardForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
+          method: "POST",
+          body: data,
+          mode: "cors",
+          headers: { "Accept": "application/json" }
+        });
+        let result = null;
+        const ct = res.headers.get('content-type') || '';
+        if (ct.includes('application/json')) {
+          result = await res.json().catch(() => null);
+        }
+        const fromJson = normalizeRedirect(result && result.url);
+        if (fromJson && go(fromJson)) return;
+        if (res.redirected && res.url) {
+          const redirected = normalizeRedirect(res.url);
+          if (go(redirected)) return;
+        }
+        form.reset();
+        document.getElementById('thankYou').style.display = "block";
+      } catch (err) {
+        alert("Something went wrong, please try again.");
+      }
+    });
+
+    // ✅ Subscribe form handler
+    const subscribeForm = document.getElementById('subscribeForm');
+    subscribeForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(subscribeForm);
+      try {
+        await fetch("https://tradiebrain.app.n8n.cloud/webhook/Subscribe", {
+          method: "POST",
+          body: data,
+          mode: "cors"
+        });
+        subscribeForm.reset();
+        document.getElementById('subscribeThanks').style.display = "block";
+      } catch {
+        alert("Something went wrong, please try again later.");
       }
     });
   </script>
