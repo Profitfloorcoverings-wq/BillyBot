@@ -556,7 +556,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('open'));
   modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
 
-  // --- form submission handler ---
+ <script>
   const onboardForm = document.getElementById('onboardForm');
   onboardForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -578,16 +578,20 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
         headers: { "Accept": "application/json" }
       });
 
+      // ✅ NEW redirect logic
       const result = await res.json().catch(() => ({}));
-      const redirect = result.url || res.url;
+      const possibleUrl = result?.url || result?.redirect || res.url;
 
-      if (redirect && redirect.startsWith("http")) {
-        window.location.href = redirect;
-      } else {
-        onboardForm.reset();
-        document.getElementById('thankYou').style.display = "block";
+      if (possibleUrl && possibleUrl.startsWith("http")) {
+        window.location.href = possibleUrl; // ✅ Redirect to Stripe page
+        return;
       }
-    } catch {
+
+      // fallback
+      onboardForm.reset();
+      document.getElementById('thankYou').style.display = "block";
+
+    } catch (err) {
       alert("Something went wrong, please try again.");
     } finally {
       btn.disabled = false;
