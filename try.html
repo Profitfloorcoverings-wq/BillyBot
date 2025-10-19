@@ -5,113 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Try BillyBot™ Free</title>
   <meta name="description" content="Text BillyBot™ your next job and get a quote preview in seconds." />
-  <!-- Meta Pixel -->
   <script>
-    // Fire your custom conversion when this page loads
+    // Track Meta event
     if (typeof fbq === 'function') fbq('track', 'DemoStart');
   </script>
-
   <style>
     body {
-      margin:0;
+      margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background: linear-gradient(180deg, #0B0F1A, #0F1526 60%, #0B0F1A);
-      color:#E6ECF9;
-      text-align:center;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      min-height:100vh;
-      padding:20px;
+      color: #E6ECF9;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
     }
     .card {
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:16px;
-      padding:32px;
-      max-width:520px;
-      width:100%;
-      box-shadow:0 20px 60px rgba(0,0,0,.35);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 480px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
     }
-    h1{font:800 28px "Sora",Inter,system-ui;margin:0 0 12px}
-    p{color:#A9B4CB;margin:0 0 16px}
-    .btn{
-      display:inline-block;
-      background:linear-gradient(135deg,#F97316,#FB923C);
-      color:#fff;font-weight:700;
-      padding:14px 28px;
-      border-radius:999px;
-      text-decoration:none;
-      box-shadow:0 0 20px rgba(249,115,22,0.4);
-      transition:transform .18s ease;
-      cursor:pointer;
-      margin-top:8px;
+    h1 { font: 800 26px Sora,Inter; margin: 0 0 12px; }
+    p { color: #A9B4CB; margin: 0 0 20px; }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg,#F97316,#FB923C);
+      color: #fff; font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(249,115,22,0.4);
+      transition: transform .18s ease;
     }
-    .btn:hover{transform:translateY(-2px)}
-    .qr{margin-top:18px;width:180px;height:180px}
-    .muted{font-size:14px;opacity:.8}
-    code {background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:2px 6px;border-radius:6px}
+    .btn:hover { transform: translateY(-2px); }
+    img { margin-top: 18px; width: 160px; height: 160px; }
   </style>
 </head>
 <body>
-  <div class="card" id="content">
+  <div class="card" id="desktop">
     <h1>Try BillyBot™ Free</h1>
-    <p>On your phone, tap the button below to open your Messages app with the right template.</p>
+    <p>Scan this QR code with your phone to text BillyBot.</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles." alt="QR code to text BillyBot">
+    <p style="font-size:14px;margin-top:12px;opacity:.8;">Or text BillyBot manually: <strong>+44&nbsp;7427&nbsp;949&nbsp;007</strong></p>
+    <p style="font-size:13px;opacity:.6;">Include: customer name, email, invoice address, and job details.</p>
+  </div>
 
-    <!-- CTA: no sms: href here; click handler will open SMS on mobile -->
-    <a id="smsCta" class="btn" role="button">Text BillyBot</a>
-
-    <p class="muted">Include: <strong>customer name</strong>, <strong>email</strong>, <strong>invoice address</strong> and <strong>job details</strong>.</p>
-    <p class="muted">Example:<br>
-      <code>Sarah Jones, sarah.jones@example.com, 12 Maple Road, Bournemouth BH2 5TR – 4.8x3.6 Camaro LVT in kitchen. Uplift old. Needs ply-boarding. 2 brass singles.</code>
-    </p>
-
-    <p>If you’re on desktop, scan this QR code with your phone:</p>
-    <!-- Encode the entire sms: URL for the QR service -->
-    <img
-      class="qr"
-      src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=sms%3A%2B447427949007%3Fbody%3DPlease%2520include%2520a%2520customer%2520name%252C%2520email%2520address%252C%2520invoice%2520address%2520and%2520job%2520details.%2520Example%253A%2520Sarah%2520Jones%252C%2520sarah.jones%2540example.com%252C%252012%2520Maple%2520Road%252C%2520Bournemouth%2520BH2%25205TR%2520%25E2%2580%2593%25204.8x3.6%2520Camaro%2520LVT%2520in%2520kitchen.%2520Uplift%2520old.%2520Needs%2520ply-boarding.%25202%2520brass%2520singles."
-      alt="QR code to text BillyBot"
-    />
-
-    <p class="muted" style="margin-top:12px;">Or text manually: <strong>+44&nbsp;7427&nbsp;949&nbsp;007</strong></p>
+  <div class="card" id="mobile" style="display:none;">
+    <h1>Opening Messages…</h1>
+    <p>If nothing happens, tap below to text BillyBot manually.</p>
+    <a class="btn" href="sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles.">📩 Text BillyBot</a>
   </div>
 
   <script>
-    // Device detection
     const ua = navigator.userAgent || '';
-    const isIOS = /iPhone|iPad|iPod/i.test(ua);
-    const isAndroid = /Android/i.test(ua);
-    const isMobile = isIOS || isAndroid;
-
-    // SMS payload
-    const number = '+447427949007';
-    const body = 'Please include a customer name, email address, invoice address and job details. Example: Sarah Jones, sarah.jones@example.com, 12 Maple Road, Bournemouth BH2 5TR – 4.8x3.6 Camaro LVT in kitchen. Uplift old. Needs ply-boarding. 2 brass singles.';
-
-    function buildSmsUrl() {
-      const encBody = encodeURIComponent(body);
-      // iOS is happier with &body=; Android prefers ?body=
-      if (isIOS)   return `sms:${number}&body=${encBody}`;
-      if (isAndroid) return `sms:${number}?body=${encBody}`;
-      return null; // desktop
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+    if (isMobile) {
+      document.getElementById('desktop').style.display = 'none';
+      document.getElementById('mobile').style.display = 'block';
+      // Auto open SMS
+      setTimeout(() => {
+        window.location.href = 'sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles.';
+      }, 1200);
     }
-
-    document.getElementById('smsCta').addEventListener('click', (e) => {
-      e.preventDefault();
-      const url = buildSmsUrl();
-      if (!url) {
-        alert('Open this page on your phone to text BillyBot, or scan the QR code.');
-        return;
-      }
-      // Open via a user-initiated click to avoid “download” behavior
-      const a = document.createElement('a');
-      a.href = url;
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    });
   </script>
 </body>
 </html>
