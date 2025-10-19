@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Try BillyBot™ Free</title>
   <meta name="description" content="Text BillyBot™ your next job and get a quote preview in seconds." />
+
+  <!-- Meta Pixel -->
   <script>
-    // Track Meta event
     if (typeof fbq === 'function') fbq('track', 'DemoStart');
   </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -30,29 +36,50 @@
       max-width: 480px;
       box-shadow: 0 20px 60px rgba(0,0,0,.35);
     }
-    h1 { font: 800 26px Sora,Inter; margin: 0 0 12px; }
-    p { color: #A9B4CB; margin: 0 0 20px; }
+    h1 {
+      font-family: "Sora", Inter, sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      margin: 0 0 12px;
+    }
+    p {
+      color: #A9B4CB;
+      margin: 0 0 20px;
+    }
     .btn {
       display: inline-block;
       background: linear-gradient(135deg,#F97316,#FB923C);
-      color: #fff; font-weight: 700;
+      color: #fff;
+      font-weight: 700;
       padding: 14px 28px;
       border-radius: 999px;
       text-decoration: none;
       box-shadow: 0 0 20px rgba(249,115,22,0.4);
       transition: transform .18s ease;
     }
-    .btn:hover { transform: translateY(-2px); }
-    img { margin-top: 18px; width: 160px; height: 160px; }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    img {
+      margin-top: 18px;
+      width: 160px;
+      height: 160px;
+    }
   </style>
 </head>
 <body>
   <div class="card" id="desktop">
     <h1>Try BillyBot™ Free</h1>
-    <p>Scan this QR code with your phone to text BillyBot.</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles." alt="QR code to text BillyBot">
-    <p style="font-size:14px;margin-top:12px;opacity:.8;">Or text BillyBot manually: <strong>+44&nbsp;7427&nbsp;949&nbsp;007</strong></p>
-    <p style="font-size:13px;opacity:.6;">Include: customer name, email, invoice address, and job details.</p>
+    <p>Scan this QR code with your phone to text BillyBot — it’ll prefill your message automatically.</p>
+    <img 
+      src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles." 
+      alt="QR code to text BillyBot">
+    <p style="font-size:14px;margin-top:12px;opacity:.8;">
+      Or text BillyBot manually: <strong>07427&nbsp;949007</strong>
+    </p>
+    <p style="font-size:13px;opacity:.6;">
+      Include: customer name, email, invoice address, and job details.
+    </p>
   </div>
 
   <div class="card" id="mobile" style="display:none;">
@@ -64,10 +91,10 @@
   <script>
     const ua = navigator.userAgent || '';
     const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+
     if (isMobile) {
       document.getElementById('desktop').style.display = 'none';
       document.getElementById('mobile').style.display = 'block';
-      // Auto open SMS
       setTimeout(() => {
         window.location.href = 'sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles.';
       }, 1200);
