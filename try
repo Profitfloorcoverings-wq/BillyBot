@@ -58,13 +58,25 @@
     <a href="sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles." class="btn">Text BillyBot</a>
   </div>
 
-  <script>
-    // Auto-redirect mobile users into SMS app after short delay
-    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-      setTimeout(() => {
-        window.location.href = "sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles.";
-      }, 800);
-    }
-  </script>
+<script>
+  // Detect if user is on a real mobile browser (not desktop emulation)
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    // Use a slightly longer delay for iOS to finish rendering
+    setTimeout(() => {
+      // Create a hidden link element and "click" it, safer than direct window.location
+      const link = document.createElement("a");
+      link.href =
+        "sms:+447427949007?body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles.";
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 1500); // 1.5s delay ensures iOS doesn’t misinterpret the redirect
+  } else {
+    console.log("Desktop detected — staying on page, no SMS redirect.");
+  }
+</script>
 </body>
 </html>
