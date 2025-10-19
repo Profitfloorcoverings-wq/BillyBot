@@ -259,8 +259,25 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
     </p>
 
     <div class="cta-row">
-<a class="btn glow" href="/try.html">👉 Try It Free</a>
-    </div>
+<a class="btn glow" 
+   href="javascript:void(0)" 
+   onclick="redirectOrOpen()">👉 Try It Free</a>
+
+<script>
+function redirectOrOpen() {
+  const ua = navigator.userAgent || '';
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+  const smsLink = 'sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles.';
+
+  if (isMobile) {
+    // open SMS app immediately
+    window.location.href = smsLink;
+  } else {
+    // send desktops to QR/instructions landing page
+    window.location.href = '/try.html';
+  }
+}
+</script>
 
     <div class="chips">
       <span class="chip">No signup</span>
