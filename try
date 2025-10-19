@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Try BillyBot™ Free</title>
+  <meta name="description" content="Text BillyBot™ your next job and get a quote preview in seconds." />
+  <!-- Meta Pixel -->
+  <script>
+    fbq('track', 'DemoStart'); // fires your custom conversion
+  </script>
+
+  <style>
+    body {
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A, #0F1526 60%, #0B0F1A);
+      color:#E6ECF9;
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      padding:20px;
+    }
+    .card {
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:16px;
+      padding:32px;
+      max-width:480px;
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    h1{font:800 28px Sora,Inter;margin:0 0 12px}
+    p{color:#A9B4CB;margin:0 0 20px}
+    .btn{
+      display:inline-block;
+      background:linear-gradient(135deg,#F97316,#FB923C);
+      color:#fff;font-weight:700;
+      padding:14px 28px;
+      border-radius:999px;
+      text-decoration:none;
+      box-shadow:0 0 20px rgba(249,115,22,0.4);
+      transition:transform .18s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    img{margin-top:18px;width:160px;height:160px}
+  </style>
+</head>
+<body>
+  <div class="card" id="content">
+    <h1>Opening Messages…</h1>
+    <p>If you’re on mobile, BillyBot should appear in your texts any second.</p>
+    <p>If you’re on desktop, scan this QR code with your phone to try it free:</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles." alt="QR code to text BillyBot">
+    <p style="font-size:14px;margin-top:12px;opacity:.8;">Or text BillyBot manually: <strong>+44&nbsp;7427&nbsp;949&nbsp;007</strong></p>
+    <a href="sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles." class="btn">Text BillyBot</a>
+  </div>
+
+  <script>
+    // Auto-redirect mobile users into SMS app after short delay
+    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+      setTimeout(() => {
+        window.location.href = "sms:+447427949007?&body=Please%20include%20a%20customer%20name%2C%20email%20address%2C%20invoice%20address%20and%20job%20details.%20Example%3A%20Sarah%20Jones%2C%20sarah.jones%40example.com%2C%2012%20Maple%20Road%2C%20Bournemouth%20BH2%205TR%20%E2%80%93%204.8x3.6%20Camaro%20LVT%20in%20kitchen.%20Uplift%20old.%20Needs%20ply-boarding.%202%20brass%20singles.";
+      }, 800);
+    }
+  </script>
+</body>
+</html>
