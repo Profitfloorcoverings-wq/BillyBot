@@ -657,18 +657,23 @@ document.getElementById('onboardForm').addEventListener('submit', function(e) {
     </form>
 
 <script>
-const form = document.getElementById('onboardForm');
-form.addEventListener('submit', function(e) {
-  const phoneInput = form.querySelector('input[name="phone"]');
-  const phone = phoneInput.value.replace(/\s+/g, '');
-  const valid = /^(\+447\d{9}|07\d{9})$/.test(phone);
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('onboardForm');
+  if (!form) return;
 
-  if (!valid) {
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    alert('Please enter a valid UK mobile number');
-    phoneInput.focus();
-  }
+  form.addEventListener('submit', e => {
+    const phoneInput = form.querySelector('input[name="phone"]');
+    const phone = phoneInput.value.replace(/\s+/g, '');
+    const valid = /^(\+447\d{9}|07\d{9})$/.test(phone);
+
+    if (!valid) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      alert('Please enter a valid UK mobile number');
+      phoneInput.focus();
+      return false;
+    }
+  }, true); // capture phase ensures it runs before other handlers
 });
 </script>
 
