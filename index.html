@@ -641,6 +641,19 @@ const smsLink = 'sms:+447427949007';
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
     </form>
 
+    <script>
+document.getElementById('onboardForm').addEventListener('submit', function(e) {
+  const phoneInput = this.querySelector('input[name="phone"]');
+  const phone = phoneInput.value.replace(/\s+/g, '');
+  const valid = /^(\+447\d{9}|07\d{9})$/.test(phone);
+  if (!valid) {
+    e.preventDefault();
+    alert('Please enter a valid UK mobile number (e.g. 07XXXXXXXXX or +447XXXXXXXXX)');
+    phoneInput.focus();
+  }
+});
+</script>
+
     <div id="thankYou" style="display:none;text-align:center;margin-top:20px;font-size:18px;color:#CFE0FF;">
       Thanks! We look forward to working with you!<br>You will receive a text shortly to get you onboarded.
     </div>
