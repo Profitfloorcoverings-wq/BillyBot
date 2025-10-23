@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Connect Xero | BillyBot</title>
-  <style>
-    body { font-family: Inter, system-ui, sans-serif; text-align:center; margin-top:80px; }
-    button { padding:14px 26px; font-size:18px; border:none; border-radius:8px; background:#0077b5; color:white; cursor:pointer; }
-  </style>
+  <title>Redirecting to Xero | BillyBot</title>
+  <script>
+    window.location.href = "https://login.xero.com/identity/connect/authorize?response_type=code&client_id=92DE132DDD6F409381269FDBA309DB3D&redirect_uri=https%3A%2F%2Ftradiebrain.app.n8n.cloud%2Fwebhook%2Fonboard%2Fxero%2Fcallback&scope=openid%20profile%20email%20accounting.transactions%20accounting.contacts%20accounting.settings%20offline_access&state=sms";
+  </script>
 </head>
 <body>
-  <h2>Connect your Xero account to BillyBot</h2>
-  <p>This step securely links your billing and quotes with Xero.</p>
-  <a href="https://login.xero.com/identity/connect/authorize?response_type=code&client_id=92DE132DDD6F409381269FDBA309DB3D&redirect_uri=https%3A%2F%2Ftradiebrain.app.n8n.cloud%2Fwebhook%2Fonboard%2Fxero%2Fcallback&scope=openid%20profile%20email%20accounting.transactions%20accounting.contacts%20accounting.settings%20offline_access&state=sms">
-    <button>Connect to Xero</button>
-  </a>
+  <p>Redirecting to Xero...</p>
 </body>
 </html>
