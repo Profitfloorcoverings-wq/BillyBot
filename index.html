@@ -253,30 +253,17 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
 <!-- Hero -->
 <section class="hero">
   <div class="container">
-    <h1 class="title">Text BillyBot Your Next Job.</h1>
-    <p class="subtitle">He’ll reply with a quote preview in seconds.</p>
+    <h1 class="title">Get Quotes Built For You — Instantly.</h1>
+    <p class="subtitle">BillyBot™ builds your flooring quotes inside Sage, Xero or QuickBooks using your own prices, mark-ups and labour rates — automatically.</p>
 
     <div class="cta-row">
-      <a class="btn glow" href="javascript:void(0)" onclick="redirectOrOpen()">👉 Try It Free</a>
+      <a class="btn glow" href="#pricing">🚀 Start Your 7-Day Free Trial</a>
     </div>
 
-<!-- New explainer section -->
-<div class="explain">
-  <h3>👇READ THIS FIRST👇</h3>
-  <ol>
-    <li>Your phone will open a text to <strong>BillyBot™</strong></li>
-    <li>Just type or paste your job notes. IMPORTANT 👉 Always include a name, email, address and job details. Example:<br>
-      <span class="example">Sarah Jones, sarah.jones@example.com, 12 Maple Road, Bournemouth BH2 5TR – 4.8×3.6 Camaro LVT in kitchen. Uplift old. Needs ply-boarding. 2 brass singles.</span>
-    </li>
-    <li>BillyBot replies with your <strong>quote preview</strong> in seconds — no forms, no login.</li>
-  </ol>
-  <p class="note">Please note: free quotes use generic pricing. Billy can only apply your own supplier prices and markup rules once you’ve signed up and completed the onboarding questions.</p>
-</div>
-
     <div class="chips">
-      <span class="chip">No signup</span>
-      <span class="chip">No app download</span>
-      <span class="chip">Instant quote preview</span>
+      <span class="chip">No setup calls</span>
+      <span class="chip">No contracts</span>
+      <span class="chip">Cancel anytime</span>
     </div>
 
     <div class="trust" aria-label="Works with">
@@ -286,60 +273,51 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   </div>
 </section>
 
-<script>
-function redirectOrOpen() {
-  const ua = navigator.userAgent || '';
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
-const smsLink = 'sms:+447427949007';
-
-  if (isMobile) {
-    window.location.href = smsLink;
-  } else {
-    window.location.href = '/try.html';
-  }
-}
-</script>
-
 <style>
-.explain {
-  max-width: 700px;
-  margin: 28px auto 0;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
-  padding: 20px 26px;
-  text-align: left;
-  color: #CFE0FF;
-  font-size: 15px;
-  line-height: 1.6;
-}
-.explain h3 {
-  font: 700 17px Inter, sans-serif;
-  margin: 0 0 10px;
+.hero .title {
+  font-size: 42px;
+  line-height: 1.1;
+  margin-bottom: 16px;
   color: #fff;
 }
-.explain ol {
-  margin: 0;
-  padding-left: 20px;
+.hero .subtitle {
+  font-size: 18px;
+  color: #CFE0FF;
+  max-width: 620px;
+  margin: 0 auto 28px;
 }
-.explain li {
-  margin-bottom: 10px;
+.btn.glow {
+  background: #2E68FF;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
-.explain .example {
+.btn.glow:hover { opacity: 0.9; transform: translateY(-1px); }
+.chips {
+  margin-top: 22px;
+}
+.chip {
   display: inline-block;
-  background: rgba(46, 104, 255, 0.1);
-  border: 1px solid rgba(120, 155, 255, 0.2);
-  border-radius: 8px;
-  padding: 6px 10px;
-  margin-top: 6px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin: 4px;
   font-size: 14px;
   color: #A9B4CB;
 }
-@media (max-width: 768px) {
-  .explain {
-    font-size: 14px;
-    padding: 18px;
-  }
+.trust {
+  margin-top: 30px;
+  color: #A9B4CB;
+  font-size: 15px;
+}
+.trust .logos span {
+  margin: 0 8px;
+  font-weight: 600;
+  color: #fff;
 }
 </style>
 
