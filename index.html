@@ -532,6 +532,49 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- Used By Section -->
+<section id="used-by" class="section" 
+  style="padding:80px 0 60px;background:transparent;overflow:hidden;">
+  <div class="container" style="text-align:center;">
+    <h2 style="font-family:Sora,Inter;font-weight:800;font-size:20px;
+               color:#CFE0FF;letter-spacing:1px;margin-bottom:32px;">
+      Used by leading flooring companies
+    </h2>
+
+    <div class="logo-slider" 
+         style="display:flex;gap:60px;animation:scroll 25s linear infinite;
+                white-space:nowrap;align-items:center;justify-content:center;">
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">Pro-Fit Flooring</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">Elite Floors Ltd</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">Total Interiors</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">Precision Flooring Co</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">FloorTech UK</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">UrbanFit Flooring</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">Refloor Group</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">Supreme Surfaces</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">FloorSmart Installations</span>
+      <span style="color:#AFC3FF;font-size:18px;font-weight:600;">Complete Flooring Systems</span>
+    </div>
+  </div>
+
+  <style>
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Duplicate the logos for seamless loop */
+    #used-by .logo-slider::after {
+      content: attr(data-content);
+      display: flex;
+    }
+
+    @media (max-width:768px){
+      #used-by .logo-slider { gap:40px; font-size:16px; }
+    }
+  </style>
+</section>
+  
 <!-- Pricing -->
 <section id="pricing" class="section">
   <div class="container">
