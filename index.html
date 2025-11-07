@@ -181,6 +181,13 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
       padding:44px;color:#E8EEFF;box-shadow:var(--shadow);max-width:820px;width:92%}
     .form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:16px;margin-top:12px}
     .form input{background:#0B1225;color:#E6ECF9;border:1px solid #1A2341;border-radius:12px;padding:14px 12px;font-size:15px}
+    /* Fix input background for filled and focused states */
+.form input:focus,
+.form input:not(:placeholder-shown) {
+  background: #FFF9C4 !important;  /* same light yellow tone */
+  border-color: #F97316 !important; /* subtle orange accent */
+  color: #0B0F1A !important;        /* ensure text is dark for readability */
+}
     .hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
     .x{position:absolute;top:14px;right:18px;background:transparent;border:1px solid var(--line);color:#D3DEFF;border-radius:999px;padding:8px 12px;cursor:pointer}
     /* Contact */
