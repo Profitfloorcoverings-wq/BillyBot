@@ -346,6 +346,116 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- 3-Step Flow Section -->
+<section id="how" class="section" style="padding:90px 0;">
+  <div class="container">
+    <h2>From job note to finished quote in 3 simple steps.</h2>
+    <p class="sub">BillyBot turns your notes into ready-to-send quotes — automatically.</p>
+
+    <div class="flow3">
+      <!-- Step 1 -->
+      <div class="flow-step fade-up">
+        <div class="phone">
+          <img src="images/Untitled design - 2025-11-12T140423.561.png" alt="Text job note to BillyBot">
+        </div>
+        <h3>1. Text your job note</h3>
+        <p>Send BillyBot your job details by text or email.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flow-step fade-up">
+        <div class="phone">
+          <img src="images/Untitled design - 2025-11-12T141839.116.png" alt="Receive quote link from BillyBot">
+        </div>
+        <h3>2. Receive your quote link</h3>
+        <p>BillyBot builds your full quote — materials, labour & markup done.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flow-step fade-up">
+        <div class="phone">
+          <img src="images/Untitled design - 2025-11-12T141749.774.png" alt="Edit or send quote to customer">
+        </div>
+        <h3>3. Edit or send to customer</h3>
+        <p>Tweak anything or send straight to your client.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:60px;">
+      <a href="#pricing" class="btn glow">Try BillyBot Free</a>
+      <p style="color:var(--muted);margin-top:12px;">No card required • Used by 100+ UK floor fitters</p>
+    </div>
+  </div>
+</section>
+
+<!-- Styling for phones and layout -->
+<style>
+.flow3 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 36px;
+  align-items: start;
+}
+.flow-step {
+  text-align: center;
+}
+.flow-step h3 {
+  font: 700 18px Sora,Inter;
+  margin: 18px 0 6px;
+}
+.flow-step p {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 260px;
+  margin: 0 auto;
+}
+.phone {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(180deg,#0F1526,#0C1221);
+  border: 1px solid var(--line);
+  box-shadow: 0 0 30px rgba(0,0,0,0.4), 0 0 40px rgba(249,115,22,0.15);
+  aspect-ratio: 9/19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phone img {
+  width: 90%;
+  height: auto;
+  border-radius: 22px;
+}
+@media(max-width:1024px){
+  .flow3{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .flow3{grid-template-columns:1fr;}
+}
+
+/* Fade-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<!-- Scroll trigger -->
+<script>
+document.addEventListener('scroll', () => {
+  document.querySelectorAll('.fade-up').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) el.classList.add('visible');
+  });
+});
+</script>
+
+  
 <section id="difference" class="section">
   <div class="container" style="text-align:center;">
     <h2 style="font-family:Sora,Inter;font-weight:800;margin-bottom:8px;">How it works</h2>
