@@ -834,13 +834,18 @@ Add your own version for each service you offer.</textarea>
     });
 
     // Toggle switches
-    document.addEventListener("click", (e) => {
-      const sw = e.target.closest("[data-toggle]");
-      if (!sw) return;
-      sw.classList.toggle("active");
-      const input = sw.querySelector(".switch-input");
-      if (input) input.checked = sw.classList.contains("active");
-    });
+document.addEventListener("click", (e) => {
+  const isSwitch = e.target.classList.contains("switch") || 
+                   e.target.closest(".switch");
+
+  if (!isSwitch) return;
+
+  const sw = e.target.closest(".switch");
+  sw.classList.toggle("active");
+
+  const input = sw.querySelector(".switch-input");
+  if (input) input.checked = sw.classList.contains("active");
+});
 
     // Breakpoint show/hide and required logic
     function updateBreakpointRequired() {
