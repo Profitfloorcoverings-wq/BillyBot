@@ -503,11 +503,18 @@
             </div>
           </div>
 
-          <div class="field-group">
-            <div class="field-label">
-              <span>Typical markups</span>
-            </div>
-            <div class="rate-grid">
+<div class="field-group">
+  <div class="field-label">
+    <span>Typical markups</span>
+  </div>
+
+  <!-- DYNAMIC MARKUP FIELDS WILL BE INSERTED HERE -->
+  <div id="dynamicMarkups"></div>
+
+  <p class="small-note">
+    If you prefer £ per m² instead, just type those values instead of percentages.
+  </p>
+</div>
               <div class="rate-label">Domestic carpet markup %</div>
               <input class="rate-input" type="number" name="markup_carpet_domestic_pct" value="50" min="0" required />
               <div class="rate-label">Commercial carpet markup %</div>
@@ -770,7 +777,50 @@ Add your own version for each service you offer.</textarea>
     const form = document.getElementById("onboardForm");
     const breakpointRadios = document.querySelectorAll("input[name='use_breakpoints']");
     const breakpointDetails = document.getElementById("breakpointDetails");
+// SERVICE → MARKUP FIELD MAP
+const markupMap = {
+  service_domestic_carpets:        { label: "Domestic carpet markup %",      name: "markup_carpet_domestic_pct",      default: 50 },
+  service_commercial_carpets:      { label: "Commercial carpet markup %",    name: "markup_carpet_commercial_pct",    default: 50 },
+  service_carpet_tiles:            { label: "Carpet tiles markup %",         name: "markup_carpet_tiles_pct",         default: 50 },
+  service_lvt:                      { label: "LVT markup %",                  name: "markup_lvt_pct",                  default: 50 },
+  service_vinyl_domestic:          { label: "Vinyl domestic markup %",       name: "markup_vinyl_domestic_pct",       default: 50 },
+  service_vinyl_safety:            { label: "Safety vinyl markup %",         name: "markup_vinyl_safety_pct",         default: 50 },
+  service_laminate:                { label: "Laminate markup %",             name: "markup_laminate_pct",             default: 50 },
+  service_wood:                    { label: "Solid/engineered wood markup %",name: "markup_wood_pct",                 default: 50 },
+  service_whiterock:               { label: "Wall cladding markup %",        name: "markup_whiterock_pct",            default: 50 },
+  service_ceramic:                 { label: "Ceramic tile markup %",         name: "markup_ceramic_pct",              default: 50 }
+};
 
+
+// BUILD PAGE 2 DYNAMICALLY BASED ON STEP 1 SELECTIONS
+function buildMarkupFields() {
+  const container = document.getElementById("dynamicMarkups");
+  container.innerHTML = "";
+
+  // Get all service toggles
+  const toggles = document.querySelectorAll(".switch-input");
+
+  toggles.forEach(t => {
+    if (t.checked && markupMap[t.name]) {
+      const { label, name, default: def } = markupMap[t.name];
+
+      container.insertAdjacentHTML("beforeend", `
+        <div class="rate-grid">
+          <div class="rate-label">${label}</div>
+          <input 
+            class="rate-input" 
+            type="number" 
+            name="${name}" 
+            value="${def}" 
+            min="0" 
+            step="0.1" 
+            required 
+          />
+        </div>
+      `);
+    }
+  });
+}
     function updateView() {
       steps.forEach((s, i) => {
         s.classList.toggle("active", i === current);
@@ -823,8 +873,13 @@ Add your own version for each service you offer.</textarea>
         form.submit();
         return;
       }
-      current++;
-      updateView();
+// Step 1 → Step 2: build dynamic markups
+if (current === 0) {
+  buildMarkupFields();
+}
+
+current++;
+updateView();
     });
 
     prevBtn.addEventListener("click", () => {
