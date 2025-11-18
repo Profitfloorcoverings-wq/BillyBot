@@ -32,7 +32,7 @@
     img{max-width:100%;display:block}
     .container{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-    /* Simple header */
+    /* Header */
     header {
       position:sticky;top:0;z-index:10;
       background:linear-gradient(180deg,rgba(11,15,26,0.95),rgba(11,15,26,0.6));
@@ -43,10 +43,8 @@
     .logo{display:flex;align-items:center;gap:10px;font:800 20px Sora,Inter;}
     .logo svg{width:32px;height:32px;}
 
-    /* Onboarding card */
-    .onboard-shell {
-      padding:32px 0 40px;
-    }
+    /* Onboarding shell */
+    .onboard-shell {padding:32px 0 40px;}
     .onboard-card {
       background:linear-gradient(180deg,#0F1526,#0C1221);
       border-radius:var(--radius);
@@ -59,23 +57,12 @@
       .onboard-card{padding:26px 26px 30px;}
     }
 
-    .onboard-header {
-      margin-bottom:16px;
-    }
-    .onboard-title {
-      font:800 24px Sora,Inter;
-      margin:0 0 4px;
-    }
-    .onboard-sub {
-      margin:0;
-      font-size:14px;
-      color:var(--muted);
-    }
+    .onboard-header {margin-bottom:16px;}
+    .onboard-title {font:800 24px Sora,Inter;margin:0 0 4px;}
+    .onboard-sub {margin:0;font-size:14px;color:var(--muted);}
 
     /* Progress */
-    .progress-wrap {
-      margin-bottom:18px;
-    }
+    .progress-wrap {margin-bottom:18px;}
     .progress-top {
       display:flex;
       justify-content:space-between;
@@ -105,36 +92,18 @@
     }
 
     /* Steps */
-    .step {
-      display:none;
-      animation:fadeIn .2s ease-out;
-    }
-    .step.active {
-      display:block;
-    }
-
-    .step-title {
-      font:700 19px Sora,Inter;
-      margin:0 0 6px;
-    }
-    .step-body {
-      margin:0 0 16px;
-      font-size:14px;
-      color:var(--muted);
-    }
+    .step {display:none;animation:fadeIn .2s ease-out;}
+    .step.active {display:block;}
+    .step-title {font:700 19px Sora,Inter;margin:0 0 6px;}
+    .step-body {margin:0 0 16px;font-size:14px;color:var(--muted);}
 
     @keyframes fadeIn {
       from {opacity:0;transform:translateY(4px);}
       to {opacity:1;transform:translateY(0);}
     }
 
-    /* Toggles reusing your switch style */
-    .toggle-list {
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      margin-bottom:16px;
-    }
+    /* Toggle rows (Step 1) */
+    .toggle-list {display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
     .toggle-row {
       display:flex;
       align-items:center;
@@ -145,15 +114,10 @@
       border-radius:14px;
       border:1px solid var(--line);
       font-size:14px;
+      cursor:pointer;
     }
-    .toggle-row-main {
-      font-weight:600;
-    }
-    .toggle-row-sub {
-      font-size:12px;
-      color:var(--muted);
-      margin-top:3px;
-    }
+    .toggle-row-main {font-weight:600;}
+    .toggle-row-sub {font-size:12px;color:var(--muted);margin-top:3px;}
 
     .switch {
       width:46px;
@@ -181,19 +145,11 @@
       background:linear-gradient(135deg,var(--accent1),var(--accent2));
       box-shadow:0 0 10px rgba(249,115,22,0.6);
     }
-    .switch.active .knob {
-      left:23px;
-      background:#FFF8F3;
-    }
+    .switch.active .knob {left:23px;background:#FFF8F3;}
+    .switch-input {display:none;}
 
-    .switch-input {
-      display:none;
-    }
-
-    /* Field groups */
-    .field-group {
-      margin-bottom:18px;
-    }
+    /* Fields / grids */
+    .field-group {margin-bottom:18px;}
     .field-label {
       display:flex;
       justify-content:space-between;
@@ -208,11 +164,7 @@
       font-size:14px;
     }
 
-    .field-row {
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+    .field-row {display:flex;gap:10px;flex-wrap:wrap;}
     .field-row input,
     .field-row select,
     .field-row textarea {
@@ -224,31 +176,18 @@
       font-size:14px;
       color:var(--text);
     }
-    .field-row input[type="number"]{
-      max-width:130px;
-    }
-    textarea {
-      resize:vertical;
-      min-height:80px;
-    }
-    .small-note {
-      font-size:12px;
-      color:var(--muted);
-      margin-top:4px;
-    }
+    textarea{resize:vertical;min-height:80px;width:100%;}
+    .small-note {font-size:12px;color:var(--muted);margin-top:4px;}
 
-    /* Two column simple table look */
-    .rate-grid {
+    .rate-row {
       display:grid;
-      grid-template-columns:1.3fr 0.7fr;
+      grid-template-columns:1.3fr 0.8fr 0.7fr;
       gap:8px 10px;
       align-items:center;
       font-size:13px;
-      margin-bottom:4px;
+      margin-bottom:6px;
     }
-    .rate-label {
-      color:var(--text);
-    }
+    .rate-label {color:var(--text);}
     .rate-input {
       background:#0B1225;
       border-radius:10px;
@@ -258,19 +197,20 @@
       width:100%;
       color:var(--text);
     }
+    .rate-unit {
+      background:#0B1225;
+      border-radius:10px;
+      border:1px solid #1A2341;
+      padding:8px 9px;
+      font-size:13px;
+      width:100%;
+      color:var(--muted);
+    }
 
-    /* Radios as pills */
-    .pill-row {
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
-    .pill {
-      position:relative;
-    }
-    .pill input {
-      display:none;
-    }
+    /* Pills (radios) */
+    .pill-row {display:flex;flex-wrap:wrap;gap:8px;}
+    .pill {position:relative;}
+    .pill input{display:none;}
     .pill span {
       display:inline-block;
       padding:9px 12px;
@@ -288,7 +228,7 @@
       box-shadow:0 0 12px rgba(249,115,22,0.4);
     }
 
-    /* Buttons */
+    /* Actions */
     .actions {
       display:flex;
       justify-content:space-between;
@@ -312,29 +252,23 @@
       box-shadow:0 0 16px rgba(249,115,22,0.5);
       flex:1;
     }
-    .btn-primary[disabled] {
-      opacity:.5;
-      cursor:not-allowed;
-      box-shadow:none;
-    }
+    .btn-primary[disabled]{opacity:.5;cursor:not-allowed;box-shadow:none;}
     .btn-ghost {
       background:transparent;
       color:var(--muted);
       border:1px solid var(--line);
       flex:0 0 auto;
     }
-
-    .final-message {
-      font-size:14px;
-      color:var(--muted);
-      margin-top:8px;
-    }
+    .final-message {font-size:14px;color:var(--muted);margin-top:8px;}
 
     @media(max-width:480px){
       .onboard-card{padding:20px 16px 24px;}
       .onboard-title{font-size:20px;}
       .actions{flex-direction:column-reverse;align-items:stretch;}
       .btn-ghost{width:100%;}
+      .rate-row{
+        grid-template-columns:1.2fr 1fr 0.9fr;
+      }
     }
   </style>
 </head>
@@ -343,7 +277,6 @@
 <header>
   <div class="container nav">
     <div class="logo">
-      <!-- Simple logo placeholder - swap for your existing SVG if you want -->
       <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
         <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
@@ -382,32 +315,25 @@
           </p>
 
           <div class="toggle-list">
-            <!-- Each toggle has a hidden checkbox -->
             <label class="toggle-row">
-              <div>
-                <div class="toggle-row-main">Domestic carpets</div>
-              </div>
-              <div class="switch active" data-toggle>
+              <div><div class="toggle-row-main">Domestic carpets</div></div>
+              <div class="switch active">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_domestic_carpets" checked />
               </div>
             </label>
 
             <label class="toggle-row">
-              <div>
-                <div class="toggle-row-main">Commercial carpets (glue-down)</div>
-              </div>
-              <div class="switch active" data-toggle>
+              <div><div class="toggle-row-main">Commercial carpets (glue-down)</div></div>
+              <div class="switch active">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_commercial_carpets" checked />
               </div>
             </label>
 
             <label class="toggle-row">
-              <div>
-                <div class="toggle-row-main">Carpet tiles</div>
-              </div>
-              <div class="switch active" data-toggle>
+              <div><div class="toggle-row-main">Carpet tiles</div></div>
+              <div class="switch active">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_carpet_tiles" checked />
               </div>
@@ -415,7 +341,7 @@
 
             <label class="toggle-row">
               <div class="toggle-row-main">LVT / Luxury Vinyl Tiles</div>
-              <div class="switch active" data-toggle>
+              <div class="switch active">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_lvt" checked />
               </div>
@@ -423,7 +349,7 @@
 
             <label class="toggle-row">
               <div class="toggle-row-main">Domestic vinyl</div>
-              <div class="switch active" data-toggle>
+              <div class="switch active">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_vinyl_domestic" checked />
               </div>
@@ -431,7 +357,7 @@
 
             <label class="toggle-row">
               <div class="toggle-row-main">Commercial / safety vinyl</div>
-              <div class="switch active" data-toggle>
+              <div class="switch active">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_vinyl_safety" checked />
               </div>
@@ -439,7 +365,7 @@
 
             <label class="toggle-row">
               <div class="toggle-row-main">Laminate</div>
-              <div class="switch" data-toggle>
+              <div class="switch">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_laminate" />
               </div>
@@ -447,7 +373,7 @@
 
             <label class="toggle-row">
               <div class="toggle-row-main">Solid / engineered wood</div>
-              <div class="switch" data-toggle>
+              <div class="switch">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_wood" />
               </div>
@@ -455,7 +381,7 @@
 
             <label class="toggle-row">
               <div class="toggle-row-main">Altro Whiterock (wall cladding)</div>
-              <div class="switch" data-toggle>
+              <div class="switch">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_whiterock" />
               </div>
@@ -463,7 +389,7 @@
 
             <label class="toggle-row">
               <div class="toggle-row-main">Ceramic tiles</div>
-              <div class="switch" data-toggle>
+              <div class="switch">
                 <div class="knob"></div>
                 <input class="switch-input" type="checkbox" name="service_ceramic" />
               </div>
@@ -479,57 +405,17 @@
         <section class="step" data-step="2">
           <h2 class="step-title">How should BillyBot handle material prices?</h2>
           <p class="step-body">
-            Most fitters either add a percentage on cost, a fixed £ per m², or a mix.
+            For each service you offer, set how much you add on. Use % or a flat £ per m².
           </p>
 
           <div class="field-group">
             <div class="field-label">
-              <span>Default style</span>
-              <span>Change if needed</span>
+              <span>Markups by service</span>
+              <span>Pre-filled with typical % values</span>
             </div>
-            <div class="pill-row">
-              <label class="pill">
-                <input type="radio" name="markup_style" value="percentage" checked required />
-                <span>Flat percentage on cost</span>
-              </label>
-              <label class="pill">
-                <input type="radio" name="markup_style" value="per_m2" />
-                <span>Fixed £ per m²</span>
-              </label>
-              <label class="pill">
-                <input type="radio" name="markup_style" value="mixed" />
-                <span>Mix per product</span>
-              </label>
-            </div>
-          </div>
-
-<div class="field-group">
-  <div class="field-label">
-    <span>Typical markups</span>
-  </div>
-
-  <!-- DYNAMIC MARKUP FIELDS WILL BE INSERTED HERE -->
-  <div id="dynamicMarkups"></div>
-
-  <p class="small-note">
-    If you prefer £ per m² instead, just type those values instead of percentages.
-  </p>
-</div>
-              <div class="rate-label">Domestic carpet markup %</div>
-              <input class="rate-input" type="number" name="markup_carpet_domestic_pct" value="50" min="0" required />
-              <div class="rate-label">Commercial carpet markup %</div>
-              <input class="rate-input" type="number" name="markup_carpet_commercial_pct" value="50" min="0" required />
-              <div class="rate-label">Carpet tiles markup %</div>
-              <input class="rate-input" type="number" name="markup_carpet_tiles_pct" value="50" min="0" required />
-              <div class="rate-label">LVT markup %</div>
-              <input class="rate-input" type="number" name="markup_lvt_pct" value="50" min="0" required />
-              <div class="rate-label">Vinyl (domestic) markup %</div>
-              <input class="rate-input" type="number" name="markup_vinyl_domestic_pct" value="50" min="0" required />
-              <div class="rate-label">Vinyl (safety) markup %</div>
-              <input class="rate-input" type="number" name="markup_vinyl_safety_pct" value="50" min="0" required />
-            </div>
+            <div id="dynamicMarkups"></div>
             <p class="small-note">
-              If you prefer £ per m² instead, just type those values instead of percentages and select that style above.
+              Change any number or switch a service to £/m² if that’s how you price.
             </p>
           </div>
         </section>
@@ -545,82 +431,16 @@
             <div class="field-label">
               <span>Materials per m² or per unit</span>
             </div>
-            <div class="rate-grid">
-              <div class="rate-label">Domestic carpet £/m²</div>
-              <input class="rate-input" type="number" name="mat_carpet_domestic" value="12" min="0" step="0.1" required />
-              <div class="rate-label">Commercial carpet £/m²</div>
-              <input class="rate-input" type="number" name="mat_carpet_commercial" value="16" min="0" step="0.1" required />
-              <div class="rate-label">Carpet tiles £/m²</div>
-              <input class="rate-input" type="number" name="mat_carpet_tiles" value="19.5" min="0" step="0.1" required />
-              <div class="rate-label">LVT £/m²</div>
-              <input class="rate-input" type="number" name="mat_lvt" value="26" min="0" step="0.1" required />
-              <div class="rate-label">Vinyl domestic £/m²</div>
-              <input class="rate-input" type="number" name="mat_vinyl_domestic" value="14" min="0" step="0.1" required />
-              <div class="rate-label">Vinyl commercial/safety £/m²</div>
-              <input class="rate-input" type="number" name="mat_vinyl_safety" value="18" min="0" step="0.1" required />
-              <div class="rate-label">Wall cladding £/m²</div>
-              <input class="rate-input" type="number" name="mat_wall_cladding" value="35" min="0" step="0.1" required />
-              <div class="rate-label">Gripper £/m</div>
-              <input class="rate-input" type="number" name="mat_gripper" value="4" min="0" step="0.1" required />
-              <div class="rate-label">Underlay £/m²</div>
-              <input class="rate-input" type="number" name="mat_underlay" value="6" min="0" step="0.1" required />
-              <div class="rate-label">Adhesive £/m²</div>
-              <input class="rate-input" type="number" name="mat_adhesive" value="3" min="0" step="0.1" required />
-              <div class="rate-label">Ply board £/m²</div>
-              <input class="rate-input" type="number" name="mat_ply" value="12" min="0" step="0.1" required />
-              <div class="rate-label">Latex £/m²</div>
-              <input class="rate-input" type="number" name="mat_latex" value="10" min="0" step="0.1" required />
-              <div class="rate-label">Door bars £/m</div>
-              <input class="rate-input" type="number" name="mat_door_bars" value="8" min="0" step="0.1" required />
-              <div class="rate-label">Standard nosings £/m</div>
-              <input class="rate-input" type="number" name="mat_nosings" value="25" min="0" step="0.1" required />
-              <div class="rate-label">Entrance matting £/m²</div>
-              <input class="rate-input" type="number" name="mat_matting" value="35" min="0" step="0.1" required />
-            </div>
+            <div id="baseMaterials"></div>
           </div>
 
           <div class="field-group">
             <div class="field-label">
               <span>Labour per m² or per unit</span>
             </div>
-            <div class="rate-grid">
-              <div class="rate-label">Labour domestic carpet £/m²</div>
-              <input class="rate-input" type="number" name="lab_carpet_domestic" value="8" min="0" step="0.1" required />
-              <div class="rate-label">Labour commercial carpet £/m²</div>
-              <input class="rate-input" type="number" name="lab_carpet_commercial" value="9" min="0" step="0.1" required />
-              <div class="rate-label">Labour LVT £/m²</div>
-              <input class="rate-input" type="number" name="lab_lvt" value="16" min="0" step="0.1" required />
-              <div class="rate-label">Labour tiles £/m²</div>
-              <input class="rate-input" type="number" name="lab_tiles" value="25" min="0" step="0.1" required />
-              <div class="rate-label">Labour safety flooring £/m²</div>
-              <input class="rate-input" type="number" name="lab_safety" value="22" min="0" step="0.1" required />
-              <div class="rate-label">Labour vinyl domestic £/m²</div>
-              <input class="rate-input" type="number" name="lab_vinyl_domestic" value="12" min="0" step="0.1" required />
-              <div class="rate-label">Labour vinyl commercial £/m²</div>
-              <input class="rate-input" type="number" name="lab_vinyl_commercial" value="14" min="0" step="0.1" required />
-              <div class="rate-label">Labour carpet tiles £/m²</div>
-              <input class="rate-input" type="number" name="lab_carpet_tiles" value="8" min="0" step="0.1" required />
-              <div class="rate-label">Labour wall cladding £/m²</div>
-              <input class="rate-input" type="number" name="lab_wall_cladding" value="16" min="0" step="0.1" required />
-              <div class="rate-label">Labour coved skirting £/m</div>
-              <input class="rate-input" type="number" name="lab_coved" value="12" min="0" step="0.1" required />
-              <div class="rate-label">Labour ply board £/m²</div>
-              <input class="rate-input" type="number" name="lab_ply" value="6" min="0" step="0.1" required />
-              <div class="rate-label">Labour latex £/m²</div>
-              <input class="rate-input" type="number" name="lab_latex" value="6" min="0" step="0.1" required />
-              <div class="rate-label">Labour nosings £/m</div>
-              <input class="rate-input" type="number" name="lab_nosings" value="8" min="0" step="0.1" required />
-              <div class="rate-label">Labour matting £/m²</div>
-              <input class="rate-input" type="number" name="lab_matting" value="8" min="0" step="0.1" required />
-              <div class="rate-label">Uplift existing flooring £/m²</div>
-              <input class="rate-input" type="number" name="lab_uplift" value="3" min="0" step="0.1" required />
-              <div class="rate-label">Waste disposal £/m²</div>
-              <input class="rate-input" type="number" name="lab_waste" value="2" min="0" step="0.1" required />
-              <div class="rate-label">Furniture removal £/room</div>
-              <input class="rate-input" type="number" name="lab_furniture" value="25" min="0" step="0.1" required />
-            </div>
+            <div id="baseLabour"></div>
             <p class="small-note">
-              Do not stress the exact pennies. You can tweak any of this once you see quotes coming through.
+              Don’t overthink it. You can tweak these once you see quotes going out.
             </p>
           </div>
         </section>
@@ -640,7 +460,7 @@
               <input type="number" name="min_job_charge" value="150" min="0" step="1" required />
             </div>
             <p class="small-note">
-              This is the minimum you want to earn even if someone only wants one small room.
+              Minimum you want to earn even if it’s just one room.
             </p>
           </div>
 
@@ -652,7 +472,7 @@
               <input type="number" name="day_rate_per_fitter" value="200" min="0" step="1" required />
             </div>
             <p class="small-note">
-              BillyBot will use this to check quotes against full days on site.
+              BillyBot will check quotes against this when jobs start to look like a full day.
             </p>
           </div>
         </section>
@@ -687,13 +507,14 @@
             <div class="field-label">
               <span>Describe your breakpoints</span>
             </div>
-            <textarea name="breakpoint_text" required>
-Example:
+            <textarea
+              name="breakpoint_text"
+              placeholder="Example:
 - If LVT is under 10m², charge £30/m² for labour.
-- Over 60m², drop labour and materials by 10 percent.
-- Over 100m², drop labour by £4/m² and materials by 15 percent.
+- Over 60m², drop labour and materials by 10%.
+- Over 100m², drop labour by £4/m² and materials by 15%.
 
-Add your own version for each service you offer.</textarea>
+Add your own version for each service you offer."></textarea>
             <p class="small-note">
               Keep it simple language. BillyBot will turn this into hard rules for you.
             </p>
@@ -746,7 +567,7 @@ Add your own version for each service you offer.</textarea>
               </label>
             </div>
             <p class="small-note">
-              If you pay fitters directly and do not want VAT on labour, keep the first option.
+              If you pay fitters directly and don’t want VAT on labour, keep the first option.
             </p>
           </div>
 
@@ -765,164 +586,274 @@ Add your own version for each service you offer.</textarea>
 </main>
 
 <script>
-  (function(){
-    const steps = Array.from(document.querySelectorAll(".step"));
-    const totalSteps = steps.length;
-    let current = 0;
+(function(){
+  const steps = Array.from(document.querySelectorAll(".step"));
+  const totalSteps = steps.length;
+  let current = 0;
 
-    const progressFill = document.getElementById("progressFill");
-    const stepLabel = document.getElementById("stepLabel");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    const form = document.getElementById("onboardForm");
-    const breakpointRadios = document.querySelectorAll("input[name='use_breakpoints']");
-    const breakpointDetails = document.getElementById("breakpointDetails");
-// SERVICE → MARKUP FIELD MAP
-const markupMap = {
-  service_domestic_carpets:        { label: "Domestic carpet markup %",      name: "markup_carpet_domestic_pct",      default: 50 },
-  service_commercial_carpets:      { label: "Commercial carpet markup %",    name: "markup_carpet_commercial_pct",    default: 50 },
-  service_carpet_tiles:            { label: "Carpet tiles markup %",         name: "markup_carpet_tiles_pct",         default: 50 },
-  service_lvt:                      { label: "LVT markup %",                  name: "markup_lvt_pct",                  default: 50 },
-  service_vinyl_domestic:          { label: "Vinyl domestic markup %",       name: "markup_vinyl_domestic_pct",       default: 50 },
-  service_vinyl_safety:            { label: "Safety vinyl markup %",         name: "markup_vinyl_safety_pct",         default: 50 },
-  service_laminate:                { label: "Laminate markup %",             name: "markup_laminate_pct",             default: 50 },
-  service_wood:                    { label: "Solid/engineered wood markup %",name: "markup_wood_pct",                 default: 50 },
-  service_whiterock:               { label: "Wall cladding markup %",        name: "markup_whiterock_pct",            default: 50 },
-  service_ceramic:                 { label: "Ceramic tile markup %",         name: "markup_ceramic_pct",              default: 50 }
-};
+  const progressFill = document.getElementById("progressFill");
+  const stepLabel = document.getElementById("stepLabel");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const form = document.getElementById("onboardForm");
+  const breakpointRadios = document.querySelectorAll("input[name='use_breakpoints']");
+  const breakpointDetails = document.getElementById("breakpointDetails");
+  const dynamicMarkups = document.getElementById("dynamicMarkups");
+  const baseMaterials = document.getElementById("baseMaterials");
+  const baseLabour = document.getElementById("baseLabour");
 
+  /* ---------- STEP VIEW ---------- */
+  function updateView() {
+    steps.forEach((s, i) => {
+      s.classList.toggle("active", i === current);
+    });
+    const stepNum = current + 1;
+    stepLabel.textContent = "Step " + stepNum + " of " + totalSteps;
+    const pct = (stepNum / totalSteps) * 100;
+    progressFill.style.width = pct + "%";
 
-// BUILD PAGE 2 DYNAMICALLY BASED ON STEP 1 SELECTIONS
-function buildMarkupFields() {
-  const container = document.getElementById("dynamicMarkups");
-  container.innerHTML = "";
+    prevBtn.style.visibility = current === 0 ? "hidden" : "visible";
+    nextBtn.textContent = current === totalSteps - 1 ? "Finish" : "Next";
+  }
 
-  // Get all service toggles
-  const toggles = document.querySelectorAll(".switch-input");
+  /* ---------- SERVICES HELPER ---------- */
+  function getActiveServiceNames() {
+    const toggles = document.querySelectorAll(".step[data-step='1'] .switch-input");
+    const active = [];
+    toggles.forEach(t => {
+      if (t.checked) active.push(t.name);
+    });
+    return active;
+  }
 
-  toggles.forEach(t => {
-    if (t.checked && markupMap[t.name]) {
-      const { label, name, default: def } = markupMap[t.name];
+  /* ---------- DYNAMIC MARKUPS (STEP 2) ---------- */
+  const markupMap = {
+    service_domestic_carpets:   { label: "Domestic carpet",          default: 50 },
+    service_commercial_carpets: { label: "Commercial carpet",        default: 50 },
+    service_carpet_tiles:       { label: "Carpet tiles",             default: 50 },
+    service_lvt:                { label: "LVT",                      default: 50 },
+    service_vinyl_domestic:     { label: "Vinyl domestic",           default: 50 },
+    service_vinyl_safety:       { label: "Safety / commercial vinyl",default: 50 },
+    service_laminate:           { label: "Laminate",                 default: 50 },
+    service_wood:               { label: "Solid / engineered wood",  default: 50 },
+    service_whiterock:          { label: "Wall cladding",            default: 50 },
+    service_ceramic:            { label: "Ceramic tiles",            default: 50 },
+  };
 
-      container.insertAdjacentHTML("beforeend", `
-        <div class="rate-grid">
-          <div class="rate-label">${label}</div>
-          <input 
-            class="rate-input" 
-            type="number" 
-            name="${name}" 
-            value="${def}" 
-            min="0" 
-            step="0.1" 
-            required 
+  function buildMarkupFields() {
+    dynamicMarkups.innerHTML = "";
+    const services = getActiveServiceNames();
+
+    services.forEach(name => {
+      const cfg = markupMap[name];
+      if (!cfg) return;
+      const valueName = "markup_" + name + "_value";
+      const unitName = "markup_" + name + "_unit";
+      const def = cfg.default;
+
+      dynamicMarkups.insertAdjacentHTML("beforeend", `
+        <div class="rate-row">
+          <div class="rate-label">${cfg.label}</div>
+          <input
+            class="rate-input"
+            type="number"
+            name="${valueName}"
+            value="${def}"
+            min="0"
+            step="0.1"
+            required
           />
+          <select class="rate-unit" name="${unitName}">
+            <option value="percent" selected>%</option>
+            <option value="per_m2">£/m²</option>
+          </select>
         </div>
       `);
+    });
+  }
+
+  /* ---------- DYNAMIC BASE RATES (STEP 3) ---------- */
+  const materialConfig = [
+    { id:"mat_lvt", label:"LVT per m² £", default:26, services:["service_lvt"] },
+    { id:"mat_ceramic", label:"Ceramic tiles per m² £", default:30, services:["service_ceramic"] },
+    { id:"mat_carpet_domestic", label:"Carpet domestic per m² £", default:12, services:["service_domestic_carpets"] },
+    { id:"mat_carpet_commercial", label:"Carpet commercial per m² £", default:16, services:["service_commercial_carpets"] },
+    { id:"mat_safety", label:"Safety flooring per m² £", default:18, services:["service_vinyl_safety"] },
+    { id:"mat_vinyl_domestic", label:"Vinyl domestic per m² £", default:14, services:["service_vinyl_domestic"] },
+    { id:"mat_vinyl_commercial", label:"Vinyl commercial per m² £", default:18, services:["service_vinyl_safety"] },
+    { id:"mat_carpet_tiles", label:"Carpet tiles per m² £", default:19.5, services:["service_carpet_tiles"] },
+    { id:"mat_wall_cladding", label:"Wall cladding per m² £", default:35, services:["service_whiterock"] },
+    { id:"mat_gripper", label:"Gripper per m £", default:4, services:["service_domestic_carpets","service_commercial_carpets","service_carpet_tiles"] },
+    { id:"mat_underlay", label:"Underlay per m² £", default:6, services:["service_domestic_carpets","service_commercial_carpets","service_carpet_tiles"] },
+    { id:"mat_coved", label:"Coved skirting materials per m £", default:10, services:["service_vinyl_safety"] },
+    { id:"mat_weld", label:"Weld rod per roll £", default:25, services:["service_vinyl_safety"] },
+    { id:"mat_adhesive", label:"Adhesive per m² £", default:3, always:true },
+    { id:"mat_ply", label:"Ply board per m² £", default:12, always:true },
+    { id:"mat_latex", label:"Latex per m² £", default:10, always:true },
+    { id:"mat_door_bars", label:"Door bars per m £", default:8, always:true },
+    { id:"mat_nosings", label:"Standard nosings per m £", default:25, always:true },
+    { id:"mat_matting", label:"Entrance matting per m² £", default:35, always:true },
+  ];
+
+  const labourConfig = [
+    { id:"lab_carpet_domestic", label:"Labour carpet domestic per m² £", default:8, services:["service_domestic_carpets"] },
+    { id:"lab_carpet_commercial", label:"Labour carpet commercial per m² £", default:9, services:["service_commercial_carpets"] },
+    { id:"lab_lvt", label:"Labour LVT per m² £", default:16, services:["service_lvt"] },
+    { id:"lab_ceramic", label:"Labour ceramic tiles per m² £", default:25, services:["service_ceramic"] },
+    { id:"lab_safety", label:"Labour safety flooring per m² £", default:22, services:["service_vinyl_safety"] },
+    { id:"lab_vinyl_domestic", label:"Labour vinyl domestic per m² £", default:12, services:["service_vinyl_domestic"] },
+    { id:"lab_vinyl_commercial", label:"Labour vinyl commercial per m² £", default:14, services:["service_vinyl_safety"] },
+    { id:"lab_carpet_tiles", label:"Labour carpet tiles per m² £", default:8, services:["service_carpet_tiles"] },
+    { id:"lab_wall_cladding", label:"Labour wall cladding per m² £", default:16, services:["service_whiterock"] },
+    { id:"lab_coved", label:"Labour coved skirting per m £", default:12, services:["service_vinyl_safety"] },
+    { id:"lab_ply", label:"Labour ply board per m² £", default:6, always:true },
+    { id:"lab_latex", label:"Labour latex per m² £", default:6, always:true },
+    { id:"lab_nosings", label:"Labour nosings per m £", default:8, always:true },
+    { id:"lab_matting", label:"Labour matting per m² £", default:8, always:true },
+    { id:"lab_general", label:"Labour general £/m²", default:1, always:true },
+    { id:"lab_uplift", label:"Uplift existing flooring per m² £", default:3, always:true },
+    { id:"lab_waste", label:"Waste disposal per m² £", default:2, always:true },
+    { id:"lab_furniture", label:"Furniture removal per room £", default:25, always:true },
+  ];
+
+  function buildBaseRates() {
+    const services = getActiveServiceNames();
+    const set = new Set(services);
+
+    baseMaterials.innerHTML = "";
+    materialConfig.forEach(cfg => {
+      const show = cfg.always || (cfg.services && cfg.services.some(s => set.has(s)));
+      if (!show) return;
+      baseMaterials.insertAdjacentHTML("beforeend", `
+        <div class="rate-row">
+          <div class="rate-label">${cfg.label}</div>
+          <input
+            class="rate-input"
+            type="number"
+            name="${cfg.id}"
+            value="${cfg.default}"
+            min="0"
+            step="0.1"
+            required
+          />
+          <div></div>
+        </div>
+      `);
+    });
+
+    baseLabour.innerHTML = "";
+    labourConfig.forEach(cfg => {
+      const show = cfg.always || (cfg.services && cfg.services.some(s => set.has(s)));
+      if (!show) return;
+      baseLabour.insertAdjacentHTML("beforeend", `
+        <div class="rate-row">
+          <div class="rate-label">${cfg.label}</div>
+          <input
+            class="rate-input"
+            type="number"
+            name="${cfg.id}"
+            value="${cfg.default}"
+            min="0"
+            step="0.1"
+            required
+          />
+          <div></div>
+        </div>
+      `);
+    });
+  }
+
+  /* ---------- VALIDATION ---------- */
+  function validateStep(index) {
+    const step = steps[index];
+    if (!step) return true;
+
+    // Step 1: at least one service selected
+    if (step.dataset.step === "1") {
+      const checks = step.querySelectorAll(".switch-input");
+      const anyOn = Array.from(checks).some(c => c.checked);
+      if (!anyOn) {
+        alert("Please leave at least one service turned on.");
+        return false;
+      }
     }
-  });
-}
-    function updateView() {
-      steps.forEach((s, i) => {
-        s.classList.toggle("active", i === current);
-      });
-      const stepNum = current + 1;
-      stepLabel.textContent = "Step " + stepNum + " of " + totalSteps;
-      const pct = (stepNum / totalSteps) * 100;
-      progressFill.style.width = pct + "%";
 
-      prevBtn.style.visibility = current === 0 ? "hidden" : "visible";
-      nextBtn.textContent = current === totalSteps - 1 ? "Finish" : "Next";
-    }
-
-    function validateStep(index) {
-      const step = steps[index];
-      if (!step) return true;
-
-      // Special rule for step 1: at least one service selected
-      if (step.dataset.step === "1") {
-        const serviceChecks = step.querySelectorAll(".switch-input");
-        const anyOn = Array.from(serviceChecks).some(c => c.checked);
-        if (!anyOn) {
-          alert("Please leave at least one service turned on.");
+    const inputs = step.querySelectorAll("input, select, textarea");
+    for (const el of inputs) {
+      if (el.type === "radio") {
+        const group = step.querySelectorAll("input[name='" + el.name + "']");
+        if (group.length && !Array.from(group).some(r => r.checked)) {
+          alert("Please select an option to continue.");
           return false;
         }
-      }
-
-      // Use native validation for fields in this step
-      const inputs = step.querySelectorAll("input, select, textarea");
-      for (const el of inputs) {
-        if (el.type === "radio") {
-          const group = step.querySelectorAll("input[name='" + el.name + "']");
-          if (group.length && !Array.from(group).some(r => r.checked)) {
-            alert("Please select an option to continue.");
-            return false;
-          }
-        } else if (!el.checkValidity()) {
-          el.reportValidity();
-          return false;
-        }
-      }
-      return true;
-    }
-
-    nextBtn.addEventListener("click", () => {
-      if (!validateStep(current)) return;
-
-      if (current === totalSteps - 1) {
-        // Final submit - you can replace with fetch to n8n endpoint
-        form.submit();
-        return;
-      }
-// Step 1 → Step 2: build dynamic markups
-if (current === 0) {
-  buildMarkupFields();
-}
-
-current++;
-updateView();
-    });
-
-    prevBtn.addEventListener("click", () => {
-      if (current === 0) return;
-      current--;
-      updateView();
-    });
-
-    // Toggle switches
-document.addEventListener("click", (e) => {
-  const isSwitch = e.target.classList.contains("switch") || 
-                   e.target.closest(".switch");
-
-  if (!isSwitch) return;
-
-  const sw = e.target.closest(".switch");
-  sw.classList.toggle("active");
-
-  const input = sw.querySelector(".switch-input");
-  if (input) input.checked = sw.classList.contains("active");
-});
-
-    // Breakpoint show/hide and required logic
-    function updateBreakpointRequired() {
-      const selected = Array.from(breakpointRadios).find(r => r.checked);
-      if (!selected) return;
-      if (selected.value === "yes") {
-        breakpointDetails.style.display = "block";
-        const ta = breakpointDetails.querySelector("textarea");
-        if (ta) ta.required = true;
-      } else {
-        breakpointDetails.style.display = "none";
-        const ta = breakpointDetails.querySelector("textarea");
-        if (ta) ta.required = false;
+      } else if (!el.checkValidity()) {
+        el.reportValidity();
+        return false;
       }
     }
-    breakpointRadios.forEach(r => {
-      r.addEventListener("change", updateBreakpointRequired);
-    });
-    updateBreakpointRequired();
+    return true;
+  }
+
+  /* ---------- NAV BUTTONS ---------- */
+  nextBtn.addEventListener("click", () => {
+    if (!validateStep(current)) return;
+
+    if (current === totalSteps - 1) {
+      form.submit();
+      return;
+    }
+
+    current++;
+
+    if (current === 1) {
+      buildMarkupFields();
+    }
+    if (current === 2) {
+      buildBaseRates();
+    }
 
     updateView();
-  })();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (current === 0) return;
+    current--;
+    updateView();
+  });
+
+  /* ---------- TOGGLE ROW CLICK (ISSUE 1 FIX) ---------- */
+  document.addEventListener("click", (e) => {
+    const row = e.target.closest(".toggle-row");
+    if (!row) return;
+
+    const input = row.querySelector(".switch-input");
+    const sw = row.querySelector(".switch");
+    if (!input || !sw) return;
+
+    const newVal = !input.checked;
+    input.checked = newVal;
+    sw.classList.toggle("active", newVal);
+  });
+
+  /* ---------- BREAKPOINT SHOW/HIDE ---------- */
+  function updateBreakpointRequired() {
+    const selected = Array.from(breakpointRadios).find(r => r.checked);
+    if (!selected) return;
+    if (selected.value === "yes") {
+      breakpointDetails.style.display = "block";
+      const ta = breakpointDetails.querySelector("textarea");
+      if (ta) ta.required = true;
+    } else {
+      breakpointDetails.style.display = "none";
+      const ta = breakpointDetails.querySelector("textarea");
+      if (ta) ta.required = false;
+    }
+  }
+  breakpointRadios.forEach(r => r.addEventListener("change", updateBreakpointRequired));
+  updateBreakpointRequired();
+
+  updateView();
+})();
 </script>
 
 </body>
