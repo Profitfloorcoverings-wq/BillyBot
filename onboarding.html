@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BillyBot - Pricing Onboarding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BillyBot onboarding - set your pricing once, then let BillyBot quote for you automatically." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand1:#2563EB; --brand2:#3B82F6;
+      --accent1:#F97316; --accent2:#FB923C;
+      --bg:#0B0F1A; --bg2:#0F1526; --card:#0F172A;
+      --text:#E6ECF9; --muted:#98A3B8;
+      --line:rgba(255,255,255,.08);
+      --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.35);
+      --max:640px;
+    }
+    *{box-sizing:border-box}
+    html, body {
+      margin:0;
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 40%, #0C1221 80%, #0B0F1A 100%);
+      background-attachment: fixed;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* Simple header */
+    header {
+      position:sticky;top:0;z-index:10;
+      background:linear-gradient(180deg,rgba(11,15,26,0.95),rgba(11,15,26,0.6));
+      border-bottom:1px solid var(--line);
+      backdrop-filter:saturate(140%) blur(10px);
+    }
+    .nav{height:64px;display:flex;align-items:center;justify-content:center;gap:8px;}
+    .logo{display:flex;align-items:center;gap:10px;font:800 20px Sora,Inter;}
+    .logo svg{width:32px;height:32px;}
+
+    /* Onboarding card */
+    .onboard-shell {
+      padding:32px 0 40px;
+    }
+    .onboard-card {
+      background:linear-gradient(180deg,#0F1526,#0C1221);
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      padding:22px 18px 24px;
+      margin-top:20px;
+    }
+    @media(min-width:720px){
+      .onboard-card{padding:26px 26px 30px;}
+    }
+
+    .onboard-header {
+      margin-bottom:16px;
+    }
+    .onboard-title {
+      font:800 24px Sora,Inter;
+      margin:0 0 4px;
+    }
+    .onboard-sub {
+      margin:0;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* Progress */
+    .progress-wrap {
+      margin-bottom:18px;
+    }
+    .progress-top {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:8px;
+      font-size:12px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:600;
+    }
+    .progress-bar {
+      position:relative;
+      height:8px;
+      width:100%;
+      border-radius:999px;
+      background:rgba(255,255,255,0.06);
+      overflow:hidden;
+    }
+    .progress-fill {
+      position:absolute;
+      inset:0;
+      width:12%;
+      background:linear-gradient(135deg,var(--brand1),var(--brand2));
+      box-shadow:0 0 14px rgba(37,99,235,0.6);
+      transition:width .25s ease;
+    }
+
+    /* Steps */
+    .step {
+      display:none;
+      animation:fadeIn .2s ease-out;
+    }
+    .step.active {
+      display:block;
+    }
+
+    .step-title {
+      font:700 19px Sora,Inter;
+      margin:0 0 6px;
+    }
+    .step-body {
+      margin:0 0 16px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0;transform:translateY(4px);}
+      to {opacity:1;transform:translateY(0);}
+    }
+
+    /* Toggles reusing your switch style */
+    .toggle-list {
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-bottom:16px;
+    }
+    .toggle-row {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 12px;
+      background:#0B1225;
+      border-radius:14px;
+      border:1px solid var(--line);
+      font-size:14px;
+    }
+    .toggle-row-main {
+      font-weight:600;
+    }
+    .toggle-row-sub {
+      font-size:12px;
+      color:var(--muted);
+      margin-top:3px;
+    }
+
+    .switch {
+      width:46px;
+      height:26px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#1A2341,#233157);
+      border:1px solid var(--line);
+      position:relative;
+      cursor:pointer;
+      transition:all 0.25s ease;
+      box-shadow:inset 0 0 6px rgba(0,0,0,0.4);
+      flex-shrink:0;
+    }
+    .switch .knob {
+      width:20px;
+      height:20px;
+      border-radius:50%;
+      background:white;
+      position:absolute;
+      top:2.5px;
+      left:3px;
+      transition:all .25s ease;
+    }
+    .switch.active {
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      box-shadow:0 0 10px rgba(249,115,22,0.6);
+    }
+    .switch.active .knob {
+      left:23px;
+      background:#FFF8F3;
+    }
+
+    .switch-input {
+      display:none;
+    }
+
+    /* Field groups */
+    .field-group {
+      margin-bottom:18px;
+    }
+    .field-label {
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      font-size:13px;
+      margin-bottom:6px;
+      color:var(--muted);
+    }
+    .field-label span:first-child {
+      font-weight:600;
+      color:var(--text);
+      font-size:14px;
+    }
+
+    .field-row {
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .field-row input,
+    .field-row select,
+    .field-row textarea {
+      flex:1 1 100%;
+      background:#0B1225;
+      border-radius:12px;
+      border:1px solid #1A2341;
+      padding:10px 11px;
+      font-size:14px;
+      color:var(--text);
+    }
+    .field-row input[type="number"]{
+      max-width:130px;
+    }
+    textarea {
+      resize:vertical;
+      min-height:80px;
+    }
+    .small-note {
+      font-size:12px;
+      color:var(--muted);
+      margin-top:4px;
+    }
+
+    /* Two column simple table look */
+    .rate-grid {
+      display:grid;
+      grid-template-columns:1.3fr 0.7fr;
+      gap:8px 10px;
+      align-items:center;
+      font-size:13px;
+      margin-bottom:4px;
+    }
+    .rate-label {
+      color:var(--text);
+    }
+    .rate-input {
+      background:#0B1225;
+      border-radius:10px;
+      border:1px solid #1A2341;
+      padding:8px 9px;
+      font-size:13px;
+      width:100%;
+      color:var(--text);
+    }
+
+    /* Radios as pills */
+    .pill-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .pill {
+      position:relative;
+    }
+    .pill input {
+      display:none;
+    }
+    .pill span {
+      display:inline-block;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#0B1225;
+      font-size:13px;
+      cursor:pointer;
+      color:var(--muted);
+    }
+    .pill input:checked + span {
+      border-color:var(--accent1);
+      background:linear-gradient(135deg,rgba(249,115,22,0.12),rgba(251,146,60,0.08));
+      color:var(--text);
+      box-shadow:0 0 12px rgba(249,115,22,0.4);
+    }
+
+    /* Buttons */
+    .actions {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-top:20px;
+    }
+    .btn {
+      display:inline-block;
+      border-radius:999px;
+      border:0;
+      cursor:pointer;
+      font-weight:700;
+      font-size:14px;
+      padding:11px 18px;
+      text-align:center;
+    }
+    .btn-primary {
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      color:#fff;
+      box-shadow:0 0 16px rgba(249,115,22,0.5);
+      flex:1;
+    }
+    .btn-primary[disabled] {
+      opacity:.5;
+      cursor:not-allowed;
+      box-shadow:none;
+    }
+    .btn-ghost {
+      background:transparent;
+      color:var(--muted);
+      border:1px solid var(--line);
+      flex:0 0 auto;
+    }
+
+    .final-message {
+      font-size:14px;
+      color:var(--muted);
+      margin-top:8px;
+    }
+
+    @media(max-width:480px){
+      .onboard-card{padding:20px 16px 24px;}
+      .onboard-title{font-size:20px;}
+      .actions{flex-direction:column-reverse;align-items:stretch;}
+      .btn-ghost{width:100%;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <!-- Simple logo placeholder - swap for your existing SVG if you want -->
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+        <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
+        <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+      </svg>
+      <span>BillyBot</span>
+    </div>
+  </div>
+</header>
+
+<main class="onboard-shell">
+  <div class="container">
+    <div class="onboard-header">
+      <h1 class="onboard-title">Set your pricing once.</h1>
+      <p class="onboard-sub">Takes a few minutes now. Saves you hours on every future quote.</p>
+    </div>
+
+    <div class="onboard-card">
+      <div class="progress-wrap">
+        <div class="progress-top">
+          <span>Pricing setup</span>
+          <span id="stepLabel">Step 1 of 7</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <form id="onboardForm">
+
+        <!-- STEP 1 - Services -->
+        <section class="step active" data-step="1">
+          <h2 class="step-title">Which jobs do you actually take on?</h2>
+          <p class="step-body">
+            Pick the services you offer. You can switch any of these off later.
+          </p>
+
+          <div class="toggle-list">
+            <!-- Each toggle has a hidden checkbox -->
+            <label class="toggle-row">
+              <div>
+                <div class="toggle-row-main">Domestic carpets</div>
+              </div>
+              <div class="switch active" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_domestic_carpets" checked />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div>
+                <div class="toggle-row-main">Commercial carpets (glue-down)</div>
+              </div>
+              <div class="switch active" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_commercial_carpets" checked />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div>
+                <div class="toggle-row-main">Carpet tiles</div>
+              </div>
+              <div class="switch active" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_carpet_tiles" checked />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div class="toggle-row-main">LVT / Luxury Vinyl Tiles</div>
+              <div class="switch active" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_lvt" checked />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div class="toggle-row-main">Domestic vinyl</div>
+              <div class="switch active" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_vinyl_domestic" checked />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div class="toggle-row-main">Commercial / safety vinyl</div>
+              <div class="switch active" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_vinyl_safety" checked />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div class="toggle-row-main">Laminate</div>
+              <div class="switch" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_laminate" />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div class="toggle-row-main">Solid / engineered wood</div>
+              <div class="switch" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_wood" />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div class="toggle-row-main">Altro Whiterock (wall cladding)</div>
+              <div class="switch" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_whiterock" />
+              </div>
+            </label>
+
+            <label class="toggle-row">
+              <div class="toggle-row-main">Ceramic tiles</div>
+              <div class="switch" data-toggle>
+                <div class="knob"></div>
+                <input class="switch-input" type="checkbox" name="service_ceramic" />
+              </div>
+            </label>
+          </div>
+
+          <p class="small-note">
+            At least one service must stay on. Turn off anything you never touch.
+          </p>
+        </section>
+
+        <!-- STEP 2 - Material markup logic -->
+        <section class="step" data-step="2">
+          <h2 class="step-title">How should BillyBot handle material prices?</h2>
+          <p class="step-body">
+            Most fitters either add a percentage on cost, a fixed £ per m², or a mix.
+          </p>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>Default style</span>
+              <span>Change if needed</span>
+            </div>
+            <div class="pill-row">
+              <label class="pill">
+                <input type="radio" name="markup_style" value="percentage" checked required />
+                <span>Flat percentage on cost</span>
+              </label>
+              <label class="pill">
+                <input type="radio" name="markup_style" value="per_m2" />
+                <span>Fixed £ per m²</span>
+              </label>
+              <label class="pill">
+                <input type="radio" name="markup_style" value="mixed" />
+                <span>Mix per product</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>Typical markups</span>
+            </div>
+            <div class="rate-grid">
+              <div class="rate-label">Domestic carpet markup %</div>
+              <input class="rate-input" type="number" name="markup_carpet_domestic_pct" value="50" min="0" required />
+              <div class="rate-label">Commercial carpet markup %</div>
+              <input class="rate-input" type="number" name="markup_carpet_commercial_pct" value="50" min="0" required />
+              <div class="rate-label">Carpet tiles markup %</div>
+              <input class="rate-input" type="number" name="markup_carpet_tiles_pct" value="50" min="0" required />
+              <div class="rate-label">LVT markup %</div>
+              <input class="rate-input" type="number" name="markup_lvt_pct" value="50" min="0" required />
+              <div class="rate-label">Vinyl (domestic) markup %</div>
+              <input class="rate-input" type="number" name="markup_vinyl_domestic_pct" value="50" min="0" required />
+              <div class="rate-label">Vinyl (safety) markup %</div>
+              <input class="rate-input" type="number" name="markup_vinyl_safety_pct" value="50" min="0" required />
+            </div>
+            <p class="small-note">
+              If you prefer £ per m² instead, just type those values instead of percentages and select that style above.
+            </p>
+          </div>
+        </section>
+
+        <!-- STEP 3 - Base rates (materials + labour) -->
+        <section class="step" data-step="3">
+          <h2 class="step-title">What are your normal base rates?</h2>
+          <p class="step-body">
+            These act as your mid range prices. Variations for tiny or massive jobs come later.
+          </p>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>Materials per m² or per unit</span>
+            </div>
+            <div class="rate-grid">
+              <div class="rate-label">Domestic carpet £/m²</div>
+              <input class="rate-input" type="number" name="mat_carpet_domestic" value="12" min="0" step="0.1" required />
+              <div class="rate-label">Commercial carpet £/m²</div>
+              <input class="rate-input" type="number" name="mat_carpet_commercial" value="16" min="0" step="0.1" required />
+              <div class="rate-label">Carpet tiles £/m²</div>
+              <input class="rate-input" type="number" name="mat_carpet_tiles" value="19.5" min="0" step="0.1" required />
+              <div class="rate-label">LVT £/m²</div>
+              <input class="rate-input" type="number" name="mat_lvt" value="26" min="0" step="0.1" required />
+              <div class="rate-label">Vinyl domestic £/m²</div>
+              <input class="rate-input" type="number" name="mat_vinyl_domestic" value="14" min="0" step="0.1" required />
+              <div class="rate-label">Vinyl commercial/safety £/m²</div>
+              <input class="rate-input" type="number" name="mat_vinyl_safety" value="18" min="0" step="0.1" required />
+              <div class="rate-label">Wall cladding £/m²</div>
+              <input class="rate-input" type="number" name="mat_wall_cladding" value="35" min="0" step="0.1" required />
+              <div class="rate-label">Gripper £/m</div>
+              <input class="rate-input" type="number" name="mat_gripper" value="4" min="0" step="0.1" required />
+              <div class="rate-label">Underlay £/m²</div>
+              <input class="rate-input" type="number" name="mat_underlay" value="6" min="0" step="0.1" required />
+              <div class="rate-label">Adhesive £/m²</div>
+              <input class="rate-input" type="number" name="mat_adhesive" value="3" min="0" step="0.1" required />
+              <div class="rate-label">Ply board £/m²</div>
+              <input class="rate-input" type="number" name="mat_ply" value="12" min="0" step="0.1" required />
+              <div class="rate-label">Latex £/m²</div>
+              <input class="rate-input" type="number" name="mat_latex" value="10" min="0" step="0.1" required />
+              <div class="rate-label">Door bars £/m</div>
+              <input class="rate-input" type="number" name="mat_door_bars" value="8" min="0" step="0.1" required />
+              <div class="rate-label">Standard nosings £/m</div>
+              <input class="rate-input" type="number" name="mat_nosings" value="25" min="0" step="0.1" required />
+              <div class="rate-label">Entrance matting £/m²</div>
+              <input class="rate-input" type="number" name="mat_matting" value="35" min="0" step="0.1" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>Labour per m² or per unit</span>
+            </div>
+            <div class="rate-grid">
+              <div class="rate-label">Labour domestic carpet £/m²</div>
+              <input class="rate-input" type="number" name="lab_carpet_domestic" value="8" min="0" step="0.1" required />
+              <div class="rate-label">Labour commercial carpet £/m²</div>
+              <input class="rate-input" type="number" name="lab_carpet_commercial" value="9" min="0" step="0.1" required />
+              <div class="rate-label">Labour LVT £/m²</div>
+              <input class="rate-input" type="number" name="lab_lvt" value="16" min="0" step="0.1" required />
+              <div class="rate-label">Labour tiles £/m²</div>
+              <input class="rate-input" type="number" name="lab_tiles" value="25" min="0" step="0.1" required />
+              <div class="rate-label">Labour safety flooring £/m²</div>
+              <input class="rate-input" type="number" name="lab_safety" value="22" min="0" step="0.1" required />
+              <div class="rate-label">Labour vinyl domestic £/m²</div>
+              <input class="rate-input" type="number" name="lab_vinyl_domestic" value="12" min="0" step="0.1" required />
+              <div class="rate-label">Labour vinyl commercial £/m²</div>
+              <input class="rate-input" type="number" name="lab_vinyl_commercial" value="14" min="0" step="0.1" required />
+              <div class="rate-label">Labour carpet tiles £/m²</div>
+              <input class="rate-input" type="number" name="lab_carpet_tiles" value="8" min="0" step="0.1" required />
+              <div class="rate-label">Labour wall cladding £/m²</div>
+              <input class="rate-input" type="number" name="lab_wall_cladding" value="16" min="0" step="0.1" required />
+              <div class="rate-label">Labour coved skirting £/m</div>
+              <input class="rate-input" type="number" name="lab_coved" value="12" min="0" step="0.1" required />
+              <div class="rate-label">Labour ply board £/m²</div>
+              <input class="rate-input" type="number" name="lab_ply" value="6" min="0" step="0.1" required />
+              <div class="rate-label">Labour latex £/m²</div>
+              <input class="rate-input" type="number" name="lab_latex" value="6" min="0" step="0.1" required />
+              <div class="rate-label">Labour nosings £/m</div>
+              <input class="rate-input" type="number" name="lab_nosings" value="8" min="0" step="0.1" required />
+              <div class="rate-label">Labour matting £/m²</div>
+              <input class="rate-input" type="number" name="lab_matting" value="8" min="0" step="0.1" required />
+              <div class="rate-label">Uplift existing flooring £/m²</div>
+              <input class="rate-input" type="number" name="lab_uplift" value="3" min="0" step="0.1" required />
+              <div class="rate-label">Waste disposal £/m²</div>
+              <input class="rate-input" type="number" name="lab_waste" value="2" min="0" step="0.1" required />
+              <div class="rate-label">Furniture removal £/room</div>
+              <input class="rate-input" type="number" name="lab_furniture" value="25" min="0" step="0.1" required />
+            </div>
+            <p class="small-note">
+              Do not stress the exact pennies. You can tweak any of this once you see quotes coming through.
+            </p>
+          </div>
+        </section>
+
+        <!-- STEP 4 - Min job charge + day rate -->
+        <section class="step" data-step="4">
+          <h2 class="step-title">Safety nets for small jobs.</h2>
+          <p class="step-body">
+            We want your quotes to cover your time, even on tiny jobs.
+          </p>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>Minimum charge per job</span>
+            </div>
+            <div class="field-row">
+              <input type="number" name="min_job_charge" value="150" min="0" step="1" required />
+            </div>
+            <p class="small-note">
+              This is the minimum you want to earn even if someone only wants one small room.
+            </p>
+          </div>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>Day rate per fitter</span>
+            </div>
+            <div class="field-row">
+              <input type="number" name="day_rate_per_fitter" value="200" min="0" step="1" required />
+            </div>
+            <p class="small-note">
+              BillyBot will use this to check quotes against full days on site.
+            </p>
+          </div>
+        </section>
+
+        <!-- STEP 5 - Breakpoints -->
+        <section class="step" data-step="5">
+          <h2 class="step-title">Do your prices change for big or small jobs?</h2>
+          <p class="step-body">
+            If you use different rates for tiny areas or huge projects, add them here.
+          </p>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>Breakpoints</span>
+            </div>
+            <div class="pill-row">
+              <label class="pill">
+                <input type="radio" name="use_breakpoints" value="no" checked required />
+                <span>No breakpoints</span>
+              </label>
+              <label class="pill">
+                <input type="radio" name="use_breakpoints" value="yes" />
+                <span>Yes - I use breakpoints</span>
+              </label>
+            </div>
+            <p class="small-note">
+              If you choose no breakpoints, BillyBot will keep your base rates flat.
+            </p>
+          </div>
+
+          <div class="field-group" id="breakpointDetails" style="display:none;">
+            <div class="field-label">
+              <span>Describe your breakpoints</span>
+            </div>
+            <textarea name="breakpoint_text" required>
+Example:
+- If LVT is under 10m², charge £30/m² for labour.
+- Over 60m², drop labour and materials by 10 percent.
+- Over 100m², drop labour by £4/m² and materials by 15 percent.
+
+Add your own version for each service you offer.</textarea>
+            <p class="small-note">
+              Keep it simple language. BillyBot will turn this into hard rules for you.
+            </p>
+          </div>
+        </section>
+
+        <!-- STEP 6 - VAT -->
+        <section class="step" data-step="6">
+          <h2 class="step-title">VAT setup.</h2>
+          <p class="step-body">
+            This tells BillyBot how to treat tax inside Sage, QuickBooks or Xero.
+          </p>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>VAT status</span>
+            </div>
+            <div class="pill-row">
+              <label class="pill">
+                <input type="radio" name="vat_status" value="registered" checked required />
+                <span>VAT registered</span>
+              </label>
+              <label class="pill">
+                <input type="radio" name="vat_status" value="exempt" />
+                <span>Not VAT registered / VAT exempt</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 7 - Split labour or not -->
+        <section class="step" data-step="7">
+          <h2 class="step-title">How do you want labour to show on quotes?</h2>
+          <p class="step-body">
+            Some fitters prefer labour hidden in the notes. Others keep it on main lines.
+          </p>
+
+          <div class="field-group">
+            <div class="field-label">
+              <span>Labour display</span>
+            </div>
+            <div class="pill-row">
+              <label class="pill">
+                <input type="radio" name="labour_split" value="split" checked required />
+                <span>Split labour into notes (no VAT on labour)</span>
+              </label>
+              <label class="pill">
+                <input type="radio" name="labour_split" value="no_split" />
+                <span>Keep labour on main quote lines</span>
+              </label>
+            </div>
+            <p class="small-note">
+              If you pay fitters directly and do not want VAT on labour, keep the first option.
+            </p>
+          </div>
+
+          <p class="final-message">
+            When you click Finish, BillyBot will lock in this logic and start building quotes exactly how you do.
+          </p>
+        </section>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" id="prevBtn">Back</button>
+          <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function(){
+    const steps = Array.from(document.querySelectorAll(".step"));
+    const totalSteps = steps.length;
+    let current = 0;
+
+    const progressFill = document.getElementById("progressFill");
+    const stepLabel = document.getElementById("stepLabel");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const form = document.getElementById("onboardForm");
+    const breakpointRadios = document.querySelectorAll("input[name='use_breakpoints']");
+    const breakpointDetails = document.getElementById("breakpointDetails");
+
+    function updateView() {
+      steps.forEach((s, i) => {
+        s.classList.toggle("active", i === current);
+      });
+      const stepNum = current + 1;
+      stepLabel.textContent = "Step " + stepNum + " of " + totalSteps;
+      const pct = (stepNum / totalSteps) * 100;
+      progressFill.style.width = pct + "%";
+
+      prevBtn.style.visibility = current === 0 ? "hidden" : "visible";
+      nextBtn.textContent = current === totalSteps - 1 ? "Finish" : "Next";
+    }
+
+    function validateStep(index) {
+      const step = steps[index];
+      if (!step) return true;
+
+      // Special rule for step 1: at least one service selected
+      if (step.dataset.step === "1") {
+        const serviceChecks = step.querySelectorAll(".switch-input");
+        const anyOn = Array.from(serviceChecks).some(c => c.checked);
+        if (!anyOn) {
+          alert("Please leave at least one service turned on.");
+          return false;
+        }
+      }
+
+      // Use native validation for fields in this step
+      const inputs = step.querySelectorAll("input, select, textarea");
+      for (const el of inputs) {
+        if (el.type === "radio") {
+          const group = step.querySelectorAll("input[name='" + el.name + "']");
+          if (group.length && !Array.from(group).some(r => r.checked)) {
+            alert("Please select an option to continue.");
+            return false;
+          }
+        } else if (!el.checkValidity()) {
+          el.reportValidity();
+          return false;
+        }
+      }
+      return true;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (!validateStep(current)) return;
+
+      if (current === totalSteps - 1) {
+        // Final submit - you can replace with fetch to n8n endpoint
+        form.submit();
+        return;
+      }
+      current++;
+      updateView();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (current === 0) return;
+      current--;
+      updateView();
+    });
+
+    // Toggle switches
+    document.addEventListener("click", (e) => {
+      const sw = e.target.closest("[data-toggle]");
+      if (!sw) return;
+      sw.classList.toggle("active");
+      const input = sw.querySelector(".switch-input");
+      if (input) input.checked = sw.classList.contains("active");
+    });
+
+    // Breakpoint show/hide and required logic
+    function updateBreakpointRequired() {
+      const selected = Array.from(breakpointRadios).find(r => r.checked);
+      if (!selected) return;
+      if (selected.value === "yes") {
+        breakpointDetails.style.display = "block";
+        const ta = breakpointDetails.querySelector("textarea");
+        if (ta) ta.required = true;
+      } else {
+        breakpointDetails.style.display = "none";
+        const ta = breakpointDetails.querySelector("textarea");
+        if (ta) ta.required = false;
+      }
+    }
+    breakpointRadios.forEach(r => {
+      r.addEventListener("change", updateBreakpointRequired);
+    });
+    updateBreakpointRequired();
+
+    updateView();
+  })();
+</script>
+
+</body>
+</html>
