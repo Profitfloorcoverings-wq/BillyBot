@@ -306,6 +306,7 @@
       </div>
 
 <form id="onboardForm" method="POST" action="https://tradiebrain.app.n8n.cloud/webhook/pricing-onboarding">
+  <input type="hidden" name="session_id" id="session_id">
 
         <!-- STEP 1 - Services -->
         <section class="step active" data-step="1">
@@ -856,5 +857,13 @@ Add your own version for each service you offer."></textarea>
 })();
 </script>
 
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const sid = params.get("session_id");
+  if (sid) {
+    document.getElementById("session_id").value = sid;
+  }
+</script>
+  
 </body>
 </html>
