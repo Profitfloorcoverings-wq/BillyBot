@@ -307,6 +307,7 @@
 
 <form id="onboardForm" method="POST" action="https://tradiebrain.app.n8n.cloud/webhook/pricing-onboarding">
   <input type="hidden" name="session_id" id="session_id">
+  <input type="hidden" name="uid" id="uid">
 
         <!-- STEP 1 - Services -->
         <section class="step active" data-step="1">
@@ -859,9 +860,17 @@ Add your own version for each service you offer."></textarea>
 
 <script>
   const params = new URLSearchParams(window.location.search);
+
+  // Stripe session ID (if they came from checkout)
   const sid = params.get("session_id");
   if (sid) {
     document.getElementById("session_id").value = sid;
+  }
+
+  // User ID (for users bypassing Stripe, like your marketing guy)
+  const uid = params.get("uid");
+  if (uid) {
+    document.getElementById("uid").value = uid;
   }
 </script>
   
