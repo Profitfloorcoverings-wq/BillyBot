@@ -260,8 +260,8 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   <a href="#pricing">Pricing</a>
 </nav>
 <div class="nav-cta" style="margin-left:auto;">
-  <a class="login-link" href="https://app.billybot.ai" rel="noopener">Log in</a>
-  <a id="signup-btn" class="btn glow" href="#pricing">Get started</a>
+  <a class="login-link" href="https://app.billybot.ai" rel="noopener" data-app-login>Log in</a>
+  <a id="signup-btn" class="btn glow" href="https://app.billybot.ai/signup" data-app-signup>Get started</a>
 </div>
       <button class="btn ghost" style="display:none">Menu</button>
     </div>
@@ -276,7 +276,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
 </p>
 
     <div class="cta-row">
-      <a class="btn glow" href="#pricing" 
+      <a class="btn glow" href="https://app.billybot.ai/signup" data-app-signup
          style="background:linear-gradient(135deg,var(--accent1),var(--accent2));
                 color:#fff;
                 box-shadow:0 0 20px rgba(249,115,22,0.4),0 0 40px rgba(251,146,60,0.2);
@@ -624,9 +624,8 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
           </ul>
         </div>
         <div>
-          <p style="margin-top:8px;color:#AFC3FF;">Includes <strong>90-day Black Friday free trial</strong></p>
-          <p style="margin:4px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
-          <button class="btn price-btn open-form" data-tier="starter">Sign Up</button>
+          <p style="margin:8px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
+          <a class="btn price-btn" href="https://app.billybot.ai/signup" data-app-signup>Sign Up</a>
         </div>
       </div>
 
@@ -642,9 +641,8 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
           </ul>
         </div>
         <div>
-          <p style="margin-top:8px;color:#AFC3FF;">Includes <strong>90-day Black Friday free trial</strong></p>
-          <p style="margin:4px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
-          <button class="btn price-btn open-form" data-tier="pro">Sign Up</button>
+          <p style="margin:8px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
+          <a class="btn price-btn" href="https://app.billybot.ai/signup" data-app-signup>Sign Up</a>
         </div>
       </div>
 
@@ -661,9 +659,8 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
           </ul>
         </div>
         <div>
-          <p style="margin-top:8px;color:#AFC3FF;">Includes <strong>90-day Black Friday free trial</strong></p>
-          <p style="margin:4px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
-          <button class="btn price-btn open-form" data-tier="unlimited">Sign Up</button>
+          <p style="margin:8px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
+          <a class="btn price-btn" href="https://app.billybot.ai/signup" data-app-signup>Sign Up</a>
         </div>
       </div>
 
@@ -688,52 +685,12 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
       <input name="address_line2" placeholder="Address Line 2">
       <input name="city" placeholder="City" required>
       <input name="postcode" placeholder="Postcode" required>
-      <button class="btn" type="submit" aria-label="Start free trial">
+      <button class="btn" type="button" aria-label="Start free trial">
         <span class="btn-text">Start free trial</span>
         <span class="spinner" style="display:none;margin-left:10px;width:18px;height:18px;border:3px solid rgba(255,255,255,0.3);border-top:3px solid #fff;border-radius:50%;animation:spin 0.8s linear infinite;"></span>
       </button>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
     </form>
-
-    <script>
-document.getElementById('onboardForm').addEventListener('submit', function(e) {
-  const phoneInput = this.querySelector('input[name="phone"]');
-  const phone = phoneInput.value.replace(/\s+/g, '');
-  const valid = /^(\+447\d{9}|07\d{9})$/.test(phone);
-  if (!valid) {
-    e.preventDefault();
-    alert('Please enter a valid UK mobile number (e.g. 07XXXXXXXXX or +447XXXXXXXXX)');
-    phoneInput.focus();
-  }
-});
-</script>
-
-    </form>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('onboardForm');
-  if (!form) return;
-
-  form.addEventListener('submit', e => {
-    const phoneInput = form.querySelector('input[name="phone"]');
-    const phone = phoneInput.value.replace(/\s+/g, '');
-    const valid = /^(\+447\d{9}|07\d{9})$/.test(phone);
-
-    if (!valid) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      alert('Please enter a valid UK mobile number');
-      phoneInput.focus();
-      return false;
-    }
-  }, true); // capture phase ensures it runs before other handlers
-});
-</script>
-
-<div id="thankYou" style="display:none;text-align:center;margin-top:20px;font-size:18px;color:#CFE0FF;">
-  Thanks! We look forward to working with you!<br>You will receive a text shortly to get you onboarded.
-</div>
 
     <div id="thankYou" style="display:none;text-align:center;margin-top:20px;font-size:18px;color:#CFE0FF;">
       Thanks! We look forward to working with you!<br>You will receive a text shortly to get you onboarded.
@@ -747,67 +704,6 @@ document.addEventListener('DOMContentLoaded', () => {
   to { transform: rotate(360deg); }
 }
 </style>
-
-<script>
-  // --- open modal and set plan info ---
-  document.querySelectorAll('.open-form').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tier = btn.getAttribute('data-tier');
-      const billing = document.querySelector('.switch')?.classList.contains('active') ? 'annual' : 'monthly';
-      document.getElementById('plan_tier').value = tier;
-      document.getElementById('plan_billing').value = billing;
-      document.getElementById('trialModal').classList.add('open');
-    });
-  });
-
-  // --- modal close handlers ---
-  const modal = document.getElementById('trialModal');
-  document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('open'));
-  modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
-
-  const onboardForm = document.getElementById('onboardForm');
-  onboardForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = onboardForm.querySelector('button[type="submit"]');
-    const spinner = btn.querySelector('.spinner');
-    const btnText = btn.querySelector('.btn-text');
-
-    btn.disabled = true;
-    spinner.style.display = "inline-block";
-    btnText.textContent = "Processing...";
-
-    const data = new FormData(onboardForm);
-
-    try {
-      const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", {
-        method: "POST",
-        body: data,
-        mode: "cors",
-        headers: { "Accept": "application/json" }
-      });
-
-      // ✅ NEW redirect logic
-      const result = await res.json().catch(() => ({}));
-      const possibleUrl = result?.url || result?.redirect || res.url;
-
-      if (possibleUrl && possibleUrl.startsWith("http")) {
-        window.location.href = possibleUrl; // ✅ Redirect to Stripe page
-        return;
-      }
-
-      // fallback
-      onboardForm.reset();
-      document.getElementById('thankYou').style.display = "block";
-
-    } catch (err) {
-      alert("Something went wrong, please try again.");
-    } finally {
-      btn.disabled = false;
-      spinner.style.display = "none";
-      btnText.textContent = "Start 7-day trial";
-    }
-  });
-</script>
 
   <!-- FAQ Section -->
 <section id="faq" class="section" style="background:transparent;">
@@ -1046,6 +942,16 @@ BillyBot is learning fast. The longer you use it, the more tasks it will quietly
   <script>
     // Optional: Suggest opening in browser for faster checkout when inside FB/IG in-app browser
 
+    const APP_URL = "https://app.billybot.ai";
+    const APP_SIGNUP_URL = `${APP_URL}/signup`;
+
+    document.querySelectorAll('[data-app-signup]').forEach((link) => {
+      link.setAttribute('href', APP_SIGNUP_URL);
+    });
+    document.querySelectorAll('[data-app-login]').forEach((link) => {
+      link.setAttribute('href', APP_URL);
+    });
+
     // Set year AFTER footer exists
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -1057,128 +963,8 @@ BillyBot is learning fast. The longer you use it, the more tasks it will quietly
         const active = sw.classList.toggle('active');
         sw.setAttribute('aria-checked', String(active));
         monies.forEach(el => { el.textContent = el.dataset[ active ? 'annual' : 'month' ]; });
-        const modalOpen = document.getElementById('trialModal').classList.contains('open');
-        if (modalOpen) document.getElementById('plan_billing').value = currentBilling();
       });
     }
-
-    const modal = document.getElementById('trialModal');
-    const closeModal = document.getElementById('closeModal');
-    const planTierInput = document.getElementById('plan_tier');
-    const planBillingInput = document.getElementById('plan_billing');
-
-    document.querySelectorAll('.open-form').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const tier = btn.getAttribute('data-tier');
-        planTierInput.value = tier;
-        planBillingInput.value = currentBilling();
-        modal.classList.add('open');
-      });
-    });
-    closeModal.addEventListener('click', () => modal.classList.remove('open'));
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
-
-    function normalizeRedirect(raw) {
-      if (!raw) return '';
-      let u = String(raw).trim();
-      u = u.replace(/^=\s*/, '');
-      const idx = u.indexOf('http');
-      if (!/^https?:\/\//i.test(u) && idx > -1) u = u.slice(idx);
-      return u;
-    }
-    function go(url) {
-      try {
-        const target = new URL(url, window.location.origin).href;
-        if (/^https?:\/\//i.test(url)) {
-          window.location.replace(target);
-          return true;
-        }
-      } catch(e) {}
-      return false;
-    }
-
-    // ---------- Submit handler with spinner + reassurance for FB in-app ----------
-    const form = document.getElementById('onboardForm');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Instant visual feedback
-      const btn = form.querySelector('button[type="submit"]');
-      if (btn) {
-        btn.dataset.originalText = btn.textContent;
-
-        // inject spinner keyframes once
-        if (!document.getElementById('bb-spin-keyframes')) {
-          const style = document.createElement('style');
-          style.id = 'bb-spin-keyframes';
-          style.textContent = '@keyframes bbspin{from{transform:rotate(0)}to{transform:rotate(360deg)}}';
-          document.head.appendChild(style);
-        }
-
-        btn.disabled = true;
-        btn.innerHTML = 'Redirecting&nbsp;to&nbsp;Stripe&nbsp;...&nbsp;<span style="display:inline-block;width:14px;height:14px;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:bbspin .8s linear infinite;vertical-align:-2px"></span>';
-        btn.style.opacity = '0.7';
-        btn.style.cursor = 'wait';
-      }
-
-      // If FB in-app is slow, reassure after ~2s
-      let reassureTimer = setTimeout(() => {
-        if (btn) btn.innerHTML = 'Securing checkout&nbsp;… still working&nbsp;<span style="display:inline-block;width:14px;height:14px;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:bbspin .8s linear infinite;vertical-align:-2px"></span>';
-      }, 2000);
-
-      const data = new FormData(form);
-
-      const fetchOpts = {
-        method: "POST",
-        body: data,
-        mode: "cors",
-        cache: "no-store",
-        headers: { "Accept": "application/json" },
-        keepalive: false
-      };
-
-      try {
-        const res = await fetch("https://tradiebrain.app.n8n.cloud/webhook/Onboarding", fetchOpts);
-
-        clearTimeout(reassureTimer);
-
-        // JSON { url: "https://..." } or HTTP redirect
-        let result = null;
-        const ct = res.headers.get('content-type') || '';
-        if (ct.includes('application/json')) {
-          result = await res.json().catch(() => null);
-        }
-
-        const fromJson = normalizeRedirect(result && result.url);
-        if (fromJson && go(fromJson)) return;
-
-        if (res.redirected && res.url) {
-          const redirected = normalizeRedirect(res.url);
-          if (go(redirected)) return;
-        }
-
-        // Fallback – show thank you if no redirect provided
-        form.reset();
-        document.getElementById('thankYou').style.display = "block";
-        if (btn) {
-          btn.disabled = false;
-          btn.textContent = btn.dataset.originalText || "Start 7-day trial";
-          btn.style.opacity = "1";
-          btn.style.cursor = "pointer";
-        }
-      } catch (err) {
-        console.error(err);
-        clearTimeout(reassureTimer);
-        alert("Something went wrong, please try again.");
-        if (btn) {
-          btn.disabled = false;
-          btn.textContent = btn.dataset.originalText || "Start 7-day trial";
-          btn.style.opacity = "1";
-          btn.style.cursor = "pointer";
-        }
-      }
-    });
-    // --------------------------------------------------------------------
 
     // ✅ Subscribe form handler
     const subscribeForm = document.getElementById('subscribeForm');
