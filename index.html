@@ -68,6 +68,9 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
     .links{display:flex;gap:28px;align-items:center}
     .links a{color:var(--muted);font-weight:600}
     .links a:hover{color:var(--text)}
+    .nav-cta{display:flex;align-items:center;gap:14px;margin-left:auto}
+    .login-link{color:var(--muted);font-weight:700}
+    .login-link:hover{color:var(--text)}
     .btn{display:inline-block;background:linear-gradient(135deg,var(--accent1),var(--accent2));
       color:#0B0F1A;border:0;font-weight:800;padding:14px 26px;border-radius:999px;
       box-shadow:var(--shadow);transition:transform .18s ease;}
@@ -196,6 +199,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
     /* Responsive */
     @media (max-width:1024px){.grid3,.how,.pricing{grid-template-columns:1fr 1fr}}
     @media (max-width:768px){
+      .login-link{display:none}
       .links{display:none}.nav{height:72px}
       .title{font-size:36px}.subtitle{font-size:16px}
       .section{padding:76px 0}
@@ -255,7 +259,10 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
   <a href="#how">How it works</a>
   <a href="#pricing">Pricing</a>
 </nav>
-<a id="signup-btn" class="btn glow" href="#pricing" style="margin-left:auto;">Sign Up</a>
+<div class="nav-cta" style="margin-left:auto;">
+  <a class="login-link" href="https://app.billybot.ai" rel="noopener">Log in</a>
+  <a id="signup-btn" class="btn glow" href="#pricing">Get started</a>
+</div>
       <button class="btn ghost" style="display:none">Menu</button>
     </div>
   </header>
@@ -758,7 +765,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('open'));
   modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
 
- <script>
   const onboardForm = document.getElementById('onboardForm');
   onboardForm.addEventListener('submit', async (e) => {
     e.preventDefault();
