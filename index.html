@@ -258,7 +258,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
 </nav>
 <div class="nav-cta" style="margin-left:auto;">
   <a class="login-link" href="https://app.billybot.ai" rel="noopener" data-app-login>Log in</a>
-  <a id="signup-btn" class="btn glow" href="https://app.billybot.ai" data-app-signup>Get started</a>
+  <a id="signup-btn" class="btn glow" href="https://app.billybot.ai/signup" data-app-signup>Get started</a>
 </div>
       <button class="btn ghost" style="display:none">Menu</button>
     </div>
@@ -273,7 +273,7 @@ src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
 </p>
 
     <div class="cta-row">
-      <a class="btn glow" href="https://app.billybot.ai" data-app-signup
+      <a class="btn glow" href="https://app.billybot.ai/signup" data-app-signup
          style="background:linear-gradient(135deg,var(--accent1),var(--accent2));
                 color:#fff;
                 box-shadow:0 0 20px rgba(249,115,22,0.4),0 0 40px rgba(251,146,60,0.2);
@@ -635,7 +635,7 @@ and get the exact answer instantly.
         </div>
         <div>
           <p style="margin:8px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
-          <a class="btn price-btn" href="https://app.billybot.ai" data-app-signup>Sign Up</a>
+          <a class="btn price-btn" href="https://app.billybot.ai/signup" data-app-signup>Sign Up</a>
         </div>
       </div>
 
@@ -652,7 +652,7 @@ and get the exact answer instantly.
         </div>
         <div>
           <p style="margin:8px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
-          <a class="btn price-btn" href="https://app.billybot.ai" data-app-signup>Sign Up</a>
+          <a class="btn price-btn" href="https://app.billybot.ai/signup" data-app-signup>Sign Up</a>
         </div>
       </div>
 
@@ -671,7 +671,7 @@ and get the exact answer instantly.
         </div>
         <div>
           <p style="margin:8px 0 8px;color:#9CA3AF;font-size:12px;line-height:1;">Cancel anytime | No contract</p>
-          <a class="btn price-btn" href="https://app.billybot.ai" data-app-signup>Sign Up</a>
+          <a class="btn price-btn" href="https://app.billybot.ai/signup" data-app-signup>Sign Up</a>
         </div>
       </div>
 
@@ -921,10 +921,11 @@ BillyBot is learning fast. The longer you use it, the more tasks it will quietly
 
   <script>
     const APP_URL = "https://app.billybot.ai";
+    const APP_SIGNUP_URL = `${APP_URL}/signup`;
     const APP_REDIRECT_URL = APP_URL;
 
     document.querySelectorAll('[data-app-signup]').forEach((link) => {
-      link.setAttribute('href', APP_REDIRECT_URL);
+      link.setAttribute('href', APP_SIGNUP_URL);
     });
     document.querySelectorAll('[data-app-login]').forEach((link) => {
       link.setAttribute('href', APP_REDIRECT_URL);
