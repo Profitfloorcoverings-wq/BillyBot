@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign up | BillyBot™</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand1:#2563EB; --brand2:#3B82F6;
+      --accent1:#F97316; --accent2:#FB923C;
+      --bg:#0B0F1A; --bg2:#0F1526;
+      --text:#E6ECF9; --muted:#98A3B8;
+      --line:rgba(255,255,255,.1);
+      --radius:16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 45%, #0B0F1A 100%);
+    }
+    .shell {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 28px 18px 44px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      font: 800 20px Sora, Inter, sans-serif;
+      color: #fff;
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #0F1526, #0C1221);
+      padding: 22px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.35);
+    }
+    h1 {
+      margin: 0;
+      font: 800 30px/1.12 Sora, Inter, sans-serif;
+      letter-spacing: -0.02em;
+    }
+    p.sub {
+      margin: 10px 0 20px;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 15px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+    .field { margin-bottom: 14px; }
+    input {
+      width: 100%;
+      border: 1px solid #243150;
+      border-radius: 12px;
+      background: #0B1225;
+      color: var(--text);
+      padding: 12px;
+      font-size: 16px;
+      outline: none;
+    }
+    input:focus {
+      border-color: var(--accent1);
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+    }
+    .btn {
+      width: 100%;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 13px 20px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    }
+    .btn[disabled] { opacity: .7; cursor: not-allowed; }
+    .message {
+      margin: 12px 0 0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      line-height: 1.4;
+      display: none;
+    }
+    .message.error {
+      display: block;
+      color: #FECACA;
+      background: rgba(127,29,29,.28);
+      border: 1px solid rgba(248,113,113,.45);
+    }
+    .message.info {
+      display: block;
+      color: #BFDBFE;
+      background: rgba(30,64,175,.25);
+      border: 1px solid rgba(96,165,250,.35);
+    }
+    .success-panel { display: none; }
+    .success-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .link-btn {
+      text-align: center;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      color: #fff;
+      background: rgba(255,255,255,.04);
+    }
+    .link-btn.primary {
+      border: 0;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+    }
+    @media (min-width: 768px) {
+      .shell { padding-top: 54px; }
+      .card { padding: 28px; }
+    }
+  </style>
+  <script>
+    // TODO: Paste your real Supabase project URL.
+    // Example: SUPABASE_URL: "https://xyzcompany.supabase.co"
+    // TODO: Paste your real Supabase anon key.
+    window.__ENV = {
+      SUPABASE_URL: "",
+      SUPABASE_ANON_KEY: ""
+    };
+  </script>
+</head>
+<body>
+  <main class="shell">
+    <a class="brand" href="../">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>BillyBot™</span>
+    </a>
+
+    <section class="card" id="signupCard">
+      <div id="formPanel">
+        <h1>Create your account</h1>
+        <p class="sub">Start your free trial. We will email a confirmation link before you access the app.</p>
+
+        <form id="signupForm" novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="password">Password <span style="color:var(--muted);font-weight:500;">(min 8 characters)</span></label>
+            <input id="password" name="password" type="password" autocomplete="new-password" required minlength="8" />
+          </div>
+          <div class="field">
+            <label for="business_name">Business name <span style="color:var(--muted);font-weight:500;">(optional)</span></label>
+            <input id="business_name" name="business_name" type="text" autocomplete="organization" />
+          </div>
+
+          <button class="btn" type="submit" id="submitBtn">Create account</button>
+          <p id="formMessage" class="message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div id="successPanel" class="success-panel" aria-live="polite">
+        <h1>Check your email</h1>
+        <p class="sub">Check your email to confirm your account. Once confirmed you can open the web app or install the mobile app.</p>
+        <div class="success-actions">
+          <a class="link-btn primary" href="https://app.billybot.ai" rel="noopener">Open web app</a>
+          <a class="link-btn" href="https://billybot.ai" rel="noopener">Get the mobile app</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('signupForm');
+      const messageEl = document.getElementById('formMessage');
+      const submitBtn = document.getElementById('submitBtn');
+      const formPanel = document.getElementById('formPanel');
+      const successPanel = document.getElementById('successPanel');
+
+      const env = window.__ENV || {};
+      if (!env.SUPABASE_URL || !env.SUPABASE_ANON_KEY) {
+        showMessage('Signup is not configured yet. Please add SUPABASE_URL and SUPABASE_ANON_KEY in window.__ENV.', 'error');
+        submitBtn.disabled = true;
+        return;
+      }
+
+      const supabase = window.supabase.createClient(env.SUPABASE_URL, env.SUPABASE_ANON_KEY);
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        showMessage('', '');
+
+        const email = (form.email.value || '').trim();
+        const password = form.password.value || '';
+        const businessName = (form.business_name.value || '').trim();
+
+        if (!email) {
+          showMessage('Please enter your email address.', 'error');
+          return;
+        }
+        if (password.length < 8) {
+          showMessage('Password must be at least 8 characters.', 'error');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Creating account...';
+
+        try {
+          const { data, error } = await supabase.auth.signUp({
+            email,
+            password,
+            options: {
+              emailRedirectTo: 'https://app.billybot.ai/auth/callback'
+            }
+          });
+
+          if (error) {
+            throw new Error(mapSignupError(error.message));
+          }
+
+          const userId = data && data.user && data.user.id;
+          if (!userId) {
+            throw new Error('We could not create your account. Please try again.');
+          }
+
+          await upsertClient(supabase, {
+            id: userId,
+            business_name: businessName || null,
+            email
+          });
+
+          formPanel.style.display = 'none';
+          successPanel.style.display = 'block';
+        } catch (err) {
+          const fallback = 'Something went wrong while creating your account. Please try again.';
+          const msg = err && err.message ? err.message : fallback;
+          showMessage(msg, 'error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Create account';
+        }
+      });
+
+      function showMessage(text, type) {
+        messageEl.className = 'message';
+        if (!text) {
+          messageEl.textContent = '';
+          return;
+        }
+        messageEl.textContent = text;
+        messageEl.classList.add(type === 'info' ? 'info' : 'error');
+      }
+
+      function mapSignupError(rawMessage) {
+        const msg = (rawMessage || '').toLowerCase();
+        if (msg.includes('already registered') || msg.includes('already been registered') || msg.includes('already exists')) {
+          return 'That email is already in use. Try logging in or resetting your password.';
+        }
+        if (msg.includes('password') && (msg.includes('weak') || msg.includes('length') || msg.includes('characters'))) {
+          return 'Your password is too weak. Use at least 8 characters.';
+        }
+        return rawMessage || 'Unable to sign up right now. Please try again.';
+      }
+
+      async function upsertClient(supabaseClient, payload) {
+        const withEmailResult = await supabaseClient
+          .from('clients')
+          .upsert(payload, { onConflict: 'id' });
+
+        if (!withEmailResult.error) {
+          return;
+        }
+
+        const errorMessage = (withEmailResult.error.message || '').toLowerCase();
+        const missingEmailColumn =
+          withEmailResult.error.code === 'PGRST204' ||
+          errorMessage.includes('column') && errorMessage.includes('email') && errorMessage.includes('does not exist');
+
+        if (!missingEmailColumn) {
+          throw new Error(withEmailResult.error.message || 'Account created, but profile setup failed.');
+        }
+
+        const { email, ...payloadWithoutEmail } = payload;
+        const fallbackResult = await supabaseClient
+          .from('clients')
+          .upsert(payloadWithoutEmail, { onConflict: 'id' });
+
+        if (fallbackResult.error) {
+          throw new Error(fallbackResult.error.message || 'Account created, but profile setup failed.');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
