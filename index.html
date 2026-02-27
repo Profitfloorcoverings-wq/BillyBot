@@ -1052,13 +1052,15 @@
 
 <script>
   var APP_URL = 'https://app.billybot.ai';
+  var SIGNUP_URL = 'https://app.billybot.ai/auth/signup';
+  var LOGIN_URL = 'https://app.billybot.ai/auth/login';
 
   // ── Set all CTA links ──
   document.querySelectorAll('[data-app-signup]').forEach(function(el) {
-    el.setAttribute('href', APP_URL);
+    el.setAttribute('href', SIGNUP_URL);
   });
   document.querySelectorAll('[data-app-login]').forEach(function(el) {
-    el.setAttribute('href', APP_URL);
+    el.setAttribute('href', LOGIN_URL);
   });
 
   // ── Fire pixel Lead event on any CTA click ──
