@@ -1052,8 +1052,9 @@
 
 <script>
   var APP_URL = 'https://app.billybot.ai';
-  var SIGNUP_URL = 'https://app.billybot.ai/auth/signup';
-  var LOGIN_URL = 'https://app.billybot.ai/auth/login';
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  var SIGNUP_URL = isMobile ? 'https://app.billybot.ai/get-the-app' : 'https://app.billybot.ai/auth/signup';
+  var LOGIN_URL = isMobile ? 'https://app.billybot.ai/get-the-app' : 'https://app.billybot.ai/auth/login';
 
   // ── Set all CTA links ──
   document.querySelectorAll('[data-app-signup]').forEach(function(el) {
