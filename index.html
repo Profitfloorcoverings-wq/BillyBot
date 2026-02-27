@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '24704985755777244');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BillyBot™ — AI Operator for Flooring Businesses</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="BillyBot™ handles your quotes, jobs, emails, scheduling and admin automatically. The AI operator built for flooring businesses. Start free — 10 quotes on us, no card required." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://tradiebrain.app.n8n.cloud">
+
+  <style>
+    :root {
+      --brand1: #2563EB;
+      --brand2: #3B82F6;
+      --cyan: #38BDF8;
+      --accent1: #F97316;
+      --accent2: #FB923C;
+      --bg: #0B0F1A;
+      --bg2: #0F1526;
+      --text: #E6ECF9;
+      --muted: #98A3B8;
+      --line: rgba(255,255,255,0.08);
+      --radius: 20px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --max: 1160px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 40%, #0C1221 80%, #0B0F1A 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Gradient text ── */
+    .grad {
+      background: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff;
+      font-weight: 800;
+      font-family: Sora, Inter, sans-serif;
+      padding: 15px 30px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.18s ease;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.glow {
+      box-shadow: 0 0 20px rgba(249,115,22,0.45), 0 0 40px rgba(251,146,60,0.2);
+      animation: pulseOrange 2.5s ease-in-out infinite;
+    }
+    @keyframes pulseOrange {
+      0%, 100% { box-shadow: 0 0 18px rgba(249,115,22,0.45), 0 0 36px rgba(251,146,60,0.2); }
+      50%       { box-shadow: 0 0 32px rgba(249,115,22,0.65), 0 0 64px rgba(251,146,60,0.35); }
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(180deg, rgba(13,17,28,0.92), rgba(13,17,28,0.6) 70%, rgba(13,17,28,0));
+      backdrop-filter: saturate(140%) blur(12px);
+      -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font: 800 20px Sora, Inter;
+    }
+    .logo svg { width: 38px; height: 38px; flex-shrink: 0; }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      margin-left: 16px;
+    }
+    .nav-links a { color: var(--muted); font-weight: 600; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: flex; align-items: center; gap: 14px; margin-left: auto; }
+    .login-link { color: var(--muted); font-weight: 700; }
+    .login-link:hover { color: var(--text); }
+
+    #signup-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-6px);
+      transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    }
+    #signup-btn.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 130px 0 110px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(80% 130% at 50% -5%, rgba(37,99,235,0.3) 0%, transparent 65%);
+      z-index: 0;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37,99,235,0.12);
+      border: 1px solid rgba(56,189,248,0.25);
+      color: #38BDF8;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font: 800 clamp(46px, 7vw, 78px) Sora, Inter;
+      line-height: 1.02;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+      color: #fff;
+    }
+    .hero-subtitle {
+      font-size: clamp(17px, 2.2vw, 21px);
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .hero-cta {
+      font-size: 17px !important;
+      padding: 18px 42px !important;
+    }
+    .hero-disclaimer {
+      font-size: 13px;
+      color: #475569;
+      margin-bottom: 40px;
+    }
+    .hero-chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .chip {
+      color: #94A3B8;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* ── Value band ── */
+    .value-band {
+      padding: 64px 0;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .value-band p {
+      font: 800 clamp(19px, 2.4vw, 25px) Sora, Inter;
+      line-height: 1.5;
+      color: #CFE0FF;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── Sections ── */
+    .section { padding: 100px 0; }
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-header h2 {
+      font: 800 clamp(28px, 4vw, 46px) Sora, Inter;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+    .section-header p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── Glass cards ── */
+    .glass {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .glass:hover {
+      border-color: rgba(255,255,255,0.14);
+      transform: translateY(-3px);
+    }
+
+    /* ── Features grid ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .feature-card { padding: 30px; }
+    .feature-icon {
+      width: 50px; height: 50px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+      background: rgba(37,99,235,0.1);
+      border: 1px solid rgba(56,189,248,0.15);
+    }
+    .feature-card h3 { font: 700 17px Sora, Inter; color: #F1F5F9; margin-bottom: 10px; }
+    .feature-card p { color: var(--muted); font-size: 15px; line-height: 1.65; }
+    .feature-tag {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #38BDF8;
+      opacity: 0.8;
+    }
+
+    /* ── Benefits grid ── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .benefit-card { padding: 30px; }
+    .benefit-card h3 { font: 700 19px Sora, Inter; color: #F1F5F9; margin-bottom: 10px; }
+    .benefit-card p { color: var(--muted); font-size: 16px; line-height: 1.65; }
+
+    /* ── Steps ── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .step-card { padding: 30px; }
+    .step-num {
+      width: 44px; height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      font: 800 18px Sora, Inter;
+      margin-bottom: 18px;
+    }
+    .step-card h3 { font: 700 17px Sora, Inter; color: #F1F5F9; margin-bottom: 10px; }
+    .step-card p { color: var(--muted); font-size: 15px; line-height: 1.65; }
+
+    /* ── Reviews ── */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .review-card { padding: 26px; }
+    .review-stars { font-size: 20px; color: #FFD966; margin-bottom: 14px; }
+    .review-text { color: #CFE0FF; font-size: 16px; line-height: 1.65; margin-bottom: 14px; }
+    .review-author { color: var(--muted); font-size: 14px; }
+
+    /* ── Logo carousel ── */
+    .logo-carousel {
+      padding: 56px 0;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .logo-carousel-label {
+      font: 700 12px Inter;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #334155;
+      margin-bottom: 28px;
+    }
+    .logo-track {
+      display: flex;
+      gap: 64px;
+      animation: scrollLogos 25s linear infinite;
+      white-space: nowrap;
+      align-items: center;
+    }
+    .logo-track span { color: #334155; font-size: 17px; font-weight: 700; flex-shrink: 0; }
+    @keyframes scrollLogos {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── Pricing ── */
+    .pricing-intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(249,115,22,0.1);
+      border: 1px solid rgba(249,115,22,0.25);
+      color: #FB923C;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 999px;
+      margin-bottom: 36px;
+    }
+    .billing-toggle {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 44px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .switch {
+      width: 54px; height: 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #1A2341, #233157);
+      border: 1px solid var(--line);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+    }
+    .switch.active { background: linear-gradient(135deg, var(--accent1), var(--accent2)); box-shadow: 0 0 12px rgba(249,115,22,0.5); }
+    .knob {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      top: 2.5px; left: 3px;
+      transition: left 0.25s ease;
+    }
+    .switch.active .knob { left: 27px; }
+    .save-badge {
+      color: #7EE787;
+      background: #143019;
+      border: 1px solid #224C2B;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-left: 8px;
+      font-size: 13px;
+      box-shadow: 0 0 14px rgba(126,231,135,0.3);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+    .price-card {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+    .price-card.featured {
+      border-color: rgba(37,99,235,0.5);
+      animation: pulseBlue 3s ease-in-out infinite;
+    }
+    @keyframes pulseBlue {
+      0%, 100% { box-shadow: 0 0 0 1px rgba(37,99,235,0.45), 0 0 24px rgba(37,99,235,0.18); }
+      50%       { box-shadow: 0 0 0 1px rgba(37,99,235,0.6),  0 0 36px rgba(37,99,235,0.28); }
+    }
+    .price-popular {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #38BDF8;
+      margin-bottom: 8px;
+    }
+    .price-card h3 { font: 700 22px Sora, Inter; color: #F1F5F9; margin-bottom: 6px; }
+    .price-money {
+      font: 800 44px Sora, Inter;
+      letter-spacing: -1px;
+      color: #F1F5F9;
+      margin: 10px 0 4px;
+    }
+    .price-period { font-size: 13px; color: #475569; margin-bottom: 22px; }
+    .price-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      color: #94A3B8;
+      font-size: 15px;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+    .price-card ul li::before { content: "✓ "; color: #38BDF8; font-weight: 700; }
+    .price-btn { width: 100%; text-align: center; padding: 14px; font-size: 15px; }
+    .pricing-footer { text-align: center; margin-top: 22px; color: #475569; font-size: 14px; }
+
+    /* ── FAQ ── */
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      color: #CFE0FF;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-family: Inter, system-ui, sans-serif;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question::after {
+      content: "+";
+      font-size: 22px;
+      font-weight: 700;
+      color: #38BDF8;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      margin-left: 14px;
+    }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 24px;
+    }
+    .faq-item.active .faq-answer { max-height: 500px; padding: 0 24px 20px; }
+    .faq-answer p {
+      margin: 0;
+      color: #AFC3FF;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* ── Subscribe form ── */
+    .subscribe-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .subscribe-row select,
+    .subscribe-row input[type="email"] {
+      flex: 1;
+      min-width: 180px;
+      max-width: 240px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      font-size: 15px;
+      font-family: inherit;
+    }
+    .subscribe-row select option { background: #0F1526; }
+
+    /* ── Footer ── */
+    footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 15px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-top: 12px; }
+    .footer-links a { color: #334155; font-size: 14px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid .price-card:last-child { grid-column: 1 / -1; max-width: 400px; margin: 0 auto; width: 100%; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .login-link { display: none; }
+      #signup-btn { display: none !important; }
+      .features-grid, .steps-grid, .reviews-grid, .pricing-grid, .benefits-grid { grid-template-columns: 1fr; }
+      .pricing-grid .price-card:last-child { max-width: 100%; grid-column: auto; }
+      .section { padding: 72px 0; }
+      .hero { padding: 100px 0 80px; }
+      .hero-title { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+        <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
+        <g fill="url(#tbBlue)">
+          <rect x="45" y="34" width="6" height="14" rx="3"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
+        </g>
+        <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+        <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
+        <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
+        <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
+      </svg>
+      BillyBot™
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="login-link" href="https://app.billybot.ai" rel="noopener" data-app-login>Log in</a>
+      <a id="signup-btn" class="btn glow" href="https://app.billybot.ai" data-app-signup>Get started free</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">✦ AI-powered admin for flooring</div>
+    <h1 class="hero-title">Your <span class="grad">AI Operator</span><br>for Flooring.</h1>
+    <p class="hero-subtitle">BillyBot handles your quotes, jobs, emails, diary and paperwork — so you can focus on the work that actually pays.</p>
+    <div class="cta-row">
+      <a class="btn glow hero-cta" href="https://app.billybot.ai" data-app-signup>Start free — 10 quotes on us</a>
+    </div>
+    <p class="hero-disclaimer">No card required &middot; Cancel anytime</p>
+    <div class="hero-chips">
+      <span class="chip">📧 Gmail &amp; Outlook</span>
+      <span class="chip">📱 iOS &amp; Android</span>
+      <span class="chip">📅 Diary &amp; Scheduling</span>
+      <span class="chip">📋 Auto RAMS</span>
+      <span class="chip">👥 Team Management</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== VALUE BAND ===== -->
+<div class="value-band">
+  <div class="container">
+    <p>A flooring-trained AI that <strong><span style="color:#FFB84D;">quotes, books, manages and handles your admin</span></strong> — without the wages.</p>
+  </div>
+</div>
+
+
+<!-- ===== FEATURES ===== -->
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Everything your business needs, <span class="grad">in one place.</span></h2>
+      <p>BillyBot isn't just a quoting tool anymore. It's your entire back-office, built for flooring.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card glass">
+        <div class="feature-icon">🗒️</div>
+        <h3>Instant Quoting</h3>
+        <p>Voice notes, photos, or messy job notes — BillyBot builds your full quote in seconds using your exact supplier prices and markup rules. No guesswork, no undercharging.</p>
+        <span class="feature-tag">Core feature</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">📧</div>
+        <h3>Jobs Inbox</h3>
+        <p>Connect Gmail or Outlook. BillyBot reads your customer emails and automatically creates jobs — with the customer's details, thread history, and attachments all in one place.</p>
+        <span class="feature-tag">Email integration</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">📅</div>
+        <h3>Diary &amp; Scheduling</h3>
+        <p>Book fittings, surveys and prep jobs. Assign fitters to each booking. Everyone on your team knows exactly where to be and when — without a single phone call.</p>
+        <span class="feature-tag">Scheduling</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">👥</div>
+        <h3>Team Members</h3>
+        <p>Add fitters, managers and estimators. Each person sees only what they need. Full control over who can access what — from the office or on site.</p>
+        <span class="feature-tag">Team management</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">📋</div>
+        <h3>RAMS</h3>
+        <p>Generate Risk Assessments and Method Statements automatically. Stay compliant on every job without spending hours writing documents. Send them directly from the app.</p>
+        <span class="feature-tag">Compliance</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile App</h3>
+        <p>Chat with BillyBot, raise quotes, and manage jobs from your phone. Perfect for on-site work — everything you need in your pocket, wherever the job takes you.</p>
+        <span class="feature-tag">iOS &amp; Android</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== WHY BILLYBOT ===== -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why trades <span class="grad">love BillyBot™</span></h2>
+      <p>Built for floor layers who've had enough of admin eating into their evenings and weekends.</p>
+    </div>
+
+    <div class="benefits-grid">
+
+      <div class="benefit-card glass">
+        <h3>⏱ Save hours every week</h3>
+        <p>Imagine how many hours you'd get back if you <strong>never had to build another quote again.</strong> BillyBot handles it all — so your evenings are yours.</p>
+      </div>
+
+      <div class="benefit-card glass">
+        <h3>📥 Never miss an enquiry</h3>
+        <p>BillyBot watches your inbox around the clock. Customer emails become jobs automatically. <strong>No more losing leads because you were on site.</strong></p>
+      </div>
+
+      <div class="benefit-card glass">
+        <h3>👥 Your whole team, one place</h3>
+        <p>Fitters, managers, estimators — all on the same system. <strong>Everyone knows the plan.</strong> No more WhatsApp groups, double bookings, or missed updates.</p>
+      </div>
+
+      <div class="benefit-card glass">
+        <h3>📋 Less paperwork, more compliance</h3>
+        <p>RAMS written automatically for every job. Stay compliant, win bigger contracts, and <strong>never scramble to write a risk assessment the night before.</strong></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>How BillyBot Works</h2>
+      <p>Set up once. Then let Billy run your admin for you.</p>
+    </div>
+
+    <div class="steps-grid">
+
+      <div class="step-card glass">
+        <div class="step-num">1</div>
+        <h3>Connect &amp; configure</h3>
+        <p>Link your Gmail or Outlook, set your pricing rules, and add your team. A one-time setup that takes less than an hour.</p>
+      </div>
+
+      <div class="step-card glass">
+        <div class="step-num">2</div>
+        <h3>Billy handles the enquiries</h3>
+        <p>Emails become jobs. Quotes are built automatically. Your diary is kept up to date. Your team gets notified. All without you lifting a finger.</p>
+      </div>
+
+      <div class="step-card glass">
+        <div class="step-num">3</div>
+        <h3>You focus on the fitting</h3>
+        <p>Admin is done. Quotes are sent. Jobs are booked. You get back to the work that actually earns — with the paperwork handled.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Real feedback from the trade</h2>
+      <p>Real results from real installers using BillyBot™.</p>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card glass">
+        <p class="review-stars">★★★★★</p>
+        <p class="review-text">"Did my first quote with BillyBot and it nailed it. It works out everything needed for the job perfectly. Game changer."</p>
+        <p class="review-author">— Rob, Carpet Fitter</p>
+      </div>
+
+      <div class="review-card glass">
+        <p class="review-stars">★★★★★</p>
+        <p class="review-text">"Saves me hours every week. It's like having a secretary that actually understands flooring and a real one of them costs you like £3k a month!"</p>
+        <p class="review-author">— Mike, Flooring Shop Owner, Kent</p>
+      </div>
+
+      <div class="review-card glass">
+        <p class="review-stars">★★★★★</p>
+        <p class="review-text">"Bit sceptical at first, but it literally does exactly what you hope it would. Worth every penny. Very impressed by how well it knows commercial stuff like Safety flooring and Whiterock."</p>
+        <p class="review-author">— Liam, Commercial Flooring Contractors, Manchester</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== USED BY ===== -->
+<div class="logo-carousel">
+  <div class="container">
+    <p class="logo-carousel-label">Used by leading flooring businesses across the UK</p>
+    <div class="logo-track">
+      <span>Pro-Fit Flooring</span>
+      <span>Elite Floors Ltd</span>
+      <span>Total Interiors</span>
+      <span>Precision Flooring Co</span>
+      <span>FloorTech UK</span>
+      <span>UrbanFit Flooring</span>
+      <span>Refloor Group</span>
+      <span>Supreme Surfaces</span>
+      <span>FloorSmart Installations</span>
+      <span>Complete Flooring Systems</span>
+      <!-- Duplicate for seamless loop -->
+      <span>Pro-Fit Flooring</span>
+      <span>Elite Floors Ltd</span>
+      <span>Total Interiors</span>
+      <span>Precision Flooring Co</span>
+      <span>FloorTech UK</span>
+      <span>UrbanFit Flooring</span>
+      <span>Refloor Group</span>
+      <span>Supreme Surfaces</span>
+      <span>FloorSmart Installations</span>
+      <span>Complete Flooring Systems</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== PRICING ===== -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Simple, transparent pricing</h2>
+      <p>Start free with 10 quotes. Upgrade when you're ready.</p>
+    </div>
+
+    <div style="text-align:center;">
+      <div class="pricing-intro-badge">🎁 10 quotes free — no card required</div>
+    </div>
+
+    <div class="billing-toggle">
+      <span>Monthly</span>
+      <div class="switch" id="planSwitch" role="switch" aria-checked="false" tabindex="0">
+        <div class="knob"></div>
+      </div>
+      <span>Annual <span class="save-badge">Save 2 months</span></span>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- Starter -->
+      <div class="price-card glass">
+        <div>
+          <h3>Starter</h3>
+          <div class="price-money money" data-month="£149/mo" data-annual="£1,490/yr">£149/mo</div>
+          <p class="price-period">per month, billed monthly</p>
+          <ul>
+            <li>1 user</li>
+            <li>All core features</li>
+            <li>Up to 50 quotes / month</li>
+            <li>Email inbox integration</li>
+            <li>Diary &amp; scheduling</li>
+            <li>RAMS generation</li>
+            <li>Mobile app</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size:12px;color:#475569;margin-bottom:10px;">Cancel anytime &middot; No contract</p>
+          <a class="btn price-btn" href="https://app.billybot.ai" data-app-signup>Get started</a>
+        </div>
+      </div>
+
+      <!-- Pro (featured) -->
+      <div class="price-card glass featured">
+        <div>
+          <p class="price-popular">Most popular</p>
+          <h3>Pro</h3>
+          <div class="price-money money" data-month="£249/mo" data-annual="£2,490/yr">£249/mo</div>
+          <p class="price-period">per month, billed monthly</p>
+          <ul>
+            <li>Up to 3 users</li>
+            <li>All Starter features</li>
+            <li>Unlimited quotes / month</li>
+            <li>Team scheduling</li>
+            <li>Supplier price uploads</li>
+            <li>Priority support</li>
+            <li>Early access to new features</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size:12px;color:#475569;margin-bottom:10px;">Cancel anytime &middot; No contract</p>
+          <a class="btn price-btn glow" href="https://app.billybot.ai" data-app-signup>Get started</a>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="price-card glass">
+        <div>
+          <h3>Team</h3>
+          <div class="price-money money" data-month="£499/mo" data-annual="£4,990/yr">£499/mo</div>
+          <p class="price-period">per month, billed monthly</p>
+          <ul>
+            <li>Unlimited users</li>
+            <li>All Pro features</li>
+            <li>Unlimited quotes / month</li>
+            <li>Unlimited price requests</li>
+            <li>Dedicated account support</li>
+            <li>Early access to new features</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size:12px;color:#475569;margin-bottom:10px;">Cancel anytime &middot; No contract</p>
+          <a class="btn price-btn" href="https://app.billybot.ai" data-app-signup>Get started</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="pricing-footer">All plans include a 10-quote free trial. Prices shown exclude VAT.</p>
+  </div>
+</section>
+
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section">
+  <div class="container" style="max-width:820px;">
+    <div class="section-header">
+      <h2>Frequently asked questions</h2>
+      <p>Everything you need to know before starting your free trial.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">How does the email inbox work?</button>
+        <div class="faq-answer">
+          <p>Connect your Gmail or Outlook account via secure OAuth login — the same system used by Google and Microsoft themselves. Once connected, BillyBot watches your inbox for customer enquiries. When a new email arrives, Billy reads it, creates a job with the customer's details, and adds it to your jobs inbox. You can reply directly from within BillyBot without switching apps.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is it safe to connect my Gmail or Outlook?</button>
+        <div class="faq-answer">
+          <p>Yes. BillyBot connects using each provider's official OAuth system — you never share your password with BillyBot. You log in directly on Google's or Microsoft's own secure pages. BillyBot can only access the emails needed to create and manage your jobs. All authentication tokens are encrypted before storage, and every connection uses 256-bit SSL encryption.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can anyone see my net prices or markups?</button>
+        <div class="faq-answer">
+          <p>Absolutely not. Your pricing rules are encrypted and stored in a dedicated secure database with continuous security monitoring. Only you and BillyBot's automation can read your pricing. Every connection is protected using 256-bit SSL encryption — the same level used by banks.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I cancel anytime?</button>
+        <div class="faq-answer">
+          <p>Yes, there's no contract. Cancel your trial or subscription whenever you like. Simply text Billy: "Cancel my subscription" or manage it directly from your account settings.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What types of flooring work does BillyBot support?</button>
+        <div class="faq-answer">
+          <p>BillyBot supports carpet, LVT, laminate, vinyl, tiles, engineered wood, safety flooring, Whiterock, and more. It understands real trade language — singles and doubles for door bars, running cove, coved skirts, and all the details that actually matter on a quote. Configure your services in the pricing settings.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do I need accounting software to use BillyBot?</button>
+        <div class="faq-answer">
+          <p>No. BillyBot generates professional PDF quotes and manages your jobs entirely on its own. If you use Sage, Xero, or QuickBooks, BillyBot can push quotes directly into your accounting system. But you don't need any accounting software to get started.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">My suppliers don't provide price lists. Can I still use BillyBot?</button>
+        <div class="faq-answer">
+          <p>Most suppliers will happily send a price list if you ask. Once you have it, just forward the email (or the attached file) to BillyBot. Billy reads it, stores your prices, and applies them automatically to every quote. No manual data entry needed.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== MISSION ===== -->
+<section id="mission" class="section" style="padding-bottom:60px;">
+  <div class="container" style="max-width:860px;text-align:center;">
+    <h2 style="font-family:Sora,Inter;font-weight:800;font-size:clamp(26px,3.5vw,38px);margin-bottom:18px;">Built by trades, for trades.</h2>
+    <p style="color:#AFC3FF;font-size:18px;line-height:1.75;margin-bottom:22px;">
+      We're not a Silicon Valley startup. Our founder, Steve, has lived the grind.
+      Late nights quoting, weekends catching up on admin, and the constant feeling that
+      the paperwork never ends. BillyBot™ was built to fix that — to finally give
+      tradespeople the freedom to focus on the work that actually pays.
+    </p>
+    <p style="color:#CFE0FF;font-size:17px;line-height:1.75;margin-bottom:22px;">
+      Our goal is simple: to build the world's first <strong>AI Operator for trade businesses</strong> —
+      a system that handles your quoting, admin, and day-to-day operations as if it were your
+      own office assistant. No gimmicks, no tech fluff. Real automation that
+      understands how trades actually run.
+    </p>
+    <p style="color:#AFC3FF;font-size:17px;line-height:1.75;">
+      The world of work is changing fast and we want every floor fitter to stay <strong>ahead of the curve</strong>.
+      With BillyBot™, you're not just keeping up with AI — you're stepping into the future of how trade businesses run.
+    </p>
+  </div>
+</section>
+
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section" style="padding:40px 0 80px;">
+  <div class="container" style="text-align:center;max-width:600px;">
+    <h2 style="font-family:Sora,Inter;font-weight:800;margin-bottom:12px;">Get in touch</h2>
+    <p style="color:#AFC3FF;margin-bottom:24px;">Have questions? We'd love to hear from you.</p>
+    <a href="mailto:info@billybot.ai" class="btn">Email us at info@billybot.ai</a>
+  </div>
+</section>
+
+
+<!-- ===== SUBSCRIBE (other trades) ===== -->
+<section id="subscribe" class="section" style="padding:80px 0;border-top:1px solid var(--line);">
+  <div class="container" style="text-align:center;max-width:640px;">
+    <h2 style="font-family:Sora,Inter;font-weight:800;margin-bottom:10px;">Not a floor layer?</h2>
+    <p style="color:#AFC3FF;margin-bottom:6px;">
+      Join our list to be notified once BillyBot™ is ready for your trade — whether you're a sparkie, plumber, carpenter, or painter.
+    </p>
+    <form id="subscribeForm" class="subscribe-row">
+      <select name="trade" required>
+        <option value="" disabled selected>Select trade</option>
+        <option value="electrician">Electrician</option>
+        <option value="plumber">Plumber</option>
+        <option value="carpenter">Carpenter</option>
+        <option value="painter">Painter &amp; Decorator</option>
+        <option value="builder">Builder</option>
+        <option value="tiler">Tiler</option>
+        <option value="roofer">Roofer</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit" class="btn glow" style="padding:14px 26px;">Notify me</button>
+    </form>
+    <div id="subscribeThanks" style="display:none;margin-top:18px;color:#CFE0FF;font-weight:500;">
+      Thanks! We'll let you know as soon as BillyBot™ is ready for your trade. ⚡
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> BillyBot™. All rights reserved.
+    <div class="footer-links">
+      <a href="https://app.billybot.ai/terms">Terms</a>
+      <a href="https://app.billybot.ai/privacy">Privacy</a>
+      <a href="mailto:info@billybot.ai">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  var APP_URL = 'https://app.billybot.ai';
+
+  // ── Set all CTA links ──
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) {
+    el.setAttribute('href', APP_URL);
+  });
+  document.querySelectorAll('[data-app-login]').forEach(function(el) {
+    el.setAttribute('href', APP_URL);
+  });
+
+  // ── Fire pixel Lead event on any CTA click ──
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', { currency: 'GBP', value: 0 });
+      }
+    });
+  });
+
+  // ── Footer year ──
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ── Billing toggle ──
+  var sw = document.getElementById('planSwitch');
+  var monies = document.querySelectorAll('.money');
+  var periods = document.querySelectorAll('.price-period');
+
+  if (sw) {
+    sw.addEventListener('click', function() {
+      var active = sw.classList.toggle('active');
+      sw.setAttribute('aria-checked', String(active));
+      monies.forEach(function(el) {
+        el.textContent = active ? el.dataset.annual : el.dataset.month;
+      });
+      periods.forEach(function(el) {
+        el.textContent = active ? 'per year, billed annually' : 'per month, billed monthly';
+      });
+    });
+    sw.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); sw.click(); }
+    });
+  }
+
+  // ── FAQ accordion ──
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function(other) {
+        other.classList.remove('active');
+      });
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+
+  // ── Subscribe form ──
+  var subscribeForm = document.getElementById('subscribeForm');
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      try {
+        await fetch('https://tradiebrain.app.n8n.cloud/webhook/Subscribe', {
+          method: 'POST',
+          body: new FormData(subscribeForm),
+          mode: 'cors'
+        });
+        subscribeForm.reset();
+        document.getElementById('subscribeThanks').style.display = 'block';
+      } catch {
+        alert('Something went wrong, please try again later.');
+      }
+    });
+  }
+
+  // ── Scroll: fade in nav CTA ──
+  window.addEventListener('scroll', function() {
+    var btn = document.getElementById('signup-btn');
+    if (btn) btn.classList.toggle('visible', window.scrollY > 150);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Try BillyBot™ Free</title>
+  <meta name="description" content="Text BillyBot™ your next job and get a quote preview in seconds." />
+
+  <!-- Meta Pixel -->
+  <script>
+    if (typeof fbq === 'function') fbq('track', 'DemoStart');
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A, #0F1526 60%, #0B0F1A);
+      color: #E6ECF9;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 480px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    h1 {
+      font-family: "Sora", Inter, sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      margin: 0 0 12px;
+    }
+    p {
+      color: #A9B4CB;
+      margin: 0 0 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg,#F97316,#FB923C);
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(249,115,22,0.4);
+      transition: transform .18s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    img {
+      margin-top: 18px;
+      width: 160px;
+      height: 160px;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>Try BillyBot™ Free</h1>
+  <p>Scan this QR code with your phone to text BillyBot.</p>
+  <img 
+    src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=sms:+447427949007"
+    alt="QR code to text BillyBot"
+    style="margin-top:16px;width:180px;height:180px;border-radius:12px;"
+  >
+  <p style="margin-top:14px;">Or text BillyBot manually: <strong>07427&nbsp;949007</strong></p>
+  <p style="font-size:14px;opacity:.75;"> > IMPORTANT< 👉👉 Always Include: customer name, email, invoice address, and job details.</p>
+</div>
+
+  <div class="card" id="mobile" style="display:none;">
+    <h1>Opening Messages…</h1>
+    <p>If nothing happens, tap below to text BillyBot manually.</p>
+    <a class="btn" href="sms:+447427949007">📩 Text BillyBot</a>
+  </div>
+
+  <script>
+    const ua = navigator.userAgent || '';
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+
+    if (isMobile) {
+      document.getElementById('desktop').style.display = 'none';
+      document.getElementById('mobile').style.display = 'block';
+      setTimeout(() => {
+window.location.href = 'sms:+447427949007';
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
