@@ -1055,8 +1055,8 @@
   var IOS_APP_URL = 'https://apps.apple.com/gb/app/billybot/id6758058400';
   var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   var isAndroid = /Android/i.test(navigator.userAgent);
-  var SIGNUP_URL = isIOS ? IOS_APP_URL : (isAndroid ? 'https://app.billybot.ai/get-the-app' : 'https://app.billybot.ai/auth/signup');
-  var LOGIN_URL = isIOS ? IOS_APP_URL : (isAndroid ? 'https://app.billybot.ai/get-the-app' : 'https://app.billybot.ai/auth/login');
+  var SIGNUP_URL = isIOS ? IOS_APP_URL : 'https://app.billybot.ai/auth/signup';
+  var LOGIN_URL = isIOS ? IOS_APP_URL : 'https://app.billybot.ai/auth/login';
 
   // ── Set all CTA links ──
   document.querySelectorAll('[data-app-signup]').forEach(function(el) {
