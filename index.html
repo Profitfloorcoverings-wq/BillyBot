@@ -23,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BillyBot™ — AI Operator for Flooring Businesses</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="BillyBot™ handles your quotes, jobs, emails, scheduling and admin automatically. The AI operator built for flooring businesses. Start free — 10 quotes on us, no card required." />
+  <meta name="description" content="BillyBot handles your quotes, cutting plans, emails, receipts, invoicing, social media and admin automatically. The AI operator built for flooring businesses." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -294,9 +294,9 @@
     /* ── Benefits grid ── */
     .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
-      max-width: 980px;
+      max-width: 1160px;
       margin: 0 auto;
     }
     .benefit-card { padding: 30px; }
@@ -511,28 +511,6 @@
       line-height: 1.75;
     }
 
-    /* ── Subscribe form ── */
-    .subscribe-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 28px;
-    }
-    .subscribe-row select,
-    .subscribe-row input[type="email"] {
-      flex: 1;
-      min-width: 180px;
-      max-width: 240px;
-      padding: 14px 16px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      font-size: 15px;
-      font-family: inherit;
-    }
-    .subscribe-row select option { background: #0F1526; }
 
     /* ── Footer ── */
     footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 15px; }
@@ -542,6 +520,7 @@
     /* ── Responsive ── */
     @media (max-width: 1024px) {
       .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
       .steps-grid { grid-template-columns: repeat(2, 1fr); }
       .reviews-grid { grid-template-columns: repeat(2, 1fr); }
       .pricing-grid { grid-template-columns: repeat(2, 1fr); }
@@ -602,17 +581,19 @@
   <div class="container">
     <div class="hero-badge">✦ AI-powered admin for flooring</div>
     <h1 class="hero-title">Your <span class="grad">AI Operator</span><br>for Flooring.</h1>
-    <p class="hero-subtitle">BillyBot handles your quotes, jobs, emails, diary and paperwork — so you can focus on the work that actually pays.</p>
+    <p class="hero-subtitle">BillyBot handles your quotes, cutting plans, emails, receipts, social media and admin — so you can focus on the work that actually pays.</p>
     <div class="cta-row">
       <a class="btn glow hero-cta" href="https://app.billybot.ai" data-app-signup>Start free — 10 quotes on us</a>
     </div>
     <p class="hero-disclaimer">No card required &middot; Cancel anytime</p>
     <div class="hero-chips">
+      <span class="chip">📐 Cutting Plans</span>
+      <span class="chip">💷 Your Supplier Prices</span>
       <span class="chip">📧 Gmail &amp; Outlook</span>
-      <span class="chip">📱 iOS &amp; Android</span>
+      <span class="chip">🧾 MTD Ready</span>
+      <span class="chip">📱 Auto Social Media</span>
       <span class="chip">📅 Diary &amp; Scheduling</span>
       <span class="chip">📋 Auto RAMS</span>
-      <span class="chip">👥 Team Management</span>
     </div>
   </div>
 </section>
@@ -621,7 +602,7 @@
 <!-- ===== VALUE BAND ===== -->
 <div class="value-band">
   <div class="container">
-    <p>A flooring-trained AI that <strong><span style="color:#FFB84D;">quotes, books, manages and handles your admin</span></strong> — without the wages.</p>
+    <p>A flooring-trained AI that <strong><span style="color:#FFB84D;">runs your entire back-office</span></strong> — quotes, cutting plans, emails, receipts, social media, and everything in between. Without the wages.</p>
   </div>
 </div>
 
@@ -634,6 +615,9 @@
       <p>BillyBot isn't just a quoting tool anymore. It's your entire back-office, built for flooring.</p>
     </div>
 
+    <!-- Group 1: Quoting & Jobs Engine -->
+    <p style="font:700 14px Sora,Inter;letter-spacing:0.08em;text-transform:uppercase;color:#38BDF8;text-align:center;margin-bottom:28px;">Your quoting &amp; jobs engine</p>
+
     <div class="features-grid">
 
       <div class="feature-card glass">
@@ -644,6 +628,20 @@
       </div>
 
       <div class="feature-card glass">
+        <div class="feature-icon">📐</div>
+        <h3>Cutting Plans</h3>
+        <p>Upload a floor plan and BillyBot works out your cutting layouts for carpet, vinyl, LVT — even tiles. Minimise waste, maximise every roll.</p>
+        <span class="feature-tag">Waste reduction</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">💷</div>
+        <h3>Supplier Pricing</h3>
+        <p>Upload your supplier price lists and BillyBot uses your actual costs to build accurate quotes. Update prices in seconds when your supplier changes them.</p>
+        <span class="feature-tag">Pricing</span>
+      </div>
+
+      <div class="feature-card glass">
         <div class="feature-icon">📧</div>
         <h3>Jobs Inbox</h3>
         <p>Connect Gmail or Outlook. BillyBot reads your customer emails and automatically creates jobs — with the customer's details, thread history, and attachments all in one place.</p>
@@ -651,9 +649,64 @@
       </div>
 
       <div class="feature-card glass">
+        <div class="feature-icon">🧾</div>
+        <h3>Invoicing</h3>
+        <p>Turn any quote into a professional invoice with one click. Send it as a PDF or push it straight into Xero, Sage, or QuickBooks. No double entry.</p>
+        <span class="feature-tag">Accounting</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">🎯</div>
+        <h3>Pricing Calibration</h3>
+        <p>BillyBot learns your actual pricing from past quotes and invoices. Over time, your quotes get sharper — tighter margins where you need them, better profit where you deserve it.</p>
+        <span class="feature-tag">Smart pricing</span>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div style="text-align:center;padding:56px 0 48px;">
+      <p style="font:800 clamp(18px,2.2vw,24px) Sora,Inter;color:#CFE0FF;">Plus your entire back-office</p>
+      <div style="width:80px;height:3px;background:linear-gradient(135deg,#2563EB,#38BDF8);margin:16px auto 0;border-radius:2px;"></div>
+    </div>
+
+    <!-- Group 2: Back-office -->
+    <p style="font:700 14px Sora,Inter;letter-spacing:0.08em;text-transform:uppercase;color:#38BDF8;text-align:center;margin-bottom:28px;">The rest of your back-office, handled</p>
+
+    <div class="features-grid">
+
+      <div class="feature-card glass">
+        <div class="feature-icon">✉️</div>
+        <h3>Email Replies in Your Voice</h3>
+        <p>BillyBot drafts email replies that sound like you wrote them. Professional to architects, friendly to homeowners. Your tone, your words — just faster.</p>
+        <span class="feature-tag">AI writing</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">🧾</div>
+        <h3>Receipt Capture &amp; MTD</h3>
+        <p>Snap a photo of a receipt — BillyBot extracts the details and syncs it to your accounting software. Making Tax Digital ready, no shoebox required.</p>
+        <span class="feature-tag">MTD compliance</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">📱</div>
+        <h3>Auto Social Media</h3>
+        <p>Upload a finished job photo and BillyBot writes the caption and posts it to your Facebook page automatically. Turn every installation into free marketing.</p>
+        <span class="feature-tag">Marketing</span>
+      </div>
+
+      <div class="feature-card glass">
+        <div class="feature-icon">💬</div>
+        <h3>Conversations Inbox</h3>
+        <p>All your customer conversations in one place. See what needs a reply, what's waiting, and what's done. Never lose track of a customer thread again.</p>
+        <span class="feature-tag">CRM</span>
+      </div>
+
+      <div class="feature-card glass">
         <div class="feature-icon">📅</div>
         <h3>Diary &amp; Scheduling</h3>
-        <p>Book fittings, surveys and prep jobs. Assign fitters to each booking. Everyone on your team knows exactly where to be and when — without a single phone call.</p>
+        <p>Book fittings, surveys and prep jobs. Assign fitters to each booking. Everyone knows where to be and when — without a single phone call.</p>
         <span class="feature-tag">Scheduling</span>
       </div>
 
@@ -667,14 +720,14 @@
       <div class="feature-card glass">
         <div class="feature-icon">📋</div>
         <h3>RAMS</h3>
-        <p>Generate Risk Assessments and Method Statements automatically. Stay compliant on every job without spending hours writing documents. Send them directly from the app.</p>
+        <p>Generate Risk Assessments and Method Statements automatically. Stay compliant without spending hours on documents. Stop turning away commercial work.</p>
         <span class="feature-tag">Compliance</span>
       </div>
 
       <div class="feature-card glass">
-        <div class="feature-icon">📱</div>
+        <div class="feature-icon">📲</div>
         <h3>Mobile App</h3>
-        <p>Chat with BillyBot, raise quotes, and manage jobs from your phone. Perfect for on-site work — everything you need in your pocket, wherever the job takes you.</p>
+        <p>Chat with BillyBot, raise quotes, and manage jobs from your phone. Everything you need in your pocket, wherever the job takes you.</p>
         <span class="feature-tag">iOS &amp; Android</span>
       </div>
 
@@ -713,6 +766,16 @@
         <p>RAMS written automatically for every job. Stay compliant, win bigger contracts, and <strong>never scramble to write a risk assessment the night before.</strong></p>
       </div>
 
+      <div class="benefit-card glass">
+        <h3>🧾 MTD-ready without thinking about it</h3>
+        <p>Every receipt captured, every invoice logged, every expense tracked — automatically synced to your accounting software. <strong>When HMRC comes knocking, you're already compliant.</strong></p>
+      </div>
+
+      <div class="benefit-card glass">
+        <h3>📱 Free marketing from every job</h3>
+        <p>Every finished installation becomes a Facebook post. BillyBot writes the caption, you get the leads. <strong>Less than your marketing guy charges — and it never takes a day off.</strong></p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -731,7 +794,7 @@
       <div class="step-card glass">
         <div class="step-num">1</div>
         <h3>Connect &amp; configure</h3>
-        <p>Link your Gmail or Outlook, set your pricing rules, and add your team. A one-time setup that takes less than an hour.</p>
+        <p>Tell Billy about your business — your prices, your team, your tools. A quick one-time setup, and he takes it from there.</p>
       </div>
 
       <div class="step-card glass">
@@ -968,6 +1031,41 @@
         </div>
       </div>
 
+      <div class="faq-item">
+        <button class="faq-question">How does receipt capture work? Is it really MTD-ready?</button>
+        <div class="faq-answer">
+          <p>Take a photo of any receipt — BillyBot extracts the supplier, amount, date, and VAT automatically. It then syncs straight into Xero, Sage, or QuickBooks as a digital record. That means you've got a clean, searchable trail for Making Tax Digital — no more shoeboxes of crumpled receipts at year-end.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How does the auto social media posting work?</button>
+        <div class="faq-answer">
+          <p>Upload a photo of a finished job and BillyBot writes a caption tailored to your business. It posts directly to your Facebook page — you can review before it goes live, or let it run automatically. Turn every installation into free marketing without lifting a finger.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What does "email replies in your voice" mean?</button>
+        <div class="faq-answer">
+          <p>BillyBot learns your writing style from your sent emails. When you need to reply, it drafts a response that sounds like you — formal and detailed for architects, friendly and straightforward for homeowners. You can edit any draft before sending, or send it as-is.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can BillyBot really work out cutting plans?</button>
+        <div class="faq-answer">
+          <p>Yes. Upload a floor plan or enter your room measurements, and BillyBot calculates the optimal cutting layout for carpet, vinyl, LVT, or tiles. It accounts for pattern matching, roll widths, and seam placement — helping you minimise waste and order the right amount of material.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">I already use Sage / Xero / QuickBooks. Will BillyBot replace it?</button>
+        <div class="faq-answer">
+          <p>No — and it's not trying to. BillyBot feeds INTO your accounting software. Quotes, invoices, and receipts sync directly into your existing system. Think of BillyBot as the front-end that handles the day-to-day work, while your accounting software stays as your ledger. They work together.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1007,33 +1105,6 @@
 </section>
 
 
-<!-- ===== SUBSCRIBE (other trades) ===== -->
-<section id="subscribe" class="section" style="padding:80px 0;border-top:1px solid var(--line);">
-  <div class="container" style="text-align:center;max-width:640px;">
-    <h2 style="font-family:Sora,Inter;font-weight:800;margin-bottom:10px;">Not a floor layer?</h2>
-    <p style="color:#AFC3FF;margin-bottom:6px;">
-      Join our list to be notified once BillyBot™ is ready for your trade — whether you're a sparkie, plumber, carpenter, or painter.
-    </p>
-    <form id="subscribeForm" class="subscribe-row">
-      <select name="trade" required>
-        <option value="" disabled selected>Select trade</option>
-        <option value="electrician">Electrician</option>
-        <option value="plumber">Plumber</option>
-        <option value="carpenter">Carpenter</option>
-        <option value="painter">Painter &amp; Decorator</option>
-        <option value="builder">Builder</option>
-        <option value="tiler">Tiler</option>
-        <option value="roofer">Roofer</option>
-        <option value="other">Other</option>
-      </select>
-      <input type="email" name="email" placeholder="Your email address" required>
-      <button type="submit" class="btn glow" style="padding:14px 26px;">Notify me</button>
-    </form>
-    <div id="subscribeThanks" style="display:none;margin-top:18px;color:#CFE0FF;font-weight:500;">
-      Thanks! We'll let you know as soon as BillyBot™ is ready for your trade. ⚡
-    </div>
-  </div>
-</section>
 
 
 <!-- ===== FOOTER ===== -->
@@ -1110,24 +1181,6 @@
     });
   });
 
-  // ── Subscribe form ──
-  var subscribeForm = document.getElementById('subscribeForm');
-  if (subscribeForm) {
-    subscribeForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      try {
-        await fetch('https://tradiebrain.app.n8n.cloud/webhook/Subscribe', {
-          method: 'POST',
-          body: new FormData(subscribeForm),
-          mode: 'cors'
-        });
-        subscribeForm.reset();
-        document.getElementById('subscribeThanks').style.display = 'block';
-      } catch {
-        alert('Something went wrong, please try again later.');
-      }
-    });
-  }
 
   // ── Scroll: fade in nav CTA ──
   window.addEventListener('scroll', function() {
