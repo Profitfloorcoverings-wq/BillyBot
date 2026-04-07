@@ -1157,11 +1157,11 @@
     el.setAttribute('href', LOGIN_URL);
   });
 
-  // ── Fire pixel Lead event on any CTA click ──
+  // ── Fire pixel ViewContent event on any CTA click ──
   document.querySelectorAll('[data-app-signup]').forEach(function(el) {
     el.addEventListener('click', function() {
       if (typeof fbq !== 'undefined') {
-        fbq('track', 'Lead', { currency: 'GBP', value: 0 });
+        fbq('track', 'ViewContent', { content_name: 'CTA Click' });
       }
     });
   });
