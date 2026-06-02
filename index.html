@@ -280,6 +280,29 @@
     }
     .feature-card h3 { font: 700 17px Sora, Inter; color: #F1F5F9; margin-bottom: 10px; }
     .feature-card p { color: var(--muted); font-size: 15px; line-height: 1.65; }
+
+    /* ===== distributed live demos (iframe per feature) ===== */
+    .demos-intro { text-align: center; max-width: 680px; margin: 0 auto; }
+    .demos-intro .eyebrow { font: 700 14px Sora, Inter; letter-spacing: 0.08em; text-transform: uppercase; color: #38BDF8; margin-bottom: 14px; }
+    .demos-intro h2 { font: 800 clamp(28px, 4vw, 46px) Sora, Inter; letter-spacing: -1px; color: #fff; margin-bottom: 14px; line-height: 1.05; }
+    .demos-intro p { color: var(--muted); font-size: 18px; line-height: 1.6; }
+    .demo-row { display: flex; align-items: center; gap: 50px; max-width: 1060px; margin: 64px auto 0; }
+    .demo-row.rev { flex-direction: row-reverse; }
+    .demo-copy { flex: 1 1 0; min-width: 0; }
+    .demo-copy .demo-k { font: 700 13px Sora, Inter; letter-spacing: 0.1em; text-transform: uppercase; color: #38BDF8; margin-bottom: 12px; }
+    .demo-copy h3 { font: 800 clamp(23px, 3vw, 33px) Sora, Inter; letter-spacing: -0.5px; color: #fff; margin-bottom: 14px; line-height: 1.12; }
+    .demo-copy p { color: var(--muted); font-size: 16px; line-height: 1.7; max-width: 430px; }
+    .demo-stage { flex: none; }
+    .phone-stage { width: 328px; }
+    .phone-stage iframe { display: block; width: 100%; aspect-ratio: 410 / 806; border: 0; background: transparent; }
+    .web-stage { width: 600px; max-width: 100%; }
+    .web-stage iframe { display: block; width: 100%; aspect-ratio: 900 / 612; border: 0; background: transparent; }
+    @media (max-width: 880px) {
+      .demo-row, .demo-row.rev { flex-direction: column; gap: 24px; margin-top: 48px; text-align: center; }
+      .demo-copy p { margin: 0 auto; }
+      .phone-stage { width: 290px; }
+      .web-stage { width: 100%; }
+    }
     .feature-tag {
       display: inline-block;
       margin-top: 14px;
@@ -599,22 +622,85 @@
 </section>
 
 
-<!-- ===== DEMO VIDEO ===== -->
-<section id="demo" style="padding:40px 0 60px;">
-  <div class="container" style="max-width:860px;">
-    <p style="text-align:center;font:700 14px Sora,Inter;letter-spacing:0.08em;text-transform:uppercase;color:#38BDF8;margin-bottom:16px;">See it in action</p>
-    <h2 style="text-align:center;font:800 clamp(28px,4vw,40px) Sora,Inter;letter-spacing:-1px;color:#fff;margin-bottom:32px;">Watch the <span class="grad">BillyBot Demo</span></h2>
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);">
-      <iframe
-        src="https://www.youtube.com/embed/irKEfZWZR4Q?si=unkNMB3chdGUwT53"
-        title="BillyBot Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-        style="position:absolute;top:0;left:0;width:100%;height:100%;"
-        loading="lazy"
-      ></iframe>
+<!-- ===== SEE IT WORK · live, distributed demos (real app, embedded per feature) ===== -->
+<section id="demo" class="section" style="padding:70px 0 30px;">
+  <div class="container">
+    <div class="demos-intro">
+      <p class="eyebrow">The real app · not a mockup</p>
+      <h2>What you see is <span class="grad">the real thing.</span></h2>
+      <p>Every demo below is the actual BillyBot, running live — built by us, from scratch, for flooring. No mockups, no staged screenshots.</p>
+    </div>
+
+    <!-- Instant Quote (phone) -->
+    <div class="demo-row">
+      <div class="demo-copy">
+        <p class="demo-k">Instant Quote</p>
+        <h3>A voice note becomes a quote.</h3>
+        <p>Tell Billy the rooms in plain English — he builds the full quote on your supplier prices and markup, ready to send before you've left the driveway.</p>
+      </div>
+      <div class="demo-stage phone-stage">
+        <iframe src="demos-app.html?demo=quote&embed=1" loading="lazy" title="Instant Quote — live demo"></iframe>
+      </div>
+    </div>
+
+    <!-- Email Operator (phone) -->
+    <div class="demo-row rev">
+      <div class="demo-copy">
+        <p class="demo-k">AI Email Operator</p>
+        <h3>Billy runs your inbox.</h3>
+        <p>A customer emails in. Billy reads it, creates the job, drafts a reply in your voice — and asks before anything goes out. Like a PA who never sleeps.</p>
+      </div>
+      <div class="demo-stage phone-stage">
+        <iframe src="demos-app.html?demo=email&embed=1" loading="lazy" title="Email Operator — live demo"></iframe>
+      </div>
+    </div>
+
+    <!-- Cutting Plan (web) -->
+    <div class="demo-row">
+      <div class="demo-copy">
+        <p class="demo-k">Cutting Plans</p>
+        <h3>Every roll nested to the millimetre.</h3>
+        <p>Billy lays out every drop and seam, drives the waste right down, and prices the exact material — straight from your floor plan.</p>
+      </div>
+      <div class="demo-stage web-stage">
+        <iframe src="demos-app.html?demo=cutting&embed=1" loading="lazy" title="Cutting Plan — live demo"></iframe>
+      </div>
+    </div>
+
+    <!-- Receipts (phone) -->
+    <div class="demo-row rev">
+      <div class="demo-copy">
+        <p class="demo-k">Receipts &amp; MTD</p>
+        <h3>Snap it. It files itself.</h3>
+        <p>Photograph a receipt and Billy extracts every figure, categorises it, and syncs straight to Xero. No shoebox — Making-Tax-Digital ready.</p>
+      </div>
+      <div class="demo-stage phone-stage">
+        <iframe src="demos-app.html?demo=receipt&embed=1" loading="lazy" title="Receipts — live demo"></iframe>
+      </div>
+    </div>
+
+    <!-- Diary (phone) -->
+    <div class="demo-row">
+      <div class="demo-copy">
+        <p class="demo-k">Diary &amp; Scheduling</p>
+        <h3>Billy books the fitters.</h3>
+        <p>The moment a job's accepted, Billy drops the fitting into your diary and assigns the team — everyone knows where to be, without a single phone call.</p>
+      </div>
+      <div class="demo-stage phone-stage">
+        <iframe src="demos-app.html?demo=diary&embed=1" loading="lazy" title="Diary — live demo"></iframe>
+      </div>
+    </div>
+
+    <!-- Supplier Pricing (web) -->
+    <div class="demo-row rev">
+      <div class="demo-copy">
+        <p class="demo-k">Supplier Pricing</p>
+        <h3>Your real costs. Every quote.</h3>
+        <p>Upload a supplier price list and every quote instantly rebuilds on your actual prices — so your margins are always right.</p>
+      </div>
+      <div class="demo-stage web-stage">
+        <iframe src="demos-app.html?demo=supplier&embed=1" loading="lazy" title="Supplier Pricing — live demo"></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -632,42 +718,11 @@
 <section id="features" class="section">
   <div class="container">
     <div class="section-header">
-      <h2>Everything your business needs, <span class="grad">in one place.</span></h2>
-      <p>BillyBot isn't just a quoting tool anymore. It's your entire back-office, built for flooring.</p>
+      <h2>Everything else, <span class="grad">handled.</span></h2>
+      <p>Beyond the demos above — invoicing, marketing, compliance and your whole team, all in one place.</p>
     </div>
 
-    <!-- Group 1: Quoting & Jobs Engine -->
-    <p style="font:700 14px Sora,Inter;letter-spacing:0.08em;text-transform:uppercase;color:#38BDF8;text-align:center;margin-bottom:28px;">Your quoting &amp; jobs engine</p>
-
     <div class="features-grid">
-
-      <div class="feature-card glass">
-        <div class="feature-icon">🗒️</div>
-        <h3>Instant Quoting</h3>
-        <p>Voice notes, photos, or messy job notes — BillyBot builds your full quote in seconds using your exact supplier prices and markup rules. No guesswork, no undercharging.</p>
-        <span class="feature-tag">Core feature</span>
-      </div>
-
-      <div class="feature-card glass">
-        <div class="feature-icon">📐</div>
-        <h3>Cutting Plans</h3>
-        <p>Upload a floor plan and BillyBot works out your cutting layouts for carpet, vinyl, LVT — even tiles. Minimise waste, maximise every roll.</p>
-        <span class="feature-tag">Waste reduction</span>
-      </div>
-
-      <div class="feature-card glass">
-        <div class="feature-icon">💷</div>
-        <h3>Supplier Pricing</h3>
-        <p>Upload your supplier price lists and BillyBot uses your actual costs to build accurate quotes. Update prices in seconds when your supplier changes them.</p>
-        <span class="feature-tag">Pricing</span>
-      </div>
-
-      <div class="feature-card glass">
-        <div class="feature-icon">📧</div>
-        <h3>Jobs Inbox</h3>
-        <p>Connect Gmail or Outlook. BillyBot reads your customer emails and automatically creates jobs — with the customer's details, thread history, and attachments all in one place.</p>
-        <span class="feature-tag">Email integration</span>
-      </div>
 
       <div class="feature-card glass">
         <div class="feature-icon">🧾</div>
@@ -683,32 +738,6 @@
         <span class="feature-tag">Smart pricing</span>
       </div>
 
-    </div>
-
-    <!-- Divider -->
-    <div style="text-align:center;padding:56px 0 48px;">
-      <p style="font:800 clamp(18px,2.2vw,24px) Sora,Inter;color:#CFE0FF;">Plus your entire back-office</p>
-      <div style="width:80px;height:3px;background:linear-gradient(135deg,#2563EB,#38BDF8);margin:16px auto 0;border-radius:2px;"></div>
-    </div>
-
-    <!-- Group 2: Back-office -->
-    <p style="font:700 14px Sora,Inter;letter-spacing:0.08em;text-transform:uppercase;color:#38BDF8;text-align:center;margin-bottom:28px;">The rest of your back-office, handled</p>
-
-    <div class="features-grid">
-
-      <div class="feature-card glass">
-        <div class="feature-icon">✉️</div>
-        <h3>Email Replies in Your Voice</h3>
-        <p>BillyBot drafts email replies that sound like you wrote them. Professional to architects, friendly to homeowners. Your tone, your words — just faster.</p>
-        <span class="feature-tag">AI writing</span>
-      </div>
-
-      <div class="feature-card glass">
-        <div class="feature-icon">🧾</div>
-        <h3>Receipt Capture &amp; MTD</h3>
-        <p>Snap a photo of a receipt — BillyBot extracts the details and syncs it to your accounting software. Making Tax Digital ready, no shoebox required.</p>
-        <span class="feature-tag">MTD compliance</span>
-      </div>
 
       <div class="feature-card glass">
         <div class="feature-icon">📱</div>
@@ -722,13 +751,6 @@
         <h3>Conversations Inbox</h3>
         <p>All your customer conversations in one place. See what needs a reply, what's waiting, and what's done. Never lose track of a customer thread again.</p>
         <span class="feature-tag">CRM</span>
-      </div>
-
-      <div class="feature-card glass">
-        <div class="feature-icon">📅</div>
-        <h3>Diary &amp; Scheduling</h3>
-        <p>Book fittings, surveys and prep jobs. Assign fitters to each booking. Everyone knows where to be and when — without a single phone call.</p>
-        <span class="feature-tag">Scheduling</span>
       </div>
 
       <div class="feature-card glass">
