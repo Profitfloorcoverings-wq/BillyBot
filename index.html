@@ -439,9 +439,11 @@
     }
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 22px;
       align-items: stretch;
+      max-width: 760px;
+      margin: 0 auto;
     }
     .price-card {
       padding: 30px;
@@ -593,7 +595,7 @@
     </nav>
     <div class="nav-cta">
       <a class="login-link" href="https://app.billybot.ai" rel="noopener" data-app-login>Log in</a>
-      <a id="signup-btn" class="btn glow" href="https://app.billybot.ai" data-app-signup>Get started free</a>
+      <a id="signup-btn" class="btn glow" href="https://app.billybot.ai" data-app-signup>Start free trial</a>
     </div>
   </div>
 </header>
@@ -606,9 +608,9 @@
     <h1 class="hero-title">Your <span class="grad">AI Operator</span><br>for Flooring.</h1>
     <p class="hero-subtitle">BillyBot handles your quotes, cutting plans, emails, receipts, social media and admin — so you can focus on the work that actually pays.</p>
     <div class="cta-row">
-      <a class="btn glow hero-cta" href="https://app.billybot.ai" data-app-signup>Start free — 10 quotes on us</a>
+      <a class="btn glow hero-cta" href="https://app.billybot.ai" data-app-signup>Start your 14-day free trial</a>
     </div>
-    <p class="hero-disclaimer">No card required &middot; Cancel anytime</p>
+    <p class="hero-disclaimer">14 days free &middot; Fitters always free &middot; Cancel anytime</p>
     <div class="hero-chips">
       <span class="chip">📐 Cutting Plans</span>
       <span class="chip">💷 Your Supplier Prices</span>
@@ -911,11 +913,11 @@
   <div class="container">
     <div class="section-header">
       <h2>Simple, transparent pricing</h2>
-      <p>Start free with 10 quotes. Upgrade when you're ready.</p>
+      <p>One price per seat. Your fitters are always free.</p>
     </div>
 
     <div style="text-align:center;">
-      <div class="pricing-intro-badge">🎁 10 quotes free — no card required</div>
+      <div class="pricing-intro-badge">🎁 14 days free &middot; Unlimited fitters, always free</div>
     </div>
 
     <div class="billing-toggle">
@@ -928,74 +930,50 @@
 
     <div class="pricing-grid">
 
-      <!-- Starter -->
-      <div class="price-card glass">
-        <div>
-          <h3>Starter</h3>
-          <div class="price-money money" data-month="£149/mo" data-annual="£1,490/yr">£149/mo</div>
-          <p class="price-period">per month, billed monthly</p>
-          <ul>
-            <li>1 user</li>
-            <li>All core features</li>
-            <li>Up to 50 quotes / month</li>
-            <li>Email inbox integration</li>
-            <li>Diary &amp; scheduling</li>
-            <li>RAMS generation</li>
-            <li>Mobile app</li>
-          </ul>
-        </div>
-        <div>
-          <p style="font-size:12px;color:#475569;margin-bottom:10px;">Cancel anytime &middot; No contract</p>
-          <a class="btn price-btn" href="https://app.billybot.ai" data-app-signup>Get started</a>
-        </div>
-      </div>
-
-      <!-- Pro (featured) -->
+      <!-- Office seats (featured) -->
       <div class="price-card glass featured">
         <div>
-          <p class="price-popular">Most popular</p>
-          <h3>Pro</h3>
-          <div class="price-money money" data-month="£249/mo" data-annual="£2,490/yr">£249/mo</div>
-          <p class="price-period">per month, billed monthly</p>
+          <p class="price-popular">Pay only for the office</p>
+          <h3>Per seat</h3>
+          <div class="price-money money" data-month="£149/mo" data-annual="£1,490/yr">£149/mo</div>
+          <p class="price-period" data-month="per seat, billed monthly" data-annual="per seat, billed annually">per seat, billed monthly</p>
           <ul>
-            <li>Up to 3 users</li>
-            <li>All Starter features</li>
-            <li>Unlimited quotes / month</li>
-            <li>Team scheduling</li>
-            <li>Supplier price uploads</li>
-            <li>Priority support</li>
-            <li>Early access to new features</li>
+            <li>Owner, estimators &amp; managers</li>
+            <li><strong>Everything included</strong> — no feature tiers</li>
+            <li>AI email triage, quotes &amp; invoices</li>
+            <li>Cutting plans &amp; your supplier prices</li>
+            <li>Diary, scheduling &amp; RAMS</li>
+            <li>Add or remove seats anytime</li>
           </ul>
         </div>
         <div>
-          <p style="font-size:12px;color:#475569;margin-bottom:10px;">Cancel anytime &middot; No contract</p>
-          <a class="btn price-btn glow" href="https://app.billybot.ai" data-app-signup>Get started</a>
+          <p style="font-size:12px;color:#475569;margin-bottom:10px;">14 days free &middot; Cancel anytime</p>
+          <a class="btn price-btn glow" href="https://app.billybot.ai" data-app-signup>Start 14-day trial</a>
         </div>
       </div>
 
-      <!-- Team -->
+      <!-- Fitters free -->
       <div class="price-card glass">
         <div>
-          <h3>Team</h3>
-          <div class="price-money money" data-month="£499/mo" data-annual="£4,990/yr">£499/mo</div>
-          <p class="price-period">per month, billed monthly</p>
+          <h3>Fitters</h3>
+          <div class="price-money" style="color:#4ade80;">Free</div>
+          <p class="price-period">unlimited — always free</p>
           <ul>
-            <li>Unlimited users</li>
-            <li>All Pro features</li>
-            <li>Unlimited quotes / month</li>
-            <li>Unlimited price requests</li>
-            <li>Dedicated account support</li>
-            <li>Early access to new features</li>
+            <li>Full mobile app for every fitter</li>
+            <li>Job sheets &amp; site details</li>
+            <li>Diary &amp; what&rsquo;s on today</li>
+            <li>RAMS sign-off on site</li>
+            <li>Roll Billy out to your whole crew, free</li>
           </ul>
         </div>
         <div>
-          <p style="font-size:12px;color:#475569;margin-bottom:10px;">Cancel anytime &middot; No contract</p>
+          <p style="font-size:12px;color:#475569;margin-bottom:10px;">Included with every plan</p>
           <a class="btn price-btn" href="https://app.billybot.ai" data-app-signup>Get started</a>
         </div>
       </div>
 
     </div>
-    <p class="pricing-footer">All plans include a 10-quote free trial. Prices shown exclude VAT.</p>
+    <p class="pricing-footer">14-day free trial on every seat. Unlimited fitters free. Prices exclude VAT.</p>
   </div>
 </section>
 
@@ -1189,7 +1167,8 @@
         el.textContent = active ? el.dataset.annual : el.dataset.month;
       });
       periods.forEach(function(el) {
-        el.textContent = active ? 'per year, billed annually' : 'per month, billed monthly';
+        if (!el.dataset.month) return;
+        el.textContent = active ? el.dataset.annual : el.dataset.month;
       });
     });
     sw.addEventListener('keydown', function(e) {
