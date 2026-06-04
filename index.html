@@ -285,13 +285,15 @@
 
     @keyframes nodeUp { 0%{opacity:0;transform:translateY(10px)} 14%,84%{opacity:1;transform:none} 100%{opacity:.6;transform:none} }
     @media (max-width:880px) {
-      .hub { grid-template-columns:1fr; gap:18px; min-height:0; max-width:420px; }
+      .hub { grid-template-columns:1fr; gap:14px; min-height:0; max-width:420px; }
       .hub-wires { display:none; }
-      .hub-in, .hub-out { align-items:stretch; }
+      .hub-in, .hub-out { display:grid; grid-template-columns:1fr 1fr; gap:10px; align-items:stretch; }
+      .hub-col-label { grid-column:1 / -1; text-align:center; margin-bottom:0; }
       .hub-core { order:1; min-height:0; margin:6px 0; } .hub-out { order:2; }
-      .node { width:100%; justify-content:center; } .node.in, .node.out { transform:none; }
+      .node { width:100%; justify-content:center; padding:10px 8px; font-size:13px; } .node.in, .node.out { transform:none; }
       .hub.in-view .node.in, .hub.in-view .node.out { animation:nodeUp 9s ease-in-out infinite; }
-      .ps-band { grid-template-columns:1fr; gap:14px; } .ps-arrow { transform:rotate(90deg); }
+      .ps-band { grid-template-columns:1fr; gap:16px; }
+      .ps-arrow { justify-self:center; transform:rotate(90deg); }
     }
     @media (prefers-reduced-motion: reduce) {
       .node { opacity:1!important; transform:none!important; animation:none!important; }
