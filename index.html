@@ -232,14 +232,13 @@
     }
 
     /* ── What is BillyBot · operator hub ── */
-    .what { padding: 96px 0 90px; overflow: hidden; }
+    .what { padding: 72px 0 84px; overflow: hidden; }
     .what-eyebrow { margin: 0 auto 18px; }
-    .what .section-header { margin-bottom: 30px; }
-    .what-cred { display:flex; align-items:center; gap:10px; justify-content:center; flex-wrap:wrap; max-width:740px; margin:0 auto 52px; text-align:center; color:#CFE0FF; font-size:16px; line-height:1.6; }
+    .what .section-header { margin-bottom: 26px; }
+    .what-cred { max-width:760px; margin:0 auto 44px; text-align:center; color:#CFE0FF; font-size:18px; line-height:1.7; }
     .what-cred strong { color:#fff; }
-    .what-cred-dot { width:8px; height:8px; border-radius:50%; background:var(--cyan); box-shadow:0 0 10px var(--cyan); flex:none; }
 
-    .hub { position:relative; display:grid; grid-template-columns:1fr minmax(220px,300px) 1fr; align-items:center; max-width:1040px; margin:0 auto; min-height:420px; }
+    .hub { position:relative; display:grid; grid-template-columns:1fr minmax(220px,300px) 1fr; align-items:center; max-width:1040px; margin:0 auto; min-height:380px; }
     .hub-col { display:flex; flex-direction:column; gap:12px; position:relative; z-index:2; }
     .hub-in { align-items:flex-start; } .hub-out { align-items:flex-end; }
     .hub-col-label { font:700 12px Sora,Inter; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
@@ -256,7 +255,7 @@
     .core-ring { position:absolute; inset:0; border-radius:50%; border:1px solid rgba(56,189,248,0.35); }
     .core-ring.r2 { inset:-22px; border-color:rgba(37,99,235,0.22); }
     .core-badge { position:relative; z-index:2; width:164px; height:164px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; text-align:center; background:radial-gradient(circle at 50% 35%, rgba(37,99,235,0.55), rgba(11,15,26,0.92) 72%); border:1px solid rgba(56,189,248,0.45); box-shadow:0 0 0 1px rgba(37,99,235,0.35), 0 0 40px rgba(37,99,235,0.30), inset 0 0 30px rgba(37,99,235,0.20); }
-    .core-mark { width:34px; height:34px; border-radius:50%; background:conic-gradient(from 160deg,#2563EB,#38BDF8); box-shadow:0 0 18px rgba(56,189,248,0.7); margin-bottom:4px; }
+    .core-logo { width:50px; height:50px; display:block; margin-bottom:6px; filter:drop-shadow(0 0 12px rgba(56,189,248,0.5)); }
     .core-name { font:800 21px Sora,Inter; color:#fff; letter-spacing:-0.02em; }
     .core-sub { font:700 11px Sora,Inter; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan); }
 
@@ -427,33 +426,14 @@
     .review-text { color: #CFE0FF; font-size: 16px; line-height: 1.65; margin-bottom: 14px; }
     .review-author { color: var(--muted); font-size: 14px; }
 
-    /* ── Logo carousel ── */
-    .logo-carousel {
-      padding: 56px 0;
-      text-align: center;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      overflow: hidden;
-    }
-    .logo-carousel-label {
-      font: 700 12px Inter;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #334155;
-      margin-bottom: 28px;
-    }
-    .logo-track {
-      display: flex;
-      gap: 64px;
-      animation: scrollLogos 25s linear infinite;
-      white-space: nowrap;
-      align-items: center;
-    }
-    .logo-track span { color: #334155; font-size: 17px; font-weight: 700; flex-shrink: 0; }
-    @keyframes scrollLogos {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
+    /* ── As featured in (press) ── */
+    .press { padding: 60px 0; text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .press-label { font: 700 12px Inter; letter-spacing: 0.14em; text-transform: uppercase; color: #64748B; margin-bottom: 30px; }
+    .press-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 18px; }
+    .press-item { display: flex; flex-direction: column; gap: 6px; align-items: center; justify-content: center; min-width: 230px; padding: 22px 28px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.025); }
+    .press-name { font: 800 22px Sora, Inter; color: #E6ECF9; letter-spacing: -0.01em; }
+    .press-sub { font: 600 12.5px Inter; letter-spacing: 0.04em; text-transform: uppercase; color: #7C8BA6; }
+    @media (max-width:880px){ .press-item { min-width: 0; width: 100%; max-width: 340px; } }
 
     /* ── Pricing ── */
     .pricing-intro-badge {
@@ -679,7 +659,7 @@
     <h1 class="hero-title">Your <span class="grad">AI Operator</span><br>for Flooring.</h1>
     <p class="hero-subtitle">BillyBot handles your quotes, cutting plans, emails, receipts, social media and admin — so you can focus on the work that actually pays.</p>
     <div class="cta-row">
-      <a class="btn glow hero-cta" href="https://app.billybot.ai" data-app-signup>Start your 14-day free trial</a>
+      <a class="btn glow hero-cta" href="https://app.billybot.ai" data-app-signup>Let Billy do your admin — free</a>
     </div>
     <p class="hero-disclaimer">14 days free &middot; Fitters always free &middot; Cancel anytime</p>
     <div class="hero-chips">
@@ -702,20 +682,19 @@
     <div class="section-header">
       <p class="hero-badge what-eyebrow">What BillyBot really is</p>
       <h2>Billy doesn't help with your admin.<br><span class="grad">Billy does it.</span></h2>
-      <p>Quotes, invoices, RAMS, job sheets, cutting plans — produced, not drafted. Cheap tools do one job; Billy runs the lot.</p>
+      <p>Quotes, invoices, RAMS, job sheets, cutting plans — produced, not drafted. A cheap tool does one job; Billy runs the whole operation — and because everything flows through him, he holds the full picture of your business as your single source of truth.</p>
     </div>
 
     <p class="what-cred">
-      <span class="what-cred-dot"></span>
-      Built by Steve — <strong>20 years in flooring</strong>, from on the tools to building, running and scaling the business. That hard-won know-how is baked into how Billy works.
+      Billy isn't generic AI with a flooring logo slapped on it. He's built on <strong>20 years of running a flooring business</strong> — quoting, buying, fitting, hiring, scaling — so every call he makes carries that hard-won judgement. The expertise is the product; the AI is just how it scales to yours.
     </p>
 
     <!-- animated operator hub -->
     <div class="hub" role="img"
-         aria-label="Diagram: your team feeds BillyBot emails, voice notes, site photos, measurements, supplier prices and team updates. Billy produces quotes, invoices, RAMS, job sheets, cutting plans, diary bookings, email replies and social posts.">
+         aria-label="Diagram: Billy takes in emails, voice notes, site photos, measurements, supplier prices and team updates, and hands back quotes, invoices, RAMS, job sheets, cutting plans, diary bookings, email replies and social posts.">
 
       <div class="hub-col hub-in">
-        <span class="hub-col-label">Your team feeds in</span>
+        <span class="hub-col-label">Billy takes in</span>
         <span class="node in" style="--i:0">📧 <b>Emails</b></span>
         <span class="node in" style="--i:1">🎙️ <b>Voice notes</b></span>
         <span class="node in" style="--i:2">📷 <b>Site photos</b></span>
@@ -743,7 +722,24 @@
           <div class="core-ring"></div>
           <div class="core-ring r2"></div>
           <div class="core-badge">
-            <span class="core-mark"></span>
+            <svg class="core-logo" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><linearGradient id="tbBlueCore" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+              <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlueCore)" stroke-width="10"/>
+              <g fill="url(#tbBlueCore)">
+                <rect x="45" y="34" width="6" height="14" rx="3"/>
+                <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
+                <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
+                <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
+                <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
+                <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
+                <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
+                <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
+              </g>
+              <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+              <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlueCore)" stroke="#1E3A8A" stroke-width="2"/>
+              <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
+              <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
+            </svg>
             <span class="core-name">BillyBot™</span>
             <span class="core-sub">AI Operator</span>
           </div>
@@ -773,8 +769,8 @@
       <div class="ps-arrow" aria-hidden="true">→</div>
       <div class="ps-card solution glass">
         <span class="ps-k sol">With Billy</span>
-        <h3>Back on the tools. Turnover up.</h3>
-        <p>Billy does the admin in the background, so you and the team get the hours back — to win more jobs, fit more floors, grow the profit, and actually clock off at a sensible time.</p>
+        <h3>More profit. Less effort.</h3>
+        <p>Billy does the admin in the background — so you and the team win more work, grow the margin, and get your time back, without taking on a single extra wage.</p>
       </div>
     </div>
 
@@ -786,7 +782,7 @@
 <section id="demo" class="section" style="padding:70px 0 30px;">
   <div class="container">
     <div class="value-band" style="border:0;padding:0;">
-      <p>Now watch Billy do each job — <strong><span style="color:#FFB84D;">live, on the real app.</span></strong> No mockups, no stock screenshots.</p>
+      <p>Now watch Billy do each of those jobs — <strong><span style="color:#FFB84D;">live, in the real app.</span></strong></p>
     </div>
 
     <!-- Instant Quote (phone) -->
@@ -830,7 +826,7 @@
       <div class="demo-copy">
         <p class="demo-k">Receipts &amp; MTD</p>
         <h3>Snap it. It files itself.</h3>
-        <p>Photograph a receipt and Billy extracts every figure, categorises it, and syncs straight to Xero. No shoebox — Making-Tax-Digital ready.</p>
+        <p>Photograph a receipt and Billy extracts every figure, categorises it, and syncs straight to your accounts — Xero, Sage or QuickBooks. No shoebox — Making-Tax-Digital ready.</p>
       </div>
       <div class="demo-stage phone-stage">
         <iframe src="demos-app.html?demo=receipt&embed=1" loading="lazy" title="Receipts — live demo"></iframe>
@@ -928,8 +924,8 @@
 <section id="why" class="section">
   <div class="container">
     <div class="section-header">
-      <h2>Why trades <span class="grad">love BillyBot™</span></h2>
-      <p>Built for floor layers who've had enough of admin eating into their evenings and weekends.</p>
+      <h2>Why flooring businesses <span class="grad">love BillyBot™</span></h2>
+      <p>Built for flooring firms who've had enough of admin eating into their evenings and weekends.</p>
     </div>
 
     <div class="benefits-grid">
@@ -993,8 +989,8 @@
 
       <div class="step-card glass">
         <div class="step-num">3</div>
-        <h3>You focus on the fitting</h3>
-        <p>Admin is done. Quotes are sent. Jobs are booked. You get back to the work that actually earns — with the paperwork handled.</p>
+        <h3>You focus on growth</h3>
+        <p>Admin is done. Quotes are sent. Jobs are booked. You put your time into winning more work, growing profit and getting your evenings back — while Billy keeps the paperwork handled.</p>
       </div>
 
     </div>
@@ -1035,35 +1031,26 @@
 </section>
 
 
-<!-- ===== USED BY ===== -->
-<div class="logo-carousel">
+<!-- ===== AS FEATURED IN ===== -->
+<section class="press">
   <div class="container">
-    <p class="logo-carousel-label">Used by leading flooring businesses across the UK</p>
-    <div class="logo-track">
-      <span>Pro-Fit Flooring</span>
-      <span>Elite Floors Ltd</span>
-      <span>Total Interiors</span>
-      <span>Precision Flooring Co</span>
-      <span>FloorTech UK</span>
-      <span>UrbanFit Flooring</span>
-      <span>Refloor Group</span>
-      <span>Supreme Surfaces</span>
-      <span>FloorSmart Installations</span>
-      <span>Complete Flooring Systems</span>
-      <!-- Duplicate for seamless loop -->
-      <span>Pro-Fit Flooring</span>
-      <span>Elite Floors Ltd</span>
-      <span>Total Interiors</span>
-      <span>Precision Flooring Co</span>
-      <span>FloorTech UK</span>
-      <span>UrbanFit Flooring</span>
-      <span>Refloor Group</span>
-      <span>Supreme Surfaces</span>
-      <span>FloorSmart Installations</span>
-      <span>Complete Flooring Systems</span>
+    <p class="press-label">As seen with the flooring industry</p>
+    <div class="press-row">
+      <div class="press-item">
+        <span class="press-name">The Flooring Show</span>
+        <span class="press-sub">Exhibited · Harrogate</span>
+      </div>
+      <div class="press-item">
+        <span class="press-name">CFJ</span>
+        <span class="press-sub">Contract Flooring Journal · Featured</span>
+      </div>
+      <div class="press-item">
+        <span class="press-name">The Flooring Podcast</span>
+        <span class="press-sub">Guest episode</span>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 
 <!-- ===== PRICING ===== -->
