@@ -231,6 +231,77 @@
       margin: 0 auto;
     }
 
+    /* ── What is BillyBot · operator hub ── */
+    .what { padding: 96px 0 90px; overflow: hidden; }
+    .what-eyebrow { margin: 0 auto 18px; }
+    .what .section-header { margin-bottom: 30px; }
+    .what-cred { display:flex; align-items:center; gap:10px; justify-content:center; flex-wrap:wrap; max-width:740px; margin:0 auto 52px; text-align:center; color:#CFE0FF; font-size:16px; line-height:1.6; }
+    .what-cred strong { color:#fff; }
+    .what-cred-dot { width:8px; height:8px; border-radius:50%; background:var(--cyan); box-shadow:0 0 10px var(--cyan); flex:none; }
+
+    .hub { position:relative; display:grid; grid-template-columns:1fr minmax(220px,300px) 1fr; align-items:center; max-width:1040px; margin:0 auto; min-height:420px; }
+    .hub-col { display:flex; flex-direction:column; gap:12px; position:relative; z-index:2; }
+    .hub-in { align-items:flex-start; } .hub-out { align-items:flex-end; }
+    .hub-col-label { font:700 12px Sora,Inter; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+    .hub-in .hub-col-label { color:#7FB0F5; } .hub-out .hub-col-label { color:#FBBF77; }
+    .node { display:inline-flex; align-items:center; gap:8px; padding:9px 15px; border-radius:999px; background:rgba(255,255,255,0.04); border:1px solid var(--line); color:#CFE0FF; font:600 14px Inter; white-space:nowrap; backdrop-filter:blur(8px); opacity:0; }
+    .node b { color:#fff; font-weight:700; }
+    .node.in { transform:translateX(-26px); } .node.out { transform:translateX(26px); }
+
+    .hub-core { position:relative; display:grid; place-items:center; min-height:320px; }
+    .hub-wires { position:absolute; width:320%; height:100%; left:50%; top:0; transform:translateX(-50%); pointer-events:none; overflow:visible; z-index:1; }
+    .wire { fill:none; stroke:rgba(56,189,248,0.16); stroke-width:1.5; stroke-dasharray:7 320; stroke-dashoffset:0; }
+    .wire.r { stroke:rgba(249,115,22,0.18); }
+    .core { position:relative; display:grid; place-items:center; width:200px; height:200px; }
+    .core-ring { position:absolute; inset:0; border-radius:50%; border:1px solid rgba(56,189,248,0.35); }
+    .core-ring.r2 { inset:-22px; border-color:rgba(37,99,235,0.22); }
+    .core-badge { position:relative; z-index:2; width:164px; height:164px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; text-align:center; background:radial-gradient(circle at 50% 35%, rgba(37,99,235,0.55), rgba(11,15,26,0.92) 72%); border:1px solid rgba(56,189,248,0.45); box-shadow:0 0 0 1px rgba(37,99,235,0.35), 0 0 40px rgba(37,99,235,0.30), inset 0 0 30px rgba(37,99,235,0.20); }
+    .core-mark { width:34px; height:34px; border-radius:50%; background:conic-gradient(from 160deg,#2563EB,#38BDF8); box-shadow:0 0 18px rgba(56,189,248,0.7); margin-bottom:4px; }
+    .core-name { font:800 21px Sora,Inter; color:#fff; letter-spacing:-0.02em; }
+    .core-sub { font:700 11px Sora,Inter; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan); }
+
+    @keyframes nodeInL { 0%{opacity:0;transform:translateX(-26px)} 12%,82%{opacity:1;transform:translateX(0)} 100%{opacity:.55;transform:translateX(0)} }
+    @keyframes nodeInR { 0%{opacity:0;transform:translateX(26px)} 12%,82%{opacity:1;transform:translateX(0)} 100%{opacity:.55;transform:translateX(0)} }
+    @keyframes pulseL { from{stroke-dashoffset:327} to{stroke-dashoffset:0} }
+    @keyframes pulseR { from{stroke-dashoffset:0} to{stroke-dashoffset:-327} }
+    @keyframes corePulse { 0%,100%{box-shadow:0 0 0 1px rgba(37,99,235,0.35),0 0 40px rgba(37,99,235,0.28),inset 0 0 30px rgba(37,99,235,0.18)} 50%{box-shadow:0 0 0 1px rgba(56,189,248,0.55),0 0 64px rgba(56,189,248,0.45),inset 0 0 40px rgba(37,99,235,0.30)} }
+    @keyframes ringExpand { 0%{opacity:.5;transform:scale(1)} 70%{opacity:0;transform:scale(1.35)} 100%{opacity:0;transform:scale(1.35)} }
+    .hub.in-view .node.in { animation:nodeInL 9s ease-in-out infinite; animation-delay:calc(var(--i)*220ms); }
+    .hub.in-view .node.out { animation:nodeInR 9s ease-in-out infinite; animation-delay:calc(1.6s + var(--i)*200ms); }
+    .hub.in-view .wire.l { animation:pulseL 9s linear infinite; animation-delay:calc(var(--w)*220ms); }
+    .hub.in-view .wire.r { animation:pulseR 9s linear infinite; animation-delay:calc(1.6s + var(--w)*200ms); }
+    .hub.in-view .core-badge { animation:corePulse 4.5s ease-in-out infinite; }
+    .hub.in-view .core-ring { animation:ringExpand 4.5s ease-out infinite; }
+    .hub.in-view .core-ring.r2 { animation:ringExpand 4.5s ease-out infinite; animation-delay:.6s; }
+
+    .ps-band { display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; gap:18px; max-width:1000px; margin:64px auto 0; }
+    .ps-card { padding:28px 30px; }
+    .ps-card.problem { border-color:rgba(248,113,113,0.22); }
+    .ps-card.solution { border-color:rgba(74,222,128,0.28); }
+    .ps-k { display:inline-block; font:700 12px Sora,Inter; letter-spacing:0.1em; text-transform:uppercase; color:#F87171; margin-bottom:10px; }
+    .ps-k.sol { color:#4ADE80; }
+    .ps-card h3 { font:800 clamp(20px,2.4vw,26px) Sora,Inter; color:#fff; margin-bottom:10px; line-height:1.15; }
+    .ps-card p { color:var(--muted); font-size:15.5px; line-height:1.65; }
+    .ps-arrow { align-self:center; font:800 34px Sora,Inter; color:var(--cyan); opacity:0.8; }
+
+    @keyframes nodeUp { 0%{opacity:0;transform:translateY(10px)} 14%,84%{opacity:1;transform:none} 100%{opacity:.6;transform:none} }
+    @media (max-width:880px) {
+      .hub { grid-template-columns:1fr; gap:18px; min-height:0; max-width:420px; }
+      .hub-wires { display:none; }
+      .hub-in, .hub-out { align-items:stretch; }
+      .hub-core { order:1; min-height:0; margin:6px 0; } .hub-out { order:2; }
+      .node { width:100%; justify-content:center; } .node.in, .node.out { transform:none; }
+      .hub.in-view .node.in, .hub.in-view .node.out { animation:nodeUp 9s ease-in-out infinite; }
+      .ps-band { grid-template-columns:1fr; gap:14px; } .ps-arrow { transform:rotate(90deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .node { opacity:1!important; transform:none!important; animation:none!important; }
+      .wire { stroke-dasharray:none; stroke-dashoffset:0; animation:none!important; stroke:rgba(56,189,248,0.20); }
+      .wire.r { stroke:rgba(249,115,22,0.20); }
+      .core-badge, .core-ring, .core-ring.r2 { animation:none!important; }
+      .core-ring, .core-ring.r2 { opacity:.4; }
+    }
+
     /* ── Sections ── */
     .section { padding: 100px 0; }
     .section-header { text-align: center; margin-bottom: 56px; }
@@ -624,11 +695,98 @@
 </section>
 
 
+<!-- ===== WHAT IS BILLYBOT · animated operator-hub centrepiece ===== -->
+<section id="what" class="section what">
+  <div class="container">
+
+    <div class="section-header">
+      <p class="hero-badge what-eyebrow">What BillyBot really is</p>
+      <h2>Billy doesn't help with your admin.<br><span class="grad">Billy does it.</span></h2>
+      <p>Quotes, invoices, RAMS, job sheets, cutting plans — produced, not drafted. Cheap tools do one job; Billy runs the lot.</p>
+    </div>
+
+    <p class="what-cred">
+      <span class="what-cred-dot"></span>
+      Built by Steve — <strong>20 years in flooring</strong>, from on the tools to building, running and scaling the business. That hard-won know-how is baked into how Billy works.
+    </p>
+
+    <!-- animated operator hub -->
+    <div class="hub" role="img"
+         aria-label="Diagram: your team feeds BillyBot emails, voice notes, site photos, measurements, supplier prices and team updates. Billy produces quotes, invoices, RAMS, job sheets, cutting plans, diary bookings, email replies and social posts.">
+
+      <div class="hub-col hub-in">
+        <span class="hub-col-label">Your team feeds in</span>
+        <span class="node in" style="--i:0">📧 <b>Emails</b></span>
+        <span class="node in" style="--i:1">🎙️ <b>Voice notes</b></span>
+        <span class="node in" style="--i:2">📷 <b>Site photos</b></span>
+        <span class="node in" style="--i:3">📐 <b>Measurements</b></span>
+        <span class="node in" style="--i:4">💷 <b>Supplier prices</b></span>
+        <span class="node in" style="--i:5">👷 <b>Team updates</b></span>
+      </div>
+
+      <div class="hub-core">
+        <svg class="hub-wires" viewBox="0 0 600 380" preserveAspectRatio="none" aria-hidden="true">
+          <path class="wire l" style="--w:0" d="M0,40 C150,40 150,190 300,190"/>
+          <path class="wire l" style="--w:1" d="M0,110 C150,110 150,190 300,190"/>
+          <path class="wire l" style="--w:2" d="M0,160 C150,160 150,190 300,190"/>
+          <path class="wire l" style="--w:3" d="M0,220 C150,220 150,190 300,190"/>
+          <path class="wire l" style="--w:4" d="M0,270 C150,270 150,190 300,190"/>
+          <path class="wire l" style="--w:5" d="M0,340 C150,340 150,190 300,190"/>
+          <path class="wire r" style="--w:0" d="M300,190 C450,190 450,40  600,40"/>
+          <path class="wire r" style="--w:1" d="M300,190 C450,190 450,110 600,110"/>
+          <path class="wire r" style="--w:2" d="M300,190 C450,190 450,160 600,160"/>
+          <path class="wire r" style="--w:3" d="M300,190 C450,190 450,220 600,220"/>
+          <path class="wire r" style="--w:4" d="M300,190 C450,190 450,270 600,270"/>
+          <path class="wire r" style="--w:5" d="M300,190 C450,190 450,340 600,340"/>
+        </svg>
+        <div class="core">
+          <div class="core-ring"></div>
+          <div class="core-ring r2"></div>
+          <div class="core-badge">
+            <span class="core-mark"></span>
+            <span class="core-name">BillyBot™</span>
+            <span class="core-sub">AI Operator</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hub-col hub-out">
+        <span class="hub-col-label">Billy hands back</span>
+        <span class="node out" style="--i:0">📝 <b>Quotes</b></span>
+        <span class="node out" style="--i:1">🧾 <b>Invoices</b></span>
+        <span class="node out" style="--i:2">📋 <b>RAMS</b></span>
+        <span class="node out" style="--i:3">🗂️ <b>Job sheets</b></span>
+        <span class="node out" style="--i:4">📐 <b>Cutting plans</b></span>
+        <span class="node out" style="--i:5">📅 <b>Diary bookings</b></span>
+        <span class="node out" style="--i:6">✉️ <b>Email replies</b></span>
+        <span class="node out" style="--i:7">📱 <b>Social posts</b></span>
+      </div>
+    </div>
+
+    <!-- problem → solution -->
+    <div class="ps-band">
+      <div class="ps-card problem glass">
+        <span class="ps-k">The problem</span>
+        <h3>Admin that earns you nothing.</h3>
+        <p>You and your team burn hours every week on quoting, paperwork, chasing emails and booking jobs — graft that doesn't lay a single metre of floor or put a penny on the invoice.</p>
+      </div>
+      <div class="ps-arrow" aria-hidden="true">→</div>
+      <div class="ps-card solution glass">
+        <span class="ps-k sol">With Billy</span>
+        <h3>Back on the tools. Turnover up.</h3>
+        <p>Billy does the admin in the background, so you and the team get the hours back — to win more jobs, fit more floors, grow the profit, and actually clock off at a sensible time.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <!-- ===== SEE IT WORK · live, distributed demos (real app, embedded per feature) ===== -->
 <section id="demo" class="section" style="padding:70px 0 30px;">
   <div class="container">
     <div class="value-band" style="border:0;padding:0;">
-      <p>A flooring-trained AI that <strong><span style="color:#FFB84D;">runs your entire back-office</span></strong> — quotes, cutting plans, emails, receipts, social media, and everything in between. Without the wages.</p>
+      <p>Now watch Billy do each job — <strong><span style="color:#FFB84D;">live, on the real app.</span></strong> No mockups, no stock screenshots.</p>
     </div>
 
     <!-- Instant Quote (phone) -->
@@ -1194,6 +1352,17 @@
     var btn = document.getElementById('signup-btn');
     if (btn) btn.classList.toggle('visible', window.scrollY > 150);
   });
+
+  // ── What-is-Billy hub: run the loop only when scrolled into view ──
+  (function () {
+    var hub = document.querySelector('.hub');
+    if (!hub) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { hub.classList.add('in-view'); return; }
+    if (!('IntersectionObserver' in window)) { hub.classList.add('in-view'); return; }
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { hub.classList.toggle('in-view', e.isIntersecting); });
+    }, { threshold: 0.3 }).observe(hub);
+  })();
 </script>
 
 </body>
