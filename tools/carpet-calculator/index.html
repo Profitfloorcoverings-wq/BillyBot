@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  /* Meta Pixel: queue events now, load the library after the page has rendered */
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];f.addEventListener('load',function(){t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)})}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '24704985755777244');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Primary SEO ===== -->
+  <title>Carpet Calculator: 4m or 5m Roll, Waste &amp; Seams | BillyBot</title>
+  <meta name="description" content="Free carpet calculator for 4m and 5m rolls. Add your rooms to see the metres to order, the m² you pay for, waste and seams, with the working. Try it now." />
+  <link rel="canonical" href="https://billybot.ai/tools/carpet-calculator/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0B0F1A" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BillyBot" />
+  <meta property="og:title" content="Carpet Calculator: 4m or 5m Roll, Waste &amp; Seams | BillyBot" />
+  <meta property="og:description" content="Free carpet calculator for 4m and 5m rolls. Add your rooms to see the metres to order, the m² you pay for, waste and seams, with the working. Try it now." />
+  <meta property="og:url" content="https://billybot.ai/tools/carpet-calculator/" />
+  <meta property="og:image" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:secure_url" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BillyBot free carpet calculator for 4m and 5m rolls" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carpet Calculator: 4m or 5m Roll, Waste &amp; Seams | BillyBot" />
+  <meta name="twitter:description" content="Free carpet calculator for 4m and 5m rolls. Add your rooms to see the metres to order, the m² you pay for, waste and seams, with the working. Try it now." />
+  <meta name="twitter:image" content="https://billybot.ai/images/og-image.png" />
+  <meta name="twitter:image:alt" content="BillyBot free carpet calculator for 4m and 5m rolls" />
+
+  <!-- Self-hosted variable fonts (Inter + Sora, SIL OFL): no render-blocking third-party CSS -->
+  <link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Sora'; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/sora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+    /* Live demo embed (real app UI) */
+    .demo-embed { display: flex; justify-content: center; margin-top: 40px; }
+    .phone-stage { width: 328px; }
+    .phone-stage iframe { display: block; width: 100%; aspect-ratio: 410 / 806; border: 0; background: transparent; }
+    .web-stage { width: 760px; max-width: 100%; }
+    .web-stage iframe { display: block; width: 100%; aspect-ratio: 900 / 612; border: 0; background: transparent; }
+    .demo-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 12px; }
+    @media (max-width: 768px) { .phone-stage { width: 290px; } }
+  </style>
+
+  <style>
+    :root {
+      --brand1: #2563EB;
+      --brand2: #3B82F6;
+      --cyan: #38BDF8;
+      --accent1: #F97316;
+      --accent2: #FB923C;
+      --bg: #0B0F1A;
+      --bg2: #0F1526;
+      --text: #E6ECF9;
+      --muted: #98A3B8;
+      --line: rgba(255,255,255,0.08);
+      --radius: 20px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 40%, #0C1221 80%, #0B0F1A 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .grad {
+      background: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff; font-weight: 800; font-family: Sora, Inter, sans-serif;
+      padding: 15px 30px; border-radius: 999px; border: none; cursor: pointer;
+      transition: transform 0.18s ease; font-size: 15px; letter-spacing: -0.01em;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.glow {
+      box-shadow: 0 0 20px rgba(249,115,22,0.45), 0 0 40px rgba(251,146,60,0.2);
+      animation: pulseOrange 2.5s ease-in-out infinite;
+    }
+    @keyframes pulseOrange {
+      0%, 100% { box-shadow: 0 0 18px rgba(249,115,22,0.45), 0 0 36px rgba(251,146,60,0.2); }
+      50%       { box-shadow: 0 0 32px rgba(249,115,22,0.65), 0 0 64px rgba(251,146,60,0.35); }
+    }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(180deg, rgba(13,17,28,0.92), rgba(13,17,28,0.6) 70%, rgba(13,17,28,0));
+      backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { height: 76px; display: flex; align-items: center; gap: 28px; }
+    .logo { display: flex; align-items: center; gap: 12px; font: 800 20px Sora, Inter; }
+    .logo svg { width: 34px; height: 34px; }
+    .nav-links { display: flex; gap: 26px; margin-left: 8px; font-weight: 600; font-size: 15px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 18px; }
+    .login-link { font-weight: 600; font-size: 15px; color: var(--muted); }
+    .login-link:hover { color: var(--text); }
+
+    /* Breadcrumb */
+    .crumb { font-size: 13px; color: var(--muted); padding: 22px 0 0; }
+    .crumb a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 56px 0 64px; text-align: center; }
+    .eyebrow {
+      display: inline-block; font-family: Sora, Inter; font-weight: 700; font-size: 13px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan);
+      border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; margin-bottom: 22px;
+      background: rgba(56,189,248,0.06);
+    }
+    h1 {
+      font-family: Sora, Inter; font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
+      font-size: clamp(34px, 6vw, 60px); max-width: 920px; margin: 0 auto;
+    }
+    .lede { color: #AFC3FF; font-size: clamp(17px, 2.3vw, 21px); max-width: 760px; margin: 22px auto 0; }
+    .cta-row { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .disclaimer { color: var(--muted); font-size: 14px; margin-top: 16px; }
+
+    /* Sections */
+    section.block { padding: 56px 0; }
+    .section-title { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -0.5px; text-align: center; }
+    .section-sub { color: var(--muted); text-align: center; max-width: 680px; margin: 14px auto 0; font-size: 17px; }
+
+    /* Problem/solution two-up */
+    .twoup { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+    .twoup .glass { padding: 28px; }
+    .twoup h3 { font-family: Sora, Inter; font-weight: 700; font-size: 21px; margin-bottom: 10px; }
+    .twoup p { color: #C3D0EA; }
+    .pk { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+    .pk.bad { color: #fb7185; } .pk.good { color: #4ade80; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; counter-reset: step; }
+    .step { padding: 26px 22px; }
+    .step .n {
+      width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-family: Sora; font-weight: 800; color: #fff; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--brand1), var(--cyan));
+    }
+    .step h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 15px; }
+
+    /* Feature grid */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+    .feature { padding: 26px 24px; }
+    .feature .ic { font-size: 26px; margin-bottom: 14px; }
+    .feature h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .feature p { color: var(--muted); font-size: 15px; }
+
+    /* Comparison table */
+    .cmp { margin-top: 40px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; }
+    thead th { font-family: Sora, Inter; font-weight: 700; font-size: 14px; color: var(--muted); }
+    thead th.win { color: var(--cyan); }
+    td.lbl { color: #C3D0EA; font-weight: 600; }
+    td.old { color: var(--muted); }
+    td.win { color: var(--text); font-weight: 600; }
+    tbody tr:last-child td { border-bottom: 0; }
+
+    /* Pricing strip */
+    .pricestrip { margin-top: 40px; padding: 34px; text-align: center; }
+    .pricestrip .big { font-family: Sora, Inter; font-weight: 800; font-size: 40px; }
+    .pricestrip .big span { font-size: 18px; color: var(--muted); font-weight: 600; }
+    .pricestrip p { color: var(--muted); margin-top: 6px; }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 12px; max-width: 820px; margin: 40px auto 0; }
+    .faq-item { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .faq-question {
+      width: 100%; text-align: left; background: none; border: 0; color: var(--text); cursor: pointer;
+      font-family: Sora, Inter; font-weight: 600; font-size: 16px; padding: 18px 24px; position: relative;
+    }
+    .faq-question::after { content: "+"; position: absolute; right: 24px; top: 16px; font-size: 22px; color: var(--cyan); transition: transform 0.2s; }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; padding: 0 24px; }
+    .faq-item.active .faq-answer { max-height: 520px; padding: 0 24px 20px; }
+    .faq-answer p { color: #C3D0EA; font-size: 15px; }
+
+    /* CTA band */
+    .ctaband { text-align: center; padding: 56px 28px; margin: 56px 0; }
+    .ctaband h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 4vw, 40px); letter-spacing: -0.5px; }
+    .ctaband p { color: #AFC3FF; margin: 12px auto 26px; max-width: 560px; }
+
+    /* Prose */
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose p { color: #C3D0EA; margin-top: 16px; font-size: 17px; }
+    .prose a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Footer */
+    footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 15px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+    .footer-links a { color: #475569; font-size: 14px; }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ===== Carpet calculator (page-specific) ===== */
+    [hidden] { display: none !important; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .hero.hero-tool { padding: 34px 0 30px; }
+    .hero-tool h1 { font-size: clamp(32px, 5.2vw, 52px); }
+    .hero-tool .lede { margin-top: 16px; }
+    .hero-tool .eyebrow { margin-bottom: 18px; }
+    .tool { padding: 0 0 24px; }
+    .calc { padding: 26px; }
+    .calc-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: 28px; align-items: start; }
+    .calc-inputs, .calc-results { min-width: 0; }
+    .calc-h { font-family: Sora, Inter; font-weight: 700; font-size: 20px; letter-spacing: -0.3px; margin-bottom: 14px; }
+    .rooms { display: grid; gap: 12px; }
+    .room { border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: rgba(255,255,255,0.02); }
+    .room-top { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+    .room-top .room-name { flex: 1; min-width: 0; }
+    .room-dims { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+    .field label, .roll legend { display: block; font-size: 13px; font-weight: 600; color: #C3D0EA; margin-bottom: 6px; }
+    .calc input[type="text"] {
+      width: 100%; background: rgba(11,15,26,0.65); border: 1px solid rgba(255,255,255,0.16); border-radius: 10px;
+      color: var(--text); font: 500 16px/1.3 Inter, system-ui, sans-serif; padding: 11px 12px;
+    }
+    .calc input[type="text"]::placeholder { color: #6B7A93; }
+    .calc input[type="text"]:focus { border-color: var(--cyan); outline: none; box-shadow: 0 0 0 3px rgba(56,189,248,0.25); }
+    .calc input[aria-invalid="true"] { border-color: #fb7185; }
+    .calc button:focus-visible, .seg input:focus-visible + label, .faq-question:focus-visible, .prose a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+    .field-err { color: #fda4af; font-size: 13px; margin-top: 8px; line-height: 1.45; }
+    .hint { color: var(--muted); font-size: 12.5px; margin-top: 6px; line-height: 1.45; }
+    .room-remove, .btn-quiet {
+      background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
+      padding: 8px 14px; font: 600 13px Inter, sans-serif; cursor: pointer;
+    }
+    .room-remove:hover, .btn-quiet:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+    .btn-add { color: var(--cyan); border-color: rgba(56,189,248,0.4); font-size: 14px; padding: 10px 16px; }
+    .btn-add:disabled { opacity: 0.5; cursor: not-allowed; }
+    .calc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 22px; }
+    .roll { border: 0; margin: 0 0 16px; min-width: 0; }
+    .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+    .seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .seg label {
+      display: inline-block; padding: 9px 18px; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px;
+      cursor: pointer; font: 700 15px Sora, Inter, sans-serif; color: var(--text); margin: 0;
+    }
+    .seg input:checked + label { background: linear-gradient(135deg, var(--brand1), var(--cyan)); border-color: transparent; color: #fff; }
+    .custom-roll { margin-top: 10px; max-width: 220px; }
+    .settings { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .calc-results { border-left: 1px solid var(--line); padding-left: 28px; min-height: 320px; }
+    .res-kicker { font: 700 12px Sora, Inter, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); }
+    .res-empty p { color: #C3D0EA; margin-top: 10px; font-size: 15px; }
+    .res-empty ul { margin: 10px 0 0 1.1em; color: #fda4af; font-size: 15px; }
+    .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 4px; }
+    .tile { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; background: rgba(255,255,255,0.025); min-width: 0; }
+    .tile-main { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(56,189,248,0.08)); border-color: rgba(56,189,248,0.3); }
+    .t-label { display: block; font-size: 12px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+    .t-val { display: block; font: 800 24px/1.2 Sora, Inter, sans-serif; letter-spacing: -0.5px; margin-top: 2px; overflow-wrap: anywhere; }
+    .tile-main .t-val { font-size: 34px; }
+    .t-sub { display: block; font-size: 13px; color: #AFC3FF; margin-top: 2px; }
+    .res-alert { margin-top: 12px; padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(251,146,60,0.35); background: rgba(249,115,22,0.08); color: #fed7aa; font-size: 14px; }
+    .res-rooms { list-style: none; display: grid; gap: 10px; margin-top: 14px; }
+    .res-room { border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: rgba(255,255,255,0.015); }
+    .res-room h3 { font: 700 16px/1.35 Sora, Inter, sans-serif; }
+    .res-room h3 span { display: block; font: 500 13px Inter, sans-serif; color: var(--muted); margin-top: 2px; }
+    .res-room p { font-size: 14.5px; color: #C3D0EA; margin-top: 8px; line-height: 1.55; }
+    .res-room p strong { color: var(--text); }
+    .res-room .alt { color: var(--muted); }
+    .res-room .warn { color: #fdba74; }
+    .res-compare { margin-top: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; }
+    .res-compare caption { text-align: left; font: 700 14px Sora, Inter, sans-serif; color: var(--text); padding: 12px 10px 4px; }
+    .res-compare th, .res-compare td { padding: 9px 10px; font-size: 14px; white-space: nowrap; vertical-align: top; }
+    .res-compare thead th { font-size: 13px; }
+    .res-compare tbody th { font-weight: 700; color: var(--text); }
+    .res-compare tbody tr:last-child th { border-bottom: 0; }
+    .res-compare tr.sel th, .res-compare tr.sel td { background: rgba(56,189,248,0.06); }
+    .res-compare .sub { display: block; font-size: 12px; color: var(--muted); }
+    .res-compare .pill { display: block; width: max-content; margin: 4px 0 0; }
+    .pill { display: inline-block; font: 700 11px Inter, sans-serif; letter-spacing: 0.03em; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); margin-left: 4px; vertical-align: 1px; }
+    .res-empty ol { margin: 14px 0 0 1.2em; color: #C3D0EA; font-size: 15px; }
+    .res-empty ol li { margin-top: 6px; }
+    .pill-good { color: #4ade80; border-color: rgba(74,222,128,0.35); }
+    .pill-warn { color: #fdba74; border-color: rgba(251,146,60,0.35); }
+    .res-note { color: var(--muted); font-size: 13.5px; margin-top: 12px; line-height: 1.55; }
+    .res-note a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Guide content under the tool */
+    .guide h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(24px, 3.2vw, 32px); letter-spacing: -0.5px; line-height: 1.2; margin-top: 52px; }
+    .guide h2:first-child { margin-top: 0; }
+    .guide ul { margin: 14px 0 0 1.2em; color: #C3D0EA; }
+    .guide li { margin-top: 8px; font-size: 17px; }
+    .table-scroll { margin-top: 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.02); }
+    .table-scroll table { min-width: 680px; }
+    .table-scroll th, .table-scroll td { padding: 11px 12px; font-size: 14px; vertical-align: top; }
+    .table-scroll tbody td { color: #C3D0EA; }
+    .table-scroll tbody td:first-child { color: var(--text); font-weight: 600; }
+    .ctaband .disclaimer { color: var(--muted); margin: 16px auto 0; }
+    .ctaband .price-line { color: var(--muted); font-size: 14px; margin: 14px auto 0; }
+    .ctaband p a, .faq-answer a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    @media (max-width: 1024px) {
+      .features { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .calc-grid { grid-template-columns: minmax(0, 1fr); }
+      .calc-results { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 22px; min-height: 0; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .login-link { display: none; }
+      .twoup, .features, .steps { grid-template-columns: 1fr; }
+      .cmp { overflow-x: auto; }
+    }
+    @media (max-width: 560px) {
+      .calc { padding: 16px; }
+      .room { padding: 12px; }
+      .settings { grid-template-columns: 1fr; }
+      .tile-main .t-val { font-size: 30px; }
+      .t-val { font-size: 21px; }
+      .hero.hero-tool { padding: 26px 0 24px; }
+      .ctaband { padding: 40px 18px; }
+    }
+  </style>
+
+  <!-- ===== Structured data (rich results + AI understanding) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://billybot.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://billybot.ai/resources/" },
+          { "@type": "ListItem", "position": 3, "name": "Carpet Calculator", "item": "https://billybot.ai/tools/carpet-calculator/" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://billybot.ai/tools/carpet-calculator/#webpage",
+        "url": "https://billybot.ai/tools/carpet-calculator/",
+        "name": "Carpet Calculator: 4m or 5m Roll, Waste & Seams | BillyBot",
+        "description": "Free carpet calculator for 4m and 5m rolls. Add your rooms to see the metres to order, the m² you pay for, waste and seams, with the working.",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://billybot.ai/#website" },
+        "about": { "@id": "https://billybot.ai/#software" },
+        "primaryImageOfPage": "https://billybot.ai/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much extra carpet should I allow?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Work it out drop by drop rather than adding a percentage. Each drop is the room length plus a trimming allowance, cut at the full roll width, so the waste depends on how the room fits the roll. Fitting guides ask for carpet cut oversize for trimming in; one UK manufacturer's guide says approximately 50 mm. This calculator adds 0.10 m to every drop by default, which you can change." }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I use a 4 m or a 5 m roll?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Use the width that buys the least carpet with seams you can accept, as long as the carpet is made in that width. A room over 4 m in both directions needs a seam on a 4 m roll but may go down in one piece off a 5 m roll, while a narrow room on a 5 m roll pays for a wide strip of waste. The calculator compares both widths for your rooms." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you join carpet?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. When a room is wider than the roll, widths are joined with a seam, commonly with hot-melt seaming tape or by sewing, depending on the carpet, and cut edges are sealed so tufts don't work loose. Good practice is to keep seams to a minimum, run them the length of the room, and keep them out of doorways, busy walkways and places where light falls across them." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate carpet for stairs?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Stairs need a different method from rooms. Each step is measured as its tread and riser, including the nosing, and winders and landings are measured on their own, so a room calculator will get the quantity wrong. BillyBot's cutting plan software works out treads, risers, winders and landings, including the gripper." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I allow for a pattern repeat?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Enter the repeat from the carpet's specification and each drop is rounded up to a whole number of repeats, so neighbouring drops can be matched. That's the minimum: centring a design, or matching through doorways and over long runs, can take more, so check the fitting instructions and ask your supplier." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is carpet sold by the linear metre or the square metre?",
+            "acceptedAnswer": { "@type": "Answer", "text": "You order a length off the roll, but carpet is often priced per square metre, so you pay for the length times the roll width, not the floor area. A 4.30 m drop off a 4 m roll is 17.20 m² bought, even when the room is 15.12 m². Add a price per m² and the calculator costs the carpet you actually buy." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container nav">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+        <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
+        <g fill="url(#tbBlue)">
+          <rect x="45" y="34" width="6" height="14" rx="3"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
+        </g>
+        <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+        <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
+        <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
+        <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
+      </svg>
+      BillyBot™
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#features">Features</a>
+      <a href="/#how">How it works</a>
+      <a href="/#watch">Watch</a>
+      <a href="/#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="login-link" href="https://app.billybot.ai/auth/login" rel="noopener" data-app-login>Log in</a>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start free trial</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="container">
+  <nav class="crumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/resources/">Resources</a> &rsaquo; <span>Carpet Calculator</span>
+  </nav>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-tool">
+  <div class="container">
+    <span class="eyebrow">Free tool</span>
+    <h1>Carpet calculator for <span class="grad">4&nbsp;m and 5&nbsp;m rolls</span></h1>
+    <p class="lede">How much carpet do you need? Add your rooms and pick the roll width. It works out the drops both ways, then shows the metres to order, the m² you'll pay for, the waste and the seams, with the working.</p>
+  </div>
+</section>
+
+<!-- ===== THE CALCULATOR ===== -->
+<section class="tool" aria-label="Carpet calculator">
+  <div class="container">
+    <form class="calc glass" id="carpet-calc" novalidate>
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h2 class="calc-h">Your rooms</h2>
+          <div class="rooms" id="cc-rooms">
+            <div class="room" data-room="1">
+              <div class="room-top">
+                <label class="sr-only" for="cc-name-1"><span class="room-n">Room 1 </span>name (optional)</label>
+                <input class="room-name" id="cc-name-1" type="text" maxlength="40" autocomplete="off" placeholder="Room 1">
+                <button type="button" class="room-remove" aria-label="Remove Room 1" hidden>Remove</button>
+              </div>
+              <div class="room-dims">
+                <div class="field"><label for="cc-len-1"><span class="sr-only room-n">Room 1 </span>Length (m)</label><input class="room-len" id="cc-len-1" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 4.2" aria-describedby="cc-err-1"></div>
+                <div class="field"><label for="cc-wid-1"><span class="sr-only room-n">Room 1 </span>Width (m)</label><input class="room-wid" id="cc-wid-1" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 3.6" aria-describedby="cc-err-1"></div>
+              </div>
+              <p class="field-err" id="cc-err-1" hidden></p>
+            </div>
+          </div>
+          <div class="calc-actions">
+            <button type="button" class="btn-quiet btn-add" id="cc-add">+ Add a room</button>
+            <button type="button" class="btn-quiet" id="cc-example">Load an example</button>
+            <button type="button" class="btn-quiet" id="cc-clear">Clear</button>
+          </div>
+
+          <fieldset class="roll">
+            <legend>Roll width</legend>
+            <div class="seg">
+              <input type="radio" name="cc-roll" id="cc-roll-4" value="4" checked><label for="cc-roll-4">4 m</label>
+              <input type="radio" name="cc-roll" id="cc-roll-5" value="5"><label for="cc-roll-5">5 m</label>
+              <input type="radio" name="cc-roll" id="cc-roll-other" value="custom"><label for="cc-roll-other">Other</label>
+            </div>
+            <div class="field custom-roll" id="cc-roll-custom-wrap" hidden>
+              <label for="cc-roll-custom">Roll width (m)</label>
+              <input id="cc-roll-custom" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 3.66" aria-describedby="cc-roll-err">
+              <p class="field-err" id="cc-roll-err" hidden></p>
+            </div>
+          </fieldset>
+
+          <div class="settings">
+            <div class="field">
+              <label for="cc-trim">Trim per drop (m)</label>
+              <input id="cc-trim" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0.10" aria-describedby="cc-trim-hint cc-trim-err">
+              <p class="hint" id="cc-trim-hint">Added to every drop's length for trimming in at the walls.</p>
+              <p class="field-err" id="cc-trim-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="cc-repeat">Pattern repeat (m)</label>
+              <input id="cc-repeat" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0" aria-describedby="cc-repeat-hint cc-repeat-err">
+              <p class="hint" id="cc-repeat-hint">0 for plain carpet.</p>
+              <p class="field-err" id="cc-repeat-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="cc-price">Price per m² (£)</label>
+              <input id="cc-price" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="Optional" aria-describedby="cc-price-err">
+              <p class="field-err" id="cc-price-err" hidden></p>
+            </div>
+          </div>
+          <noscript><p class="res-note">This calculator needs JavaScript switched on.</p></noscript>
+        </div>
+
+        <div class="calc-results" id="cc-results" aria-live="polite">
+          <h2 class="calc-h">What to order</h2>
+          <div class="res-empty">
+            <p class="res-kicker">Ready when you are</p>
+            <p>Enter a length and width for a room to see how much carpet to order. You'll get:</p>
+            <ol>
+              <li>the metres to order off the roll;</li>
+              <li>the m² you'll pay for, the waste and the seams;</li>
+              <li>both ways to lay each room, with the working;</li>
+              <li>the same rooms compared on 4&nbsp;m and 5&nbsp;m rolls.</li>
+            </ol>
+            <p>Measure at the widest points, in metres (4.25 is 4&nbsp;m 25&nbsp;cm). Don't add your own allowance: the trim goes on every drop for you.</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== GUIDE ===== -->
+<section class="block">
+  <div class="container prose guide">
+
+    <h2>How to measure a room for carpet</h2>
+    <p>Measure the length and width at the widest points. Walls bow and corners are rarely square, so measure in more than one place and use the biggest figure. Cormar's advice is to measure at the longest and widest points even when a room has chimney breasts, recesses or a bay window.</p>
+    <p>Measure into the middle of each doorway, not just to the door, and into bays, alcoves and door reveals. Enter sizes in metres: 4.25 is 4&nbsp;m 25&nbsp;cm, or type 425cm. Don't add your own allowance, because the calculator already adds the trim to every drop.</p>
+
+    <h2>4&nbsp;m or 5&nbsp;m roll? Why the width decides the waste</h2>
+    <p>Broadloom carpet comes in fixed roll widths, and in the UK those are usually 4&nbsp;m and 5&nbsp;m. Cormar makes all its loop and twist pile carpets in both "to avoid seams in wider rooms", but not every range comes in both, so check the product first.</p>
+    <p>You buy drops cut off the roll, and every drop is the full roll width whether the room needs it or not. A room 3.6&nbsp;m across wastes a 0.4&nbsp;m strip on a 4&nbsp;m roll and a 1.4&nbsp;m strip on a 5&nbsp;m roll. A room over 4&nbsp;m in both directions needs a seam on a 4&nbsp;m roll, but a 5&nbsp;m roll may cover it in one piece.</p>
+    <p>Wider isn't automatically better: a 5.5 &times; 3.0&nbsp;m room buys 22.40&nbsp;m² off a 4&nbsp;m roll but 28.00&nbsp;m² off a 5&nbsp;m roll. Cormar also recommends planning a job from one width, as colour matching between 4&nbsp;m and 5&nbsp;m widths, or carpet bought at different times, can't be guaranteed.</p>
+
+    <h2>Pile direction: why every drop runs the same way</h2>
+    <p>Carpet laid with its pile running the other way can look like a different shade. The US installation standard CRI 105 requires adjacent pieces of the same carpet to have the pile running the same way, and Gerflor's Gradus guidelines have multi-width fits cut as consecutive pieces from the roll, pile the same way. In the UK, BS 5325 is the code of practice for installing textile floor coverings.</p>
+    <p>So the calculator never turns a drop to save carpet. It picks the direction that buys least and shows the other, for when the pile has to run a set way: CRI 105 names the pile lying towards the entrance as ideal, where other factors allow.</p>
+
+    <h2>Seams: where to put them</h2>
+    <p>Where a room is wider than the roll, the widths are joined with a seam. Seams can show, so plan where they go. The general practice set out in CRI 105 is to:</p>
+    <ul>
+      <li>keep seams to a minimum and run them the length of the area;</li>
+      <li>let the main traffic run along a seam, not across it;</li>
+      <li>keep natural light from falling across a seam;</li>
+      <li>keep seams away from where people turn, and not run them into doorways.</li>
+    </ul>
+    <p>Some carpets need their factory edges trimmed before seaming, so don't plan to the last centimetre of roll width. This calculator counts seams; it doesn't place them.</p>
+
+    <h2>Pattern repeat: why patterned carpet needs more</h2>
+    <p>A patterned carpet repeats its design at a set distance, the pattern repeat, shown on its specification. For the pattern to line up at a seam, neighbouring drops must start at the same point in the design, so each drop is cut to whole repeats: with a 0.64&nbsp;m repeat, a 4.30&nbsp;m drop becomes 4.48&nbsp;m.</p>
+    <p>That's the minimum. Brintons expects patterns kept matched and aligned in both length and width, and CRI 105 calls for enough material to match. Centring a design, carrying it through a doorway or matching long runs can take more, so check the fitting instructions and your supplier before ordering.</p>
+
+    <h2>Worked examples</h2>
+    <p>All use the default 0.10&nbsp;m trim per drop. Enter any of them above to see the full working.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Room</th><th scope="col">Roll</th><th scope="col">Layout</th><th scope="col">Order</th><th scope="col">Bought</th><th scope="col">Waste</th><th scope="col">Seams</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>3.60 &times; 4.20&nbsp;m</td><td>4&nbsp;m</td><td>1 width &times; 4.30&nbsp;m, drops along the 4.20&nbsp;m side</td><td>4.30&nbsp;m</td><td>17.20&nbsp;m²</td><td>2.08&nbsp;m² (12.1%)</td><td>0</td></tr>
+          <tr><td>Same room, turned</td><td>4&nbsp;m</td><td>2 widths &times; 3.70&nbsp;m, drops along the 3.60&nbsp;m side</td><td>7.40&nbsp;m</td><td>29.60&nbsp;m²</td><td>14.48&nbsp;m² (48.9%)</td><td>1</td></tr>
+          <tr><td>5.50 &times; 3.00&nbsp;m</td><td>4&nbsp;m</td><td>1 width &times; 5.60&nbsp;m, drops along the 5.50&nbsp;m side</td><td>5.60&nbsp;m</td><td>22.40&nbsp;m²</td><td>5.90&nbsp;m² (26.3%)</td><td>0</td></tr>
+          <tr><td>5.50 &times; 3.00&nbsp;m</td><td>5&nbsp;m</td><td>1 width &times; 5.60&nbsp;m, drops along the 5.50&nbsp;m side</td><td>5.60&nbsp;m</td><td>28.00&nbsp;m²</td><td>11.50&nbsp;m² (41.1%)</td><td>0</td></tr>
+          <tr><td>4.00 &times; 4.00&nbsp;m</td><td>4&nbsp;m</td><td>1 width &times; 4.10&nbsp;m either way, but nothing spare to trim at the side walls</td><td>4.10&nbsp;m</td><td>16.40&nbsp;m²</td><td>0.40&nbsp;m² (2.4%)</td><td>0</td></tr>
+          <tr><td>3.60 &times; 4.20&nbsp;m, 0.64&nbsp;m repeat</td><td>4&nbsp;m</td><td>1 width &times; 4.48&nbsp;m (7 repeats), drops along the 4.20&nbsp;m side</td><td>4.48&nbsp;m</td><td>17.92&nbsp;m²</td><td>2.80&nbsp;m² (15.6%)</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>What this calculator assumes</h2>
+    <ul>
+      <li>Every room is a rectangle, so measure the widest points, including into doorways, door reveals and bays.</li>
+      <li>One pile direction per room, and no drop is turned to save carpet.</li>
+      <li>Offcuts aren't reused between rooms, or to fill bays and alcoves.</li>
+      <li>Seams are counted, not placed.</li>
+      <li>The trim goes on the length of every drop. Across the roll, you get a warning when there's little or nothing spare to trim at the side walls.</li>
+    </ul>
+    <p>Real jobs have offcuts worth reusing, stairs and seams to plan. A proper cutting plan nests every drop on the roll and often saves material: that's what <a href="/cutting-plan-software/">BillyBot's cutting plan software</a> does. Once you know what to order, see <a href="/how-to-quote-a-flooring-job/">how to quote a flooring job</a>. Fitting LVT or laminate? Use the <a href="/tools/flooring-pack-calculator/">flooring pack calculator</a>, and the <a href="/tools/smoothing-compound-calculator/">smoothing compound calculator</a> for the floor prep.</p>
+
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">Carpet calculator FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">How much extra carpet should I allow?</button><div class="faq-answer"><p>Work it out drop by drop rather than adding a percentage. Each drop is the room length plus a trimming allowance, cut at the full roll width, so the waste depends on how the room fits the roll. Fitting guides ask for carpet cut oversize for trimming in; one UK manufacturer's guide says approximately 50 mm. This calculator adds 0.10 m to every drop by default, which you can change.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">Should I use a 4 m or a 5 m roll?</button><div class="faq-answer"><p>Use the width that buys the least carpet with seams you can accept, as long as the carpet is made in that width. A room over 4 m in both directions needs a seam on a 4 m roll but may go down in one piece off a 5 m roll, while a narrow room on a 5 m roll pays for a wide strip of waste. The calculator compares both widths for your rooms.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">Can you join carpet?</button><div class="faq-answer"><p>Yes. When a room is wider than the roll, widths are joined with a seam, commonly with hot-melt seaming tape or by sewing, depending on the carpet, and cut edges are sealed so tufts don't work loose. Good practice is to keep seams to a minimum, run them the length of the room, and keep them out of doorways, busy walkways and places where light falls across them.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">How do I calculate carpet for stairs?</button><div class="faq-answer"><p>Stairs need a different method from rooms. Each step is measured as its tread and riser, including the nosing, and winders and landings are measured on their own, so a room calculator will get the quantity wrong. <a href="/cutting-plan-software/">BillyBot's cutting plan software</a> works out treads, risers, winders and landings, including the gripper.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">How do I allow for a pattern repeat?</button><div class="faq-answer"><p>Enter the repeat from the carpet's specification and each drop is rounded up to a whole number of repeats, so neighbouring drops can be matched. That's the minimum: centring a design, or matching through doorways and over long runs, can take more, so check the fitting instructions and ask your supplier.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">Is carpet sold by the linear metre or the square metre?</button><div class="faq-answer"><p>You order a length off the roll, but carpet is often priced per square metre, so you pay for the length times the roll width, not the floor area. A 4.30 m drop off a 4 m roll is 17.20 m² bought, even when the room is 15.12 m². Add a price per m² and the calculator costs the carpet you actually buy.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="block">
+  <div class="container">
+    <div class="ctaband glass">
+      <h2>Let BillyBot plan and price the whole job</h2>
+      <p>BillyBot works out the cutting plan for the whole job, rooms and stairs together, so you order the right material with less waste. Then it prices the material into a <a href="/flooring-quoting-software/">quote on your own rates</a>, ready for you to check and send.</p>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try BillyBot free for 14 days</a>
+      <p class="disclaimer">14-day free trial · Fitters always free · Cancel anytime</p>
+      <p class="price-line">BillyBot runs the office side of a flooring business, from first enquiry to final invoice. Built by a flooring business, on 20 years of running one. £149 per office seat per month, everything included (prices exclude VAT).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> BillyBot™. All rights reserved.
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/flooring-quoting-software/">Flooring Quoting Software</a>
+      <a href="/flooring-estimating-software/">Flooring Estimating Software</a>
+      <a href="/cutting-plan-software/">Cutting Plan Software</a>
+      <a href="/flooring-software-comparison/">Flooring Software Compared</a>
+      <a href="/tools/">Free tools</a>
+      <a href="/resources/">Resources</a>
+      <a href="https://app.billybot.ai/terms">Terms</a>
+      <a href="https://app.billybot.ai/privacy">Privacy</a>
+      <a href="mailto:info@billybot.ai">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var IOS_APP_URL = 'https://apps.apple.com/gb/app/billybot/id6758058400';
+  var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // Signup link carries where the visitor came from (page, external referrer, incoming ad/UTM params)
+  function bbSignupUrl() {
+    var p = new URLSearchParams();
+    var page = location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+    try {
+      var q = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'].forEach(function (k) {
+        if (q.get(k)) p.set(k, q.get(k));
+      });
+      var ref = document.referrer ? new URL(document.referrer).hostname : '';
+      if (ref && ref !== location.hostname) p.set('ref', ref);
+    } catch (e) {}
+    if (!p.get('utm_source')) {
+      p.set('utm_source', 'billybot.ai');
+      p.set('utm_medium', 'website');
+      p.set('utm_campaign', page);
+    } else if (!p.get('utm_content')) {
+      p.set('utm_content', page);
+    }
+    return 'https://app.billybot.ai/auth/signup?' + p.toString();
+  }
+  var SIGNUP_URL = isIOS ? IOS_APP_URL : bbSignupUrl();
+  var LOGIN_URL = isIOS ? IOS_APP_URL : 'https://app.billybot.ai/auth/login';
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) { el.setAttribute('href', SIGNUP_URL); });
+  document.querySelectorAll('[data-app-login]').forEach(function(el) { el.setAttribute('href', LOGIN_URL); });
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      if (typeof fbq !== 'undefined') { fbq('track', 'ViewContent', { content_name: 'Carpet Calculator CTA' }); }
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function(other) { other.classList.remove('active'); });
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+</script>
+
+<script id="carpet-calc-core">
+/* Carpet calculator core: pure functions, no DOM. Every length is whole millimetres,
+   so rounding a drop up to a pattern repeat never trips over floating-point error. */
+(function (root, factory) {
+  var api = factory();
+  if (typeof module === 'object' && module && module.exports) { module.exports = api; }
+  else { root.CarpetCalc = api; }
+}(this, function () {
+  'use strict';
+
+  var LIMITS = {
+    room:   { minMm: 1,   maxMm: 100000, example: '4.2' },
+    roll:   { minMm: 500, maxMm: 10000,  example: '3.66' },
+    trim:   { minMm: 0,   maxMm: 1000,   example: '0.10' },
+    repeat: { minMm: 0,   maxMm: 5000,   example: '0.64' }
+  };
+
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function pad(n, len) { var s = String(n); while (s.length < len) { s = '0' + s; } return s; }
+
+  // "4.2", "4,2", "4.2m", "420cm" and "4200mm" all read as 4200 mm. Bare numbers are metres.
+  function parseLength(raw) {
+    var s = String(raw == null ? '' : raw).replace(/\s+/g, '').toLowerCase();
+    if (s === '') { return { empty: true, ok: false }; }
+    var m = /^(-?)(\d*)(?:[.,](\d*))?(mm|cm|m)?$/.exec(s);
+    if (!m || (m[2] === '' && !m[3])) { return { empty: false, ok: false }; }
+    var n = Number((m[2] || '0') + '.' + (m[3] || '0'));
+    if (!isFinite(n)) { return { empty: false, ok: false }; }
+    var unit = m[4] || 'm';
+    var mm = Math.round(unit === 'mm' ? n : unit === 'cm' ? n * 10 : n * 1000);
+    if (m[1] === '-' && mm !== 0) { mm = -mm; }
+    return { empty: false, ok: true, mm: mm };
+  }
+
+  // kind: room | roll | trim | repeat. Always returns a friendly message when not ok.
+  function checkLength(raw, kind, label) {
+    var lim = LIMITS[kind];
+    var p = parseLength(raw);
+    if (p.empty) { return { ok: false, empty: true, message: 'Enter the ' + label + ' in metres, e.g. ' + lim.example + '.' }; }
+    if (!p.ok) { return { ok: false, empty: false, message: cap(label) + ' needs to be a number in metres, e.g. ' + lim.example + '.' }; }
+    if (p.mm < 0) { return { ok: false, empty: false, message: cap(label) + " can't be negative." }; }
+    if (p.mm === 0 && lim.minMm > 0) { return { ok: false, empty: false, message: cap(label) + ' must be more than 0.' }; }
+    if (p.mm < lim.minMm) { return { ok: false, empty: false, message: cap(label) + ' must be at least ' + fmtLen(lim.minMm) + ' m.' }; }
+    if (p.mm > lim.maxMm) {
+      return { ok: false, empty: false, message: kind === 'room' || kind === 'roll'
+        ? cap(label) + ' looks too big. Enter metres (e.g. ' + lim.example + ') or add cm (e.g. ' + Math.round(Number(lim.example) * 100) + 'cm).'
+        : cap(label) + ' must be no more than ' + fmtLen(lim.maxMm) + ' m.' };
+    }
+    return { ok: true, empty: false, mm: p.mm };
+  }
+
+  // Price per m² in pounds. Empty or 0 means "no price".
+  function checkPrice(raw) {
+    var s = String(raw == null ? '' : raw).replace(/\s+/g, '').replace(/^£/, '').replace(/(\/|per)?m(2|²)$/i, '');
+    if (s === '') { return { ok: true, empty: true, pence: 0 }; }
+    if (/^\d+,\d{1,2}$/.test(s)) { s = s.replace(',', '.'); } else { s = s.replace(/,/g, ''); }
+    if (!/^-?(\d+\.?\d*|\.\d+)$/.test(s)) { return { ok: false, empty: false, message: 'Price per m² needs to be a number, e.g. 18.50.' }; }
+    var n = Number(s);
+    if (!isFinite(n)) { return { ok: false, empty: false, message: 'Price per m² needs to be a number, e.g. 18.50.' }; }
+    if (n < 0) { return { ok: false, empty: false, message: "Price per m² can't be negative." }; }
+    if (n > 100000) { return { ok: false, empty: false, message: 'Price per m² looks too high. Enter pounds per m², e.g. 18.50.' }; }
+    var pence = Math.round(n * 100);
+    return { ok: true, empty: pence === 0, pence: pence };
+  }
+
+  // One lay direction. along = the room side the drops run along; across = the side the roll width covers.
+  function layDrops(alongMm, acrossMm, rollMm, trimMm, repeatMm) {
+    var widths = Math.ceil(acrossMm / rollMm);
+    var cutMm = alongMm + trimMm;
+    var repeats = repeatMm > 0 ? Math.ceil(cutMm / repeatMm) : 0;
+    var dropMm = repeatMm > 0 ? repeats * repeatMm : cutMm;
+    var linearMm = widths * dropMm;
+    var spareMm = widths * rollMm - acrossMm;
+    return {
+      alongMm: alongMm, acrossMm: acrossMm, widths: widths, seams: widths - 1,
+      cutMm: cutMm, repeats: repeats, dropMm: dropMm, linearMm: linearMm,
+      boughtMm2: linearMm * rollMm, spareMm: spareMm, tight: spareMm < trimMm
+    };
+  }
+
+  // Both directions; best = least m² bought, then fewer seams, then more spare width.
+  function calcRoom(lengthMm, widthMm, rollMm, trimMm, repeatMm) {
+    var areaMm2 = lengthMm * widthMm;
+    var a = layDrops(lengthMm, widthMm, rollMm, trimMm, repeatMm);
+    var b = layDrops(widthMm, lengthMm, rollMm, trimMm, repeatMm);
+    a.wasteMm2 = a.boughtMm2 - areaMm2;
+    b.wasteMm2 = b.boughtMm2 - areaMm2;
+    var bWins = b.boughtMm2 < a.boughtMm2 ||
+      (b.boughtMm2 === a.boughtMm2 && b.seams < a.seams) ||
+      (b.boughtMm2 === a.boughtMm2 && b.seams === a.seams && b.spareMm > a.spareMm);
+    return {
+      lengthMm: lengthMm, widthMm: widthMm, areaMm2: areaMm2,
+      best: bWins ? b : a, alt: bWins ? a : b,
+      same: a.boughtMm2 === b.boughtMm2 && a.seams === b.seams
+    };
+  }
+
+  function calcJob(rooms, rollMm, trimMm, repeatMm) {
+    var job = { rollMm: rollMm, rooms: [], linearMm: 0, boughtMm2: 0, areaMm2: 0, wasteMm2: 0, seams: 0, tightRooms: 0 };
+    for (var i = 0; i < rooms.length; i++) {
+      var r = calcRoom(rooms[i].lengthMm, rooms[i].widthMm, rollMm, trimMm, repeatMm);
+      job.rooms.push(r);
+      job.linearMm += r.best.linearMm;
+      job.boughtMm2 += r.best.boughtMm2;
+      job.areaMm2 += r.areaMm2;
+      job.wasteMm2 += r.best.wasteMm2;
+      job.seams += r.best.seams;
+      if (r.best.tight) { job.tightRooms += 1; }
+    }
+    return job;
+  }
+
+  function compareRolls(rooms, rollsMm, trimMm, repeatMm) {
+    var jobs = [], best = 0;
+    for (var i = 0; i < rollsMm.length; i++) {
+      jobs.push(calcJob(rooms, rollsMm[i], trimMm, repeatMm));
+      if (i > 0 && (jobs[i].boughtMm2 < jobs[best].boughtMm2 ||
+          (jobs[i].boughtMm2 === jobs[best].boughtMm2 && jobs[i].seams < jobs[best].seams))) { best = i; }
+    }
+    return { jobs: jobs, bestIndex: best };
+  }
+
+  function costPence(boughtMm2, pricePence) { return Math.round(boughtMm2 * pricePence / 1000000); }
+
+  // ---- Formatting (integer maths, so no stray rounding) ----
+  function fmtLen(mm) {
+    mm = Math.round(mm);
+    var neg = mm < 0; if (neg) { mm = -mm; }
+    var frac = mm % 1000, f = pad(frac, 3);
+    return (neg ? '-' : '') + Math.floor(mm / 1000) + '.' + (frac % 10 === 0 ? f.slice(0, 2) : f);
+  }
+  function fmtRoll(mm) { return (mm % 1000 === 0 ? String(mm / 1000) : fmtLen(mm)) + ' m'; }
+  function fmtArea(mm2) {
+    var c = Math.round(mm2 / 10000);
+    return Math.floor(c / 100) + '.' + pad(c % 100, 2);
+  }
+  function fmtPct(partMm2, wholeMm2) {
+    if (!(wholeMm2 > 0)) { return '0.0'; }
+    var t = Math.round(partMm2 * 1000 / wholeMm2);
+    return Math.floor(t / 10) + '.' + (t % 10);
+  }
+  function fmtMoney(pence) {
+    var p = Math.round(pence), pounds = String(Math.floor(p / 100)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return '£' + pounds + '.' + pad(p % 100, 2);
+  }
+
+  // ---- The working, in words ----
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+  function seamsText(n) { return n === 0 ? 'no seams' : plural(n, 'seam', 'seams'); }
+
+  function dropWorking(o, trimMm, repeatMm) {
+    var s = 'Each drop: ' + fmtLen(o.alongMm) + ' m';
+    s += trimMm > 0 ? ' + ' + fmtLen(trimMm) + ' m trim = ' + fmtLen(o.cutMm) + ' m' : ' (no trim allowance)';
+    if (repeatMm > 0) {
+      s += o.dropMm !== o.cutMm
+        ? ', rounded up to ' + fmtLen(o.dropMm) + ' m (' + o.repeats + ' × ' + fmtLen(repeatMm) + ' m pattern repeat)'
+        : ', exactly ' + o.repeats + ' × ' + fmtLen(repeatMm) + ' m pattern repeat';
+    }
+    return s + '.';
+  }
+
+  function optionWorking(o, rollMm) {
+    return plural(o.widths, 'width', 'widths') + ' × ' + fmtLen(o.dropMm) + ' m = ' + fmtLen(o.linearMm) +
+      ' m off a ' + fmtRoll(rollMm) + ' roll = ' + fmtArea(o.boughtMm2) + ' m² bought. Waste ' +
+      fmtArea(o.wasteMm2) + ' m² (' + fmtPct(o.wasteMm2, o.boughtMm2) + '%), ' + seamsText(o.seams) + '.';
+  }
+
+  function tightNote(o, rollMm) {
+    if (!o.tight) { return ''; }
+    var one = o.widths === 1;
+    var cover = plural(o.widths, 'width', 'widths') + ' of a ' + fmtRoll(rollMm) + ' roll';
+    if (o.spareMm === 0) {
+      return 'No spare width: ' + cover + (one ? ' covers' : ' cover') + ' the ' + fmtLen(o.acrossMm) +
+        ' m exactly, leaving nothing to trim at the side walls. Re-measure at the widest point, or compare another roll width.';
+    }
+    return 'Tight: ' + cover + (one ? ' leaves' : ' leave') + ' only ' + fmtLen(o.spareMm) + ' m spare across the ' +
+      fmtLen(o.acrossMm) + ' m to trim at the side walls.';
+  }
+
+  function describeRoom(r, rollMm, trimMm, repeatMm) {
+    var square = r.lengthMm === r.widthMm;
+    var head = square ? 'Drops either way (square room)'
+      : r.same ? 'Drops along the ' + fmtLen(r.best.alongMm) + ' m side (the other way buys the same)'
+      : 'Best: drops along the ' + fmtLen(r.best.alongMm) + ' m side';
+    return {
+      size: fmtLen(r.lengthMm) + ' × ' + fmtLen(r.widthMm) + ' m, ' + fmtArea(r.areaMm2) + ' m² of floor',
+      head: head,
+      drop: dropWorking(r.best, trimMm, repeatMm),
+      working: optionWorking(r.best, rollMm),
+      note: tightNote(r.best, rollMm),
+      alt: (square || r.same) ? '' : 'Other way, drops along the ' + fmtLen(r.alt.alongMm) + ' m side: ' + optionWorking(r.alt, rollMm)
+    };
+  }
+
+  return {
+    LIMITS: LIMITS, parseLength: parseLength, checkLength: checkLength, checkPrice: checkPrice,
+    layDrops: layDrops, calcRoom: calcRoom, calcJob: calcJob, compareRolls: compareRolls, costPence: costPence,
+    fmtLen: fmtLen, fmtRoll: fmtRoll, fmtArea: fmtArea, fmtPct: fmtPct, fmtMoney: fmtMoney,
+    describeRoom: describeRoom, seamsText: seamsText
+  };
+}));
+</script>
+
+<script>
+/* Carpet calculator UI */
+(function () {
+  'use strict';
+  var C = window.CarpetCalc;
+  var form = document.getElementById('carpet-calc');
+  if (!C || !form) { return; }
+  var roomsEl = document.getElementById('cc-rooms');
+  var resultsEl = document.getElementById('cc-results');
+  var addBtn = document.getElementById('cc-add');
+  var customWrap = document.getElementById('cc-roll-custom-wrap');
+  var customInput = document.getElementById('cc-roll-custom');
+  var trimInput = document.getElementById('cc-trim');
+  var repeatInput = document.getElementById('cc-repeat');
+  var priceInput = document.getElementById('cc-price');
+  var MAX_ROOMS = 20;
+  var nextId = 2;
+  var timer = null;
+  var lastHtml = '';
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  // Escape, and keep numbers on the same line as their units ("5.60 m", "22.40 m²")
+  function nb(s) { return esc(s).replace(/(\d) (m²|m|%)(?![a-z])/g, '$1&nbsp;$2'); }
+
+  function makeRow() {
+    var id = nextId++;
+    var row = document.createElement('div');
+    row.className = 'room';
+    row.setAttribute('data-room', String(id));
+    var dim = function (cls, key, label, ph) {
+      return '<div class="field"><label for="cc-' + key + '-' + id + '"><span class="sr-only room-n">Room </span>' + label +
+        '</label><input class="' + cls + '" id="cc-' + key + '-' + id + '" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="' +
+        ph + '" aria-describedby="cc-err-' + id + '"></div>';
+    };
+    row.innerHTML =
+      '<div class="room-top"><label class="sr-only" for="cc-name-' + id + '"><span class="room-n">Room </span>name (optional)</label>' +
+      '<input class="room-name" id="cc-name-' + id + '" type="text" maxlength="40" autocomplete="off">' +
+      '<button type="button" class="room-remove">Remove</button></div>' +
+      '<div class="room-dims">' + dim('room-len', 'len', 'Length (m)', 'e.g. 4.2') + dim('room-wid', 'wid', 'Width (m)', 'e.g. 3.6') + '</div>' +
+      '<p class="field-err" id="cc-err-' + id + '" hidden></p>';
+    return row;
+  }
+
+  function rows() { return Array.prototype.slice.call(roomsEl.querySelectorAll('.room')); }
+
+  function renumber() {
+    var all = rows();
+    all.forEach(function (row, i) {
+      var n = 'Room ' + (i + 1);
+      Array.prototype.forEach.call(row.querySelectorAll('.room-n'), function (el) { el.textContent = n + ' '; });
+      row.querySelector('.room-name').setAttribute('placeholder', n);
+      var rm = row.querySelector('.room-remove');
+      rm.setAttribute('aria-label', 'Remove ' + n);
+      rm.hidden = all.length === 1;
+    });
+    addBtn.disabled = all.length >= MAX_ROOMS;
+  }
+
+  function setError(input, errEl, message) {
+    if (input) { input.setAttribute('aria-invalid', message ? 'true' : 'false'); }
+    errEl.textContent = message || '';
+    errEl.hidden = !message;
+  }
+
+  function readSettings() {
+    var s = { errors: [], priceError: '', rollMm: 4000, trimMm: 0, repeatMm: 0, pricePence: 0 };
+    var checked = form.querySelector('input[name="cc-roll"]:checked');
+    var choice = checked ? checked.value : '4';
+    customWrap.hidden = choice !== 'custom';
+    var rollErr = document.getElementById('cc-roll-err');
+    if (choice === '5') { s.rollMm = 5000; setError(customInput, rollErr, ''); }
+    else if (choice === 'custom') {
+      var r = C.checkLength(customInput.value, 'roll', 'roll width');
+      if (r.ok) { s.rollMm = r.mm; setError(customInput, rollErr, ''); }
+      else { s.errors.push(r.message); setError(customInput, rollErr, r.empty ? '' : r.message); }
+    } else { setError(customInput, rollErr, ''); }
+
+    var t = C.checkLength(trimInput.value, 'trim', 'trim allowance');
+    if (t.ok) { s.trimMm = t.mm; setError(trimInput, document.getElementById('cc-trim-err'), ''); }
+    else {
+      var tm = t.empty ? 'Enter the trim per drop in metres, e.g. 0.10 (or 0 for none).' : t.message;
+      s.errors.push(tm); setError(trimInput, document.getElementById('cc-trim-err'), tm);
+    }
+
+    var repErr = document.getElementById('cc-repeat-err');
+    if (repeatInput.value.trim() === '') { s.repeatMm = 0; setError(repeatInput, repErr, ''); }
+    else {
+      var rp = C.checkLength(repeatInput.value, 'repeat', 'pattern repeat');
+      if (rp.ok) { s.repeatMm = rp.mm; setError(repeatInput, repErr, ''); }
+      else { s.errors.push(rp.message); setError(repeatInput, repErr, rp.message); }
+    }
+
+    var pr = C.checkPrice(priceInput.value);
+    if (pr.ok) { s.pricePence = pr.pence; setError(priceInput, document.getElementById('cc-price-err'), ''); }
+    else { s.priceError = pr.message; setError(priceInput, document.getElementById('cc-price-err'), pr.message); }
+    return s;
+  }
+
+  function readRooms() {
+    var out = { valid: [], problems: [], anyInput: false };
+    rows().forEach(function (row, i) {
+      var label = 'Room ' + (i + 1);
+      var nameEl = row.querySelector('.room-name');
+      var lenEl = row.querySelector('.room-len');
+      var widEl = row.querySelector('.room-wid');
+      var errEl = row.querySelector('.field-err');
+      var name = nameEl.value.trim() || label;
+      var lenEmpty = lenEl.value.trim() === '';
+      var widEmpty = widEl.value.trim() === '';
+      var len = C.checkLength(lenEl.value, 'room', 'length');
+      var wid = C.checkLength(widEl.value, 'room', 'width');
+      var msgs = [];
+      if (!lenEmpty && !len.ok) { msgs.push(len.message); }
+      if (!widEmpty && !wid.ok) { msgs.push(wid.message); }
+      lenEl.setAttribute('aria-invalid', !lenEmpty && !len.ok ? 'true' : 'false');
+      widEl.setAttribute('aria-invalid', !widEmpty && !wid.ok ? 'true' : 'false');
+      errEl.textContent = msgs.join(' ');
+      errEl.hidden = msgs.length === 0;
+      if (lenEmpty && widEmpty) { return; }
+      out.anyInput = true;
+      if (len.ok && wid.ok) { out.valid.push({ name: name, lengthMm: len.mm, widthMm: wid.mm }); return; }
+      out.problems.push(msgs.length ? name + ': ' + msgs.join(' ') : name + ' needs a ' + (lenEmpty ? 'length' : 'width') + '.');
+    });
+    return out;
+  }
+
+  function tile(label, value, sub, main) {
+    return '<div class="tile' + (main ? ' tile-main' : '') + '"><span class="t-label">' + esc(label) + '</span><span class="t-val">' +
+      nb(value) + '</span><span class="t-sub">' + nb(sub) + '</span></div>';
+  }
+
+  function resultsHtml(rooms, s) {
+    var job = C.calcJob(rooms.valid, s.rollMm, s.trimMm, s.repeatMm);
+    var roll = C.fmtRoll(s.rollMm);
+    var h = '<h2 class="calc-h">What to order</h2>';
+    if (rooms.problems.length) { h += '<p class="res-alert"><strong>Not counted yet.</strong> ' + esc(rooms.problems.join(' ')) + '</p>'; }
+    h += '<div class="tiles">';
+    h += tile('Order', C.fmtLen(job.linearMm) + ' m', 'off a ' + roll + ' roll (linear metres)', true);
+    h += tile('Carpet bought', C.fmtArea(job.boughtMm2) + ' m²', 'for ' + C.fmtArea(job.areaMm2) + ' m² of floor');
+    h += tile('Waste', C.fmtArea(job.wasteMm2) + ' m²', C.fmtPct(job.wasteMm2, job.boughtMm2) + '% of the carpet bought');
+    h += tile('Seams', String(job.seams), job.rooms.length === 1 ? 'in this room' : 'across ' + job.rooms.length + ' rooms');
+    if (s.pricePence > 0) {
+      h += tile('Carpet cost', C.fmtMoney(C.costPence(job.boughtMm2, s.pricePence)), 'at ' + C.fmtMoney(s.pricePence) + ' per m²');
+    }
+    h += '</div>';
+    if (s.priceError) { h += '<p class="res-alert">' + esc(s.priceError) + ' Cost not shown.</p>'; }
+
+    h += '<ol class="res-rooms">';
+    job.rooms.forEach(function (r, i) {
+      var d = C.describeRoom(r, s.rollMm, s.trimMm, s.repeatMm);
+      h += '<li class="res-room"><h3>' + esc(rooms.valid[i].name) + ' <span>' + nb(d.size) + '</span></h3>' +
+        '<p><strong>' + nb(d.head) + '.</strong> ' + nb(d.drop) + ' ' + nb(d.working) + '</p>' +
+        (d.note ? '<p class="warn">' + nb(d.note) + '</p>' : '') +
+        (d.alt ? '<p class="alt">' + nb(d.alt) + '</p>' : '') + '</li>';
+    });
+    h += '</ol>';
+
+    var widths = [4000, 5000];
+    if (s.rollMm !== 4000 && s.rollMm !== 5000) { widths.push(s.rollMm); }
+    var cmp = C.compareRolls(rooms.valid, widths, s.trimMm, s.repeatMm);
+    var priced = s.pricePence > 0;
+    h += '<div class="res-compare"><table><caption>Compare roll widths</caption><thead><tr><th scope="col">Roll</th><th scope="col">Order</th>' +
+      '<th scope="col">Bought</th><th scope="col">Waste</th><th scope="col">Seams</th>' + (priced ? '<th scope="col">Cost</th>' : '') + '</tr></thead><tbody>';
+    cmp.jobs.forEach(function (j, i) {
+      var sel = j.rollMm === s.rollMm;
+      h += '<tr' + (sel ? ' class="sel"' : '') + '><th scope="row">' + nb(C.fmtRoll(j.rollMm)) +
+        (sel ? '<span class="sub">selected</span>' : '') +
+        (i === cmp.bestIndex ? '<span class="pill pill-good">least carpet</span>' : '') + '</th>' +
+        '<td>' + nb(C.fmtLen(j.linearMm) + ' m') + '</td><td>' + nb(C.fmtArea(j.boughtMm2) + ' m²') + '</td>' +
+        '<td>' + nb(C.fmtArea(j.wasteMm2) + ' m²') + '<span class="sub">' + C.fmtPct(j.wasteMm2, j.boughtMm2) + '%</span></td>' +
+        '<td>' + j.seams + (j.tightRooms ? '<span class="pill pill-warn">tight</span>' : '') + '</td>' +
+        (priced ? '<td>' + esc(C.fmtMoney(C.costPence(j.boughtMm2, s.pricePence))) + '</td>' : '') + '</tr>';
+    });
+    h += '</tbody></table></div>';
+    var bestJob = cmp.jobs[cmp.bestIndex];
+    if (bestJob.rollMm !== s.rollMm && bestJob.boughtMm2 < job.boughtMm2) {
+      h += '<p class="res-note">' + nb('A ' + C.fmtRoll(bestJob.rollMm) + ' roll buys ' + C.fmtArea(job.boughtMm2 - bestJob.boughtMm2) +
+        ' m² less carpet for these rooms, if the carpet you want is made in that width.') + '</p>';
+    }
+    if (cmp.jobs.some(function (j) { return j.tightRooms > 0; })) {
+      h += '<p class="res-note">"Tight" means at least one room has little or nothing spare across the roll to trim at the side walls.</p>';
+    }
+    if (s.repeatMm > 0) {
+      h += '<p class="res-note">Whole repeats per drop are the minimum for a patterned carpet. Where the pattern has to sit, or matching over long runs, can need more: check the fitting instructions.</p>';
+    }
+    h += '<p class="res-note">Rooms are treated as rectangles, one pile direction each, with no offcuts reused between rooms. ' +
+      'For whole jobs, <a href="/cutting-plan-software/">a cutting plan</a> nests every drop and often saves carpet.</p>';
+    return h;
+  }
+
+  function stateHtml(kicker, lines, isError) {
+    var h = '<h2 class="calc-h">What to order</h2><div class="res-empty"><p class="res-kicker">' + esc(kicker) + '</p>';
+    if (isError) { h += '<ul>' + lines.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>'; }
+    else { h += lines.map(function (l) { return '<p>' + esc(l) + '</p>'; }).join(''); }
+    return h + '</div>';
+  }
+  // The empty state is the static markup already in the page, so nothing jumps on load
+  var EMPTY_HTML = resultsEl.innerHTML;
+  lastHtml = EMPTY_HTML;
+
+  function render() {
+    if (timer) { clearTimeout(timer); timer = null; }
+    var s = readSettings();
+    var rooms = readRooms();
+    var html;
+    if (!rooms.anyInput) {
+      html = EMPTY_HTML || stateHtml('Ready when you are', ['Enter a length and width for a room to see how much carpet to order.'], false);
+    } else if (s.errors.length) {
+      html = stateHtml('Check the settings', s.errors, true);
+    } else if (!rooms.valid.length) {
+      html = stateHtml('Not ready yet', rooms.problems, true);
+    } else {
+      html = resultsHtml(rooms, s);
+    }
+    if (html !== lastHtml) { resultsEl.innerHTML = html; lastHtml = html; }
+  }
+
+  function schedule() {
+    if (timer) { clearTimeout(timer); }
+    timer = setTimeout(render, 350);
+  }
+
+  function setRooms(list) {
+    roomsEl.innerHTML = '';
+    (list.length ? list : [['', '', '']]).slice(0, MAX_ROOMS).forEach(function (item) {
+      var row = makeRow();
+      row.querySelector('.room-name').value = item[0] || '';
+      row.querySelector('.room-len').value = item[1] || '';
+      row.querySelector('.room-wid').value = item[2] || '';
+      roomsEl.appendChild(row);
+    });
+    renumber();
+  }
+
+  function setRoll(value) {
+    var v = String(value || '').trim();
+    var id = v === '4' ? 'cc-roll-4' : v === '5' ? 'cc-roll-5' : 'cc-roll-other';
+    document.getElementById(id).checked = true;
+    if (id === 'cc-roll-other') { customInput.value = v; }
+  }
+
+  // Optional prefill, e.g. ?rooms=Lounge:5.5x3|Bedroom:3.6x4.2&roll=4&trim=0.1&repeat=0&price=20
+  function prefillFromQuery() {
+    var q;
+    try { q = new URLSearchParams(location.search); } catch (e) { return; }
+    var roomsParam = q.get('rooms');
+    if (roomsParam) {
+      var list = [];
+      roomsParam.split(/[|;]/).forEach(function (part) {
+        var m = /^(?:([^:]{1,40}):)?\s*([^x×*]+)[x×*](.+)$/i.exec(part.trim());
+        if (m) { list.push([m[1] ? m[1].trim() : '', m[2].trim(), m[3].trim()]); }
+      });
+      if (list.length) { setRooms(list); }
+    }
+    if (q.get('roll')) { setRoll(q.get('roll')); }
+    if (q.get('trim') !== null) { trimInput.value = q.get('trim'); }
+    if (q.get('repeat') !== null) { repeatInput.value = q.get('repeat'); }
+    if (q.get('price') !== null) { priceInput.value = q.get('price'); }
+  }
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); render(); });
+  form.addEventListener('input', schedule);
+  form.addEventListener('change', function (e) {
+    if (e.target && e.target.name === 'cc-roll') {
+      render();
+      if (e.target.value === 'custom' && customInput.value.trim() === '') { customInput.focus(); }
+    }
+  });
+  roomsEl.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.room-remove') : null;
+    if (!btn) { return; }
+    var all = rows();
+    var row = btn.closest('.room');
+    var idx = all.indexOf(row);
+    if (all.length <= 1 || idx < 0) { return; }
+    roomsEl.removeChild(row);
+    renumber();
+    var left = rows();
+    left[Math.max(0, idx - 1)].querySelector('.room-name').focus();
+    render();
+  });
+  addBtn.addEventListener('click', function () {
+    if (rows().length >= MAX_ROOMS) { return; }
+    var row = makeRow();
+    roomsEl.appendChild(row);
+    renumber();
+    row.querySelector('.room-name').focus();
+    render();
+  });
+  document.getElementById('cc-example').addEventListener('click', function () {
+    setRooms([['Lounge', '5.5', '3.0'], ['Bedroom', '3.6', '4.2']]);
+    setRoll('4');
+    trimInput.value = '0.10';
+    repeatInput.value = '0';
+    render();
+    rows()[0].querySelector('.room-len').focus();
+  });
+  document.getElementById('cc-clear').addEventListener('click', function () {
+    setRooms([]);
+    setRoll('4');
+    customInput.value = '';
+    trimInput.value = '0.10';
+    repeatInput.value = '0';
+    priceInput.value = '';
+    render();
+    rows()[0].querySelector('.room-name').focus();
+  });
+
+  // Keep aria-expanded in step with the FAQ accordion
+  Array.prototype.forEach.call(document.querySelectorAll('.faq-question'), function (btn) {
+    btn.addEventListener('click', function () {
+      Array.prototype.forEach.call(document.querySelectorAll('.faq-item'), function (item) {
+        var b = item.querySelector('.faq-question');
+        if (b) { b.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false'); }
+      });
+    });
+  });
+
+  prefillFromQuery();
+  renumber();
+  render();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  /* Meta Pixel: queue events now, load the library after the page has rendered */
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];f.addEventListener('load',function(){t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)})}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '24704985755777244');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Primary SEO ===== -->
+  <title>Smoothing Compound Calculator: Latex Bags per m² | BillyBot</title>
+  <meta name="description" content="Free smoothing compound calculator: enter area, average depth and bag size to see how many bags of latex you need, using UK data sheet rates. Try it." />
+  <link rel="canonical" href="https://billybot.ai/tools/smoothing-compound-calculator/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0B0F1A" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BillyBot" />
+  <meta property="og:title" content="Smoothing Compound Calculator: How Many Bags of Latex?" />
+  <meta property="og:description" content="Enter the floor area, average depth and bag size to get the kilos and whole bags of smoothing compound to order, with consumption rates checked against UK data sheets." />
+  <meta property="og:url" content="https://billybot.ai/tools/smoothing-compound-calculator/" />
+  <meta property="og:image" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:secure_url" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BillyBot — the AI operator for flooring businesses" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Smoothing Compound Calculator: How Many Bags of Latex?" />
+  <meta name="twitter:description" content="Enter the floor area, average depth and bag size to get the kilos and whole bags of smoothing compound to order, with consumption rates checked against UK data sheets." />
+  <meta name="twitter:image" content="https://billybot.ai/images/og-image.png" />
+  <meta name="twitter:image:alt" content="BillyBot — the AI operator for flooring businesses" />
+
+  <!-- Self-hosted variable fonts (Inter + Sora, SIL OFL): no render-blocking third-party CSS -->
+  <link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Sora'; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/sora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+    /* Live demo embed (real app UI) */
+    .demo-embed { display: flex; justify-content: center; margin-top: 40px; }
+    .phone-stage { width: 328px; }
+    .phone-stage iframe { display: block; width: 100%; aspect-ratio: 410 / 806; border: 0; background: transparent; }
+    .web-stage { width: 760px; max-width: 100%; }
+    .web-stage iframe { display: block; width: 100%; aspect-ratio: 900 / 612; border: 0; background: transparent; }
+    .demo-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 12px; }
+    @media (max-width: 768px) { .phone-stage { width: 290px; } }
+  </style>
+
+  <style>
+    :root {
+      --brand1: #2563EB;
+      --brand2: #3B82F6;
+      --cyan: #38BDF8;
+      --accent1: #F97316;
+      --accent2: #FB923C;
+      --bg: #0B0F1A;
+      --bg2: #0F1526;
+      --text: #E6ECF9;
+      --muted: #98A3B8;
+      --line: rgba(255,255,255,0.08);
+      --radius: 20px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 40%, #0C1221 80%, #0B0F1A 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .grad {
+      background: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff; font-weight: 800; font-family: Sora, Inter, sans-serif;
+      padding: 15px 30px; border-radius: 999px; border: none; cursor: pointer;
+      transition: transform 0.18s ease; font-size: 15px; letter-spacing: -0.01em;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.glow {
+      box-shadow: 0 0 20px rgba(249,115,22,0.45), 0 0 40px rgba(251,146,60,0.2);
+      animation: pulseOrange 2.5s ease-in-out infinite;
+    }
+    @keyframes pulseOrange {
+      0%, 100% { box-shadow: 0 0 18px rgba(249,115,22,0.45), 0 0 36px rgba(251,146,60,0.2); }
+      50%       { box-shadow: 0 0 32px rgba(249,115,22,0.65), 0 0 64px rgba(251,146,60,0.35); }
+    }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(180deg, rgba(13,17,28,0.92), rgba(13,17,28,0.6) 70%, rgba(13,17,28,0));
+      backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { height: 76px; display: flex; align-items: center; gap: 28px; }
+    .logo { display: flex; align-items: center; gap: 12px; font: 800 20px Sora, Inter; }
+    .logo svg { width: 34px; height: 34px; }
+    .nav-links { display: flex; gap: 26px; margin-left: 8px; font-weight: 600; font-size: 15px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 18px; }
+    .login-link { font-weight: 600; font-size: 15px; color: var(--muted); }
+    .login-link:hover { color: var(--text); }
+
+    /* Breadcrumb */
+    .crumb { font-size: 13px; color: var(--muted); padding: 22px 0 0; }
+    .crumb a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 56px 0 64px; text-align: center; }
+    .eyebrow {
+      display: inline-block; font-family: Sora, Inter; font-weight: 700; font-size: 13px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan);
+      border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; margin-bottom: 22px;
+      background: rgba(56,189,248,0.06);
+    }
+    h1 {
+      font-family: Sora, Inter; font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
+      font-size: clamp(34px, 6vw, 60px); max-width: 920px; margin: 0 auto;
+    }
+    .lede { color: #AFC3FF; font-size: clamp(17px, 2.3vw, 21px); max-width: 760px; margin: 22px auto 0; }
+    .cta-row { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .disclaimer { color: var(--muted); font-size: 14px; margin-top: 16px; }
+
+    /* Sections */
+    section.block { padding: 56px 0; }
+    .section-title { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -0.5px; text-align: center; }
+    .section-sub { color: var(--muted); text-align: center; max-width: 680px; margin: 14px auto 0; font-size: 17px; }
+
+    /* Problem/solution two-up */
+    .twoup { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+    .twoup .glass { padding: 28px; }
+    .twoup h3 { font-family: Sora, Inter; font-weight: 700; font-size: 21px; margin-bottom: 10px; }
+    .twoup p { color: #C3D0EA; }
+    .pk { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+    .pk.bad { color: #fb7185; } .pk.good { color: #4ade80; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; counter-reset: step; }
+    .step { padding: 26px 22px; }
+    .step .n {
+      width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-family: Sora; font-weight: 800; color: #fff; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--brand1), var(--cyan));
+    }
+    .step h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 15px; }
+
+    /* Feature grid */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+    .feature { padding: 26px 24px; }
+    .feature .ic { font-size: 26px; margin-bottom: 14px; }
+    .feature h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .feature p { color: var(--muted); font-size: 15px; }
+
+    /* Comparison table */
+    .cmp { margin-top: 40px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; }
+    thead th { font-family: Sora, Inter; font-weight: 700; font-size: 14px; color: var(--muted); }
+    thead th.win { color: var(--cyan); }
+    td.lbl { color: #C3D0EA; font-weight: 600; }
+    td.old { color: var(--muted); }
+    td.win { color: var(--text); font-weight: 600; }
+    tbody tr:last-child td { border-bottom: 0; }
+
+    /* Pricing strip */
+    .pricestrip { margin-top: 40px; padding: 34px; text-align: center; }
+    .pricestrip .big { font-family: Sora, Inter; font-weight: 800; font-size: 40px; }
+    .pricestrip .big span { font-size: 18px; color: var(--muted); font-weight: 600; }
+    .pricestrip p { color: var(--muted); margin-top: 6px; }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 12px; max-width: 820px; margin: 40px auto 0; }
+    .faq-item { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .faq-question {
+      width: 100%; text-align: left; background: none; border: 0; color: var(--text); cursor: pointer;
+      font-family: Sora, Inter; font-weight: 600; font-size: 16px; padding: 18px 24px; position: relative;
+    }
+    .faq-question::after { content: "+"; position: absolute; right: 24px; top: 16px; font-size: 22px; color: var(--cyan); transition: transform 0.2s; }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; padding: 0 24px; }
+    .faq-item.active .faq-answer { max-height: 520px; padding: 0 24px 20px; }
+    .faq-answer p { color: #C3D0EA; font-size: 15px; }
+
+    /* CTA band */
+    .ctaband { text-align: center; padding: 56px 28px; margin: 56px 0; }
+    .ctaband h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 4vw, 40px); letter-spacing: -0.5px; }
+    .ctaband p { color: #AFC3FF; margin: 12px auto 26px; max-width: 560px; }
+
+    /* Prose */
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose p { color: #C3D0EA; margin-top: 16px; font-size: 17px; }
+    .prose a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Footer */
+    footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 15px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+    .footer-links a { color: #475569; font-size: 14px; }
+    .footer-links a:hover { color: var(--text); }
+
+
+    /* ===== Calculator tool (page-specific) ===== */
+    [hidden] { display: none !important; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .hero.hero-tool { padding: 34px 0 30px; }
+    .hero-tool h1 { font-size: clamp(32px, 5.2vw, 52px); }
+    .hero-tool .lede { margin-top: 16px; }
+    .hero-tool .eyebrow { margin-bottom: 18px; }
+    .tool { padding: 0 0 24px; }
+    .calc { padding: 26px; }
+    .calc-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 28px; align-items: start; }
+    .calc-h { font-family: Sora, Inter; font-weight: 700; font-size: 20px; letter-spacing: -0.3px; margin-bottom: 14px; }
+    .field { margin-bottom: 16px; min-width: 0; }
+    .field label, .fs legend { display: block; font-size: 13px; font-weight: 600; color: #C3D0EA; margin-bottom: 6px; }
+    .fs { border: 0; margin: 0 0 16px; min-width: 0; }
+    .calc input[type="text"], .calc select {
+      width: 100%; background: rgba(11,15,26,0.65); border: 1px solid rgba(255,255,255,0.16); border-radius: 10px;
+      color: var(--text); font: 500 16px/1.3 Inter, system-ui, sans-serif; padding: 11px 12px;
+    }
+    .calc select { color-scheme: dark; cursor: pointer; }
+    .calc input[type="text"]::placeholder { color: #6B7A93; }
+    .calc input[type="text"]:focus, .calc select:focus { border-color: var(--cyan); outline: none; box-shadow: 0 0 0 3px rgba(56,189,248,0.25); }
+    .calc input[aria-invalid="true"] { border-color: #fb7185; }
+    .calc button:focus-visible, .seg input:focus-visible + label, .faq-question:focus-visible, .prose a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+    .field-err { color: #fda4af; font-size: 13px; margin-top: 8px; line-height: 1.45; }
+    .hint { color: var(--muted); font-size: 12.5px; margin-top: 6px; line-height: 1.45; }
+    .hint a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+    .tile-wide { grid-column: 1 / -1; }
+    .pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+    .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .btn-quiet {
+      background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
+      padding: 8px 14px; font: 600 13px Inter, sans-serif; cursor: pointer;
+    }
+    .btn-quiet:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+    .btn-add { color: var(--cyan); border-color: rgba(56,189,248,0.4); font-size: 14px; padding: 10px 16px; }
+    .btn-add:disabled { opacity: 0.5; cursor: not-allowed; }
+    .linkbtn { background: none; border: 0; padding: 0; color: var(--cyan); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+    .helper { border: 1px dashed rgba(255,255,255,0.14); border-radius: 12px; padding: 12px; margin-top: 10px; }
+    .helper .field { margin-bottom: 10px; }
+    .helper-out { color: #C3D0EA; font-size: 13.5px; margin: 8px 0 0; }
+    .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+    .seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .seg label {
+      display: inline-block; padding: 9px 18px; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px;
+      cursor: pointer; font: 700 15px Sora, Inter, sans-serif; color: var(--text); margin: 0;
+    }
+    .seg input:checked + label { background: linear-gradient(135deg, var(--brand1), var(--cyan)); border-color: transparent; color: #fff; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { background: rgba(255,255,255,0.03); color: #C3D0EA; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px; padding: 7px 12px; font: 600 13px Inter, sans-serif; cursor: pointer; text-align: left; }
+    .chip:hover, .chip[aria-pressed="true"] { border-color: var(--cyan); color: var(--text); background: rgba(56,189,248,0.1); }
+    .custom-in { margin-top: 10px; max-width: 220px; }
+    .settings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
+    .rooms { display: grid; gap: 12px; }
+    .room { border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: rgba(255,255,255,0.02); }
+    .room-top { display: flex; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .room-title { font: 700 15px Sora, Inter, sans-serif; }
+    .room .field { margin-bottom: 0; }
+    .room-or { color: var(--muted); font-size: 12.5px; margin: 10px 0 6px; }
+    .calc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 20px; }
+    .calc-results { border-left: 1px solid var(--line); padding-left: 28px; min-height: 320px; }
+    .res-kicker { font: 700 12px Sora, Inter, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+    .res-empty p { color: #C3D0EA; font-size: 15px; }
+    .res-empty ul { margin: 10px 0 0 1.1em; color: #fda4af; font-size: 15px; }
+    .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .tile { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; background: rgba(255,255,255,0.025); min-width: 0; }
+    .tile-main { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(56,189,248,0.08)); border-color: rgba(56,189,248,0.3); }
+    .t-label { display: block; font-size: 12px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+    .t-val { display: block; font: 800 24px/1.2 Sora, Inter, sans-serif; letter-spacing: -0.5px; margin-top: 2px; overflow-wrap: anywhere; }
+    .tile-main .t-val { font-size: 34px; }
+    .t-sub { display: block; font-size: 13px; color: #AFC3FF; margin-top: 2px; }
+    .res-alert { margin-top: 12px; padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(251,146,60,0.35); background: rgba(249,115,22,0.08); color: #fed7aa; font-size: 14px; }
+    .working { margin-top: 14px; border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; background: rgba(255,255,255,0.015); }
+    .working h3 { font: 700 14px Sora, Inter, sans-serif; margin-bottom: 6px; }
+    .working ol { margin: 0 0 0 1.2em; color: #C3D0EA; font-size: 14px; }
+    .working li { margin-top: 4px; overflow-wrap: anywhere; }
+    .res-compare { margin-top: 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; }
+    .res-compare table { min-width: 300px; }
+    .res-compare caption { text-align: left; font: 700 14px Sora, Inter, sans-serif; color: var(--text); padding: 12px 12px 4px; }
+    .res-compare th, .res-compare td { padding: 8px 12px; font-size: 14px; white-space: nowrap; }
+    .res-compare tbody th { font-weight: 700; color: var(--text); }
+    .res-compare tr.sel th, .res-compare tr.sel td { background: rgba(56,189,248,0.08); }
+    .res-note { color: var(--muted); font-size: 13.5px; margin-top: 12px; line-height: 1.55; }
+    .res-note a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Guide content under the tool */
+    .guide h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(24px, 3.2vw, 32px); letter-spacing: -0.5px; line-height: 1.2; margin-top: 52px; }
+    .guide h2:first-child { margin-top: 0; }
+    .guide [id] { scroll-margin-top: 96px; }
+    .guide h3 { font-family: Sora, Inter; font-weight: 700; font-size: 19px; margin-top: 26px; }
+    .guide ul, .guide ol { margin: 14px 0 0 1.2em; color: #C3D0EA; }
+    .guide li { margin-top: 8px; font-size: 17px; }
+    .guide strong { color: var(--text); }
+    .formula { margin-top: 16px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.03); font: 600 15px/1.6 Inter, sans-serif; color: var(--text); overflow-wrap: anywhere; }
+    .table-scroll { margin-top: 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.02); }
+    .table-scroll table { min-width: 680px; }
+    .table-scroll th, .table-scroll td { padding: 11px 12px; font-size: 14px; vertical-align: top; }
+    .table-scroll tbody td { color: #C3D0EA; }
+    .table-scroll tbody td:first-child { color: var(--text); font-weight: 600; }
+    .table-scroll td a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+    .table-note { color: var(--muted); font-size: 14px; margin-top: 10px; }
+    .ctaband .disclaimer { color: var(--muted); margin: 16px auto 0; }
+    .faq-answer a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    @media (max-width: 900px) {
+      .calc-grid { grid-template-columns: 1fr; }
+      .calc-results { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 22px; min-height: 0; }
+    }
+    @media (max-width: 560px) {
+      .calc { padding: 16px; }
+      .room { padding: 12px; }
+      .settings { grid-template-columns: 1fr; }
+      .trio { grid-template-columns: 1fr 1fr; }
+      .tile-main .t-val { font-size: 30px; }
+      .t-val { font-size: 21px; }
+      .hero.hero-tool { padding: 26px 0 24px; }
+      .ctaband { padding: 40px 18px; }
+    }
+    @media (max-width: 1024px) {
+      .features { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .login-link { display: none; }
+      .twoup, .features, .steps { grid-template-columns: 1fr; }
+      .cmp { overflow-x: auto; }
+    }
+  </style>
+
+  <!-- ===== Structured data (rich results + AI understanding) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://billybot.ai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://billybot.ai/resources/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Smoothing Compound Calculator",
+            "item": "https://billybot.ai/tools/smoothing-compound-calculator/"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://billybot.ai/tools/smoothing-compound-calculator/#webpage",
+        "url": "https://billybot.ai/tools/smoothing-compound-calculator/",
+        "name": "Smoothing Compound Calculator: Latex Bags per m² | BillyBot",
+        "description": "Free smoothing compound calculator: enter area, average depth and bag size to see how many bags of latex you need, using UK data sheet rates. Try it.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://billybot.ai/#website"
+        },
+        "about": {
+          "@id": "https://billybot.ai/#software"
+        },
+        "primaryImageOfPage": "https://billybot.ai/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much smoothing compound do I need per m²?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Multiply the depth in mm by the product's consumption rate. The UK data sheets we checked give 1.5 to 1.66 kg per m² per mm, so a 3 mm layer takes roughly 4.5 to 5 kg per m². Use the figure for your product."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many m² does a 25 kg bag of latex cover?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the depth. At 1.66 kg/m² per mm, a 25 kg bag covers about 5 m² at 3 mm but only about 2.5 m² at 6 mm. Divide the bag weight by the depth times the consumption rate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is latex the same as smoothing compound?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually, yes: in flooring, latex often just means a smoothing or levelling compound. Some products are two-part, with a bottle of liquid; many mix with water. The calculation is the same either way."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I work out the average depth of a floor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Find the high spots with a laser level or straightedge, take readings in a grid across the floor, add the product's minimum thickness to each, then average them. Work out much deeper areas separately."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I add extra for waste?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's your call. The calculator starts at 0% and always rounds up to whole bags. You might add 5–10% for bucket residue, spills or a floor that turns out worse than it measured."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long before I can lay flooring on smoothing compound?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the product, thickness, subfloor, temperature and humidity, and thicker layers take longer. Follow the drying times on your product's data sheet and the floor covering manufacturer's instructions."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container nav">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+        <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
+        <g fill="url(#tbBlue)">
+          <rect x="45" y="34" width="6" height="14" rx="3"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
+        </g>
+        <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+        <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
+        <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
+        <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
+      </svg>
+      BillyBot™
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#features">Features</a>
+      <a href="/#how">How it works</a>
+      <a href="/#watch">Watch</a>
+      <a href="/#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="login-link" href="https://app.billybot.ai/auth/login" rel="noopener" data-app-login>Log in</a>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start free trial</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="container">
+  <nav class="crumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/resources/">Resources</a> &rsaquo; <span>Smoothing Compound Calculator</span>
+  </nav>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-tool">
+  <div class="container">
+    <span class="eyebrow">Free flooring tool</span>
+    <h1>Smoothing compound calculator: <span class="grad">how many bags?</span></h1>
+    <p class="lede">Enter the floor area, the average depth and your bag size. You get the kilos and whole bags to order, with the working shown, based on the consumption rate from your product's data sheet.</p>
+  </div>
+</section>
+
+<!-- ===== TOOL ===== -->
+<section class="tool" aria-labelledby="sc-h">
+  <div class="container">
+    <div class="calc glass">
+      <div class="calc-grid">
+        <form id="sc-form" novalidate>
+          <h2 class="calc-h" id="sc-h">Your floor</h2>
+
+          <div class="field">
+            <label for="sc-area">Floor area (m²)</label>
+            <input id="sc-area" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 18.5" aria-describedby="sc-area-hint sc-area-err">
+            <p class="hint" id="sc-area-hint">No area yet? <button type="button" class="linkbtn" id="sc-lw-toggle" aria-expanded="false" aria-controls="sc-lw">Work it out from length × width</button></p>
+            <div class="helper" id="sc-lw" hidden>
+              <div class="pair">
+                <div class="field"><label for="sc-len">Length (m)</label><input id="sc-len" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 5.2"></div>
+                <div class="field"><label for="sc-wid">Width (m)</label><input id="sc-wid" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 3.6"></div>
+              </div>
+              <button type="button" class="btn-quiet btn-add" id="sc-lw-use">Use this area</button>
+              <p class="helper-out" id="sc-lw-out" aria-live="polite"></p>
+            </div>
+            <p class="field-err" id="sc-area-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="sc-depth">Average depth (mm)</label>
+            <input id="sc-depth" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 3" aria-describedby="sc-depth-hint sc-depth-err">
+            <p class="hint" id="sc-depth-hint">The average of your readings across the whole floor, not the deepest dip. <a href="#measure-depth">How to measure it</a>.</p>
+            <p class="field-err" id="sc-depth-err" hidden></p>
+          </div>
+
+          <fieldset class="fs">
+            <legend>Bag size</legend>
+            <div class="seg">
+              <input type="radio" name="sc-bag" id="sc-bag-20" value="20"><label for="sc-bag-20">20 kg</label>
+              <input type="radio" name="sc-bag" id="sc-bag-25" value="25" checked><label for="sc-bag-25">25 kg</label>
+              <input type="radio" name="sc-bag" id="sc-bag-other" value="other"><label for="sc-bag-other">Other</label>
+            </div>
+            <div class="field custom-in" id="sc-bag-custom-wrap" hidden>
+              <label for="sc-bag-custom">Bag size (kg)</label>
+              <input id="sc-bag-custom" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 22" aria-describedby="sc-bag-err">
+            </div>
+            <p class="field-err" id="sc-bag-err" hidden></p>
+          </fieldset>
+
+          <div class="field">
+            <label for="sc-rate">Consumption rate (kg per m² per mm)</label>
+            <input id="sc-rate" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1.6" aria-describedby="sc-rate-hint sc-rate-err">
+            <p class="hint" id="sc-rate-hint">1.6 is a typical starting figure: the middle of the data sheets we checked (1.5 to 1.66). Replace it with the figure on your product's data sheet.</p>
+            <p class="field-err" id="sc-rate-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="sc-product">Or fill it in from a data sheet we checked</label>
+            <select id="sc-product" aria-describedby="sc-product-hint">
+              <option value="">Choose a product (optional)</option>
+              <option value="1.66|25">F. Ball STOPGAP 300: 1.66 kg, 25 kg bag</option>
+              <option value="1.62|20">ARDEX K 55 FAST: 1.62 kg, 20 kg bag</option>
+              <option value="1.54|20">F. Ball STOPGAP 1200 (two-part): 1.54 kg, 20 kg powder</option>
+              <option value="1.5|25">UZIN NC 170 LevelStar: 1.5 kg, 25 kg bag</option>
+            </select>
+            <p class="hint" id="sc-product-hint">Figures as printed on each manufacturer's data sheet, checked 13 September 2026. Sheets are updated, so confirm against the current one.</p>
+          </div>
+
+          <div class="settings">
+            <div class="field">
+              <label for="sc-waste">Extra allowance (%)</label>
+              <input id="sc-waste" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="0" aria-describedby="sc-waste-hint sc-waste-err">
+              <p class="hint" id="sc-waste-hint">Optional. You might add 5–10% for bucket residue, spills or a floor that turns out worse than it measured. Your call.</p>
+              <p class="field-err" id="sc-waste-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="sc-price">Price per bag (£)</label>
+              <input id="sc-price" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="Optional" aria-describedby="sc-price-err">
+              <p class="field-err" id="sc-price-err" hidden></p>
+            </div>
+          </div>
+        </form>
+
+        <div class="calc-results">
+          <p class="res-kicker">Result</p>
+          <div id="sc-live" aria-live="polite">
+            <div class="res-empty"><p>Enter the floor area and average depth to see how many bags you need.</p></div>
+          </div>
+          <div id="sc-detail" hidden></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUIDE ===== -->
+<section class="block">
+  <div class="container prose guide">
+    <h2 id="how-it-works">How the calculator works</h2>
+    <p>Smoothing compound is sold by weight but laid by depth, so data sheets give a consumption rate: kilos per square metre for each millimetre of thickness.</p>
+    <p class="formula">kg needed = area (m²) × average depth (mm) × consumption rate (kg/m² per mm) × (1 + extra %)<br>bags = kg needed ÷ bag size, rounded up to a whole bag</p>
+
+    <h3>Worked example</h3>
+    <p>A 20 m² kitchen needs an average of 3 mm of F. Ball STOPGAP 300, which its data sheet puts at 1.66 kg/m² per mm, in 25 kg bags.</p>
+    <ol>
+      <li>20 × 3 × 1.66 = <strong>99.6 kg</strong></li>
+      <li>99.6 ÷ 25 = 3.98, so <strong>4 bags</strong></li>
+      <li>4 bags is 100 kg: just 0.4 kg spare, so if your readings might be optimistic, add an allowance.</li>
+    </ol>
+    <p>That agrees with the sheet's own figure of approximately 5.0 m² per bag at 3 mm. Depth moves the number fast: the same floor takes 66.4 kg (3 bags) at 2 mm and 332 kg (14 bags) at 10 mm.</p>
+
+    <h2 id="consumption-rates">Published consumption rates</h2>
+    <p>From the manufacturers' own data sheets for cement-based smoothing compounds sold in the UK, checked 13 September 2026. Where a sheet gives coverage per bag, we've shown the sum.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Product</th><th scope="col">Data sheet says</th><th scope="col">kg/m² per mm</th><th scope="col">Pack</th><th scope="col">Thickness</th><th scope="col">Source</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>F. Ball STOPGAP 300</td><td>"Consumption per mm thickness 1.66 kg/m²"</td><td>1.66</td><td>25 kg</td><td>2–15 mm unfilled, up to 20 mm filled</td><td><a href="https://f-ball.com/wp-content/uploads/2023/10/300_TechDataSheet_GB-1.pdf" rel="noopener">F. Ball</a> (April 2024)</td></tr>
+          <tr><td>ARDEX K 55 FAST</td><td>"Approximately 1.62kg of powder per square metre per millimetre"</td><td>1.62</td><td>20 kg</td><td>Feather edge to 10 mm</td><td><a href="https://ardex.co.uk/wp-content/uploads/2023/03/ARDEX-K-55-FAST.pdf" rel="noopener">Ardex</a> (July 2023)</td></tr>
+          <tr><td>ARDEX K 11</td><td>"Approximately 7m² at 2mm thick" per bag</td><td>About 1.57 (22 ÷ (7 × 2))</td><td>22 kg</td><td>1.5–10 mm</td><td><a href="https://ardex.co.uk/wp-content/uploads/2020/07/ARDEX-K-11.pdf" rel="noopener">Ardex</a> (September 2025)</td></tr>
+          <tr><td>F. Ball STOPGAP 1200 (two-part)</td><td>"Consumption per mm thickness 1.54 kg/m²"</td><td>1.54</td><td>20 kg + 5 litres liquid</td><td>2–10 mm unfilled, up to 30 mm filled</td><td><a href="https://f-ball.com/wp-content/uploads/2026/08/1200_TechDataSheet_GB_Jul26.pdf" rel="noopener">F. Ball</a> (July 2026)</td></tr>
+          <tr><td>UZIN NC 170 LevelStar</td><td>"Consumption approx. 1,5 kg/m²/mm thickness"</td><td>1.5</td><td>25 kg</td><td>No limit stated; sand added at 20–50 mm</td><td><a href="https://int.uzin.com/fileadmin/MAM/104582/UZIN_NC_170_LevelStar.pdf" rel="noopener">Uzin</a> (07/2026)</td></tr>
+          <tr><td>Bostik Cempolay</td><td>"Approx. 4m² per bag at 3mm thickness"</td><td>About 1.67 (20 ÷ (4 × 3))</td><td>20 kg</td><td>3–5 mm</td><td><a href="https://www.bostik.com/files/live/sites/shared_bostik/files/documents-brochures/United%20Kingdom/Documents/TDS/bostik-uk-tds-cempolay" rel="noopener">Bostik</a> (May 2025)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Scroll sideways on a phone to see every column.</p>
+    <p>Most sit between 1.5 and 1.67, hence the calculator's 1.6 starting point, but the spread adds up: on 50 m² at 5 mm, 1.5 against 1.66 is 40 kg. Figures differ even within one manufacturer's range, so use the figure for the product you're buying. If a sheet only gives coverage per bag, divide the bag weight by coverage × thickness.</p>
+
+    <h2 id="measure-depth">Measuring average depth</h2>
+    <p>The rate is only as good as the depth. One reading from the worst dip over-orders; a guess from the doorway under-orders.</p>
+    <ol>
+      <li><strong>Find the high spots</strong> with a laser level or a long straightedge. Unless you grind them down, they set the finished level.</li>
+      <li><strong>Take readings in a grid</strong> across the whole floor, including corners and along the walls.</li>
+      <li><strong>Add the product's minimum thickness</strong> to every reading, high spots included.</li>
+      <li><strong>Average them</strong>: add the readings up and divide by how many you took.</li>
+    </ol>
+    <p>Depth is a multiplier: a 10 m² dip averaging 8 mm takes as much compound as 40 m² at 2 mm, so work much deeper areas out separately. Check the floor covering's flatness limit too. <a href="https://www.karndean.com/globalassets/karndean/downloads/residential-and-commercial/pdfs/installation-guides/uk/karndean-designflooring-installation-guidelines-uk-rigid-core.pdf" rel="noopener">Karndean's rigid core guidelines</a>, for example, allow a maximum of 5 mm below the level over 3 m.</p>
+
+    <h2 id="primer">Prime before you pour</h2>
+    <p>Most sheets we checked insist on it: "IT IS ESSENTIAL TO PRIME ALL SURFACES" (STOPGAP 300) and "ALL SURFACES MUST BE PRIMED" (Ardex K 11). The primer and dilution depend on whether the subfloor is absorbent, like screed and concrete, or non-absorbent, like tiles and surface membranes, and calcium sulphate screeds get their own instructions. Let it dry before you pour. Exceptions exist: F. Ball says priming is generally not required for STOPGAP 1200, which is why you follow the sheet for the product in the bucket.</p>
+
+    <h2 id="thickness">Minimum and maximum thickness</h2>
+    <p>Working ranges vary: Bostik Cempolay goes down at 3–5 mm, Ardex K 11 at 1.5–10 mm, STOPGAP 300 at 2–15 mm unfilled. Minimums matter too. F. Ball recommends at least 3 mm overall for STOPGAP 300, Ardex wants at least 2 mm of K 55 FAST on non-absorbent subfloors, and Uzin caps NC 170 at 3 mm on OSB and chipboard. If your depth is outside the range, you need a different product, a filled mix or a screed, not more bags.</p>
+
+    <h2 id="drying">Drying before the floor covering goes down</h2>
+    <p>Data sheet drying times apply to stated conditions, usually 20°C, and a stated thickness. The sheets agree that thicker layers, cold or humid rooms, poor airflow and non-absorbent subfloors all take longer, and the gap can be big: STOPGAP 1200 takes most floor coverings from 4 hours at 2–5 mm, but above 10 mm its drying time will be extended up to 7–14 days. Use the drying table for your product at your depth, and the floor covering manufacturer's instructions.</p>
+
+    <h2 id="compound-or-screed">Smoothing compound or screed?</h2>
+    <p>A screed is part of the floor build-up: the sand and cement or calcium sulphate layer over the slab, sometimes with underfloor heating in it. A smoothing compound is a thin layer over a sound base, giving the floor covering a flat, smooth surface. It isn't a finished floor: Uzin says not to use NC 170 "as a screed or as a wear surface". The CT-C35-F7 style code on a bag is its EN 13813 class: cementitious, with compressive (C) and flexural (F) strength classes.</p>
+
+    <h2 id="quote-the-prep">Put the prep on the quote</h2>
+    <p>Working out bags is easy. Remembering to charge for them, and the labour, is where margin leaks. In BillyBot, prep like latex and ply is priced on your own rates. Tell Billy the kitchen needs latexing and the hall needs ply, and both go into the quote. Nothing goes to the customer until you approve it, unless you've switched on auto-send.</p>
+    <p>Built by a flooring business, on 20 years of running one, BillyBot runs the office side of the business from first enquiry to final invoice. See its <a href="/flooring-quoting-software/">flooring quoting software</a>, read <a href="/how-to-quote-a-flooring-job/">how to quote a flooring job</a>, or use the <a href="/tools/flooring-pack-calculator/">flooring pack calculator</a> for the LVT or laminate going on top.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">Smoothing compound calculator: FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button type="button" class="faq-question">How much smoothing compound do I need per m²?</button><div class="faq-answer"><p>Multiply the depth in mm by the product's consumption rate. The UK data sheets we checked give 1.5 to 1.66 kg per m² per mm, so a 3 mm layer takes roughly 4.5 to 5 kg per m². Use the figure for your product.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">How many m² does a 25 kg bag of latex cover?</button><div class="faq-answer"><p>It depends on the depth. At 1.66 kg/m² per mm, a 25 kg bag covers about 5 m² at 3 mm but only about 2.5 m² at 6 mm. Divide the bag weight by the depth times the consumption rate.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Is latex the same as smoothing compound?</button><div class="faq-answer"><p>Usually, yes: in flooring, latex often just means a smoothing or levelling compound. Some products are two-part, with a bottle of liquid; many mix with water. The calculation is the same either way.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">How do I work out the average depth of a floor?</button><div class="faq-answer"><p>Find the high spots with a laser level or straightedge, take readings in a grid across the floor, add the product's minimum thickness to each, then average them. Work out much deeper areas separately.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Should I add extra for waste?</button><div class="faq-answer"><p>It's your call. The calculator starts at 0% and always rounds up to whole bags. You might add 5–10% for bucket residue, spills or a floor that turns out worse than it measured.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">How long before I can lay flooring on smoothing compound?</button><div class="faq-answer"><p>It depends on the product, thickness, subfloor, temperature and humidity, and thicker layers take longer. Follow the drying times on your product's data sheet and the floor covering manufacturer's instructions.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="block">
+  <div class="container">
+    <div class="ctaband glass">
+      <h2>Price the prep. Protect the margin.</h2>
+      <p>BillyBot quotes flooring jobs on your own rates, latex and ply included, and runs the office side of your business from first enquiry to final invoice.</p>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your 14-day free trial</a>
+      <p class="disclaimer">£149 per office seat per month, everything included · Fitters always free · Cancel anytime · Prices exclude VAT</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> BillyBot™. All rights reserved.
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/flooring-quoting-software/">Flooring Quoting Software</a>
+      <a href="/flooring-estimating-software/">Flooring Estimating Software</a>
+      <a href="/cutting-plan-software/">Cutting Plan Software</a>
+      <a href="/flooring-software-comparison/">Flooring Software Compared</a>
+      <a href="/tools/">Free tools</a>
+      <a href="/resources/">Resources</a>
+      <a href="https://app.billybot.ai/terms">Terms</a>
+      <a href="https://app.billybot.ai/privacy">Privacy</a>
+      <a href="mailto:info@billybot.ai">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* CALC-START */
+function bbNum(v) {
+  if (typeof v === 'number') return isFinite(v) ? v : NaN;
+  if (v === null || v === undefined) return NaN;
+  var s = String(v).replace(/\s+/g, '').replace(/£|kg|mm|m²|m2|%/gi, '');
+  if (s === '') return NaN;
+  if (/^\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, '');
+  else if (/^\d*,\d+$/.test(s)) s = s.replace(',', '.');
+  if (!/^[-+]?(\d+\.?\d*|\.\d+)$/.test(s)) return NaN;
+  return Number(s);
+}
+function bbBlank(v) { return v === null || v === undefined || String(v).trim() === ''; }
+function bbRound(x, dp) { var f = Math.pow(10, dp); return Math.round(x * f) / f; }
+function bbCeil(x) { return Math.ceil(bbRound(x, 6)); }
+
+function smoothingCompound(input) {
+  var errors = [], warnings = [];
+  function required(raw, field, label, example, max, unit) {
+    var n = bbNum(raw);
+    if (bbBlank(raw)) errors.push({ field: field, message: 'Add the ' + label + '.' });
+    else if (isNaN(n)) errors.push({ field: field, message: 'The ' + label + ' needs to be a number, like ' + example + '.' });
+    else if (n <= 0) errors.push({ field: field, message: 'The ' + label + ' needs to be more than zero.' });
+    else if (n > max) errors.push({ field: field, message: 'The ' + label + ' looks too big. Check it (up to ' + max + ' ' + unit + ').' });
+    return n;
+  }
+  var area = required(input.area, 'area', 'floor area', '18.5', 100000, 'm²');
+  var depth = required(input.depth, 'depth', 'average depth', '3', 100, 'mm');
+  var rate = required(input.rate, 'rate', 'consumption rate', '1.6', 5, 'kg per m² per mm');
+  var bagKg = required(input.bagKg, 'bag', 'bag size', '25', 1000, 'kg');
+  var wastePct = bbBlank(input.wastePct) ? 0 : bbNum(input.wastePct);
+  if (isNaN(wastePct)) errors.push({ field: 'waste', message: 'The extra allowance needs to be a number, like 5, or left blank.' });
+  else if (wastePct < 0) errors.push({ field: 'waste', message: 'The extra allowance can\'t be negative.' });
+  else if (wastePct > 50) errors.push({ field: 'waste', message: 'Keep the extra allowance at 50% or less.' });
+  var price = bbBlank(input.pricePerBag) ? null : bbNum(input.pricePerBag);
+  if (price !== null && isNaN(price)) errors.push({ field: 'price', message: 'The price per bag needs to be a number, like 18.50, or left blank.' });
+  else if (price !== null && price < 0) errors.push({ field: 'price', message: 'The price per bag can\'t be negative.' });
+  if (errors.length) return { ok: false, errors: errors };
+
+  var baseKg = area * depth * rate;
+  var totalKg = baseKg * (1 + wastePct / 100);
+  var bagsExact = totalKg / bagKg;
+  var bags = bbCeil(bagsExact);
+  if (depth < 2) warnings.push('Under 2 mm is thin. Several data sheets we checked ask for at least 2–3 mm, at least on some subfloors, so check your product\'s minimum.');
+  if (depth > 10) warnings.push('Over 10 mm: several data sheets we checked cap a neat pour at 10–15 mm and need aggregate, or a different product, for deeper fills. Check your product\'s maximum.');
+  if (rate < 1 || rate > 2.5) warnings.push('That rate is outside the 1.5–1.66 range on the data sheets we checked. Make sure it\'s kg per m² per mm of depth, not coverage per bag.');
+  return {
+    ok: true, area: area, depth: depth, rate: rate, bagKg: bagKg, wastePct: wastePct, pricePerBag: price,
+    baseKg: baseKg, totalKg: totalKg, bagsExact: bagsExact, bags: bags,
+    boughtKg: bags * bagKg, spareKg: bags * bagKg - totalKg,
+    coveragePerBagM2: bagKg / (depth * rate),
+    cost: price === null ? null : bbRound(bags * price, 2),
+    warnings: warnings
+  };
+}
+
+function smoothingDepthTable(res, depths) {
+  return depths.map(function (d) {
+    var kg = res.area * d * res.rate * (1 + res.wastePct / 100);
+    var bags = bbCeil(kg / res.bagKg);
+    return { depth: d, kg: kg, bags: bags, cost: res.pricePerBag === null ? null : bbRound(bags * res.pricePerBag, 2) };
+  });
+}
+/* CALC-END */
+
+(function () {
+  function $(id) { return document.getElementById(id); }
+  var form = $('sc-form');
+  if (!form) return;
+  var fields = { area: $('sc-area'), depth: $('sc-depth'), rate: $('sc-rate'), bag: $('sc-bag-custom'), waste: $('sc-waste'), price: $('sc-price') };
+  var errs = { area: $('sc-area-err'), depth: $('sc-depth-err'), rate: $('sc-rate-err'), bag: $('sc-bag-err'), waste: $('sc-waste-err'), price: $('sc-price-err') };
+  var live = $('sc-live'), detail = $('sc-detail'), product = $('sc-product');
+  var timer = null;
+
+  function num(n, dp) { return Number(n).toLocaleString('en-GB', { minimumFractionDigits: dp, maximumFractionDigits: dp }); }
+  function trim(n, dp) { return Number(n).toLocaleString('en-GB', { maximumFractionDigits: dp }); }
+  function money(n) { return '£' + num(n, 2); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function bagsText(x) {
+    var s = trim(x, 2);
+    if (Math.abs(x - Math.round(x)) > 1e-6 && Number(s.replace(/,/g, '')) === Math.round(x)) s = trim(x, 6);
+    return s;
+  }
+  function bagValue() {
+    var c = form.querySelector('input[name="sc-bag"]:checked');
+    if (!c) return '';
+    return c.value === 'other' ? fields.bag.value : c.value;
+  }
+  function clearErrors() {
+    Object.keys(errs).forEach(function (k) { errs[k].hidden = true; errs[k].textContent = ''; });
+    Object.keys(fields).forEach(function (k) { fields[k].removeAttribute('aria-invalid'); });
+  }
+
+  function render() {
+    clearErrors();
+    if (bbBlank(fields.area.value) && bbBlank(fields.depth.value)) {
+      live.innerHTML = '<div class="res-empty"><p>Enter the floor area and average depth to see how many bags you need.</p></div>';
+      detail.hidden = true; detail.innerHTML = '';
+      return;
+    }
+    var res = smoothingCompound({ area: fields.area.value, depth: fields.depth.value, rate: fields.rate.value, bagKg: bagValue(), wastePct: fields.waste.value, pricePerBag: fields.price.value });
+    if (!res.ok) {
+      var list = res.errors.map(function (e) {
+        if (errs[e.field]) { errs[e.field].textContent = e.message; errs[e.field].hidden = false; }
+        if (fields[e.field]) fields[e.field].setAttribute('aria-invalid', 'true');
+        return '<li>' + esc(e.message) + '</li>';
+      }).join('');
+      live.innerHTML = '<div class="res-empty"><p>Nearly there. Check this:</p><ul>' + list + '</ul></div>';
+      detail.hidden = true; detail.innerHTML = '';
+      return;
+    }
+    var bagWord = res.bags === 1 ? 'bag' : 'bags';
+    var html = '<div class="tiles">' +
+      '<div class="tile tile-main"><span class="t-label">Bags to order</span><span class="t-val">' + res.bags + ' ' + bagWord + '</span><span class="t-sub">of ' + trim(res.bagKg, 2) + ' kg, for ' + num(res.totalKg, 1) + ' kg of compound</span></div>' +
+      '<div class="tile"><span class="t-label">Spare after rounding up</span><span class="t-val">' + num(res.spareKg, 1) + ' kg</span></div>' +
+      '<div class="tile"><span class="t-label">One bag covers</span><span class="t-val">' + num(res.coveragePerBagM2, 1) + ' m²</span><span class="t-sub">at ' + trim(res.depth, 2) + ' mm</span></div>' +
+      (res.cost !== null ? '<div class="tile tile-wide"><span class="t-label">Compound cost</span><span class="t-val">' + money(res.cost) + '</span><span class="t-sub">' + res.bags + ' ' + bagWord + ' at ' + money(res.pricePerBag) + '</span></div>' : '') +
+      '</div>' +
+      res.warnings.map(function (w) { return '<p class="res-alert">' + esc(w) + '</p>'; }).join('');
+    live.innerHTML = html;
+
+    var steps = [];
+    steps.push(trim(res.area, 3) + ' m² × ' + trim(res.depth, 2) + ' mm × ' + trim(res.rate, 3) + ' kg/m² per mm = ' + num(res.baseKg, 1) + ' kg');
+    if (res.wastePct > 0) steps.push(num(res.baseKg, 1) + ' kg + ' + trim(res.wastePct, 2) + '% extra = ' + num(res.totalKg, 1) + ' kg');
+    steps.push(num(res.totalKg, 1) + ' kg ÷ ' + trim(res.bagKg, 2) + ' kg bags = ' + bagsText(res.bagsExact) + ', rounded up to ' + res.bags + ' ' + bagWord);
+    steps.push(res.bags + ' × ' + trim(res.bagKg, 2) + ' kg = ' + num(res.boughtKg, 1) + ' kg bought, ' + num(res.spareKg, 1) + ' kg spare');
+    if (res.cost !== null) steps.push(res.bags + ' × ' + money(res.pricePerBag) + ' = ' + money(res.cost));
+    var withCost = res.cost !== null;
+    var rows = smoothingDepthTable(res, [2, 3, 5, 10]).map(function (r) {
+      var sel = Math.abs(r.depth - res.depth) < 1e-9 ? ' class="sel"' : '';
+      return '<tr' + sel + '><th scope="row">' + r.depth + ' mm</th><td>' + num(r.kg, 1) + ' kg</td><td>' + r.bags + '</td>' + (withCost ? '<td>' + money(r.cost) + '</td>' : '') + '</tr>';
+    }).join('');
+    detail.innerHTML = '<div class="working"><h3>The working</h3><ol>' + steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol></div>' +
+      '<div class="res-compare"><table><caption>The same floor at other depths</caption><thead><tr><th scope="col">Depth</th><th scope="col">Compound</th><th scope="col">Bags</th>' + (withCost ? '<th scope="col">Cost</th>' : '') + '</tr></thead><tbody>' + rows + '</tbody></table></div>' +
+      '<p class="res-note">Based on ' + esc(trim(res.rate, 3)) + ' kg/m² per mm. Coverage varies with the subfloor, so check the data sheet for your product.</p>';
+    detail.hidden = false;
+  }
+  function schedule() { clearTimeout(timer); timer = setTimeout(render, 250); }
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); render(); });
+  Object.keys(fields).forEach(function (k) { fields[k].addEventListener('input', schedule); });
+  fields.rate.addEventListener('input', function () {
+    if (product.value && product.value.split('|')[0] !== String(bbNum(fields.rate.value))) product.value = '';
+  });
+  Array.prototype.forEach.call(form.querySelectorAll('input[name="sc-bag"]'), function (r) {
+    r.addEventListener('change', function () {
+      var other = $('sc-bag-other').checked;
+      $('sc-bag-custom-wrap').hidden = !other;
+      if (other) fields.bag.focus();
+      render();
+    });
+  });
+  product.addEventListener('change', function () {
+    if (!product.value) return;
+    var parts = product.value.split('|');
+    fields.rate.value = parts[0];
+    var radio = $('sc-bag-' + parts[1]);
+    if (radio) { radio.checked = true; $('sc-bag-custom-wrap').hidden = true; }
+    render();
+  });
+  $('sc-lw-toggle').addEventListener('click', function () {
+    var box = $('sc-lw'), open = box.hidden;
+    box.hidden = !open;
+    this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) $('sc-len').focus();
+  });
+  $('sc-lw-use').addEventListener('click', function () {
+    var l = bbNum($('sc-len').value), w = bbNum($('sc-wid').value), out = $('sc-lw-out');
+    if (isNaN(l) || isNaN(w) || l <= 0 || w <= 0) { out.textContent = 'Enter both the length and the width in metres, like 5.2 and 3.6.'; return; }
+    var a = bbRound(l * w, 2);
+    fields.area.value = String(a);
+    out.textContent = 'Area set to ' + trim(a, 2) + ' m² (' + trim(l, 3) + ' × ' + trim(w, 3) + ').';
+    render();
+  });
+  // Optional prefill from the link, e.g. ?area=20&depth=3&bag=25&rate=1.66
+  try {
+    var q = new URLSearchParams(location.search), any = false;
+    ['area', 'depth', 'rate', 'waste', 'price'].forEach(function (k) { if (q.has(k)) { fields[k].value = q.get(k).slice(0, 12); any = true; } });
+    if (q.has('bag')) {
+      var b = q.get('bag').slice(0, 12);
+      if (b === '20' || b === '25') { $('sc-bag-' + b).checked = true; }
+      else { $('sc-bag-other').checked = true; $('sc-bag-custom-wrap').hidden = false; fields.bag.value = b; }
+      any = true;
+    }
+    if (any) render();
+  } catch (e) {}
+})();
+</script>
+
+<script>
+  var IOS_APP_URL = 'https://apps.apple.com/gb/app/billybot/id6758058400';
+  var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // Signup link carries where the visitor came from (page, external referrer, incoming ad/UTM params)
+  function bbSignupUrl() {
+    var p = new URLSearchParams();
+    var page = location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+    try {
+      var q = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'].forEach(function (k) {
+        if (q.get(k)) p.set(k, q.get(k));
+      });
+      var ref = document.referrer ? new URL(document.referrer).hostname : '';
+      if (ref && ref !== location.hostname) p.set('ref', ref);
+    } catch (e) {}
+    if (!p.get('utm_source')) {
+      p.set('utm_source', 'billybot.ai');
+      p.set('utm_medium', 'website');
+      p.set('utm_campaign', page);
+    } else if (!p.get('utm_content')) {
+      p.set('utm_content', page);
+    }
+    return 'https://app.billybot.ai/auth/signup?' + p.toString();
+  }
+  var SIGNUP_URL = isIOS ? IOS_APP_URL : bbSignupUrl();
+  var LOGIN_URL = isIOS ? IOS_APP_URL : 'https://app.billybot.ai/auth/login';
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) { el.setAttribute('href', SIGNUP_URL); });
+  document.querySelectorAll('[data-app-login]').forEach(function(el) { el.setAttribute('href', LOGIN_URL); });
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      if (typeof fbq !== 'undefined') { fbq('track', 'ViewContent', { content_name: 'Smoothing Compound Calculator CTA' }); }
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function(other) { other.classList.remove('active'); });
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

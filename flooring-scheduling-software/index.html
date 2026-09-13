@@ -24,9 +24,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- ===== Primary SEO ===== -->
-  <title>Flooring Cutting Plan Software — Cut Waste, Order Right | BillyBot™</title>
-  <meta name="description" content="BillyBot's cutting plan software nests every drop from your floor plan or measurements — minimising waste and ordering the exact material for any flooring job. Try it free for 14 days." />
-  <link rel="canonical" href="https://billybot.ai/cutting-plan-software/" />
+  <title>Flooring Scheduling Software &amp; Fitter Diary App | BillyBot</title>
+  <meta name="description" content="Flooring scheduling software with one diary for fittings and surveys, each fitter's jobs on their phone and clashes flagged early. Try it free for 14 days." />
+  <link rel="canonical" href="https://billybot.ai/flooring-scheduling-software/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0B0F1A" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -34,23 +34,23 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BillyBot" />
-  <meta property="og:title" content="Flooring Cutting Plan Software That Nests Every Roll — BillyBot™" />
-  <meta property="og:description" content="Upload a floor plan or enter measurements — BillyBot lays out every drop and seam, drives the waste down, and tells you exactly how much material to order." />
-  <meta property="og:url" content="https://billybot.ai/cutting-plan-software/" />
+  <meta property="og:title" content="Flooring Scheduling Software &amp; Fitter Diary App | BillyBot" />
+  <meta property="og:description" content="Flooring scheduling software with one diary for fittings and surveys, each fitter's jobs on their phone and clashes flagged early. Try it free for 14 days." />
+  <meta property="og:url" content="https://billybot.ai/flooring-scheduling-software/" />
   <meta property="og:image" content="https://billybot.ai/images/og-image.png" />
   <meta property="og:image:secure_url" content="https://billybot.ai/images/og-image.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="BillyBot — cutting plan software for flooring" />
+  <meta property="og:image:alt" content="BillyBot flooring scheduling software: one diary for fitters, fittings and surveys" />
   <meta property="og:locale" content="en_GB" />
 
   <!-- ===== Twitter / X ===== -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Flooring Cutting Plan Software That Nests Every Roll — BillyBot™" />
-  <meta name="twitter:description" content="Upload a floor plan or enter measurements — BillyBot lays out every drop and seam, drives the waste down, and tells you exactly how much material to order." />
+  <meta name="twitter:title" content="Flooring Scheduling Software &amp; Fitter Diary App | BillyBot" />
+  <meta name="twitter:description" content="Flooring scheduling software with one diary for fittings and surveys, each fitter's jobs on their phone and clashes flagged early. Try it free for 14 days." />
   <meta name="twitter:image" content="https://billybot.ai/images/og-image.png" />
-  <meta name="twitter:image:alt" content="BillyBot — cutting plan software for flooring" />
+  <meta name="twitter:image:alt" content="BillyBot flooring scheduling software: one diary for fitters, fittings and surveys" />
 
   <!-- Self-hosted variable fonts (Inter + Sora, SIL OFL): no render-blocking third-party CSS -->
   <link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -58,12 +58,6 @@
   <style>
     @font-face { font-family: 'Sora'; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/sora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-    /* Live demo embed (real app UI) */
-    .demo-embed { display: flex; justify-content: center; margin-top: 40px; }
-    .web-stage { width: 760px; max-width: 100%; }
-    .web-stage iframe { display: block; width: 100%; aspect-ratio: 900 / 612; border: 0; background: transparent; }
-    .demo-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 12px; }
   </style>
 
   <style>
@@ -170,7 +164,7 @@
     .pk.bad { color: #fb7185; } .pk.good { color: #4ade80; }
 
     /* Steps */
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; counter-reset: step; }
     .step { padding: 26px 22px; }
     .step .n {
       width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
@@ -214,7 +208,7 @@
     .faq-question::after { content: "+"; position: absolute; right: 24px; top: 16px; font-size: 22px; color: var(--cyan); transition: transform 0.2s; }
     .faq-item.active .faq-question::after { transform: rotate(45deg); }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; padding: 0 24px; }
-    .faq-item.active .faq-answer { max-height: 560px; padding: 0 24px 20px; }
+    .faq-item.active .faq-answer { max-height: 520px; padding: 0 24px 20px; }
     .faq-answer p { color: #C3D0EA; font-size: 15px; }
 
     /* CTA band */
@@ -233,14 +227,40 @@
     .footer-links a { color: #475569; font-size: 14px; }
     .footer-links a:hover { color: var(--text); }
 
+    /* ===== Page-specific: flooring scheduling software ===== */
+    .step p a, .feature p a, .section-sub a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+    .faq-question { padding-right: 56px; }
+
+    /* Live diary demo */
+    .demo-row { display: flex; align-items: center; justify-content: center; gap: 56px; max-width: 980px; margin: 0 auto; }
+    .demo-copy { flex: 1 1 0; min-width: 0; max-width: 460px; }
+    .demo-k { font: 700 13px Sora, Inter; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); margin-bottom: 12px; }
+    .demo-copy h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -0.5px; line-height: 1.12; margin-bottom: 14px; }
+    .demo-copy p { color: #C3D0EA; font-size: 16px; }
+    .demo-copy p + p { margin-top: 12px; }
+    .demo-copy .demo-note { color: var(--muted); font-size: 14px; }
+    .prose .section-title { line-height: 1.2; }
+    .cmp-hint { display: none; color: var(--muted); font-size: 13px; text-align: center; margin-top: 10px; }
+    .phone-stage { width: 328px; flex: none; }
+    .phone-stage iframe { display: block; width: 100%; aspect-ratio: 410/806; border: 0; background: transparent; }
+    .features.eight { grid-template-columns: repeat(4, 1fr); }
+
     @media (max-width: 1024px) {
-      .features { grid-template-columns: repeat(2, 1fr); }
+      .features, .features.eight { grid-template-columns: repeat(2, 1fr); }
       .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 880px) {
+      .demo-row { flex-direction: column; gap: 28px; text-align: center; }
+      .demo-copy { max-width: 560px; }
     }
     @media (max-width: 768px) {
       .nav-links, .login-link { display: none; }
-      .twoup, .features, .steps { grid-template-columns: 1fr; }
-      .cmp { overflow-x: auto; }
+      .twoup, .features, .features.eight, .steps { grid-template-columns: 1fr; }
+      .cmp { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .cmp table { min-width: 640px; }
+      .cmp-hint { display: block; }
+      th, td { padding: 14px 16px; font-size: 14px; }
+      .phone-stage { width: 290px; }
     }
   </style>
 
@@ -253,15 +273,15 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://billybot.ai/" },
-          { "@type": "ListItem", "position": 2, "name": "Cutting Plan Software", "item": "https://billybot.ai/cutting-plan-software/" }
+          { "@type": "ListItem", "position": 2, "name": "Flooring Scheduling Software", "item": "https://billybot.ai/flooring-scheduling-software/" }
         ]
       },
       {
         "@type": "WebPage",
-        "@id": "https://billybot.ai/cutting-plan-software/#webpage",
-        "url": "https://billybot.ai/cutting-plan-software/",
-        "name": "Flooring Cutting Plan Software — Cut Waste, Order Right | BillyBot",
-        "description": "Cutting plan software for flooring that nests every drop from your floor plan or measurements, minimising waste and ordering the exact material.",
+        "@id": "https://billybot.ai/flooring-scheduling-software/#webpage",
+        "url": "https://billybot.ai/flooring-scheduling-software/",
+        "name": "Flooring Scheduling Software & Fitter Diary App | BillyBot",
+        "description": "Flooring scheduling software with one diary for fittings and surveys, each fitter's jobs on their phone and clashes flagged early.",
         "inLanguage": "en-GB",
         "isPartOf": { "@id": "https://billybot.ai/#website" },
         "about": { "@id": "https://billybot.ai/#software" },
@@ -272,38 +292,38 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How does BillyBot work out a flooring cutting plan?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Upload a floor plan or enter your room measurements and BillyBot nests every drop across your roll width, places the seams sensibly, and outputs the cutting layout along with the exact material needed — for carpet, vinyl, LVT, tiles and more." }
+            "name": "Does BillyBot sync with Google Calendar and Outlook?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Switch on Calendar Sync for your Gmail or Outlook mailbox and your own bookings, or every booking in the business, appear in that calendar. Anything already in it counts as busy when Billy looks for free slots. Customers are never added as guests, so they get no invites." }
           },
           {
             "@type": "Question",
-            "name": "Does it handle pattern repeats and pattern matching?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. BillyBot accounts for pattern matching so patterned carpet, vinyl or LVT lines up correctly, factoring the repeat into the cutting layout and the material quantity so you order enough to match the pattern." }
+            "name": "Can fitters see only their own jobs?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fitters use the free app and see only the bookings they're assigned to, as far ahead as you allow: today only, one, two or four weeks, a custom number of days, or no limit. They don't see quotes, prices or costs, the business inbox or the Billy chat." }
           },
           {
             "@type": "Question",
-            "name": "How does it deal with roll widths and sheet goods?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Roll goods such as sheet vinyl, safety flooring, lino and broadloom carpet are bought as fixed-width drops, so the material needed is more than the net floor area. BillyBot sizes material off the least-waste drops plus a trim allowance — the way you actually buy it — while LVT and tiles are calculated by net area." }
+            "name": "What happens when a job moves?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Drag or edit the booking in the web diary. Fitters on a confirmed booking get a notification with the new date and time, and a synced calendar event moves too. Billy's checks follow the new date, so if a fitter is now booked while off, or the order is due after the fitting, he tells you." }
           },
           {
             "@type": "Question",
-            "name": "Will it reduce waste and stop me over-ordering?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. BillyBot chooses the least-waste drop layout and tells you the exact material to order, so you stop guessing and over-ordering 'just in case' — which protects your margin on every job." }
+            "name": "Can Billy book jobs into the diary for me?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tell him in chat, for example “book the Oak Avenue carpet fit for Thursday with Dave”. He books it and tells you in one line what he assumed, such as the time. When dates go to a customer, he only offers days the diary shows as free, and the email waits for your approval unless you've switched on auto-send." }
           },
           {
             "@type": "Question",
-            "name": "Can it work out cutting plans for stairs?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. BillyBot handles treads, risers, winders and landings, and works out the real gripper lengths needed, not just a rough perimeter figure." }
+            "name": "Does it handle surveys as well as fittings?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. A booking can be a fitting, survey, prep or another visit such as goods-in. For survey slots, Billy checks whoever is doing the survey, you by default or someone you name such as an estimator, against their bookings, time off, rota and connected calendar." }
           },
           {
             "@type": "Question",
-            "name": "Can I see the cutting layout?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. BillyBot produces a visual cutting plan you and your fitters can view and work from, on the web or in the mobile app." }
+            "name": "We use a paper diary and a whiteboard. How do we switch?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Photograph a page of the paper diary, or the rota on the wall, and send it to Billy. He reads it back, turns the clear bookings, enquiries and call-backs into records, and asks about anything he can't make out. A rota is loaded once you've confirmed it. Then invite your fitters to the free app." }
           },
           {
             "@type": "Question",
-            "name": "Does the cutting plan feed into my quote?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The material the cutting plan works out flows straight into your quote, so you price the real material required rather than a rough estimate — quoting and ordering stay in sync." }
+            "name": "Do fitters cost extra?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Fitters are always free, however many you have. Office seats are £149 per month, excluding VAT, with everything included and no feature tiers. Annual billing saves two months, and every account starts with a 14-day free trial you can cancel anytime." }
           }
         ]
       }
@@ -353,16 +373,18 @@
 <!-- ===== BREADCRUMB ===== -->
 <div class="container">
   <nav class="crumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> &rsaquo; <span>Cutting Plan Software</span>
+    <a href="/">Home</a> &rsaquo; <span>Flooring Scheduling Software</span>
   </nav>
 </div>
+
+<main>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Flooring Cutting Plan Software</span>
-    <h1>Cutting plan software that <span class="grad">nests every roll for you</span></h1>
-    <p class="lede">Stop working out cuts on graph paper and over-ordering "just in case". Upload a floor plan or enter your measurements — BillyBot lays out every drop and seam, drives the waste down, and tells you exactly how much material to order.</p>
+    <span class="eyebrow">Flooring Scheduling Software</span>
+    <h1>Flooring scheduling software that <span class="grad">puts the right fitter on the right job</span></h1>
+    <p class="lede">One diary for every fitting, survey and prep day. Billy checks who's actually free before a date is offered, puts each fitter's bookings on their phone, and flags a clash before it costs you a day on site.</p>
     <div class="cta-row">
       <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try it free for 14 days</a>
     </div>
@@ -373,70 +395,84 @@
 <!-- ===== PROBLEM / SOLUTION ===== -->
 <section class="block">
   <div class="container">
-    <h2 class="section-title">Waste is margin you've already paid for</h2>
-    <p class="section-sub">Get the cutting plan wrong and you either over-order and bin the offcuts, or come up short and lose a day going back to the supplier.</p>
+    <h2 class="section-title">The diary is where flooring margin leaks</h2>
+    <p class="section-sub">Double-booked fitters, surveys squeezed in, customers chasing dates. None of it shows on the quote, but all of it comes off the margin.</p>
     <div class="twoup">
       <div class="glass">
-        <span class="pk bad">Working it out by hand</span>
-        <h3>Graph paper and guesswork</h3>
-        <p>Sketching drops on paper, eyeballing the roll width, adding a bit "to be safe", and hoping the pattern lines up. The safety margin comes straight off your profit — and a miscalculation means a wasted trip and a delayed job.</p>
+        <span class="pk bad">Whiteboard, paper diary, group chat</span>
+        <h3>Days lost before a floor goes down</h3>
+        <p>Two fitters turn up to the same job while another customer waits for a date. A survey lands on the estimator's holiday. Customers ring to ask when you're coming. The fitter reaches site without the customer's number or the notes, so the day starts with phone calls. That's paid time earning nothing.</p>
       </div>
       <div class="glass">
         <span class="pk good">With BillyBot</span>
-        <h3>The least-waste layout, instantly</h3>
-        <p>BillyBot nests every drop across the real roll width, places the seams, matches the pattern, and gives you the exact material to order. Less waste, no over-ordering, and a cutting plan your fitters can work straight from.</p>
+        <h3>One diary the whole firm can trust</h3>
+        <p>Every fitting, survey and prep day sits in one diary. Billy checks bookings, holidays, sick days and the rota before a date is offered. Fitters get their own bookings on their phone with the address, customer and notes, and are notified of changes. You stay in charge of every date.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== HOW IT WORKS ===== -->
-<section class="block">
+<section class="block" id="how">
   <div class="container">
-    <h2 class="section-title">How BillyBot builds a cutting plan</h2>
-    <p class="section-sub">From a floor plan to a costed cutting list in four steps.</p>
+    <h2 class="section-title">How BillyBot schedules a flooring job</h2>
+    <p class="section-sub">From the first enquiry to the check-in after the fit. Billy prepares, you decide.</p>
     <div class="steps">
       <div class="step glass">
         <div class="n">1</div>
-        <h3>Add the rooms</h3>
-        <p>Upload a floor plan or enter your room measurements. Multi-room and multi-area jobs are no problem.</p>
+        <h3>Enquiry in, survey offered</h3>
+        <p>When an enquiry email needs a survey, Billy's draft reply offers two or three slots checked against the diary, sent when you approve it. Or tell him “survey for Mrs Patel, Tuesday at 1” and it's booked.</p>
       </div>
       <div class="step glass">
         <div class="n">2</div>
-        <h3>Billy nests the cuts</h3>
-        <p>It lays out every drop across your roll width, places seams sensibly and matches the pattern repeat.</p>
+        <h3>Quote accepted, dates offered</h3>
+        <p>When a customer accepts <a href="/flooring-quoting-software/">your quote</a>, Billy drafts the email offering three free days from the diary. Swap a date, edit the wording, then send.</p>
       </div>
       <div class="step glass">
         <div class="n">3</div>
-        <h3>See waste &amp; material</h3>
-        <p>You get a visual cutting plan and the exact material to order — sheet goods by the drop, LVT and tiles by area.</p>
+        <h3>Booked, assigned, notified</h3>
+        <p>The fitting goes in the diary with the fitters on it. They're notified, the job moves to Fitting booked, and it shows in your Google or Outlook calendar if sync is on.</p>
       </div>
       <div class="step glass">
         <div class="n">4</div>
-        <h3>Straight into the quote</h3>
-        <p>The material flows into your quote and order, so you price and buy exactly what the job needs.</p>
+        <h3>On the day, and after</h3>
+        <p>Fitters open the booking on their phone for the address, Maps, the customer's number and notes. After the visit, Billy asks how it went, and “Visit finished” lets him help with the invoice.</p>
       </div>
     </div>
-    <div class="demo-embed"><div class="web-stage"><iframe src="/demos-app.html?demo=cutting&amp;embed=1" loading="lazy" title="BillyBot cutting plan for a three-room job (live demo of the app)"></iframe></div></div>
-    <p class="demo-note">The real BillyBot cutting plan viewer, running a sample job.</p>
+  </div>
+</section>
+
+<!-- ===== LIVE DEMO ===== -->
+<section class="block">
+  <div class="container">
+    <div class="demo-row">
+      <div class="demo-copy">
+        <p class="demo-k">Live demo</p>
+        <h2>The week, on your phone</h2>
+        <p>This is the BillyBot app's diary running in your browser. When a fitting is booked, whether you add it yourself or ask Billy to, it lands in the week with the fitters on it, and they're notified.</p>
+        <p class="demo-note">The real app interface, with example bookings.</p>
+      </div>
+      <div class="phone-stage">
+        <iframe src="/demos-app.html?demo=diary&embed=1" loading="lazy" title="BillyBot diary on a phone: live demo"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== FEATURES ===== -->
 <section class="block" id="features">
   <div class="container">
-    <h2 class="section-title">A cutting plan that knows how flooring is bought</h2>
-    <p class="section-sub">Built around real roll widths, drops and trade detailing — not a generic area calculator.</p>
-    <div class="features">
-      <div class="feature glass"><div class="ic">📐</div><h3>Roll-width nesting</h3><p>Lays out every drop across the actual roll width to find the least-waste layout for the job.</p></div>
-      <div class="feature glass"><div class="ic">🧵</div><h3>Pattern repeat &amp; matching</h3><p>Factors the pattern repeat in so patterned carpet, vinyl and LVT line up — and you order enough to match.</p></div>
-      <div class="feature glass"><div class="ic">📏</div><h3>Sheet goods by the drop</h3><p>Vinyl, safety flooring, lino and broadloom are sized off fixed-width drops plus trim — the way you actually buy them, not net area.</p></div>
-      <div class="feature glass"><div class="ic">🟫</div><h3>LVT &amp; tiles by area</h3><p>Modular products are calculated by net area with the right allowance, so every flooring type is priced correctly.</p></div>
-      <div class="feature glass"><div class="ic">✂️</div><h3>Seam placement</h3><p>Puts seams where they belong, keeping them out of doorways and high-traffic lines wherever the layout allows.</p></div>
-      <div class="feature glass"><div class="ic">🪜</div><h3>Stairs, winders &amp; landings</h3><p>Works out treads, risers, winders and landings — including the real gripper lengths you'll actually use.</p></div>
-      <div class="feature glass"><div class="ic">♻️</div><h3>Waste driven down</h3><p>Picks the least-waste option and shows the offcuts, so you stop over-ordering and protect your margin.</p></div>
-      <div class="feature glass"><div class="ic">🗺️</div><h3>Visual cutting plan</h3><p>A clear layout you and your fitters can view and cut from — on the web or in the mobile app on site.</p></div>
-      <div class="feature glass"><div class="ic">🧾</div><h3>Feeds your quote</h3><p>The exact material flows into your quote and order, so quoting, cutting and buying all stay in sync.</p></div>
+    <h2 class="section-title">Built around how flooring work gets booked</h2>
+    <p class="section-sub">Not a generic calendar with a flooring logo on it.</p>
+    <div class="features eight">
+      <div class="feature glass"><div class="ic" aria-hidden="true">📅</div><h3>One diary for every booking</h3><p>Fittings, surveys, prep and goods-in together, in month, week or day view, coloured and filtered by fitter or job type.</p></div>
+      <div class="feature glass"><div class="ic" aria-hidden="true">🔔</div><h3>Fitters told, not rung round</h3><p>Put one or more fitters on a booking. They get a phone notification when it's booked, moved or cancelled.</p></div>
+      <div class="feature glass"><div class="ic" aria-hidden="true">📱</div><h3>Today's work on every phone</h3><p>Fitters get the iPhone or Android app free, with the address, Maps, customer's number, notes and job. Multi-day fits show Day 2 of 3, and <a href="/flooring-rams-software/">RAMS</a> to sign appear too.</p></div>
+      <div class="feature glass"><div class="ic" aria-hidden="true">🔒</div><h3>Fitters see only their own work</h3><p>Fitters see only the bookings they're on, with no quotes, prices, costs or business inbox. You choose how far ahead they can look.</p></div>
+      <div class="feature glass"><div class="ic" aria-hidden="true">✅</div><h3>Who's free, checked properly</h3><p>Ask Billy who's free to fit next week. He checks bookings, time off, the rota, bank holidays and synced calendars, then tells you who's free.</p></div>
+      <div class="feature glass"><div class="ic" aria-hidden="true">🗓️</div><h3>Google and Outlook calendar sync</h3><p>Bookings appear in your Google or Outlook calendar, and anything already in it counts as busy when Billy looks for a slot.</p></div>
+      <div class="feature glass"><div class="ic" aria-hidden="true">🔁</div><h3>Rota, holidays and sick days</h3><p>A rota repeating over one to six weeks shows who's measuring, in the shop or off. Holidays and sick days sit on the diary, and Billy won't offer anyone away.</p></div>
+      <div class="feature glass"><div class="ic" aria-hidden="true">⚠️</div><h3>Clashes flagged before the day</h3><p>Billy warns you when a fitter is double-booked or booked while off, or an order is due after its fitting. The booking stays put until you decide.</p></div>
     </div>
   </div>
 </section>
@@ -444,33 +480,35 @@
 <!-- ===== COMPARISON ===== -->
 <section class="block">
   <div class="container">
-    <h2 class="section-title">Graph paper vs BillyBot</h2>
-    <p class="section-sub">The same job, far less guesswork — and far less waste.</p>
+    <h2 class="section-title">Whiteboard, paper diary or generic calendar vs BillyBot</h2>
+    <p class="section-sub">The same week of fittings, run three ways. Comparing complete systems? See our <a href="/flooring-software-comparison/">flooring software comparison</a>.</p>
     <div class="cmp glass">
       <table>
         <thead>
-          <tr><th>&nbsp;</th><th>Working it out by hand</th><th class="win">BillyBot</th></tr>
+          <tr><th>&nbsp;</th><th class="win">BillyBot</th><th>Whiteboard or paper diary</th><th>Generic calendar</th></tr>
         </thead>
         <tbody>
-          <tr><td class="lbl">Drop layout</td><td class="old">Sketched on paper</td><td class="win">Nested across the roll width</td></tr>
-          <tr><td class="lbl">Pattern matching</td><td class="old">Easy to get wrong</td><td class="win">Repeat factored in</td></tr>
-          <tr><td class="lbl">Sheet goods</td><td class="old">Net area + a guess</td><td class="win">Sized by least-waste drops + trim</td></tr>
-          <tr><td class="lbl">Stairs</td><td class="old">Rough perimeter</td><td class="win">Treads, risers, winders &amp; real gripper</td></tr>
-          <tr><td class="lbl">Over-ordering</td><td class="old">"A bit extra to be safe"</td><td class="win">Exact material to order</td></tr>
-          <tr><td class="lbl">The plan</td><td class="old">In your head / on paper</td><td class="win">Visual plan fitters can cut from</td></tr>
-          <tr><td class="lbl">Into the quote</td><td class="old">Re-calculate separately</td><td class="win">Flows straight into the quote</td></tr>
+          <tr><td class="lbl">Who's free</td><td class="win">Billy checks bookings, holidays, sick days, rota and bank holidays</td><td class="old">Ask around</td><td class="old">Compare everyone's calendars</td></tr>
+          <tr><td class="lbl">Fitter's job details</td><td class="win">Address, Maps, customer number and notes on their phone</td><td class="old">A call the night before</td><td class="old">Whatever was typed in</td></tr>
+          <tr><td class="lbl">What fitters can see</td><td class="win">Only their own bookings, as far ahead as you choose</td><td class="old">The whole board</td><td class="old">Depends how it's shared</td></tr>
+          <tr><td class="lbl">When a job moves</td><td class="win">Fitters on it get a notification with the new date</td><td class="old">Rub out, ring round</td><td class="old">Edit it, then message the fitter</td></tr>
+          <tr><td class="lbl">Holidays and double-bookings</td><td class="win">Flagged by Billy before the day</td><td class="old">Found out on the morning</td><td class="old">Only if someone spots it</td></tr>
+          <tr><td class="lbl">Materials vs fitting date</td><td class="win">Flagged when an order is due after the fitting</td><td class="old">In your head</td><td class="old">Not tracked</td></tr>
+          <tr><td class="lbl">Offering dates to customers</td><td class="win">Billy drafts the email with free dates</td><td class="old">Check the board, ring back</td><td class="old">Check calendars, write the email</td></tr>
+          <tr><td class="lbl">Linked to the job</td><td class="win">A booked fitting moves the job to Fitting booked</td><td class="old">No</td><td class="old">No</td></tr>
         </tbody>
       </table>
     </div>
+    <p class="cmp-hint">Swipe the table sideways to see every column.</p>
   </div>
 </section>
 
-<!-- ===== BUILT BY TRADES ===== -->
+<!-- ===== BUILT BY A FLOORING BUSINESS ===== -->
 <section class="block">
   <div class="container prose" style="text-align:center;">
-    <h2 class="section-title">Cutting plans built around the way you buy</h2>
-    <p>Most "area calculators" just multiply length by width and call it a day. But you don't buy flooring by the square metre of floor — you buy carpet and vinyl by the drop off a fixed-width roll. BillyBot's cutting plan software is built around that reality, so the material it works out matches what you actually order from your supplier.</p>
-    <p>And because it's part of the same AI operator that runs your back office, the cutting plan feeds straight into your <a href="/flooring-quoting-software/">flooring quoting software</a> and onto the <a href="/">job</a> — no double-handling, no re-keying.</p>
+    <h2 class="section-title">Scheduling built by a flooring business</h2>
+    <p>BillyBot was built by a flooring business, on 20 years of running one: quoting, buying, fitting, hiring and scaling. So the diary works the way flooring does: surveys before quotes, fittings after materials, jobs that run over several days, and fitters who need the address, not access to the whole business.</p>
+    <p>Scheduling is one part of <a href="/">the AI operator that runs the office side of your flooring business</a>, from first enquiry to final invoice. See how bookings connect to quotes, materials and invoices in our <a href="/flooring-job-management-software/">flooring job management software</a>.</p>
   </div>
 </section>
 
@@ -481,7 +519,7 @@
     <p class="section-sub">One price per office seat. Your fitters are always free.</p>
     <div class="pricestrip glass">
       <div class="big">£149<span>/seat / month</span></div>
-      <p>Everything included — cutting plans, quoting, invoicing and more. Unlimited fitters free. 14-day free trial. Cancel anytime. Prices exclude VAT.</p>
+      <p>Everything included, no feature tiers. Unlimited fitters free. Annual billing saves two months. 14-day free trial. Cancel anytime. Prices exclude VAT.</p>
       <div style="margin-top:22px;"><a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your free trial</a></div>
     </div>
   </div>
@@ -490,15 +528,15 @@
 <!-- ===== FAQ ===== -->
 <section class="block">
   <div class="container">
-    <h2 class="section-title">Cutting plan software — FAQ</h2>
+    <h2 class="section-title">Flooring scheduling software: FAQ</h2>
     <div class="faq-list">
-      <div class="faq-item"><button class="faq-question">How does BillyBot work out a flooring cutting plan?</button><div class="faq-answer"><p>Upload a floor plan or enter your room measurements and BillyBot nests every drop across your roll width, places the seams sensibly, and outputs the cutting layout along with the exact material needed — for carpet, vinyl, LVT, tiles and more.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Does it handle pattern repeats and pattern matching?</button><div class="faq-answer"><p>Yes. BillyBot accounts for pattern matching so patterned carpet, vinyl or LVT lines up correctly, factoring the repeat into the cutting layout and the material quantity so you order enough to match the pattern.</p></div></div>
-      <div class="faq-item"><button class="faq-question">How does it deal with roll widths and sheet goods?</button><div class="faq-answer"><p>Roll goods such as sheet vinyl, safety flooring, lino and broadloom carpet are bought as fixed-width drops, so the material needed is more than the net floor area. BillyBot sizes material off the least-waste drops plus a trim allowance — the way you actually buy it — while LVT and tiles are calculated by net area.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Will it reduce waste and stop me over-ordering?</button><div class="faq-answer"><p>Yes. BillyBot chooses the least-waste drop layout and tells you the exact material to order, so you stop guessing and over-ordering "just in case" — which protects your margin on every job.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Can it work out cutting plans for stairs?</button><div class="faq-answer"><p>Yes. BillyBot handles treads, risers, winders and landings, and works out the real gripper lengths needed, not just a rough perimeter figure.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Can I see the cutting layout?</button><div class="faq-answer"><p>Yes. BillyBot produces a visual cutting plan you and your fitters can view and work from, on the web or in the mobile app.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Does the cutting plan feed into my quote?</button><div class="faq-answer"><p>Yes. The material the cutting plan works out flows straight into your quote, so you price the real material required rather than a rough estimate — quoting and ordering stay in sync.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Does BillyBot sync with Google Calendar and Outlook?</button><div class="faq-answer"><p>Yes. Switch on Calendar Sync for your Gmail or Outlook mailbox and your own bookings, or every booking in the business, appear in that calendar. Anything already in it counts as busy when Billy looks for free slots. Customers are never added as guests, so they get no invites.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Can fitters see only their own jobs?</button><div class="faq-answer"><p>Yes. Fitters use the free app and see only the bookings they're assigned to, as far ahead as you allow: today only, one, two or four weeks, a custom number of days, or no limit. They don't see quotes, prices or costs, the business inbox or the Billy chat.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">What happens when a job moves?</button><div class="faq-answer"><p>Drag or edit the booking in the web diary. Fitters on a confirmed booking get a notification with the new date and time, and a synced calendar event moves too. Billy's checks follow the new date, so if a fitter is now booked while off, or the order is due after the fitting, he tells you.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Can Billy book jobs into the diary for me?</button><div class="faq-answer"><p>Yes. Tell him in chat, for example “book the Oak Avenue carpet fit for Thursday with Dave”. He books it and tells you in one line what he assumed, such as the time. When dates go to a customer, he only offers days the diary shows as free, and the email waits for your approval unless you've switched on auto-send.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Does it handle surveys as well as fittings?</button><div class="faq-answer"><p>Yes. A booking can be a fitting, survey, prep or another visit such as goods-in. For survey slots, Billy checks whoever is doing the survey, you by default or someone you name such as an estimator, against their bookings, time off, rota and connected calendar.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">We use a paper diary and a whiteboard. How do we switch?</button><div class="faq-answer"><p>Photograph a page of the paper diary, or the rota on the wall, and send it to Billy. He reads it back, turns the clear bookings, enquiries and call-backs into records, and asks about anything he can't make out. A rota is loaded once you've confirmed it. Then invite your fitters to the free app.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Do fitters cost extra?</button><div class="faq-answer"><p>No. Fitters are always free, however many you have. Office seats are £149 per month, excluding VAT, with everything included and no feature tiers. Annual billing saves two months, and every account starts with a 14-day free trial you can cancel anytime.</p></div></div>
     </div>
   </div>
 </section>
@@ -507,12 +545,14 @@
 <section class="block">
   <div class="container">
     <div class="ctaband glass">
-      <h2>Plan your next job with zero guesswork</h2>
-      <p>Let Billy nest the rolls, match the pattern and tell you exactly what to order. 14 days free, fitters always free, cancel anytime.</p>
-      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try the cutting plan software — free</a>
+      <h2>One diary. Every fitter. Fewer phone calls.</h2>
+      <p>Run your diary with Billy free for 14 days. Fitters are always free, and you can cancel anytime.</p>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try BillyBot free for 14 days</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer>
@@ -565,7 +605,7 @@
 
   document.querySelectorAll('[data-app-signup]').forEach(function(el) {
     el.addEventListener('click', function() {
-      if (typeof fbq !== 'undefined') { fbq('track', 'ViewContent', { content_name: 'Cutting Plan Software CTA' }); }
+      if (typeof fbq !== 'undefined') { fbq('track', 'ViewContent', { content_name: 'Flooring Scheduling Software CTA' }); }
     });
   });
 

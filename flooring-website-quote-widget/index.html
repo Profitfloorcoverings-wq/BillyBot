@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  /* Meta Pixel: queue events now, load the library after the page has rendered */
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];f.addEventListener('load',function(){t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)})}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '24704985755777244');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Primary SEO ===== -->
+  <title>Instant Quote Widget for Flooring Websites | BillyBot</title>
+  <meta name="description" content="Add an instant quote widget to your flooring website. Visitors get an indicative price on your own rates, and the lead lands in BillyBot. Try it free." />
+  <link rel="canonical" href="https://billybot.ai/flooring-website-quote-widget/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0B0F1A" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BillyBot" />
+  <meta property="og:title" content="Instant Quote Widget for Flooring Websites | BillyBot" />
+  <meta property="og:description" content="Add an instant quote widget to your flooring website. Visitors get an indicative price on your own rates, and the lead lands in BillyBot. Try it free." />
+  <meta property="og:url" content="https://billybot.ai/flooring-website-quote-widget/" />
+  <meta property="og:image" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:secure_url" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BillyBot — instant quote widget for flooring websites" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Instant Quote Widget for Flooring Websites | BillyBot" />
+  <meta name="twitter:description" content="Add an instant quote widget to your flooring website. Visitors get an indicative price on your own rates, and the lead lands in BillyBot. Try it free." />
+  <meta name="twitter:image" content="https://billybot.ai/images/og-image.png" />
+  <meta name="twitter:image:alt" content="BillyBot — instant quote widget for flooring websites" />
+
+  <!-- Self-hosted variable fonts (Inter + Sora, SIL OFL): no render-blocking third-party CSS -->
+  <link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Sora'; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/sora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  </style>
+
+  <style>
+    :root {
+      --brand1: #2563EB;
+      --brand2: #3B82F6;
+      --cyan: #38BDF8;
+      --accent1: #F97316;
+      --accent2: #FB923C;
+      --bg: #0B0F1A;
+      --bg2: #0F1526;
+      --text: #E6ECF9;
+      --muted: #98A3B8;
+      --line: rgba(255,255,255,0.08);
+      --radius: 20px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 40%, #0C1221 80%, #0B0F1A 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .grad {
+      background: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff; font-weight: 800; font-family: Sora, Inter, sans-serif;
+      padding: 15px 30px; border-radius: 999px; border: none; cursor: pointer;
+      transition: transform 0.18s ease; font-size: 15px; letter-spacing: -0.01em;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.glow {
+      box-shadow: 0 0 20px rgba(249,115,22,0.45), 0 0 40px rgba(251,146,60,0.2);
+      animation: pulseOrange 2.5s ease-in-out infinite;
+    }
+    @keyframes pulseOrange {
+      0%, 100% { box-shadow: 0 0 18px rgba(249,115,22,0.45), 0 0 36px rgba(251,146,60,0.2); }
+      50%       { box-shadow: 0 0 32px rgba(249,115,22,0.65), 0 0 64px rgba(251,146,60,0.35); }
+    }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(180deg, rgba(13,17,28,0.92), rgba(13,17,28,0.6) 70%, rgba(13,17,28,0));
+      backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { height: 76px; display: flex; align-items: center; gap: 28px; }
+    .logo { display: flex; align-items: center; gap: 12px; font: 800 20px Sora, Inter; }
+    .logo svg { width: 34px; height: 34px; }
+    .nav-links { display: flex; gap: 26px; margin-left: 8px; font-weight: 600; font-size: 15px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 18px; }
+    .login-link { font-weight: 600; font-size: 15px; color: var(--muted); }
+    .login-link:hover { color: var(--text); }
+
+    /* Breadcrumb */
+    .crumb { font-size: 13px; color: var(--muted); padding: 22px 0 0; }
+    .crumb a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 56px 0 64px; text-align: center; }
+    .eyebrow {
+      display: inline-block; font-family: Sora, Inter; font-weight: 700; font-size: 13px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan);
+      border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; margin-bottom: 22px;
+      background: rgba(56,189,248,0.06);
+    }
+    h1 {
+      font-family: Sora, Inter; font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
+      font-size: clamp(34px, 6vw, 60px); max-width: 920px; margin: 0 auto;
+    }
+    .lede { color: #AFC3FF; font-size: clamp(17px, 2.3vw, 21px); max-width: 760px; margin: 22px auto 0; }
+    .cta-row { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .disclaimer { color: var(--muted); font-size: 14px; margin-top: 16px; }
+
+    /* Sections */
+    section.block { padding: 56px 0; }
+    .section-title { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -0.5px; text-align: center; }
+    .section-sub { color: var(--muted); text-align: center; max-width: 680px; margin: 14px auto 0; font-size: 17px; }
+
+    /* Problem/solution two-up */
+    .twoup { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+    .twoup .glass { padding: 28px; }
+    .twoup h3 { font-family: Sora, Inter; font-weight: 700; font-size: 21px; margin-bottom: 10px; }
+    .twoup p { color: #C3D0EA; }
+    .pk { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+    .pk.bad { color: #fb7185; } .pk.good { color: #4ade80; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; counter-reset: step; }
+    .step { padding: 26px 22px; }
+    .step .n {
+      width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-family: Sora; font-weight: 800; color: #fff; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--brand1), var(--cyan));
+    }
+    .step h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 15px; }
+
+    /* Feature grid */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+    .feature { padding: 26px 24px; }
+    .feature .ic { font-size: 26px; margin-bottom: 14px; }
+    .feature h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .feature p { color: var(--muted); font-size: 15px; }
+
+    /* Comparison table */
+    .cmp { margin-top: 40px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; }
+    thead th { font-family: Sora, Inter; font-weight: 700; font-size: 14px; color: var(--muted); }
+    thead th.win { color: var(--cyan); }
+    td.lbl { color: #C3D0EA; font-weight: 600; }
+    td.old { color: var(--muted); }
+    td.win { color: var(--text); font-weight: 600; }
+    tbody tr:last-child td { border-bottom: 0; }
+
+    /* Pricing strip */
+    .pricestrip { margin-top: 40px; padding: 34px; text-align: center; }
+    .pricestrip .big { font-family: Sora, Inter; font-weight: 800; font-size: 40px; }
+    .pricestrip .big span { font-size: 18px; color: var(--muted); font-weight: 600; }
+    .pricestrip p { color: var(--muted); margin-top: 6px; }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 12px; max-width: 820px; margin: 40px auto 0; }
+    .faq-item { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .faq-question {
+      width: 100%; text-align: left; background: none; border: 0; color: var(--text); cursor: pointer;
+      font-family: Sora, Inter; font-weight: 600; font-size: 16px; padding: 18px 24px; position: relative;
+    }
+    .faq-question::after { content: "+"; position: absolute; right: 24px; top: 16px; font-size: 22px; color: var(--cyan); transition: transform 0.2s; }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; padding: 0 24px; }
+    .faq-item.active .faq-answer { max-height: 520px; padding: 0 24px 20px; }
+    .faq-answer p { color: #C3D0EA; font-size: 15px; }
+
+    /* CTA band */
+    .ctaband { text-align: center; padding: 56px 28px; margin: 56px 0; }
+    .ctaband h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 4vw, 40px); letter-spacing: -0.5px; }
+    .ctaband p { color: #AFC3FF; margin: 12px auto 26px; max-width: 560px; }
+
+    /* Prose */
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose p { color: #C3D0EA; margin-top: 16px; font-size: 17px; }
+    .prose a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Footer */
+    footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 15px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+    .footer-links a { color: #475569; font-size: 14px; }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ===== Page-specific: illustrative widget + lead card mocks ===== */
+    .mockwrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; margin-top: 40px; align-items: start; }
+    .mock { margin: 0; min-width: 0; }
+    .mock-label { display: block; text-align: center; font-family: Sora, Inter; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); margin-bottom: 14px; }
+    .mock figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 12px; }
+    .chatmock { max-width: 400px; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--bg2); box-shadow: var(--shadow); }
+    .chatmock-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; background: linear-gradient(135deg, rgba(37,99,235,0.32), rgba(56,189,248,0.14)); border-bottom: 1px solid var(--line); }
+    .chatmock-head strong { display: block; font-family: Sora, Inter; font-size: 15px; font-weight: 700; }
+    .chatmock-head small { display: block; font-size: 12px; color: var(--muted); }
+    .chatmock-x { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); }
+    .chatmock-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+    .bub { max-width: 86%; padding: 10px 13px; font-size: 14px; line-height: 1.45; border-radius: 14px; overflow-wrap: anywhere; }
+    .bub.bot { align-self: flex-start; background: rgba(255,255,255,0.06); border: 1px solid var(--line); border-bottom-left-radius: 4px; color: #C3D0EA; }
+    .bub.you { align-self: flex-end; background: var(--brand1); color: #fff; border-bottom-right-radius: 4px; }
+    .bub .price { display: block; margin: 6px 0; font-family: Sora, Inter; font-weight: 800; font-size: 22px; color: var(--text); }
+    .bub .caveat { display: block; font-style: italic; color: var(--muted); margin-bottom: 6px; }
+    .chatmock-foot { border-top: 1px solid var(--line); padding: 12px 14px 10px; }
+    .chatmock-input { display: flex; gap: 8px; }
+    .chatmock-field { flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; color: var(--muted); font-size: 14px; }
+    .chatmock-send { flex: 0 0 auto; width: 40px; border-radius: 10px; background: var(--brand1); color: #fff; display: flex; align-items: center; justify-content: center; }
+    .chatmock-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 8px; line-height: 1.35; }
+    .chatmock-powered { font-size: 10.5px; color: #475569; text-align: center; margin-top: 3px; }
+    .leadcard { max-width: 400px; margin: 0 auto; padding: 18px 18px 16px; border-radius: 16px; border: 1px solid var(--line); border-left: 3px solid var(--accent1); background: rgba(255,255,255,0.03); box-shadow: var(--shadow); }
+    .lc-eyebrow { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent2); }
+    .lc-name { display: block; font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin: 4px 0 2px; }
+    .lc-sum { display: block; color: var(--muted); font-size: 14px; }
+    .lc-pill { display: block; margin-top: 10px; padding: 9px 12px; border-radius: 10px; font-size: 14px; overflow-wrap: anywhere; }
+    .lc-pill.money { background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.22); color: #4ade80; font-weight: 600; }
+    .lc-pill.phone { background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.16); color: var(--text); }
+    .lc-meta { display: block; color: var(--muted); font-size: 13px; margin-top: 10px; overflow-wrap: anywhere; }
+    .lc-actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+    .lc-btn { display: inline-block; padding: 8px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; border: 1px solid var(--line); }
+    .lc-btn.call { color: #4ade80; background: rgba(74,222,128,0.1); border-color: rgba(74,222,128,0.25); }
+    .lc-btn.view { color: var(--cyan); background: rgba(56,189,248,0.1); border-color: rgba(56,189,248,0.25); }
+    .arrives-title { font-family: Sora, Inter; font-weight: 700; font-size: 18px; max-width: 400px; margin: 30px auto 0; }
+    .arrives { list-style: none; margin: 12px auto 0; display: grid; gap: 10px; max-width: 400px; }
+    .arrives li { position: relative; padding-left: 26px; color: #C3D0EA; font-size: 15px; }
+    .arrives li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--cyan); font-weight: 700; }
+    .faq-question { padding-right: 56px; }
+    .pricestrip .big .unit { white-space: nowrap; }
+
+    @media (max-width: 1024px) {
+      .features { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .login-link { display: none; }
+      .twoup, .features, .steps { grid-template-columns: 1fr; }
+      .cmp { overflow-x: auto; }
+      .mockwrap { grid-template-columns: 1fr; gap: 44px; }
+      .cmp th, .cmp td { padding: 13px 14px; font-size: 14px; }
+    }
+    @media (max-width: 600px) {
+      .cmp thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .cmp table, .cmp tbody, .cmp tr, .cmp td { display: block; width: 100%; }
+      .cmp tr { padding: 14px 18px; border-bottom: 1px solid var(--line); }
+      .cmp tbody tr:last-child { border-bottom: 0; }
+      .cmp td { border: 0; padding: 3px 0; }
+      .cmp td.lbl { font-family: Sora, Inter; font-size: 15px; margin-bottom: 4px; }
+      .cmp td[data-label]::before { content: attr(data-label) ": "; font-weight: 700; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+      .cmp td.old::before { color: #fb7185; }
+      .cmp td.win::before { color: #4ade80; }
+      .pricestrip { padding: 28px 20px; }
+      .pricestrip .big .unit { display: block; font-size: 16px; margin-top: 2px; }
+    }
+  </style>
+
+  <!-- ===== Structured data (rich results + AI understanding) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://billybot.ai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Flooring Website Quote Widget",
+            "item": "https://billybot.ai/flooring-website-quote-widget/"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://billybot.ai/flooring-website-quote-widget/#webpage",
+        "url": "https://billybot.ai/flooring-website-quote-widget/",
+        "name": "Instant Quote Widget for Flooring Websites | BillyBot",
+        "description": "Add an instant quote widget to your flooring website. Visitors get an indicative price on your own rates, and the lead lands in BillyBot. Try it free.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://billybot.ai/#website"
+        },
+        "about": {
+          "@id": "https://billybot.ai/#software"
+        },
+        "primaryImageOfPage": "https://billybot.ai/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Will the widget give customers a wrong price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's built to quote only the figure BillyBot's pricing works out from your rates and the customer's answers, so it's as close as the sizes they give. Every price carries a note that it may change after a site visit or measure-up, and if a job can't be priced properly, it takes their details for you to price."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if the customer doesn't have measurements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "That's normal. Rough sizes are fine, because everything is confirmed on a site visit, and every price the widget gives says so."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work on my website builder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If your site lets you add code, yes. You get a floating “Get an instant quote” button for your custom-code or footer area, an inline “Start my quote” card for builders such as GoDaddy and Wix, and a plain iframe for builders that strip out scripts. Check your plan: Squarespace doesn't run scripts or iframes in code blocks on its Personal plan, Wix needs a connected domain for custom code, and WordPress.com needs a plugin-enabled plan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where do the leads go?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Straight into BillyBot, as a lead on the Leads tab of your Jobs page with contact details, the full chat and any price given. A “Website lead” card appears in your Billy chat with Call and View lead buttons, and your phone gets a notification if you use the BillyBot app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I control what it quotes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It only gives instant prices for the flooring types you've set rates for. Ask about anything else and it says the job needs a tailored price, then takes the details. You can also switch pricing off entirely, write your own disclaimer and lock the widget to your own domains."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the widget send a formal quote?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It gives an indicative price in the chat and takes the enquiry. It doesn't create a PDF quote or put anything into Xero, Sage or QuickBooks. You send the proper quote from BillyBot when you're ready."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the widget included in the subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, at no extra cost. It works during your 14-day free trial and while your subscription is active. If the account lapses, the widget stops taking enquiries and tells visitors it isn't available."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container nav">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+        <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
+        <g fill="url(#tbBlue)">
+          <rect x="45" y="34" width="6" height="14" rx="3"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
+        </g>
+        <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+        <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
+        <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
+        <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
+      </svg>
+      BillyBot™
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#features">Features</a>
+      <a href="/#how">How it works</a>
+      <a href="/#watch">Watch</a>
+      <a href="/#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="login-link" href="https://app.billybot.ai/auth/login" rel="noopener" data-app-login>Log in</a>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start free trial</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="container">
+  <nav class="crumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <span>Flooring Website Quote Widget</span>
+  </nav>
+</div>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Website Quote Widget</span>
+    <h1>The instant quote widget for flooring websites that <span class="grad">turns visitors into priced leads</span></h1>
+    <p class="lede">Homeowners want a rough price before they'll give you their number. BillyBot's website quote widget chats with each visitor, asks what an estimator would ask, gives an indicative price worked out on your own rates, then hands you the lead with the whole conversation.</p>
+    <div class="cta-row">
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try it free for 14 days</a>
+    </div>
+    <p class="disclaimer">14-day free trial · Fitters always free · Cancel anytime</p>
+  </div>
+</section>
+
+<!-- ===== PROBLEM / SOLUTION ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">The contact form that goes nowhere at 9pm</h2>
+    <p class="section-sub">When your office is shut, what your website does decides whether you ever hear from the person looking at it.</p>
+    <div class="twoup">
+      <div class="glass">
+        <span class="pk bad">A contact form</span>
+        <h3>No price, no reply, no lead</h3>
+        <p>They want a ballpark before committing to a phone call. Your form asks for a name, number and message, then says someone will be in touch. So they try the next firm, or fill in three forms and go with whoever rings first.</p>
+      </div>
+      <div class="glass">
+        <span class="pk good">The BillyBot widget</span>
+        <h3>A price for them, a lead for you</h3>
+        <p>It asks the questions an estimator would, then gives an indicative price on your rates, noting it may change after a site visit. Then it takes their contact details and the enquiry lands in BillyBot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">How the website quote widget works</h2>
+    <p class="section-sub">Four steps to set up. After that it answers whenever someone visits.</p>
+    <div class="steps">
+      <div class="step glass">
+        <div class="n">1</div>
+        <h3>Switch it on</h3>
+        <p>In BillyBot, open Account, then Lead Capture, and turn the widget on. Choose whether it shows prices, set your disclaimer, add your domain.</p>
+      </div>
+      <div class="step glass">
+        <div class="n">2</div>
+        <h3>Paste in the code</h3>
+        <p>Add one snippet to your site: a floating “Get an instant quote” button, an inline “Start my quote” card, or a plain iframe.</p>
+      </div>
+      <div class="step glass">
+        <div class="n">3</div>
+        <h3>Visitors get a price</h3>
+        <p>It asks the questions that matter for a flooring price, then prices the job on your rates.</p>
+      </div>
+      <div class="step glass">
+        <div class="n">4</div>
+        <h3>You get the lead</h3>
+        <p>Their details arrive as a lead in your jobs, with the chat and the price, plus a card in your Billy chat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ILLUSTRATIVE MOCK ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">What your visitor sees, and what you see</h2>
+    <p class="section-sub">An illustration of a typical conversation, with a made-up business, customer and figures.</p>
+    <div class="mockwrap">
+      <figure class="mock">
+        <span class="mock-label">On your website</span>
+        <div class="chatmock">
+          <div class="chatmock-head">
+            <div><strong>Example Flooring Co.</strong><small>Instant flooring quote</small></div>
+            <span class="chatmock-x" aria-hidden="true">✕</span>
+          </div>
+          <div class="chatmock-body">
+            <p class="bub bot">Hi there! Welcome to Example Flooring Co. What rooms need new flooring, and do you have a rough idea of the sizes?</p>
+            <p class="bub you">Living room about 5x4m and the hallway, maybe 4x1. Mid-range LVT.</p>
+            <p class="bub bot">Lovely. What's on the floor now, and is it concrete or floorboards underneath? Any furniture to move?</p>
+            <p class="bub you">Old carpet on concrete. Just a sofa.</p>
+            <p class="bub bot">For mid-range LVT in both rooms, with the old carpet up, the concrete prepared, adhesive and door bars:<span class="price">£1,845</span><span class="caveat">This is an indicative price and may change after a site visit or measure-up.</span>Happy with that? Pop your name, mobile, email and postcode here.</p>
+            <p class="bub you">Sam Taylor, 07700 900123, sam@example.com, AB1 2CD</p>
+            <p class="bub bot">Thanks Sam! Example Flooring Co. will be in touch shortly to confirm and book you in.</p>
+          </div>
+          <div class="chatmock-foot" aria-hidden="true">
+            <div class="chatmock-input"><span class="chatmock-field">Type your message…</span><span class="chatmock-send"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span></div>
+            <p class="chatmock-note">Prices are indicative and not final — they may change after a site visit or measure-up.</p>
+            <p class="chatmock-powered">Powered by BillyBot</p>
+          </div>
+        </div>
+        <figcaption>Illustration only: example business, customer and price.</figcaption>
+      </figure>
+
+      <figure class="mock">
+        <span class="mock-label">In your Billy chat</span>
+        <div class="leadcard">
+          <span class="lc-eyebrow">Website lead</span>
+          <span class="lc-name">Sam Taylor</span>
+          <span class="lc-sum">LVT</span>
+          <span class="lc-pill money">Indicative quote: £1,845</span>
+          <span class="lc-pill phone">+447700900123</span>
+          <span class="lc-meta">sam@example.com · AB1 2CD</span>
+          <span class="lc-actions" aria-hidden="true"><span class="lc-btn call">Call</span><span class="lc-btn view">View lead →</span></span>
+        </div>
+        <figcaption>Illustration only: example lead details.</figcaption>
+        <h3 class="arrives-title">Every website lead arrives with</h3>
+        <ul class="arrives">
+          <li>Name, mobile, email and postcode, plus the address if given</li>
+          <li>The whole chat, plus the price breakdown if it gave one</li>
+          <li>Anything they add afterwards, passed to your chat</li>
+        </ul>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="block" id="features">
+  <div class="container">
+    <h2 class="section-title">Built around how flooring is actually priced</h2>
+    <p class="section-sub">It asks the questions that change the price, then prices on your numbers.</p>
+    <div class="features">
+      <div class="feature glass"><div class="ic">💷</div><h3>Your rates, not averages</h3><p>Priced by the same pricing you've set up for your own quotes.</p></div>
+      <div class="feature glass"><div class="ic">📏</div><h3>The questions that matter</h3><p>It asks what an estimator would need to know, so the price is worth having.</p></div>
+      <div class="feature glass"><div class="ic">🧮</div><h3>No made-up numbers</h3><p>It quotes only what your pricing works out, or takes the details instead.</p></div>
+      <div class="feature glass"><div class="ic">🧵</div><h3>Only the floors you price</h3><p>Instant prices only for the flooring types you've set rates for.</p></div>
+      <div class="feature glass"><div class="ic">📝</div><h3>Your disclaimer</h3><p>Keep the standard “prices are indicative” wording or write your own.</p></div>
+      <div class="feature glass"><div class="ic">🔕</div><h3>Details-only mode</h3><p>Rather not show prices online? Switch pricing off and just take enquiries.</p></div>
+      <div class="feature glass"><div class="ic">🔒</div><h3>Locked to your website</h3><p>List your domains and the chat can only be embedded on your site.</p></div>
+      <div class="feature glass"><div class="ic">📱</div><h3>Made for phones</h3><p>On small screens, the floating button opens the chat full screen.</p></div>
+      <div class="feature glass"><div class="ic">🔔</div><h3>Told straight away</h3><p>A lead card lands in your Billy chat, plus a notification in the BillyBot app.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">Contact form vs BillyBot quote widget</h2>
+    <p class="section-sub">Same visitor, same evening. Two very different mornings.</p>
+    <div class="cmp glass">
+      <table>
+        <thead>
+          <tr><th>&nbsp;</th><th>Website contact form</th><th class="win">BillyBot quote widget</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="lbl">Price for the visitor</td><td class="old" data-label="Contact form">None until someone calls back</td><td class="win" data-label="BillyBot widget">Indicative price in the chat, on your rates</td></tr>
+          <tr><td class="lbl">Questions asked</td><td class="old" data-label="Contact form">Whatever they type in the box</td><td class="win" data-label="BillyBot widget">The questions that change the price</td></tr>
+          <tr><td class="lbl">Out of hours</td><td class="old" data-label="Contact form">Waits in an inbox</td><td class="win" data-label="BillyBot widget">Replies straight away</td></tr>
+          <tr><td class="lbl">Contact details</td><td class="old" data-label="Contact form">Whatever your form asks for</td><td class="win" data-label="BillyBot widget">Name, mobile, email and postcode</td></tr>
+          <tr><td class="lbl">Where it lands</td><td class="old" data-label="Contact form">An email to spot and re-type</td><td class="win" data-label="BillyBot widget">A lead in your jobs and a card in your chat</td></tr>
+          <tr><td class="lbl">Before you call</td><td class="old" data-label="Contact form">One message to go on</td><td class="win" data-label="BillyBot widget">The full chat and the price they saw</td></tr>
+          <tr><td class="lbl">Pricing control</td><td class="old" data-label="Contact form">No price given</td><td class="win" data-label="BillyBot widget">Your flooring types, your wording, or no prices</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAY IN CHARGE ===== -->
+<section class="block">
+  <div class="container prose" style="text-align:center;">
+    <h2 class="section-title">An indicative price. The real quote is still yours.</h2>
+    <p>A price on your website is a starting point, not a contract. The widget only gives a figure worked out from your rates and the customer's answers, always with the site-visit caveat. It doesn't send a formal quote, create a PDF or put anything into Xero, Sage or QuickBooks.</p>
+    <p>When the lead arrives, you decide what's next: ring them, book the measure-up, then send the proper quote with BillyBot's <a href="/flooring-quoting-software/">flooring quoting software</a>, on the same rates. The lead sits on your Leads tab with the rest of your <a href="/flooring-job-management-software/">flooring job management</a>.</p>
+    <p>BillyBot was built by a flooring business, on 20 years of running one. The widget is one part of the <a href="/">AI operator that runs the office side of your business</a>, from first enquiry to final invoice.</p>
+  </div>
+</section>
+
+<!-- ===== PRICING STRIP ===== -->
+<section class="block" id="pricing">
+  <div class="container">
+    <h2 class="section-title">Included in your BillyBot subscription</h2>
+    <p class="section-sub">The website quote widget costs nothing extra. One price per office seat, and your fitters are always free.</p>
+    <div class="pricestrip glass">
+      <div class="big">£149<span class="unit">/office seat / month</span></div>
+      <p>Everything included, no feature tiers. Unlimited fitters free. Annual billing saves two months. 14-day free trial, cancel anytime. Prices exclude VAT.</p>
+      <div style="margin-top:22px;"><a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your free trial</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">Website quote widget FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button type="button" class="faq-question">Will the widget give customers a wrong price?</button><div class="faq-answer"><p>It's built to quote only the figure BillyBot's pricing works out from your rates and the customer's answers, so it's as close as the sizes they give. Every price carries a note that it may change after a site visit or measure-up, and if a job can't be priced properly, it takes their details for you to price.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">What if the customer doesn't have measurements?</button><div class="faq-answer"><p>That's normal. Rough sizes are fine, because everything is confirmed on a site visit, and every price the widget gives says so.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Does it work on my website builder?</button><div class="faq-answer"><p>If your site lets you add code, yes. You get a floating “Get an instant quote” button for your custom-code or footer area, an inline “Start my quote” card for builders such as GoDaddy and Wix, and a plain iframe for builders that strip out scripts. Check your plan: Squarespace doesn't run scripts or iframes in code blocks on its Personal plan, Wix needs a connected domain for custom code, and WordPress.com needs a plugin-enabled plan.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Where do the leads go?</button><div class="faq-answer"><p>Straight into BillyBot, as a lead on the Leads tab of your Jobs page with contact details, the full chat and any price given. A “Website lead” card appears in your Billy chat with Call and View lead buttons, and your phone gets a notification if you use the BillyBot app.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Can I control what it quotes?</button><div class="faq-answer"><p>Yes. It only gives instant prices for the flooring types you've set rates for. Ask about anything else and it says the job needs a tailored price, then takes the details. You can also switch pricing off entirely, write your own disclaimer and lock the widget to your own domains.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Does the widget send a formal quote?</button><div class="faq-answer"><p>No. It gives an indicative price in the chat and takes the enquiry. It doesn't create a PDF quote or put anything into Xero, Sage or QuickBooks. You send the proper quote from BillyBot when you're ready.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Is the widget included in the subscription?</button><div class="faq-answer"><p>Yes, at no extra cost. It works during your 14-day free trial and while your subscription is active. If the account lapses, the widget stops taking enquiries and tells visitors it isn't available.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="block">
+  <div class="container">
+    <div class="ctaband glass">
+      <h2>Win more of the enquiries your website already gets</h2>
+      <p>Switch the widget on during your 14-day free trial, paste the snippet into your site and let the next visitor get a price. Fitters always free, cancel anytime.</p>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your free trial</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> BillyBot™. All rights reserved.
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/flooring-quoting-software/">Flooring Quoting Software</a>
+      <a href="/flooring-estimating-software/">Flooring Estimating Software</a>
+      <a href="/cutting-plan-software/">Cutting Plan Software</a>
+      <a href="/flooring-software-comparison/">Flooring Software Compared</a>
+      <a href="/tools/">Free tools</a>
+      <a href="/resources/">Resources</a>
+      <a href="https://app.billybot.ai/terms">Terms</a>
+      <a href="https://app.billybot.ai/privacy">Privacy</a>
+      <a href="mailto:info@billybot.ai">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var IOS_APP_URL = 'https://apps.apple.com/gb/app/billybot/id6758058400';
+  var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // Signup link carries where the visitor came from (page, external referrer, incoming ad/UTM params)
+  function bbSignupUrl() {
+    var p = new URLSearchParams();
+    var page = location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+    try {
+      var q = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'].forEach(function (k) {
+        if (q.get(k)) p.set(k, q.get(k));
+      });
+      var ref = document.referrer ? new URL(document.referrer).hostname : '';
+      if (ref && ref !== location.hostname) p.set('ref', ref);
+    } catch (e) {}
+    if (!p.get('utm_source')) {
+      p.set('utm_source', 'billybot.ai');
+      p.set('utm_medium', 'website');
+      p.set('utm_campaign', page);
+    } else if (!p.get('utm_content')) {
+      p.set('utm_content', page);
+    }
+    return 'https://app.billybot.ai/auth/signup?' + p.toString();
+  }
+  var SIGNUP_URL = isIOS ? IOS_APP_URL : bbSignupUrl();
+  var LOGIN_URL = isIOS ? IOS_APP_URL : 'https://app.billybot.ai/auth/login';
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) { el.setAttribute('href', SIGNUP_URL); });
+  document.querySelectorAll('[data-app-login]').forEach(function(el) { el.setAttribute('href', LOGIN_URL); });
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      if (typeof fbq !== 'undefined') { fbq('track', 'ViewContent', { content_name: 'Flooring Website Quote Widget CTA' }); }
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function(other) { other.classList.remove('active'); });
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

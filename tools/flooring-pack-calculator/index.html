@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  /* Meta Pixel: queue events now, load the library after the page has rendered */
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];f.addEventListener('load',function(){t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)})}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '24704985755777244');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Primary SEO ===== -->
+  <title>Flooring Pack Calculator: LVT &amp; Laminate Boxes | BillyBot</title>
+  <meta name="description" content="Free flooring pack calculator: add your rooms, the m² per pack and a waste allowance to see how many packs of LVT or laminate to order. Work it out now." />
+  <link rel="canonical" href="https://billybot.ai/tools/flooring-pack-calculator/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0B0F1A" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BillyBot" />
+  <meta property="og:title" content="Flooring Pack Calculator: How Many Packs Do I Need?" />
+  <meta property="og:description" content="Add your rooms, the m² per pack from the label and your waste allowance to get whole packs of LVT, laminate or wood flooring to order, the spare and the cost." />
+  <meta property="og:url" content="https://billybot.ai/tools/flooring-pack-calculator/" />
+  <meta property="og:image" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:secure_url" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BillyBot — the AI operator for flooring businesses" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flooring Pack Calculator: How Many Packs Do I Need?" />
+  <meta name="twitter:description" content="Add your rooms, the m² per pack from the label and your waste allowance to get whole packs of LVT, laminate or wood flooring to order, the spare and the cost." />
+  <meta name="twitter:image" content="https://billybot.ai/images/og-image.png" />
+  <meta name="twitter:image:alt" content="BillyBot — the AI operator for flooring businesses" />
+
+  <!-- Self-hosted variable fonts (Inter + Sora, SIL OFL): no render-blocking third-party CSS -->
+  <link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Sora'; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/sora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+    /* Live demo embed (real app UI) */
+    .demo-embed { display: flex; justify-content: center; margin-top: 40px; }
+    .phone-stage { width: 328px; }
+    .phone-stage iframe { display: block; width: 100%; aspect-ratio: 410 / 806; border: 0; background: transparent; }
+    .web-stage { width: 760px; max-width: 100%; }
+    .web-stage iframe { display: block; width: 100%; aspect-ratio: 900 / 612; border: 0; background: transparent; }
+    .demo-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 12px; }
+    @media (max-width: 768px) { .phone-stage { width: 290px; } }
+  </style>
+
+  <style>
+    :root {
+      --brand1: #2563EB;
+      --brand2: #3B82F6;
+      --cyan: #38BDF8;
+      --accent1: #F97316;
+      --accent2: #FB923C;
+      --bg: #0B0F1A;
+      --bg2: #0F1526;
+      --text: #E6ECF9;
+      --muted: #98A3B8;
+      --line: rgba(255,255,255,0.08);
+      --radius: 20px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 40%, #0C1221 80%, #0B0F1A 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .grad {
+      background: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff; font-weight: 800; font-family: Sora, Inter, sans-serif;
+      padding: 15px 30px; border-radius: 999px; border: none; cursor: pointer;
+      transition: transform 0.18s ease; font-size: 15px; letter-spacing: -0.01em;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.glow {
+      box-shadow: 0 0 20px rgba(249,115,22,0.45), 0 0 40px rgba(251,146,60,0.2);
+      animation: pulseOrange 2.5s ease-in-out infinite;
+    }
+    @keyframes pulseOrange {
+      0%, 100% { box-shadow: 0 0 18px rgba(249,115,22,0.45), 0 0 36px rgba(251,146,60,0.2); }
+      50%       { box-shadow: 0 0 32px rgba(249,115,22,0.65), 0 0 64px rgba(251,146,60,0.35); }
+    }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(180deg, rgba(13,17,28,0.92), rgba(13,17,28,0.6) 70%, rgba(13,17,28,0));
+      backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { height: 76px; display: flex; align-items: center; gap: 28px; }
+    .logo { display: flex; align-items: center; gap: 12px; font: 800 20px Sora, Inter; }
+    .logo svg { width: 34px; height: 34px; }
+    .nav-links { display: flex; gap: 26px; margin-left: 8px; font-weight: 600; font-size: 15px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 18px; }
+    .login-link { font-weight: 600; font-size: 15px; color: var(--muted); }
+    .login-link:hover { color: var(--text); }
+
+    /* Breadcrumb */
+    .crumb { font-size: 13px; color: var(--muted); padding: 22px 0 0; }
+    .crumb a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 56px 0 64px; text-align: center; }
+    .eyebrow {
+      display: inline-block; font-family: Sora, Inter; font-weight: 700; font-size: 13px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan);
+      border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; margin-bottom: 22px;
+      background: rgba(56,189,248,0.06);
+    }
+    h1 {
+      font-family: Sora, Inter; font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
+      font-size: clamp(34px, 6vw, 60px); max-width: 920px; margin: 0 auto;
+    }
+    .lede { color: #AFC3FF; font-size: clamp(17px, 2.3vw, 21px); max-width: 760px; margin: 22px auto 0; }
+    .cta-row { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .disclaimer { color: var(--muted); font-size: 14px; margin-top: 16px; }
+
+    /* Sections */
+    section.block { padding: 56px 0; }
+    .section-title { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -0.5px; text-align: center; }
+    .section-sub { color: var(--muted); text-align: center; max-width: 680px; margin: 14px auto 0; font-size: 17px; }
+
+    /* Problem/solution two-up */
+    .twoup { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+    .twoup .glass { padding: 28px; }
+    .twoup h3 { font-family: Sora, Inter; font-weight: 700; font-size: 21px; margin-bottom: 10px; }
+    .twoup p { color: #C3D0EA; }
+    .pk { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+    .pk.bad { color: #fb7185; } .pk.good { color: #4ade80; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; counter-reset: step; }
+    .step { padding: 26px 22px; }
+    .step .n {
+      width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-family: Sora; font-weight: 800; color: #fff; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--brand1), var(--cyan));
+    }
+    .step h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 15px; }
+
+    /* Feature grid */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+    .feature { padding: 26px 24px; }
+    .feature .ic { font-size: 26px; margin-bottom: 14px; }
+    .feature h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .feature p { color: var(--muted); font-size: 15px; }
+
+    /* Comparison table */
+    .cmp { margin-top: 40px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; }
+    thead th { font-family: Sora, Inter; font-weight: 700; font-size: 14px; color: var(--muted); }
+    thead th.win { color: var(--cyan); }
+    td.lbl { color: #C3D0EA; font-weight: 600; }
+    td.old { color: var(--muted); }
+    td.win { color: var(--text); font-weight: 600; }
+    tbody tr:last-child td { border-bottom: 0; }
+
+    /* Pricing strip */
+    .pricestrip { margin-top: 40px; padding: 34px; text-align: center; }
+    .pricestrip .big { font-family: Sora, Inter; font-weight: 800; font-size: 40px; }
+    .pricestrip .big span { font-size: 18px; color: var(--muted); font-weight: 600; }
+    .pricestrip p { color: var(--muted); margin-top: 6px; }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 12px; max-width: 820px; margin: 40px auto 0; }
+    .faq-item { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .faq-question {
+      width: 100%; text-align: left; background: none; border: 0; color: var(--text); cursor: pointer;
+      font-family: Sora, Inter; font-weight: 600; font-size: 16px; padding: 18px 24px; position: relative;
+    }
+    .faq-question::after { content: "+"; position: absolute; right: 24px; top: 16px; font-size: 22px; color: var(--cyan); transition: transform 0.2s; }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; padding: 0 24px; }
+    .faq-item.active .faq-answer { max-height: 520px; padding: 0 24px 20px; }
+    .faq-answer p { color: #C3D0EA; font-size: 15px; }
+
+    /* CTA band */
+    .ctaband { text-align: center; padding: 56px 28px; margin: 56px 0; }
+    .ctaband h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 4vw, 40px); letter-spacing: -0.5px; }
+    .ctaband p { color: #AFC3FF; margin: 12px auto 26px; max-width: 560px; }
+
+    /* Prose */
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose p { color: #C3D0EA; margin-top: 16px; font-size: 17px; }
+    .prose a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Footer */
+    footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 15px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+    .footer-links a { color: #475569; font-size: 14px; }
+    .footer-links a:hover { color: var(--text); }
+
+
+    /* ===== Calculator tool (page-specific) ===== */
+    [hidden] { display: none !important; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .hero.hero-tool { padding: 34px 0 30px; }
+    .hero-tool h1 { font-size: clamp(32px, 5.2vw, 52px); }
+    .hero-tool .lede { margin-top: 16px; }
+    .hero-tool .eyebrow { margin-bottom: 18px; }
+    .tool { padding: 0 0 24px; }
+    .calc { padding: 26px; }
+    .calc-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 28px; align-items: start; }
+    .calc-h { font-family: Sora, Inter; font-weight: 700; font-size: 20px; letter-spacing: -0.3px; margin-bottom: 14px; }
+    .field { margin-bottom: 16px; min-width: 0; }
+    .field label, .fs legend { display: block; font-size: 13px; font-weight: 600; color: #C3D0EA; margin-bottom: 6px; }
+    .fs { border: 0; margin: 0 0 16px; min-width: 0; }
+    .calc input[type="text"], .calc select {
+      width: 100%; background: rgba(11,15,26,0.65); border: 1px solid rgba(255,255,255,0.16); border-radius: 10px;
+      color: var(--text); font: 500 16px/1.3 Inter, system-ui, sans-serif; padding: 11px 12px;
+    }
+    .calc select { color-scheme: dark; cursor: pointer; }
+    .calc input[type="text"]::placeholder { color: #6B7A93; }
+    .calc input[type="text"]:focus, .calc select:focus { border-color: var(--cyan); outline: none; box-shadow: 0 0 0 3px rgba(56,189,248,0.25); }
+    .calc input[aria-invalid="true"] { border-color: #fb7185; }
+    .calc button:focus-visible, .seg input:focus-visible + label, .faq-question:focus-visible, .prose a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+    .field-err { color: #fda4af; font-size: 13px; margin-top: 8px; line-height: 1.45; }
+    .hint { color: var(--muted); font-size: 12.5px; margin-top: 6px; line-height: 1.45; }
+    .hint a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+    .tile-wide { grid-column: 1 / -1; }
+    .pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+    .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .btn-quiet {
+      background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
+      padding: 8px 14px; font: 600 13px Inter, sans-serif; cursor: pointer;
+    }
+    .btn-quiet:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+    .btn-add { color: var(--cyan); border-color: rgba(56,189,248,0.4); font-size: 14px; padding: 10px 16px; }
+    .btn-add:disabled { opacity: 0.5; cursor: not-allowed; }
+    .linkbtn { background: none; border: 0; padding: 0; color: var(--cyan); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+    .helper { border: 1px dashed rgba(255,255,255,0.14); border-radius: 12px; padding: 12px; margin-top: 10px; }
+    .helper .field { margin-bottom: 10px; }
+    .helper-out { color: #C3D0EA; font-size: 13.5px; margin: 8px 0 0; }
+    .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+    .seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .seg label {
+      display: inline-block; padding: 9px 18px; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px;
+      cursor: pointer; font: 700 15px Sora, Inter, sans-serif; color: var(--text); margin: 0;
+    }
+    .seg input:checked + label { background: linear-gradient(135deg, var(--brand1), var(--cyan)); border-color: transparent; color: #fff; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { background: rgba(255,255,255,0.03); color: #C3D0EA; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px; padding: 7px 12px; font: 600 13px Inter, sans-serif; cursor: pointer; text-align: left; }
+    .chip:hover, .chip[aria-pressed="true"] { border-color: var(--cyan); color: var(--text); background: rgba(56,189,248,0.1); }
+    .custom-in { margin-top: 10px; max-width: 220px; }
+    .settings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
+    .rooms { display: grid; gap: 12px; }
+    .room { border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: rgba(255,255,255,0.02); }
+    .room-top { display: flex; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .room-title { font: 700 15px Sora, Inter, sans-serif; }
+    .room .field { margin-bottom: 0; }
+    .room-or { color: var(--muted); font-size: 12.5px; margin: 10px 0 6px; }
+    .calc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 20px; }
+    .calc-results { border-left: 1px solid var(--line); padding-left: 28px; min-height: 320px; }
+    .res-kicker { font: 700 12px Sora, Inter, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+    .res-empty p { color: #C3D0EA; font-size: 15px; }
+    .res-empty ul { margin: 10px 0 0 1.1em; color: #fda4af; font-size: 15px; }
+    .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .tile { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; background: rgba(255,255,255,0.025); min-width: 0; }
+    .tile-main { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(56,189,248,0.08)); border-color: rgba(56,189,248,0.3); }
+    .t-label { display: block; font-size: 12px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+    .t-val { display: block; font: 800 24px/1.2 Sora, Inter, sans-serif; letter-spacing: -0.5px; margin-top: 2px; overflow-wrap: anywhere; }
+    .tile-main .t-val { font-size: 34px; }
+    .t-sub { display: block; font-size: 13px; color: #AFC3FF; margin-top: 2px; }
+    .res-alert { margin-top: 12px; padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(251,146,60,0.35); background: rgba(249,115,22,0.08); color: #fed7aa; font-size: 14px; }
+    .working { margin-top: 14px; border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; background: rgba(255,255,255,0.015); }
+    .working h3 { font: 700 14px Sora, Inter, sans-serif; margin-bottom: 6px; }
+    .working ol { margin: 0 0 0 1.2em; color: #C3D0EA; font-size: 14px; }
+    .working li { margin-top: 4px; overflow-wrap: anywhere; }
+    .res-compare { margin-top: 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; }
+    .res-compare table { min-width: 300px; }
+    .res-compare caption { text-align: left; font: 700 14px Sora, Inter, sans-serif; color: var(--text); padding: 12px 12px 4px; }
+    .res-compare th, .res-compare td { padding: 8px 12px; font-size: 14px; white-space: nowrap; }
+    .res-compare tbody th { font-weight: 700; color: var(--text); }
+    .res-compare tr.sel th, .res-compare tr.sel td { background: rgba(56,189,248,0.08); }
+    .res-note { color: var(--muted); font-size: 13.5px; margin-top: 12px; line-height: 1.55; }
+    .res-note a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Guide content under the tool */
+    .guide h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(24px, 3.2vw, 32px); letter-spacing: -0.5px; line-height: 1.2; margin-top: 52px; }
+    .guide h2:first-child { margin-top: 0; }
+    .guide [id] { scroll-margin-top: 96px; }
+    .guide h3 { font-family: Sora, Inter; font-weight: 700; font-size: 19px; margin-top: 26px; }
+    .guide ul, .guide ol { margin: 14px 0 0 1.2em; color: #C3D0EA; }
+    .guide li { margin-top: 8px; font-size: 17px; }
+    .guide strong { color: var(--text); }
+    .formula { margin-top: 16px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.03); font: 600 15px/1.6 Inter, sans-serif; color: var(--text); overflow-wrap: anywhere; }
+    .table-scroll { margin-top: 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.02); }
+    .table-scroll table { min-width: 680px; }
+    .table-scroll th, .table-scroll td { padding: 11px 12px; font-size: 14px; vertical-align: top; }
+    .table-scroll tbody td { color: #C3D0EA; }
+    .table-scroll tbody td:first-child { color: var(--text); font-weight: 600; }
+    .table-scroll td a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+    .table-note { color: var(--muted); font-size: 14px; margin-top: 10px; }
+    .ctaband .disclaimer { color: var(--muted); margin: 16px auto 0; }
+    .faq-answer a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    @media (max-width: 900px) {
+      .calc-grid { grid-template-columns: 1fr; }
+      .calc-results { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 22px; min-height: 0; }
+    }
+    @media (max-width: 560px) {
+      .calc { padding: 16px; }
+      .room { padding: 12px; }
+      .settings { grid-template-columns: 1fr; }
+      .trio { grid-template-columns: 1fr 1fr; }
+      .tile-main .t-val { font-size: 30px; }
+      .t-val { font-size: 21px; }
+      .hero.hero-tool { padding: 26px 0 24px; }
+      .ctaband { padding: 40px 18px; }
+    }
+    @media (max-width: 1024px) {
+      .features { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .login-link { display: none; }
+      .twoup, .features, .steps { grid-template-columns: 1fr; }
+      .cmp { overflow-x: auto; }
+    }
+  </style>
+
+  <!-- ===== Structured data (rich results + AI understanding) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://billybot.ai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://billybot.ai/resources/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Flooring Pack Calculator",
+            "item": "https://billybot.ai/tools/flooring-pack-calculator/"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://billybot.ai/tools/flooring-pack-calculator/#webpage",
+        "url": "https://billybot.ai/tools/flooring-pack-calculator/",
+        "name": "Flooring Pack Calculator: LVT & Laminate Boxes | BillyBot",
+        "description": "Free flooring pack calculator: add your rooms, the m² per pack and a waste allowance to see how many packs of LVT or laminate to order. Work it out now.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://billybot.ai/#website"
+        },
+        "about": {
+          "@id": "https://billybot.ai/#software"
+        },
+        "primaryImageOfPage": "https://billybot.ai/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many packs of flooring do I need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Add up the floor area of every room in m², add your waste allowance, then divide by the m² per pack on the label and round up to a whole pack. For 22.56 m² with 10% waste and packs of 1.835 m², that's 24.82 ÷ 1.835 = 13.52, so 14 packs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much extra flooring should I order for waste?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the room and the pattern. Quick-Step suggests 5% extra for a regular room and 10% for rooms with many angles or curves. Havwoods suggests 8–12% for wood planks and says herringbone or chevron may need 15–20%. Small rooms and awkward shapes push waste up."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why isn't pack coverage a round number?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because it's the planks or tiles in the pack multiplied by their size. Seven planks of 1380 × 190 mm cover 1.835 m², not 2 m². Always use the figure on the label or data sheet, because rounding it up can leave you a pack short."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I buy more packs later if I run short?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can, but they may come from a different batch. Amtico warns that materials from different batches vary in shade, texture and gloss. It's safer to order the full quantity in one go and check the batch numbers when it arrives."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I keep spare flooring after fitting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Keeping the spare from rounding up is worth it for repairs. A later batch may not match, and Amtico's guidelines point out that even the same batch can look different once a floor has been walked on and cleaned for months or years."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the calculator work for tiles and carpet tiles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Anything sold by the box or pack works the same way: enter the m² per box from the label. Carpet and sheet vinyl come off a roll, so use a roll-based calculator or a cutting plan for those instead."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container nav">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+        <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
+        <g fill="url(#tbBlue)">
+          <rect x="45" y="34" width="6" height="14" rx="3"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
+        </g>
+        <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+        <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
+        <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
+        <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
+      </svg>
+      BillyBot™
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#features">Features</a>
+      <a href="/#how">How it works</a>
+      <a href="/#watch">Watch</a>
+      <a href="/#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="login-link" href="https://app.billybot.ai/auth/login" rel="noopener" data-app-login>Log in</a>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start free trial</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="container">
+  <nav class="crumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/resources/">Resources</a> &rsaquo; <span>Flooring Pack Calculator</span>
+  </nav>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-tool">
+  <div class="container">
+    <span class="eyebrow">Free flooring tool</span>
+    <h1>Flooring pack calculator: <span class="grad">how many packs do I need?</span></h1>
+    <p class="lede">Add your rooms, the m² per pack from the label and your waste allowance. You get the whole packs to order, what you'll actually buy, the spare and the cost, with the working shown.</p>
+  </div>
+</section>
+
+<!-- ===== TOOL ===== -->
+<section class="tool" aria-labelledby="fp-h">
+  <div class="container">
+    <div class="calc glass">
+      <div class="calc-grid">
+        <form id="fp-form" novalidate>
+          <h2 class="calc-h" id="fp-h">Your rooms</h2>
+          <div class="rooms" id="fp-rooms">
+            <div class="room" data-room="1">
+              <div class="room-top"><h3 class="room-title">Room 1</h3><button type="button" class="btn-quiet room-remove" aria-label="Remove room 1" hidden>Remove</button></div>
+              <div class="trio">
+                <div class="field"><label for="fp-len-1"><span class="sr-only room-n">Room 1 </span>Length (m)</label><input class="room-len" id="fp-len-1" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 4.2" aria-describedby="fp-err-1"></div>
+                <div class="field"><label for="fp-wid-1"><span class="sr-only room-n">Room 1 </span>Width (m)</label><input class="room-wid" id="fp-wid-1" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 3.6" aria-describedby="fp-err-1"></div>
+                <div class="field"><label for="fp-area-1"><span class="sr-only room-n">Room 1 </span>Or area (m²)</label><input class="room-area" id="fp-area-1" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 15.1" aria-describedby="fp-err-1"></div>
+              </div>
+              <p class="field-err" id="fp-err-1" hidden></p>
+            </div>
+          </div>
+          <div class="calc-actions">
+            <button type="button" class="btn-quiet btn-add" id="fp-add">+ Add a room</button>
+          </div>
+          <p class="field-err" id="fp-rooms-err" hidden></p>
+
+          <div class="field">
+            <label for="fp-pack">Pack coverage (m² per pack)</label>
+            <input id="fp-pack" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 1.835" aria-describedby="fp-pack-hint fp-pack-err">
+            <p class="hint" id="fp-pack-hint">From the pack label or the product's data sheet. <button type="button" class="linkbtn" id="fp-pk-toggle" aria-expanded="false" aria-controls="fp-pk">Work it out from plank size</button></p>
+            <div class="helper" id="fp-pk" hidden>
+              <div class="trio">
+                <div class="field"><label for="fp-pk-n">Planks per pack</label><input id="fp-pk-n" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="e.g. 7"></div>
+                <div class="field"><label for="fp-pk-l">Length (mm)</label><input id="fp-pk-l" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 1380"></div>
+                <div class="field"><label for="fp-pk-w">Width (mm)</label><input id="fp-pk-w" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 190"></div>
+              </div>
+              <button type="button" class="btn-quiet btn-add" id="fp-pk-use">Use this coverage</button>
+              <p class="helper-out" id="fp-pk-out" aria-live="polite"></p>
+            </div>
+            <p class="field-err" id="fp-pack-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="fp-waste">Waste allowance (%)</label>
+            <input id="fp-waste" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="0" aria-describedby="fp-waste-hint fp-waste-err">
+            <div class="chips" role="group" aria-label="Common waste allowances">
+              <button type="button" class="chip" data-waste="5" aria-pressed="false">5% · straight lay, simple room</button>
+              <button type="button" class="chip" data-waste="10" aria-pressed="false">10% · awkward room, lots of cuts</button>
+              <button type="button" class="chip" data-waste="15" aria-pressed="false">15% · herringbone or chevron</button>
+              <button type="button" class="chip" data-waste="20" aria-pressed="false">20% · pattern in a small or awkward room</button>
+            </div>
+            <p class="hint" id="fp-waste-hint">Rules of thumb drawn from manufacturer guidance (<a href="#waste">sources below</a>). Your fitter's figure for the actual room wins.</p>
+            <p class="field-err" id="fp-waste-err" hidden></p>
+          </div>
+
+          <div class="settings">
+            <div class="field">
+              <label for="fp-price">Price (£, optional)</label>
+              <input id="fp-price" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="Optional" aria-describedby="fp-price-err">
+              <p class="field-err" id="fp-price-err" hidden></p>
+            </div>
+            <fieldset class="fs">
+              <legend>The price is</legend>
+              <div class="seg">
+                <input type="radio" name="fp-basis" id="fp-basis-m2" value="m2" checked><label for="fp-basis-m2">per m²</label>
+                <input type="radio" name="fp-basis" id="fp-basis-pack" value="pack"><label for="fp-basis-pack">per pack</label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+
+        <div class="calc-results">
+          <p class="res-kicker">Result</p>
+          <div id="fp-live" aria-live="polite">
+            <div class="res-empty"><p>Add a room and the pack coverage to see how many packs you need.</p></div>
+          </div>
+          <div id="fp-detail" hidden></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUIDE ===== -->
+<section class="block">
+  <div class="container prose guide">
+    <h2 id="how-it-works">How the pack calculator works</h2>
+    <p>LVT, laminate, engineered wood, tiles and carpet tiles are sold in packs or boxes, and you can't buy 0.4 of a box, so the sum always ends by rounding up.</p>
+    <p class="formula">area with waste = floor area (m²) × (1 + waste %)<br>packs = area with waste ÷ m² per pack, rounded up to a whole pack<br>m² bought = packs × m² per pack</p>
+
+    <h3>Worked example: two rooms of laminate</h3>
+    <p>A living room of 4.2 × 3.6 m (15.12 m²) and a hall of 3.1 × 2.4 m (7.44 m²) make 22.56 m². The laminate comes in packs of 1.835 m², and with a bay window and three door frames to cut round you allow 10%.</p>
+    <ol>
+      <li>22.56 × 1.10 = <strong>24.82 m²</strong> needed</li>
+      <li>24.82 ÷ 1.835 = 13.52, so <strong>14 packs</strong></li>
+      <li>14 × 1.835 = <strong>25.69 m² bought</strong>: 0.87 m² beyond your allowance, and 3.13 m² (about 14%) more than the floor itself</li>
+    </ol>
+    <p>At £30 per m², that's 25.69 × £30 = £770.70. Priced per pack, it's 14 × the pack price. Either way you pay for whole packs.</p>
+
+    <h3>Worked example: herringbone</h3>
+    <p>A 12 m² kitchen in herringbone, allowing 15%, needs 12 × 1.15 = 13.8 m². Say the packs hold 0.8 m²: 13.8 ÷ 0.8 = 17.25, so 18 packs, which is 14.4 m² on the van.</p>
+
+    <h2 id="batches">Order it all in one go: batches and shade</h2>
+    <p>Packs are made in batches, and batches can differ. <a href="https://media.amtico.com/image/upload/v1713958245/Documents/Technical%20Documents/Installation/amtico-click-smart-parquet-installation-guidelines-acsp-in-20230314-01-en.pdf" rel="noopener">Amtico's Click Smart Parquet installation guidelines</a> tell fitters to "check packaging to ensure all boxes are all of the same product and batch", and warn that "materials from different batches will vary in terms of shade, texture and gloss". <a href="https://www.karndean.com/globalassets/karndean/downloads/residential-and-commercial/pdfs/installation-guides/uk/karndean-designflooring-installation-guidelines-uk-rigid-core.pdf" rel="noopener">Karndean's rigid core guidelines</a> make checking the design, colour and batch the installer's job before anything goes down, and say claims for clearly identifiable defects won't be accepted after installation.</p>
+    <p>That's why the rounding matters more than it looks. Going back for two more packs next month can mean a different batch that doesn't match. Order the full quantity at once, check the batch numbers when it arrives, and open several packs as you lay: Karndean's guidelines ask for planks to be unboxed and shuffled so you don't get patches of heavy and light shading.</p>
+
+    <h2 id="waste">Laying patterns and waste</h2>
+    <p>Waste is the offcuts you can't use anywhere else. Every angle, bay, door frame and pipe adds cuts, and small rooms give offcuts fewer places to go. Herringbone and chevron are cut where every row meets the edge of the room, and a diagonal lay meets every wall at an angle, so both leave more pieces that won't fit elsewhere. Here's what manufacturers and suppliers say, checked 13 September 2026:</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Source</th><th scope="col">Flooring</th><th scope="col">What they suggest</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="https://www.quick-step.co.uk/en-gb/frequently-asked-questions/laminate/preparation-and-installation/how-much-floor-do-i-need-for-my-room" rel="noopener">Quick-Step FAQ</a></td><td>Laminate</td><td>"A 5% extra floor" for a regular room; 10% extra for "more difficult rooms with many angles, curves, etc."</td></tr>
+          <tr><td><a href="https://www.havwoods.com/uk/faqs/" rel="noopener">Havwoods UK FAQs</a></td><td>Wood flooring</td><td>8–12% for planks; herringbone or chevron "may need 15-20% wastage"; small areas need more than open spaces</td></tr>
+          <tr><td><a href="https://media.amtico.com/image/upload/v1713958245/Documents/Technical%20Documents/Installation/amtico-click-smart-parquet-installation-guidelines-acsp-in-20230314-01-en.pdf" rel="noopener">Amtico Click Smart Parquet guidelines</a></td><td>Click LVT parquet</td><td>At least 15% on rooms under 10 m²; 10% "is a good guide" for larger areas; narrow or awkward spaces may need more</td></tr>
+          <tr><td><a href="https://www.amtico.com/faq/installation-faq/" rel="noopener">Amtico installation FAQ</a></td><td>LVT</td><td>"10-20% more than the floor area to ensure ample stock for strips, corners and angles"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Scroll sideways on a phone to see every column.</p>
+    <p>The calculator's chips follow these ranges, but they're rules of thumb, not guarantees. We found no manufacturer figure for diagonal lays to quote, so that one is down to you and your fitter.</p>
+
+    <h2 id="pack-coverage">Check the pack coverage on the label</h2>
+    <p>Pack coverage is rarely a round number, because it's the planks or tiles in the pack multiplied by their size. <a href="https://www.quick-step.co.uk/en-gb/laminate/impressive/im8258_ivory-oak" rel="noopener">Quick-Step's Impressive laminate</a>, for example, has 7 planks of 1380 × 190 mm to a pack, listed at 1.835 m² per pack. Round that up to 2 m² and the 22.56 m² job above looks like 13 packs, but 13 real packs only cover 23.86 m² against the 24.82 m² you need: nearly 1 m² short.</p>
+    <p>Use the m² per pack printed on the label or data sheet. If you only have the plank size, multiply the planks in a pack by the length and width in metres: 7 × 1.38 × 0.19 = 1.835 m². Check the figure is per pack, not per plank or per pallet.</p>
+
+    <h2 id="acclimatisation">Let it acclimatise first</h2>
+    <p>Manufacturers set their own rules for letting flooring adjust to the room before it goes down, and they vary by product. Amtico's Click Smart Parquet guidelines say to leave the boxes flat in the room for 24 hours at 18–25°C. Karndean's rigid core guidelines ask for at least 48 hours out of the packaging on commercial installs, and say acclimatisation is generally not essential on residential installs if the product is already at 18–27°C. Follow the instructions for the product you're laying, not a rule you remember from a different one.</p>
+    <p>Before any of that, the subfloor has to be right. If it needs levelling first, the <a href="/tools/smoothing-compound-calculator/">smoothing compound calculator</a> works out the bags.</p>
+
+    <h2 id="quote-it">From packs to the quote</h2>
+    <p>On a quote, the same rounding sets your material cost, which is why BillyBot prices packed flooring in whole packs from your own supplier price lists. Carpet and sheet vinyl are bought off the roll instead, which is where <a href="/cutting-plan-software/">cutting plan software</a> comes in, planning the whole job room by room. For carpet, try the <a href="/tools/carpet-calculator/">carpet calculator</a>.</p>
+    <p>BillyBot was built by a flooring business, on 20 years of running one. It runs the office side of the business from first enquiry to final invoice, and its <a href="/flooring-quoting-software/">flooring quoting software</a> prices every job on your own rates, as a branded PDF or pushed into Xero, Sage or QuickBooks once you confirm.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">Flooring pack calculator: FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button type="button" class="faq-question">How many packs of flooring do I need?</button><div class="faq-answer"><p>Add up the floor area of every room in m², add your waste allowance, then divide by the m² per pack on the label and round up to a whole pack. For 22.56 m² with 10% waste and packs of 1.835 m², that's 24.82 ÷ 1.835 = 13.52, so 14 packs.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">How much extra flooring should I order for waste?</button><div class="faq-answer"><p>It depends on the room and the pattern. Quick-Step suggests 5% extra for a regular room and 10% for rooms with many angles or curves. Havwoods suggests 8–12% for wood planks and says herringbone or chevron may need 15–20%. Small rooms and awkward shapes push waste up.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Why isn't pack coverage a round number?</button><div class="faq-answer"><p>Because it's the planks or tiles in the pack multiplied by their size. Seven planks of 1380 × 190 mm cover 1.835 m², not 2 m². Always use the figure on the label or data sheet, because rounding it up can leave you a pack short.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Can I buy more packs later if I run short?</button><div class="faq-answer"><p>You can, but they may come from a different batch. Amtico warns that materials from different batches vary in shade, texture and gloss. It's safer to order the full quantity in one go and check the batch numbers when it arrives.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Should I keep spare flooring after fitting?</button><div class="faq-answer"><p>Keeping the spare from rounding up is worth it for repairs. A later batch may not match, and Amtico's guidelines point out that even the same batch can look different once a floor has been walked on and cleaned for months or years.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Does the calculator work for tiles and carpet tiles?</button><div class="faq-answer"><p>Yes. Anything sold by the box or pack works the same way: enter the m² per box from the label. Carpet and sheet vinyl come off a roll, so use a roll-based calculator or a cutting plan for those instead.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="block">
+  <div class="container">
+    <div class="ctaband glass">
+      <h2>Order right. Quote right.</h2>
+      <p>BillyBot prices packed flooring in whole packs from your own supplier price lists, and runs the office side of your flooring business from first enquiry to final invoice.</p>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your 14-day free trial</a>
+      <p class="disclaimer">£149 per office seat per month, everything included · Fitters always free · Cancel anytime · Prices exclude VAT</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> BillyBot™. All rights reserved.
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/flooring-quoting-software/">Flooring Quoting Software</a>
+      <a href="/flooring-estimating-software/">Flooring Estimating Software</a>
+      <a href="/cutting-plan-software/">Cutting Plan Software</a>
+      <a href="/flooring-software-comparison/">Flooring Software Compared</a>
+      <a href="/tools/">Free tools</a>
+      <a href="/resources/">Resources</a>
+      <a href="https://app.billybot.ai/terms">Terms</a>
+      <a href="https://app.billybot.ai/privacy">Privacy</a>
+      <a href="mailto:info@billybot.ai">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* CALC-START */
+function bbNum(v) {
+  if (typeof v === 'number') return isFinite(v) ? v : NaN;
+  if (v === null || v === undefined) return NaN;
+  var s = String(v).replace(/\s+/g, '').replace(/£|mm|m²|m2|%/gi, '');
+  if (s === '') return NaN;
+  if (/^\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, '');
+  else if (/^\d*,\d+$/.test(s)) s = s.replace(',', '.');
+  if (!/^[-+]?(\d+\.?\d*|\.\d+)$/.test(s)) return NaN;
+  return Number(s);
+}
+function bbBlank(v) { return v === null || v === undefined || String(v).trim() === ''; }
+function bbRound(x, dp) { var f = Math.pow(10, dp); return Math.round(x * f) / f; }
+function bbCeil(x) { return Math.ceil(bbRound(x, 6)); }
+
+function packRoomArea(room, n) {
+  var L = room ? room.length : '', W = room ? room.width : '', A = room ? room.area : '';
+  var name = 'Room ' + n;
+  if (bbBlank(L) && bbBlank(W) && bbBlank(A)) return { empty: true };
+  if (!bbBlank(A)) {
+    var a = bbNum(A);
+    if (isNaN(a)) return { error: name + ': the area needs to be a number, like 15.1.' };
+    if (a <= 0) return { error: name + ': the area needs to be more than zero.' };
+    if (a > 100000) return { error: name + ': that area looks too big. Check it.' };
+    return { area: a, source: 'area' };
+  }
+  if (bbBlank(L)) return { error: name + ': add the length, or enter the area instead.' };
+  if (bbBlank(W)) return { error: name + ': add the width, or enter the area instead.' };
+  var l = bbNum(L), w = bbNum(W);
+  if (isNaN(l) || isNaN(w)) return { error: name + ': length and width need to be numbers in metres, like 4.2.' };
+  if (l <= 0 || w <= 0) return { error: name + ': length and width need to be more than zero.' };
+  if (l > 1000 || w > 1000) return { error: name + ': those sizes look too big. Enter them in metres.' };
+  return { area: l * w, length: l, width: w, source: 'dims' };
+}
+
+function packCost(packs, boughtM2, price, basis) {
+  if (price === null) return null;
+  return bbRound(basis === 'pack' ? packs * price : boughtM2 * price, 2);
+}
+
+function flooringPacks(input) {
+  var errors = [], rooms = [], total = 0, warnings = [];
+  (input.rooms || []).forEach(function (r, i) {
+    var res = packRoomArea(r, i + 1);
+    if (res.empty) return;
+    if (res.error) { errors.push({ field: 'room', room: i, message: res.error }); return; }
+    res.n = i + 1; rooms.push(res); total += res.area;
+  });
+  if (!rooms.length && !errors.length) errors.push({ field: 'rooms', message: 'Add at least one room: its length and width, or its area.' });
+  var pack = bbNum(input.packM2);
+  if (bbBlank(input.packM2)) errors.push({ field: 'pack', message: 'Add the pack coverage in m² from the label, like 1.835.' });
+  else if (isNaN(pack)) errors.push({ field: 'pack', message: 'The pack coverage needs to be a number, like 1.835.' });
+  else if (pack <= 0) errors.push({ field: 'pack', message: 'The pack coverage needs to be more than zero.' });
+  else if (pack > 100) errors.push({ field: 'pack', message: 'That pack coverage looks too big. Check it\'s m² per pack.' });
+  var waste = bbBlank(input.wastePct) ? 0 : bbNum(input.wastePct);
+  if (isNaN(waste)) errors.push({ field: 'waste', message: 'The waste allowance needs to be a number, like 10, or left blank.' });
+  else if (waste < 0) errors.push({ field: 'waste', message: 'The waste allowance can\'t be negative.' });
+  else if (waste > 50) errors.push({ field: 'waste', message: 'Keep the waste allowance at 50% or less.' });
+  var price = bbBlank(input.price) ? null : bbNum(input.price);
+  if (price !== null && isNaN(price)) errors.push({ field: 'price', message: 'The price needs to be a number, like 29.99, or left blank.' });
+  else if (price !== null && price < 0) errors.push({ field: 'price', message: 'The price can\'t be negative.' });
+  if (errors.length) return { ok: false, errors: errors };
+
+  var basis = input.priceBasis === 'pack' ? 'pack' : 'm2';
+  var withWaste = total * (1 + waste / 100);
+  var packsExact = withWaste / pack;
+  var packs = bbCeil(packsExact);
+  var bought = packs * pack;
+  if (pack > 10) warnings.push('That\'s a big pack. Check the figure is m² per pack, not per pallet.');
+  if (pack < 0.3) warnings.push('That\'s a small pack. Check the figure is m² per pack, not per plank or tile.');
+  return {
+    ok: true, rooms: rooms, totalM2: total, wastePct: waste, withWasteM2: withWaste, packM2: pack,
+    packsExact: packsExact, packs: packs, boughtM2: bought,
+    spareM2: Math.max(0, bought - withWaste), overFloorM2: Math.max(0, bought - total),
+    overFloorPct: Math.max(0, (bought - total) / total * 100),
+    price: price, priceBasis: basis, cost: packCost(packs, bought, price, basis), warnings: warnings
+  };
+}
+
+function packWasteTable(res, wastes) {
+  return wastes.map(function (w) {
+    var need = res.totalM2 * (1 + w / 100);
+    var packs = bbCeil(need / res.packM2);
+    var bought = packs * res.packM2;
+    return { wastePct: w, needM2: need, packs: packs, boughtM2: bought, cost: packCost(packs, bought, res.price, res.priceBasis) };
+  });
+}
+
+function packCoverageFromPlanks(planks, lengthMm, widthMm) {
+  if (bbBlank(planks) || bbBlank(lengthMm) || bbBlank(widthMm)) return { ok: false, message: 'Enter the planks per pack and the plank length and width in mm, like 7, 1380 and 190.' };
+  var n = bbNum(planks), l = bbNum(lengthMm), w = bbNum(widthMm);
+  if (isNaN(n) || isNaN(l) || isNaN(w) || n <= 0 || l <= 0 || w <= 0) return { ok: false, message: 'Planks per pack, length and width all need to be numbers above zero.' };
+  if (Math.round(n) !== n) return { ok: false, message: 'Planks per pack needs to be a whole number.' };
+  if (l < 50 || w < 20) return { ok: false, message: 'Enter the plank size in millimetres, like 1380 and 190.' };
+  if (l > 5000 || w > 2000) return { ok: false, message: 'Those plank sizes look too big for millimetres. Check them.' };
+  return { ok: true, m2: n * l * w / 1e6 };
+}
+/* CALC-END */
+
+(function () {
+  function $(id) { return document.getElementById(id); }
+  var form = $('fp-form');
+  if (!form) return;
+  var roomsEl = $('fp-rooms'), addBtn = $('fp-add'), live = $('fp-live'), detail = $('fp-detail');
+  var pack = $('fp-pack'), waste = $('fp-waste'), price = $('fp-price');
+  var errs = { rooms: $('fp-rooms-err'), pack: $('fp-pack-err'), waste: $('fp-waste-err'), price: $('fp-price-err') };
+  var inputs = { pack: pack, waste: waste, price: price };
+  var nextId = 2, MAX_ROOMS = 20, timer = null;
+
+  function num(n, dp) { return Number(n).toLocaleString('en-GB', { minimumFractionDigits: dp, maximumFractionDigits: dp }); }
+  function trim(n, dp) { return Number(n).toLocaleString('en-GB', { maximumFractionDigits: dp }); }
+  function money(n) { return '£' + num(n, 2); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function packsText(x) {
+    var s = trim(x, 2);
+    if (Math.abs(x - Math.round(x)) > 1e-6 && Number(s.replace(/,/g, '')) === Math.round(x)) s = trim(x, 6);
+    return s;
+  }
+  function roomEls() { return Array.prototype.slice.call(roomsEl.querySelectorAll('.room')); }
+
+  function roomHtml(id) {
+    function f(cls, key, label, ph) {
+      return '<div class="field"><label for="fp-' + key + '-' + id + '"><span class="sr-only room-n"></span>' + label + '</label><input class="' + cls + '" id="fp-' + key + '-' + id + '" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="' + ph + '" aria-describedby="fp-err-' + id + '"></div>';
+    }
+    return '<div class="room-top"><h3 class="room-title"></h3><button type="button" class="btn-quiet room-remove">Remove</button></div>' +
+      '<div class="trio">' + f('room-len', 'len', 'Length (m)', 'e.g. 4.2') + f('room-wid', 'wid', 'Width (m)', 'e.g. 3.6') + f('room-area', 'area', 'Or area (m²)', 'e.g. 15.1') + '</div>' +
+      '<p class="field-err" id="fp-err-' + id + '" hidden></p>';
+  }
+  function renumber() {
+    var list = roomEls();
+    list.forEach(function (el, i) {
+      var n = i + 1;
+      el.querySelector('.room-title').textContent = 'Room ' + n;
+      Array.prototype.forEach.call(el.querySelectorAll('.room-n'), function (s) { s.textContent = 'Room ' + n + ' '; });
+      var rm = el.querySelector('.room-remove');
+      rm.setAttribute('aria-label', 'Remove room ' + n);
+      rm.hidden = list.length === 1;
+    });
+    addBtn.disabled = list.length >= MAX_ROOMS;
+  }
+  function addRoom(values, focus) {
+    var id = nextId++;
+    var el = document.createElement('div');
+    el.className = 'room';
+    el.setAttribute('data-room', String(id));
+    el.innerHTML = roomHtml(id);
+    roomsEl.appendChild(el);
+    if (values) {
+      if (values.length !== undefined) el.querySelector('.room-len').value = values.length;
+      if (values.width !== undefined) el.querySelector('.room-wid').value = values.width;
+      if (values.area !== undefined) el.querySelector('.room-area').value = values.area;
+    }
+    renumber();
+    if (focus) el.querySelector('.room-len').focus();
+    return el;
+  }
+
+  function clearErrors() {
+    Object.keys(errs).forEach(function (k) { errs[k].hidden = true; errs[k].textContent = ''; });
+    Object.keys(inputs).forEach(function (k) { inputs[k].removeAttribute('aria-invalid'); });
+    roomEls().forEach(function (el) {
+      var e = el.querySelector('.field-err'); e.hidden = true; e.textContent = '';
+      Array.prototype.forEach.call(el.querySelectorAll('input'), function (i) { i.removeAttribute('aria-invalid'); });
+    });
+  }
+  function syncChips() {
+    var v = bbNum(waste.value);
+    Array.prototype.forEach.call(form.querySelectorAll('.chip'), function (c) {
+      c.setAttribute('aria-pressed', String(!isNaN(v) && Number(c.getAttribute('data-waste')) === v));
+    });
+  }
+
+  function render() {
+    clearErrors();
+    syncChips();
+    var els = roomEls();
+    var rooms = els.map(function (el) { return { length: el.querySelector('.room-len').value, width: el.querySelector('.room-wid').value, area: el.querySelector('.room-area').value }; });
+    var anyRoom = rooms.some(function (r) { return !bbBlank(r.length) || !bbBlank(r.width) || !bbBlank(r.area); });
+    if (!anyRoom && bbBlank(pack.value)) {
+      live.innerHTML = '<div class="res-empty"><p>Add a room and the pack coverage to see how many packs you need.</p></div>';
+      detail.hidden = true; detail.innerHTML = '';
+      return;
+    }
+    var basisEl = form.querySelector('input[name="fp-basis"]:checked');
+    var res = flooringPacks({ rooms: rooms, packM2: pack.value, wastePct: waste.value, price: price.value, priceBasis: basisEl ? basisEl.value : 'm2' });
+    if (!res.ok) {
+      var list = res.errors.map(function (e) {
+        if (e.field === 'room') {
+          var el = els[e.room], box = el.querySelector('.field-err');
+          box.textContent = e.message; box.hidden = false;
+          Array.prototype.forEach.call(el.querySelectorAll('input'), function (i) { if (!bbBlank(i.value) || !i.classList.contains('room-area')) i.setAttribute('aria-invalid', 'true'); });
+        } else if (errs[e.field]) {
+          errs[e.field].textContent = e.message; errs[e.field].hidden = false;
+          if (inputs[e.field]) inputs[e.field].setAttribute('aria-invalid', 'true');
+        }
+        return '<li>' + esc(e.message) + '</li>';
+      }).join('');
+      live.innerHTML = '<div class="res-empty"><p>Nearly there. Check this:</p><ul>' + list + '</ul></div>';
+      detail.hidden = true; detail.innerHTML = '';
+      return;
+    }
+    var packWord = res.packs === 1 ? 'pack' : 'packs';
+    var costSub = res.cost === null ? '' : (res.priceBasis === 'pack' ? res.packs + ' ' + packWord + ' at ' + money(res.price) + ' per pack' : num(res.boughtM2, 2) + ' m² at ' + money(res.price) + ' per m²');
+    live.innerHTML = '<div class="tiles">' +
+      '<div class="tile tile-main"><span class="t-label">Packs to order</span><span class="t-val">' + res.packs + ' ' + packWord + '</span><span class="t-sub">' + num(res.boughtM2, 2) + ' m² of flooring at ' + trim(res.packM2, 4) + ' m² per pack</span></div>' +
+      '<div class="tile"><span class="t-label">Floor area</span><span class="t-val">' + num(res.totalM2, 2) + ' m²</span></div>' +
+      '<div class="tile"><span class="t-label">With ' + trim(res.wastePct, 2) + '% waste</span><span class="t-val">' + num(res.withWasteM2, 2) + ' m²</span></div>' +
+      '<div class="tile"><span class="t-label">Spare beyond allowance</span><span class="t-val">' + num(res.spareM2, 2) + ' m²</span></div>' +
+      '<div class="tile"><span class="t-label">Over the floor area</span><span class="t-val">' + num(res.overFloorM2, 2) + ' m²</span><span class="t-sub">' + trim(res.overFloorPct, 1) + '% extra in total</span></div>' +
+      (res.cost !== null ? '<div class="tile tile-wide"><span class="t-label">Flooring cost</span><span class="t-val">' + money(res.cost) + '</span><span class="t-sub">' + esc(costSub) + '</span></div>' : '') +
+      '</div>' +
+      res.warnings.map(function (w) { return '<p class="res-alert">' + esc(w) + '</p>'; }).join('') +
+      (res.wastePct === 0 ? '<p class="res-alert">No waste allowance included, so every cut comes out of the spare from rounding up.</p>' : '');
+
+    var steps = res.rooms.map(function (r) {
+      return 'Room ' + r.n + ': ' + (r.source === 'dims' ? trim(r.length, 3) + ' × ' + trim(r.width, 3) + ' = ' : '') + num(r.area, 2) + ' m²';
+    });
+    if (res.rooms.length > 1) steps.push('Total floor area = ' + num(res.totalM2, 2) + ' m²');
+    if (res.wastePct > 0) steps.push(num(res.totalM2, 2) + ' m² + ' + trim(res.wastePct, 2) + '% waste = ' + num(res.withWasteM2, 2) + ' m²');
+    steps.push(num(res.withWasteM2, 2) + ' m² ÷ ' + trim(res.packM2, 4) + ' m² per pack = ' + packsText(res.packsExact) + ', rounded up to ' + res.packs + ' ' + packWord);
+    steps.push(res.packs + ' × ' + trim(res.packM2, 4) + ' m² = ' + num(res.boughtM2, 2) + ' m² bought');
+    if (res.cost !== null) steps.push(res.priceBasis === 'pack' ? res.packs + ' × ' + money(res.price) + ' = ' + money(res.cost) : num(res.boughtM2, 2) + ' m² × ' + money(res.price) + ' = ' + money(res.cost));
+    var withCost = res.cost !== null;
+    var rows = packWasteTable(res, [0, 5, 10, 15, 20]).map(function (r) {
+      var sel = Math.abs(r.wastePct - res.wastePct) < 1e-9 ? ' class="sel"' : '';
+      return '<tr' + sel + '><th scope="row">' + r.wastePct + '%</th><td>' + r.packs + '</td><td>' + num(r.boughtM2, 2) + ' m²</td>' + (withCost ? '<td>' + money(r.cost) + '</td>' : '') + '</tr>';
+    }).join('');
+    detail.innerHTML = '<div class="working"><h3>The working</h3><ol>' + steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol></div>' +
+      '<div class="res-compare"><table><caption>The same rooms at other waste allowances</caption><thead><tr><th scope="col">Waste</th><th scope="col">Packs</th><th scope="col">m² bought</th>' + (withCost ? '<th scope="col">Cost</th>' : '') + '</tr></thead><tbody>' + rows + '</tbody></table></div>' +
+      '<p class="res-note">Order every pack at once and check the batch numbers match. Acclimatise and lay it to the manufacturer\'s instructions.</p>';
+    detail.hidden = false;
+  }
+  function schedule() { clearTimeout(timer); timer = setTimeout(render, 250); }
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); render(); });
+  form.addEventListener('input', function (e) { if (e.target && e.target.tagName === 'INPUT' && e.target.type === 'text' && !/^fp-pk-/.test(e.target.id)) schedule(); });
+  Array.prototype.forEach.call(form.querySelectorAll('input[name="fp-basis"]'), function (r) { r.addEventListener('change', render); });
+  roomsEl.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.room-remove') : null;
+    if (!btn) return;
+    var el = btn.closest('.room');
+    if (roomEls().length <= 1) return;
+    el.parentNode.removeChild(el);
+    renumber();
+    addBtn.focus();
+    render();
+  });
+  addBtn.addEventListener('click', function () { if (roomEls().length < MAX_ROOMS) { addRoom(null, true); } });
+  Array.prototype.forEach.call(form.querySelectorAll('.chip'), function (c) {
+    c.addEventListener('click', function () { waste.value = c.getAttribute('data-waste'); render(); });
+  });
+  $('fp-pk-toggle').addEventListener('click', function () {
+    var box = $('fp-pk'), open = box.hidden;
+    box.hidden = !open;
+    this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) $('fp-pk-n').focus();
+  });
+  $('fp-pk-use').addEventListener('click', function () {
+    var r = packCoverageFromPlanks($('fp-pk-n').value, $('fp-pk-l').value, $('fp-pk-w').value), out = $('fp-pk-out');
+    if (!r.ok) { out.textContent = r.message; return; }
+    var m2 = bbRound(r.m2, 3);
+    pack.value = String(m2);
+    out.textContent = 'Pack coverage set to ' + trim(m2, 3) + ' m². If the label says something different, use the label.';
+    render();
+  });
+  renumber();
+  // Optional prefill from the link, e.g. ?rooms=4.2x3.6,3.1x2.4&pack=1.835&waste=10&price=30&per=m2
+  try {
+    var q = new URLSearchParams(location.search), any = false;
+    if (q.has('rooms')) {
+      var parts = q.get('rooms').split(',').slice(0, MAX_ROOMS);
+      parts.forEach(function (p, i) {
+        var d = p.toLowerCase().split('x'), vals = d.length === 2 ? { length: d[0].slice(0, 10), width: d[1].slice(0, 10) } : { area: p.slice(0, 10) };
+        var el = i === 0 ? roomEls()[0] : addRoom(null, false);
+        if (vals.area !== undefined) el.querySelector('.room-area').value = vals.area;
+        else { el.querySelector('.room-len').value = vals.length; el.querySelector('.room-wid').value = vals.width; }
+      });
+      any = true;
+    }
+    ['pack', 'waste', 'price'].forEach(function (k) { if (q.has(k)) { inputs[k].value = q.get(k).slice(0, 12); any = true; } });
+    if (q.get('per') === 'pack') { $('fp-basis-pack').checked = true; any = true; }
+    if (any) render();
+  } catch (e) {}
+})();
+</script>
+
+<script>
+  var IOS_APP_URL = 'https://apps.apple.com/gb/app/billybot/id6758058400';
+  var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // Signup link carries where the visitor came from (page, external referrer, incoming ad/UTM params)
+  function bbSignupUrl() {
+    var p = new URLSearchParams();
+    var page = location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+    try {
+      var q = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'].forEach(function (k) {
+        if (q.get(k)) p.set(k, q.get(k));
+      });
+      var ref = document.referrer ? new URL(document.referrer).hostname : '';
+      if (ref && ref !== location.hostname) p.set('ref', ref);
+    } catch (e) {}
+    if (!p.get('utm_source')) {
+      p.set('utm_source', 'billybot.ai');
+      p.set('utm_medium', 'website');
+      p.set('utm_campaign', page);
+    } else if (!p.get('utm_content')) {
+      p.set('utm_content', page);
+    }
+    return 'https://app.billybot.ai/auth/signup?' + p.toString();
+  }
+  var SIGNUP_URL = isIOS ? IOS_APP_URL : bbSignupUrl();
+  var LOGIN_URL = isIOS ? IOS_APP_URL : 'https://app.billybot.ai/auth/login';
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) { el.setAttribute('href', SIGNUP_URL); });
+  document.querySelectorAll('[data-app-login]').forEach(function(el) { el.setAttribute('href', LOGIN_URL); });
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      if (typeof fbq !== 'undefined') { fbq('track', 'ViewContent', { content_name: 'Flooring Pack Calculator CTA' }); }
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function(other) { other.classList.remove('active'); });
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

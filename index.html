@@ -58,6 +58,14 @@
   <style>
     @font-face { font-family: 'Sora'; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/sora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      /* Explore strip */
+    .explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 980px; margin: 30px auto 0; }
+    .explore-col { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015)); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 24px 26px; }
+    .explore-col h3 { font-family: Sora, Inter; font-weight: 700; font-size: 17px; margin-bottom: 12px; color: #E6ECF9; }
+    .explore-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+    .explore-col a { color: #AFC3FF; font-size: 15px; }
+    .explore-col a:hover { color: #38BDF8; }
+    @media (max-width: 860px) { .explore-grid { grid-template-columns: 1fr; } }
   </style>
   <link rel="preconnect" href="https://tradiebrain.app.n8n.cloud">
 
@@ -1114,7 +1122,7 @@
         <p class="demo-k">AI Email Operator</p>
         <h3>Billy runs your inbox.</h3>
         <p>A customer emails in. Billy reads it, creates the job, drafts a reply in your voice — and asks before anything goes out. Like a PA who never sleeps.</p>
-        <p style="margin-top:12px;"><a href="/flooring-software-comparison/" style="color:#38BDF8;font-weight:600;">BillyBot vs Jobber, Tradify &amp; flooring ERPs — see the comparison →</a></p>
+        <p style="margin-top:12px;"><a href="/flooring-job-management-software/" style="color:#38BDF8;font-weight:600;">See how BillyBot manages every flooring job →</a></p>
       </div>
       <div class="demo-stage phone-stage">
         <iframe data-src="demos-app.html?demo=email&embed=1" loading="lazy" title="Email Operator — live demo"></iframe>
@@ -1140,6 +1148,7 @@
         <p class="demo-k">Receipts &amp; MTD</p>
         <h3>Snap it. It files itself.</h3>
         <p>Photograph a receipt and Billy extracts every figure and categorises it. Approve it and it syncs to your accounts — Xero, Sage or QuickBooks. No shoebox — Making-Tax-Digital ready.</p>
+        <p style="margin-top:12px;"><a href="/flooring-invoicing-software/" style="color:#38BDF8;font-weight:600;">See how invoicing and your accounts fit together →</a></p>
       </div>
       <div class="demo-stage phone-stage">
         <iframe data-src="demos-app.html?demo=receipt&embed=1" loading="lazy" title="Receipts — live demo"></iframe>
@@ -1152,6 +1161,7 @@
         <p class="demo-k">Diary &amp; Scheduling</p>
         <h3>Billy books the fitters.</h3>
         <p>When a quote's accepted, Billy drafts the email offering the customer free dates from your diary. Confirm the day and he books the fitting, assigns the team and tells the fitters — without a round of phone calls.</p>
+        <p style="margin-top:12px;"><a href="/flooring-scheduling-software/" style="color:#38BDF8;font-weight:600;">See how BillyBot schedules surveys and fitters →</a></p>
       </div>
       <div class="demo-stage phone-stage">
         <iframe data-src="demos-app.html?demo=diary&embed=1" loading="lazy" title="Diary — live demo"></iframe>
@@ -1164,6 +1174,7 @@
         <p class="demo-k">Supplier Pricing</p>
         <h3>Your real costs. Every quote.</h3>
         <p>Upload a supplier price list and every quote instantly rebuilds on your actual prices — so your margins are always right.</p>
+        <p style="margin-top:12px;"><a href="/flooring-estimating-software/" style="color:#38BDF8;font-weight:600;">Pricing tenders and drawings? See flooring estimating →</a></p>
       </div>
       <div class="demo-stage web-stage">
         <iframe data-src="demos-app.html?demo=supplier&embed=1" loading="lazy" title="Supplier Pricing — live demo"></iframe>
@@ -1580,6 +1591,52 @@
 </section>
 
 
+<!-- ===== EXPLORE (guides, tools, software pages) ===== -->
+<section id="explore" class="section" style="padding:40px 0 30px;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Guides, free tools <span class="grad">&amp; more</span></h2>
+      <p>Practical help for running a flooring business, whether or not you use BillyBot.</p>
+    </div>
+    <div class="explore-grid">
+      <div class="explore-col">
+        <h3>Free tools</h3>
+        <ul>
+          <li><a href="/tools/carpet-calculator/">Carpet calculator</a></li>
+          <li><a href="/tools/smoothing-compound-calculator/">Smoothing compound calculator</a></li>
+          <li><a href="/tools/flooring-pack-calculator/">Flooring pack calculator</a></li>
+          <li><a href="/tools/flooring-labour-rate-calculator/">Labour rate calculator</a></li>
+        </ul>
+      </div>
+      <div class="explore-col">
+        <h3>Guides</h3>
+        <ul>
+          <li><a href="/how-to-quote-a-flooring-job/">How to quote a flooring job</a></li>
+          <li><a href="/how-to-price-a-flooring-tender/">How to price a tender</a></li>
+          <li><a href="/how-to-win-commercial-flooring-contracts/">Winning commercial contracts</a></li>
+          <li><a href="/cis-for-flooring-contractors/">CIS for flooring contractors</a></li>
+        </ul>
+      </div>
+      <div class="explore-col">
+        <h3>Software</h3>
+        <ul>
+          <li><a href="/flooring-quoting-software/">Quoting software</a></li>
+          <li><a href="/flooring-estimating-software/">Estimating software</a></li>
+          <li><a href="/cutting-plan-software/">Cutting plan software</a></li>
+          <li><a href="/flooring-job-management-software/">Job management</a></li>
+          <li><a href="/flooring-scheduling-software/">Scheduling</a></li>
+          <li><a href="/flooring-invoicing-software/">Invoicing</a></li>
+          <li><a href="/flooring-rams-software/">RAMS &amp; COSHH</a></li>
+          <li><a href="/flooring-website-quote-widget/">Website quote widget</a></li>
+          <li><a href="/flooring-software-comparison/">Software comparison</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:22px;"><a href="/resources/" style="color:#38BDF8;font-weight:600;">All guides &amp; resources →</a></p>
+  </div>
+</section>
+<!-- ===== END EXPLORE ===== -->
+
 <!-- ===== MISSION ===== -->
 <section id="mission" class="section" style="padding-bottom:60px;">
   <div class="container" style="max-width:860px;text-align:center;">
@@ -1621,6 +1678,7 @@
   <div class="container">
     © <span id="year"></span> BillyBot™. All rights reserved.
     <div class="footer-links">
+      <a href="/tools/">Free tools</a>
       <a href="/resources/">Resources</a>
       <a href="https://app.billybot.ai/terms">Terms</a>
       <a href="https://app.billybot.ai/privacy">Privacy</a>
