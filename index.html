@@ -704,8 +704,14 @@
         "image": "https://billybot.ai/images/og-image.png",
         "description": "BillyBot is an AI operator (AI assistant software) for flooring businesses and contractors. It runs the office side of the business: enquiries and email, quotes on your own prices, cutting plans, invoicing, receipts, RAMS, diary and team scheduling.",
         "email": "info@billybot.ai",
-        "founder": { "@type": "Person", "name": "Steve" },
-        "areaServed": { "@type": "Country", "name": "United Kingdom" },
+        "founder": {
+          "@type": "Person",
+          "name": "Steve"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
         "sameAs": [
           "https://apps.apple.com/gb/app/billybot/id6758058400",
           "https://play.google.com/store/apps/details?id=com.billybot.billybotmobile"
@@ -724,7 +730,9 @@
         "url": "https://billybot.ai/",
         "name": "BillyBot",
         "description": "AI software for flooring businesses — quotes, cutting plans, emails, invoicing and admin, handled automatically.",
-        "publisher": { "@id": "https://billybot.ai/#organization" },
+        "publisher": {
+          "@id": "https://billybot.ai/#organization"
+        },
         "inLanguage": "en-GB"
       },
       {
@@ -749,7 +757,9 @@
           "Mobile app for every fitter (iPhone and Android)",
           "Xero, Sage and QuickBooks integration"
         ],
-        "provider": { "@id": "https://billybot.ai/#organization" },
+        "provider": {
+          "@id": "https://billybot.ai/#organization"
+        },
         "offers": {
           "@type": "Offer",
           "price": "149.00",
@@ -776,64 +786,142 @@
           {
             "@type": "Question",
             "name": "How does the email inbox work?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Connect your Gmail or Outlook account via secure OAuth login — the same system used by Google and Microsoft themselves. Once connected, BillyBot watches your inbox for customer enquiries. When a new email arrives, Billy reads it, creates a job with the customer's details, and adds it to your jobs inbox. You can reply directly from within BillyBot without switching apps." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Connect your Gmail or Outlook account via secure OAuth login — the same system used by Google and Microsoft themselves. Once connected, BillyBot watches your inbox for customer enquiries. When a new email arrives, Billy reads it, creates a job with the customer's details, and adds it to your jobs inbox. You can reply directly from within BillyBot without switching apps."
+            }
           },
           {
             "@type": "Question",
             "name": "Is it safe to connect my Gmail or Outlook?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. BillyBot connects using each provider's official OAuth system — you never share your password with BillyBot. You log in directly on Google's or Microsoft's own secure pages. BillyBot can only access the emails needed to create and manage your jobs. All authentication tokens are encrypted before storage, and every connection uses 256-bit SSL encryption." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. BillyBot connects using each provider's official OAuth system — you never share your password with BillyBot. You log in directly on Google's or Microsoft's own secure pages. BillyBot can only access the emails needed to create and manage your jobs. All authentication tokens are encrypted before storage, and every connection uses 256-bit SSL encryption."
+            }
           },
           {
             "@type": "Question",
             "name": "Can anyone see my net prices or markups?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Absolutely not. Your pricing rules are encrypted and stored in a dedicated secure database with continuous security monitoring. Only you and BillyBot's automation can read your pricing. Every connection is protected using 256-bit SSL encryption — the same level used by banks." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely not. Your pricing rules are encrypted and stored in a dedicated secure database with continuous security monitoring. Only you and BillyBot's automation can read your pricing. Every connection is protected using 256-bit SSL encryption — the same level used by banks."
+            }
           },
           {
             "@type": "Question",
             "name": "Can I cancel anytime?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, there's no contract. Cancel your trial or subscription whenever you like. Simply text Billy: \"Cancel my subscription\" or manage it directly from your account settings." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, there's no contract. Cancel your trial or subscription whenever you like. Simply text Billy: \"Cancel my subscription\" or manage it directly from your account settings."
+            }
           },
           {
             "@type": "Question",
             "name": "What types of flooring work does BillyBot support?",
-            "acceptedAnswer": { "@type": "Answer", "text": "BillyBot supports carpet, LVT, laminate, vinyl, tiles, engineered wood, safety flooring, Whiterock, and more. It understands real trade language — singles and doubles for door bars, running cove, coved skirts, and all the details that actually matter on a quote. Configure your services in the pricing settings." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BillyBot supports carpet, LVT, laminate, vinyl, tiles, engineered wood, safety flooring, Whiterock, and more. It understands real trade language — singles and doubles for door bars, running cove, coved skirts, and all the details that actually matter on a quote. Configure your services in the pricing settings."
+            }
           },
           {
             "@type": "Question",
             "name": "Do I need accounting software to use BillyBot?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. BillyBot generates professional PDF quotes and manages your jobs entirely on its own. If you use Sage, Xero, or QuickBooks, BillyBot can push quotes directly into your accounting system. But you don't need any accounting software to get started." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. BillyBot generates professional PDF quotes and manages your jobs entirely on its own. If you use Sage, Xero, or QuickBooks, BillyBot can push quotes directly into your accounting system. But you don't need any accounting software to get started."
+            }
           },
           {
             "@type": "Question",
             "name": "My suppliers don't provide price lists. Can I still use BillyBot?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Most suppliers will happily send a price list if you ask. Once you have it, just forward the email (or the attached file) to BillyBot. Billy reads it, stores your prices, and applies them automatically to every quote. No manual data entry needed." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most suppliers will happily send a price list if you ask. Once you have it, just forward the email (or the attached file) to BillyBot. Billy reads it, stores your prices, and applies them automatically to every quote. No manual data entry needed."
+            }
           },
           {
             "@type": "Question",
             "name": "How does receipt capture work? Is it really MTD-ready?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Take a photo of any receipt — BillyBot extracts the supplier, amount, date, and VAT automatically. It then syncs straight into Xero, Sage, or QuickBooks as a digital record. That means you've got a clean, searchable trail for Making Tax Digital — no more shoeboxes of crumpled receipts at year-end." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Take a photo of any receipt — BillyBot extracts the supplier, amount, date, and VAT automatically. It then syncs straight into Xero, Sage, or QuickBooks as a digital record. That means you've got a clean, searchable trail for Making Tax Digital — no more shoeboxes of crumpled receipts at year-end."
+            }
           },
           {
             "@type": "Question",
             "name": "Does BillyBot work on my phone?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. BillyBot runs in any web browser and has apps for iPhone and Android. Every fitter gets the app free, with their diary, jobs and site details on their phone, so the office and the vans work from the same information." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. BillyBot runs in any web browser and has apps for iPhone and Android. Every fitter gets the app free, with their diary, jobs and site details on their phone, so the office and the vans work from the same information."
+            }
           },
           {
             "@type": "Question",
             "name": "What does \"email replies in your voice\" mean?",
-            "acceptedAnswer": { "@type": "Answer", "text": "BillyBot learns your writing style from your sent emails. When you need to reply, it drafts a response that sounds like you — formal and detailed for architects, friendly and straightforward for homeowners. You can edit any draft before sending, or send it as-is." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BillyBot learns your writing style from your sent emails. When you need to reply, it drafts a response that sounds like you — formal and detailed for architects, friendly and straightforward for homeowners. You can edit any draft before sending, or send it as-is."
+            }
           },
           {
             "@type": "Question",
             "name": "Can BillyBot really work out cutting plans?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Upload a floor plan or enter your room measurements, and BillyBot calculates the optimal cutting layout for carpet, vinyl, LVT, or tiles. It accounts for pattern matching, roll widths, and seam placement — helping you minimise waste and order the right amount of material." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Upload a floor plan or enter your room measurements, and BillyBot calculates the optimal cutting layout for carpet, vinyl, LVT, or tiles. It accounts for pattern matching, roll widths, and seam placement — helping you minimise waste and order the right amount of material."
+            }
           },
           {
             "@type": "Question",
             "name": "I already use Sage / Xero / QuickBooks. Will BillyBot replace it?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No — and it's not trying to. BillyBot feeds INTO your accounting software. Quotes, invoices, and receipts sync directly into your existing system. Think of BillyBot as the front-end that handles the day-to-day work, while your accounting software stays as your ledger. They work together." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No — and it's not trying to. BillyBot feeds INTO your accounting software. Quotes, invoices, and receipts sync directly into your existing system. Think of BillyBot as the front-end that handles the day-to-day work, while your accounting software stays as your ledger. They work together."
+            }
           }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "name": "BillyBot demo: the AI operator for flooring businesses",
+        "description": "A walkthrough of BillyBot, the AI operator built for UK flooring businesses: quoting on your own prices, email, invoicing, RAMS, job sheets and the diary.",
+        "thumbnailUrl": [
+          "https://i.ytimg.com/vi/irKEfZWZR4Q/hqdefault.jpg"
+        ],
+        "uploadDate": "2026-03-18T04:01:26-07:00",
+        "duration": "PT10M1S",
+        "contentUrl": "https://www.youtube.com/watch?v=irKEfZWZR4Q",
+        "embedUrl": "https://www.youtube.com/embed/irKEfZWZR4Q",
+        "publisher": {
+          "@id": "https://billybot.ai/#organization"
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "BillyBot setup guide: get your AI flooring operator running",
+        "description": "Step-by-step setup for a flooring business: creating the account, connecting email, adding your products and prices, and getting the first quotes out.",
+        "thumbnailUrl": [
+          "https://i.ytimg.com/vi/UKdRL7lAe0Y/hqdefault.jpg"
+        ],
+        "uploadDate": "2026-04-01T03:45:04-07:00",
+        "duration": "PT18M39S",
+        "contentUrl": "https://www.youtube.com/watch?v=UKdRL7lAe0Y",
+        "embedUrl": "https://www.youtube.com/embed/UKdRL7lAe0Y",
+        "publisher": {
+          "@id": "https://billybot.ai/#organization"
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "AI will take my job? The UK Flooring Podcast with BillyBot’s founder",
+        "description": "An episode of The UK Flooring Podcast on how AI is already changing the running of a flooring business, with the founder of BillyBot.",
+        "thumbnailUrl": [
+          "https://i.ytimg.com/vi/x7Q0FDecq4w/hqdefault.jpg"
+        ],
+        "uploadDate": "2026-06-06T22:00:03-07:00",
+        "duration": "PT56M51S",
+        "contentUrl": "https://www.youtube.com/watch?v=x7Q0FDecq4w",
+        "embedUrl": "https://www.youtube.com/embed/x7Q0FDecq4w"
       }
     ]
   }
@@ -1016,7 +1104,7 @@
         <p style="margin-top:12px;"><a href="/flooring-quoting-software/" style="color:#38BDF8;font-weight:600;">See how BillyBot's flooring quoting software works →</a></p>
       </div>
       <div class="demo-stage phone-stage">
-        <iframe src="demos-app.html?demo=quote&embed=1" loading="lazy" title="Instant Quote — live demo"></iframe>
+        <iframe data-src="demos-app.html?demo=quote&embed=1" loading="lazy" title="Instant Quote — live demo"></iframe>
       </div>
     </div>
 
@@ -1029,7 +1117,7 @@
         <p style="margin-top:12px;"><a href="/flooring-software-comparison/" style="color:#38BDF8;font-weight:600;">BillyBot vs Jobber, Tradify &amp; flooring ERPs — see the comparison →</a></p>
       </div>
       <div class="demo-stage phone-stage">
-        <iframe src="demos-app.html?demo=email&embed=1" loading="lazy" title="Email Operator — live demo"></iframe>
+        <iframe data-src="demos-app.html?demo=email&embed=1" loading="lazy" title="Email Operator — live demo"></iframe>
       </div>
     </div>
 
@@ -1042,7 +1130,7 @@
         <p style="margin-top:12px;"><a href="/cutting-plan-software/" style="color:#38BDF8;font-weight:600;">See how BillyBot's cutting plan software works →</a></p>
       </div>
       <div class="demo-stage web-stage">
-        <iframe src="demos-app.html?demo=cutting&embed=1" loading="lazy" title="Cutting Plan — live demo"></iframe>
+        <iframe data-src="demos-app.html?demo=cutting&embed=1" loading="lazy" title="Cutting Plan — live demo"></iframe>
       </div>
     </div>
 
@@ -1054,7 +1142,7 @@
         <p>Photograph a receipt and Billy extracts every figure, categorises it, and syncs straight to your accounts — Xero, Sage or QuickBooks. No shoebox — Making-Tax-Digital ready.</p>
       </div>
       <div class="demo-stage phone-stage">
-        <iframe src="demos-app.html?demo=receipt&embed=1" loading="lazy" title="Receipts — live demo"></iframe>
+        <iframe data-src="demos-app.html?demo=receipt&embed=1" loading="lazy" title="Receipts — live demo"></iframe>
       </div>
     </div>
 
@@ -1066,7 +1154,7 @@
         <p>The moment a job's accepted, Billy drops the fitting into your diary and assigns the team — everyone knows where to be, without a single phone call.</p>
       </div>
       <div class="demo-stage phone-stage">
-        <iframe src="demos-app.html?demo=diary&embed=1" loading="lazy" title="Diary — live demo"></iframe>
+        <iframe data-src="demos-app.html?demo=diary&embed=1" loading="lazy" title="Diary — live demo"></iframe>
       </div>
     </div>
 
@@ -1078,7 +1166,7 @@
         <p>Upload a supplier price list and every quote instantly rebuilds on your actual prices — so your margins are always right.</p>
       </div>
       <div class="demo-stage web-stage">
-        <iframe src="demos-app.html?demo=supplier&embed=1" loading="lazy" title="Supplier Pricing — live demo"></iframe>
+        <iframe data-src="demos-app.html?demo=supplier&embed=1" loading="lazy" title="Supplier Pricing — live demo"></iframe>
       </div>
     </div>
   </div>
@@ -1641,6 +1729,16 @@
     new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { hub.classList.toggle('in-view', e.isIntersecting); });
     }, { threshold: 0.3 }).observe(hub);
+  })();
+  // ── Live demos: only load each demo when it is about to scroll into view (keeps first paint fast) ──
+  (function () {
+    var frames = [].slice.call(document.querySelectorAll('iframe[data-src]'));
+    function load(f) { if (!f.getAttribute('src')) f.setAttribute('src', f.getAttribute('data-src')); }
+    if (!('IntersectionObserver' in window)) { frames.forEach(load); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { load(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '600px 0px' });
+    frames.forEach(function (f) { io.observe(f); });
   })();
 </script>
 
