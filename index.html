@@ -25,7 +25,7 @@
 
   <!-- ===== Primary SEO ===== -->
   <title>Flooring Business Software &amp; AI Assistant — BillyBot™</title>
-  <meta name="description" content="BillyBot automatically handles quotes, cutting plans, emails, invoicing and admin — the AI software built for UK flooring businesses and contractors. 14 days free." />
+  <meta name="description" content="BillyBot runs the office side of UK flooring businesses: enquiries, quotes, cutting plans, invoicing into Xero, Sage or QuickBooks, diary and RAMS." />
   <link rel="canonical" href="https://billybot.ai/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0B0F1A" />
@@ -702,12 +702,13 @@
           "height": 512
         },
         "image": "https://billybot.ai/images/og-image.png",
-        "description": "BillyBot is an AI operator (AI assistant software) for flooring businesses and contractors. It automatically handles quotes, cutting plans, emails, invoicing, receipts, RAMS, diary scheduling and social media.",
+        "description": "BillyBot is an AI operator (AI assistant software) for flooring businesses and contractors. It runs the office side of the business: enquiries and email, quotes on your own prices, cutting plans, invoicing, receipts, RAMS, diary and team scheduling.",
         "email": "info@billybot.ai",
         "founder": { "@type": "Person", "name": "Steve" },
         "areaServed": { "@type": "Country", "name": "United Kingdom" },
         "sameAs": [
-          "https://apps.apple.com/gb/app/billybot/id6758058400"
+          "https://apps.apple.com/gb/app/billybot/id6758058400",
+          "https://play.google.com/store/apps/details?id=com.billybot.billybotmobile"
         ],
         "contactPoint": {
           "@type": "ContactPoint",
@@ -732,11 +733,11 @@
         "name": "BillyBot",
         "applicationCategory": "BusinessApplication",
         "applicationSubCategory": "Flooring business management & quoting software",
-        "operatingSystem": "Web-based, iOS",
+        "operatingSystem": "Web, iOS, Android",
         "url": "https://billybot.ai/",
         "image": "https://billybot.ai/images/og-image.png",
         "downloadUrl": "https://apps.apple.com/gb/app/billybot/id6758058400",
-        "description": "BillyBot is an AI operator for flooring businesses and contractors. It builds quotes from voice notes or emails on your own supplier prices, generates cutting plans, runs your inbox, captures receipts, produces invoices and RAMS, manages your diary and posts to social media — and integrates with Xero, Sage and QuickBooks.",
+        "description": "BillyBot is an AI operator for flooring businesses and contractors. It builds quotes from voice notes or emails on your own supplier prices, generates cutting plans, runs your inbox with your approval, captures receipts, produces invoices and RAMS, manages the diary and fitters, and integrates with Xero, Sage and QuickBooks.",
         "featureList": [
           "AI quoting on your supplier prices and markups",
           "Cutting plans and material optimisation",
@@ -744,7 +745,8 @@
           "Invoicing and MTD-ready receipt capture",
           "Automatic RAMS documents",
           "Diary and job scheduling",
-          "Automatic social media posting",
+          "Quote tracking and follow-up reminders",
+          "Mobile app for every fitter (iPhone and Android)",
           "Xero, Sage and QuickBooks integration"
         ],
         "provider": { "@id": "https://billybot.ai/#organization" },
@@ -813,8 +815,8 @@
           },
           {
             "@type": "Question",
-            "name": "How does the auto social media posting work?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Upload a photo of a finished job and BillyBot writes a caption tailored to your business. It posts directly to your Facebook page — you can review before it goes live, or let it run automatically. Turn every installation into free marketing without lifting a finger." }
+            "name": "Does BillyBot work on my phone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. BillyBot runs in any web browser and has apps for iPhone and Android. Every fitter gets the app free, with their diary, jobs and site details on their phone, so the office and the vans work from the same information." }
           },
           {
             "@type": "Question",
@@ -870,8 +872,8 @@
       <a href="#pricing">Pricing</a>
     </nav>
     <div class="nav-cta">
-      <a class="login-link" href="https://app.billybot.ai" rel="noopener" data-app-login>Log in</a>
-      <a id="signup-btn" class="btn glow" href="https://app.billybot.ai" data-app-signup>Start free trial</a>
+      <a class="login-link" href="https://app.billybot.ai/auth/login" rel="noopener" data-app-login>Log in</a>
+      <a id="signup-btn" class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start free trial</a>
     </div>
   </div>
 </header>
@@ -882,9 +884,9 @@
   <div class="container">
     <div class="hero-badge">✦ AI-powered admin for flooring</div>
     <h1 class="hero-title">Your <span class="grad">AI Operator</span><br>for Flooring.</h1>
-    <p class="hero-subtitle">BillyBot handles your quotes, cutting plans, emails, receipts, social media and admin — so you can focus on the work that actually pays.</p>
+    <p class="hero-subtitle">BillyBot runs the office side of your flooring business, from the first enquiry to the final invoice — so you win more work and grow without taking on another wage.</p>
     <div class="cta-row">
-      <a class="btn glow hero-cta" href="https://app.billybot.ai" data-app-signup>Let Billy do your admin — free</a>
+      <a class="btn glow hero-cta" href="https://app.billybot.ai/auth/signup" data-app-signup>Let Billy do your admin — free</a>
     </div>
     <p class="hero-disclaimer">14 days free &middot; Fitters always free &middot; Cancel anytime</p>
     <div class="hero-chips">
@@ -892,7 +894,7 @@
       <span class="chip">💷 Your Supplier Prices</span>
       <span class="chip">📧 Gmail &amp; Outlook</span>
       <span class="chip">🧾 MTD Ready</span>
-      <span class="chip">📱 Auto Social Media</span>
+      <span class="chip">🔗 Xero · Sage · QuickBooks</span>
       <span class="chip">📅 Diary &amp; Scheduling</span>
       <span class="chip">📋 Auto RAMS</span>
     </div>
@@ -911,7 +913,7 @@
 
     <!-- animated operator hub -->
     <div class="hub" role="img"
-         aria-label="Diagram: Billy takes in emails, voice notes, site photos, measurements, supplier prices and team updates, and hands back quotes, invoices, RAMS, job sheets, cutting plans, diary bookings, email replies and social posts.">
+         aria-label="Diagram: Billy takes in emails, voice notes, site photos, measurements, supplier prices and team updates, and hands back quotes, invoices, RAMS, job sheets, cutting plans, diary bookings, email replies and purchase orders.">
 
       <div class="hub-col hub-in">
         <span class="hub-col-label">Billy takes in</span>
@@ -975,7 +977,7 @@
         <span class="node out" style="--i:4">📐 <b>Cutting plans</b></span>
         <span class="node out" style="--i:5">📅 <b>Diary bookings</b></span>
         <span class="node out" style="--i:6">✉️ <b>Email replies</b></span>
-        <span class="node out" style="--i:7">📱 <b>Social posts</b></span>
+        <span class="node out" style="--i:7">📦 <b>Purchase orders</b></span>
       </div>
     </div>
 
@@ -1090,7 +1092,7 @@
   <div class="container">
     <div class="section-header">
       <h2>Everything else, <span class="grad">handled.</span></h2>
-      <p>Beyond the demos above — invoicing, marketing, compliance and your whole team, all in one place.</p>
+      <p>Beyond the demos above — invoicing, compliance, customers and your whole team, all in one place.</p>
     </div>
 
     <div class="features-grid">
@@ -1175,12 +1177,12 @@
 
       <div class="benefit-card glass">
         <h3>🧾 MTD-ready without thinking about it</h3>
-        <p>Every receipt captured, every invoice logged, every expense tracked — automatically synced to your accounting software. <strong>When HMRC comes knocking, you're already compliant.</strong></p>
+        <p>Every receipt captured, every invoice logged, every expense tracked — automatically synced to your accounting software. <strong>Your records stay digital and up to date, ready for Making Tax Digital.</strong></p>
       </div>
 
       <div class="benefit-card glass">
-        <h3>📱 Free marketing from every job</h3>
-        <p>Every finished installation becomes a Facebook post. BillyBot writes the caption, you get the leads. <strong>Less than your marketing guy charges — and it never takes a day off.</strong></p>
+        <h3>💷 No quote left to go cold</h3>
+        <p>Billy keeps track of every quote you've sent and whether the customer has opened it, and nudges you to follow up on the quiet ones. <strong>Fewer jobs lost to silence.</strong></p>
       </div>
 
     </div>
@@ -1316,7 +1318,7 @@
         </div>
         <div>
           <p style="font-size:12px;color:#475569;margin-bottom:10px;">14 days free &middot; Cancel anytime</p>
-          <a class="btn price-btn glow" href="https://app.billybot.ai" data-app-signup>Start 14-day trial</a>
+          <a class="btn price-btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start 14-day trial</a>
         </div>
       </div>
 
@@ -1336,7 +1338,7 @@
         </div>
         <div>
           <p style="font-size:12px;color:#475569;margin-bottom:10px;">Included with every plan</p>
-          <a class="btn price-btn" href="https://app.billybot.ai" data-app-signup>Get started</a>
+          <a class="btn price-btn" href="https://app.billybot.ai/auth/signup" data-app-signup>Get started</a>
         </div>
       </div>
 
@@ -1413,9 +1415,9 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">How does the auto social media posting work?</button>
+        <button class="faq-question">Does BillyBot work on my phone?</button>
         <div class="faq-answer">
-          <p>Upload a photo of a finished job and BillyBot writes a caption tailored to your business. It posts directly to your Facebook page — you can review before it goes live, or let it run automatically. Turn every installation into free marketing without lifting a finger.</p>
+          <p>Yes. BillyBot runs in any web browser and has apps for iPhone and Android. Every fitter gets the app free, with their diary, jobs and site details on their phone, so the office and the vans work from the same information.</p>
         </div>
       </div>
 
@@ -1493,22 +1495,22 @@
 <!-- ===== MISSION ===== -->
 <section id="mission" class="section" style="padding-bottom:60px;">
   <div class="container" style="max-width:860px;text-align:center;">
-    <h2 style="font-family:Sora,Inter;font-weight:800;font-size:clamp(26px,3.5vw,38px);margin-bottom:18px;">Built by trades, for trades.</h2>
+    <h2 style="font-family:Sora,Inter;font-weight:800;font-size:clamp(26px,3.5vw,38px);margin-bottom:18px;">Built by a flooring business, for flooring businesses.</h2>
     <p style="color:#AFC3FF;font-size:18px;line-height:1.75;margin-bottom:22px;">
       We're not a Silicon Valley startup. Our founder, Steve, has lived the grind.
       Late nights quoting, weekends catching up on admin, and the constant feeling that
       the paperwork never ends. BillyBot™ was built to fix that — to finally give
-      tradespeople the freedom to focus on the work that actually pays.
+      flooring business owners their time back — without taking on another wage.
     </p>
     <p style="color:#CFE0FF;font-size:17px;line-height:1.75;margin-bottom:22px;">
-      Our goal is simple: to build the world's first <strong>AI Operator for trade businesses</strong> —
+      Our goal is simple: to build the world's first <strong>AI Operator for flooring businesses</strong> —
       a system that handles your quoting, admin, and day-to-day operations as if it were your
       own office assistant. No gimmicks, no tech fluff. Real automation that
-      understands how trades actually run.
+      understands how flooring businesses actually run.
     </p>
     <p style="color:#AFC3FF;font-size:17px;line-height:1.75;">
       The world of work is changing fast and we want every floor fitter to stay <strong>ahead of the curve</strong>.
-      With BillyBot™, you're not just keeping up with AI — you're stepping into the future of how trade businesses run.
+      With BillyBot™, you're not just keeping up with AI — you're stepping into the future of how flooring businesses run.
     </p>
   </div>
 </section>

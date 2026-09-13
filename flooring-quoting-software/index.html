@@ -25,7 +25,7 @@
 
   <!-- ===== Primary SEO ===== -->
   <title>Flooring Quoting Software — Build Quotes in Minutes | BillyBot™</title>
-  <meta name="description" content="BillyBot is AI flooring quoting software that builds accurate quotes from a voice note or email — on your own supplier prices and markups. Trusted by UK flooring firms. Try it free for 14 days." />
+  <meta name="description" content="Flooring quoting software that builds the quote from a voice note or forwarded email, on your own supplier prices and markups. Try it free for 14 days." />
   <link rel="canonical" href="https://billybot.ai/flooring-quoting-software/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0B0F1A" />
@@ -58,6 +58,15 @@
   <style>
     @font-face { font-family: 'Sora'; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/sora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+    /* Live demo embed (real app UI) */
+    .demo-embed { display: flex; justify-content: center; margin-top: 40px; }
+    .phone-stage { width: 328px; }
+    .phone-stage iframe { display: block; width: 100%; aspect-ratio: 410 / 806; border: 0; background: transparent; }
+    .web-stage { width: 760px; max-width: 100%; }
+    .web-stage iframe { display: block; width: 100%; aspect-ratio: 900 / 612; border: 0; background: transparent; }
+    .demo-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 12px; }
+    @media (max-width: 768px) { .phone-stage { width: 290px; } }
   </style>
 
   <style>
@@ -338,8 +347,8 @@
       <a href="/#pricing">Pricing</a>
     </nav>
     <div class="nav-cta">
-      <a class="login-link" href="https://app.billybot.ai" rel="noopener" data-app-login>Log in</a>
-      <a class="btn glow" href="https://app.billybot.ai" data-app-signup>Start free trial</a>
+      <a class="login-link" href="https://app.billybot.ai/auth/login" rel="noopener" data-app-login>Log in</a>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start free trial</a>
     </div>
   </div>
 </header>
@@ -358,7 +367,7 @@
     <h1>Flooring quoting software that <span class="grad">builds the quote for you</span></h1>
     <p class="lede">Stop losing your evenings to quoting. Describe the job by voice, or forward the customer's email — BillyBot builds a professional flooring quote on your own supplier prices and markups, ready to send in minutes.</p>
     <div class="cta-row">
-      <a class="btn glow" href="https://app.billybot.ai" data-app-signup>Try it free for 14 days</a>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try it free for 14 days</a>
     </div>
     <p class="disclaimer">14 days free · Fitters always free · Cancel anytime</p>
   </div>
@@ -411,6 +420,8 @@
         <p>Send a branded PDF, or push it straight into Xero, Sage or QuickBooks. The job lands in your pipeline automatically.</p>
       </div>
     </div>
+    <div class="demo-embed"><div class="phone-stage"><iframe src="/demos-app.html?demo=quote&amp;embed=1" loading="lazy" title="BillyBot building a flooring quote from a message (live demo of the app)"></iframe></div></div>
+    <p class="demo-note">The real BillyBot app, running a sample job.</p>
   </div>
 </section>
 
@@ -427,7 +438,7 @@
       <div class="feature glass"><div class="ic">🔧</div><h3>Real trade detailing</h3><p>Door bars (singles &amp; doubles), running cove, coved skirting, latex, ply, uplift and disposal — all understood.</p></div>
       <div class="feature glass"><div class="ic">🧾</div><h3>PDF or accounts</h3><p>Professional branded PDFs, or push quotes straight into Xero, Sage or QuickBooks. No re-keying.</p></div>
       <div class="feature glass"><div class="ic">✉️</div><h3>Covering email in your voice</h3><p>The quote arrives with a covering note that sounds like you — ready to review and send.</p></div>
-      <div class="feature glass"><div class="ic">📱</div><h3>Quote from anywhere</h3><p>On the web or the iOS app — quote from the van, the site, or the sofa. Fitters get the app free.</p></div>
+      <div class="feature glass"><div class="ic">📱</div><h3>Quote from anywhere</h3><p>On the web or the iPhone and Android apps — quote from the van, the site or the office. Fitters get the app free.</p></div>
       <div class="feature glass"><div class="ic">🔒</div><h3>Your prices stay private</h3><p>Net prices and markups are encrypted. Only you and your automation can see them — 256-bit SSL.</p></div>
     </div>
   </div>
@@ -475,7 +486,7 @@
     <div class="pricestrip glass">
       <div class="big">£149<span>/seat / month</span></div>
       <p>Everything included — no feature tiers. Unlimited fitters free. 14-day free trial. Cancel anytime. Prices exclude VAT.</p>
-      <div style="margin-top:22px;"><a class="btn glow" href="https://app.billybot.ai" data-app-signup>Start your free trial</a></div>
+      <div style="margin-top:22px;"><a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your free trial</a></div>
     </div>
   </div>
 </section>
@@ -501,8 +512,8 @@
   <div class="container">
     <div class="ctaband glass">
       <h2>Quote your next flooring job in minutes</h2>
-      <p>Join the UK flooring firms letting Billy handle the quoting. 14 days free, fitters always free, cancel anytime.</p>
-      <a class="btn glow" href="https://app.billybot.ai" data-app-signup>Let Billy do your quoting — free</a>
+      <p>Let Billy handle the quoting while you win the work. 14 days free, fitters always free, cancel anytime.</p>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Let Billy do your quoting — free</a>
     </div>
   </div>
 </section>
