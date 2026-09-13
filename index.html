@@ -66,6 +66,15 @@
     .explore-col a { color: #AFC3FF; font-size: 15px; }
     .explore-col a:hover { color: #38BDF8; }
     @media (max-width: 860px) { .explore-grid { grid-template-columns: 1fr; } }
+      /* Operator vs quote app */
+    .opx-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 1000px; margin: 30px auto 0; }
+    .opx-item { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015)); border: 1px solid rgba(255,255,255,0.08); }
+    .opx-item .tick { flex: 0 0 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(74,222,128,0.14); color: #4ade80; font-weight: 800; font-size: 14px; }
+    .opx-item h3 { font-family: Sora, Inter; font-weight: 700; font-size: 16px; color: #E6ECF9; margin: 1px 0 4px; }
+    .opx-item p { color: #AFC3FF; font-size: 14.5px; line-height: 1.55; margin: 0; }
+    .opx-punch { text-align: center; max-width: 780px; margin: 26px auto 0; color: #CFE0FF; font-size: 16.5px; line-height: 1.65; }
+    .opx-punch strong { color: #fff; }
+    @media (max-width: 760px) { .opx-grid { grid-template-columns: 1fr; } }
   </style>
   <link rel="preconnect" href="https://tradiebrain.app.n8n.cloud">
 
@@ -1186,6 +1195,27 @@
 
 
 
+<!-- ===== OPERATOR, NOT A QUOTE APP ===== -->
+<section id="operator" class="section" style="padding:60px 0 20px;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Not another <span class="grad">AI quote app.</span></h2>
+      <p>A quote app helps you write a quote. Billy is an operator: he works across your inbox, your prices, your diary, your accounts and your paperwork, and asks you before anything goes out. Ask any flooring software these questions.</p>
+    </div>
+    <div class="opx-grid">
+      <div class="opx-item"><span class="tick" aria-hidden="true">✓</span><div><h3>Does it quote on my own prices?</h3><p>From a voice note, a forwarded email or a drawing, on your rates and markups.</p></div></div>
+      <div class="opx-item"><span class="tick" aria-hidden="true">✓</span><div><h3>Does it read and answer my enquiry emails?</h3><p>Every enquiry becomes a job, with a reply drafted in your voice for you to approve.</p></div></div>
+      <div class="opx-item"><span class="tick" aria-hidden="true">✓</span><div><h3>Does it chase quotes that go quiet?</h3><p>It tracks what's been sent and opened, and nudges you to follow up the quiet ones.</p></div></div>
+      <div class="opx-item"><span class="tick" aria-hidden="true">✓</span><div><h3>Does it book the job and tell my fitters?</h3><p>It offers the customer free dates, books the fitting and tells the fitters on their phones.</p></div></div>
+      <div class="opx-item"><span class="tick" aria-hidden="true">✓</span><div><h3>Does it invoice into Xero, Sage or QuickBooks?</h3><p>The invoice is built from the quote and created in your accounts when you confirm.</p></div></div>
+      <div class="opx-item"><span class="tick" aria-hidden="true">✓</span><div><h3>Does it write the RAMS for the job?</h3><p>Job-specific RAMS and COSHH, for you to review, signed on the fitters' phones.</p></div></div>
+      <div class="opx-item"><span class="tick" aria-hidden="true">✓</span><div><h3>Can I ask it about any job, months later?</h3><p>“What carpet did we fit in Jane's lounge last year?” answered from your own records.</p></div></div>
+      <div class="opx-item"><span class="tick" aria-hidden="true">✓</span><div><h3>Does it ask before anything goes out?</h3><p>Always, unless you choose to switch on automatic sending.</p></div></div>
+    </div>
+    <p class="opx-punch">A quote app answers yes to the first question. <strong>Billy answers yes to all of them</strong> — built and proven on a real flooring business, on 20 years of running one, with real Gmail, Outlook, Xero, Sage and QuickBooks connections and an app for every fitter.</p>
+  </div>
+</section>
+
 <!-- ===== FEATURES ===== -->
 <section id="features" class="section">
   <div class="container">
@@ -1605,6 +1635,7 @@
           <li><a href="/tools/carpet-calculator/">Carpet calculator</a></li>
           <li><a href="/tools/smoothing-compound-calculator/">Smoothing compound calculator</a></li>
           <li><a href="/tools/flooring-pack-calculator/">Flooring pack calculator</a></li>
+          <li><a href="/tools/stair-carpet-calculator/">Stair carpet calculator</a></li>
           <li><a href="/tools/flooring-labour-rate-calculator/">Labour rate calculator</a></li>
         </ul>
       </div>

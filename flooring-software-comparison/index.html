@@ -158,6 +158,7 @@
     /* Three-up cards */
     .threeup { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
     .threeup .glass { padding: 28px; }
+    .threeup.fourup { grid-template-columns: repeat(2, 1fr); }
     .threeup h3 { font-family: Sora, Inter; font-weight: 700; font-size: 20px; margin-bottom: 10px; }
     .threeup p { color: #C3D0EA; font-size: 15px; }
     .threeup .who { color: var(--muted); font-size: 13px; margin-top: 14px; font-style: italic; }
@@ -221,6 +222,7 @@
     @media (max-width: 1024px) {
       .features { grid-template-columns: repeat(2, 1fr); }
       .threeup { grid-template-columns: 1fr; }
+      .threeup.fourup { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links, .login-link { display: none; }
@@ -256,6 +258,11 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is BillyBot different from AI quoting apps?",
+            "acceptedAnswer": { "@type": "Answer", "text": "An AI quoting app helps you produce a quote. BillyBot is an AI operator: it reads enquiry emails and drafts replies for your approval, quotes on your own prices from voice notes, emails and drawings, follows up quotes that go quiet, books fittings and tells your fitters, creates invoices in Xero, Sage or QuickBooks when you confirm, drafts job-specific RAMS and answers questions about any job from your records. If a faster quote is all you need, a quote app may be enough. If the office work around the quote is the problem, that's what BillyBot is for." }
+          },
           {
             "@type": "Question",
             "name": "What is the difference between BillyBot and Jobber or Tradify?",
@@ -354,9 +361,9 @@
 <!-- ===== THE TWO KINDS ===== -->
 <section class="block">
   <div class="container">
-    <h2 class="section-title">There are two kinds of flooring software today</h2>
-    <p class="section-sub">Both are systems of record — a place to store data after you've done the thinking and typing. They differ in how flooring-specific they are.</p>
-    <div class="threeup">
+    <h2 class="section-title">The kinds of flooring software, and what each one does</h2>
+    <p class="section-sub">Most flooring software is a place to store work, or a faster way to produce one piece of it. An operator does the work around the job.</p>
+    <div class="threeup fourup">
       <div class="glass">
         <span class="pk a">Type 1 · Flooring-specific systems</span>
         <h3>MasterPiece, Comp-U-Floor, RollMaster</h3>
@@ -368,6 +375,12 @@
         <h3>Jobber, Tradify, ServiceM8</h3>
         <p>Modern, mobile and easy to adopt: quoting, scheduling, dispatch, invoicing and payments. The catch — they're trade-generic. A flooring job looks the same to them as a plumbing job. No m² pricing, no roll/cut logic, no cutting plans.</p>
         <p class="who">Best for: general home-service trades that don't need flooring detail.</p>
+      </div>
+      <div class="glass">
+        <span class="pk b">Type 3 · AI quote and cutting-plan apps</span>
+        <h3>Newer quoting apps</h3>
+        <p>Low-cost apps built to get a quote, an estimate or a cutting plan out faster, often with AI to help. Useful if a quicker quote is all you need. The quote is their job; your inbox, the follow-ups, the diary, invoicing and site paperwork are still yours.</p>
+        <p class="who">Best for: fitters who mainly want quotes and cutting plans done faster.</p>
       </div>
       <div class="glass" style="border-color: rgba(56,189,248,0.4);">
         <span class="pk c">The new kind · AI operator</span>
@@ -467,6 +480,7 @@
   <div class="container">
     <h2 class="section-title">Flooring software comparison — FAQ</h2>
     <div class="faq-list">
+      <div class="faq-item"><button class="faq-question">How is BillyBot different from AI quoting apps?</button><div class="faq-answer"><p>An AI quoting app helps you produce a quote. BillyBot is an AI operator: it reads enquiry emails and drafts replies for your approval, quotes on your own prices from voice notes, emails and drawings, follows up quotes that go quiet, books fittings and tells your fitters, creates invoices in Xero, Sage or QuickBooks when you confirm, drafts job-specific RAMS and answers questions about any job from your records. If a faster quote is all you need, a quote app may be enough. If the office work around the quote is the problem, that's what BillyBot is for.</p></div></div>
       <div class="faq-item"><button class="faq-question">What is the difference between BillyBot and Jobber or Tradify?</button><div class="faq-answer"><p>Jobber and Tradify are general trades tools — brilliant, modern places to record jobs, schedule work and send invoices, but they treat a flooring job like any other trade. They have no m² flooring pricing, no roll or cut/drop awareness and no cutting plans, and every quote is only as fast as the human typing it. BillyBot is flooring-native and, more importantly, is an AI operator: it reads your inbox, drafts the quote from a voice note or a forwarded email on your own supplier prices, and hands it to you to approve. The incumbents store your work; Billy does it.</p></div></div>
       <div class="faq-item"><button class="faq-question">How does BillyBot compare to flooring systems like MasterPiece, Comp-U-Floor or RollMaster?</button><div class="faq-answer"><p>They're built around records you keep. Comp-U-Floor and RollMaster are business systems for flooring retailers and dealers, with inventory and point of sale, and MasterPiece focuses on measuring, cut planning and estimating. They're strong at those jobs, but a person still reads the enquiries, types in the details and does the chasing. BillyBot is built for flooring businesses buried in quoting, email and admin: it does that work itself, on your own prices, and you approve what goes out.</p></div></div>
       <div class="faq-item"><button class="faq-question">Is BillyBot a good alternative to Jobber for a flooring business?</button><div class="faq-answer"><p>For a flooring contractor, yes. Jobber is excellent generic field-service software, but it doesn't understand flooring pricing, roll widths, cut/drops or cutting plans, and it can't build a quote for you — you still type every line. BillyBot quotes on your real supplier prices and markups, works out materials and waste, and drafts the covering email in your voice, so you reply first and win more of the work you quote for.</p></div></div>

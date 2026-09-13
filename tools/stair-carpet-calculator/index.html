@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  /* Meta Pixel: queue events now, load the library after the page has rendered */
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];f.addEventListener('load',function(){t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)})}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '24704985755777244');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=24704985755777244&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Primary SEO ===== -->
+  <title>Stair Carpet Calculator with Landings &amp; Gripper | BillyBot</title>
+  <meta name="description" content="Stair carpet calculator: enter your steps, tread and riser to get the cut off a 4 m or 5 m roll, the strip layout, landings, gripper and underlay. Free." />
+  <link rel="canonical" href="https://billybot.ai/tools/stair-carpet-calculator/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0B0F1A" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BillyBot" />
+  <meta property="og:title" content="Stair Carpet Calculator with Landings &amp; Gripper | BillyBot" />
+  <meta property="og:description" content="Stair carpet calculator: enter your steps, tread and riser to get the cut off a 4 m or 5 m roll, the strip layout, landings, gripper and underlay. Free." />
+  <meta property="og:url" content="https://billybot.ai/tools/stair-carpet-calculator/" />
+  <meta property="og:image" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:secure_url" content="https://billybot.ai/images/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BillyBot stair carpet calculator for flooring businesses" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stair Carpet Calculator with Landings &amp; Gripper | BillyBot" />
+  <meta name="twitter:description" content="Stair carpet calculator: enter your steps, tread and riser to get the cut off a 4 m or 5 m roll, the strip layout, landings, gripper and underlay. Free." />
+  <meta name="twitter:image" content="https://billybot.ai/images/og-image.png" />
+  <meta name="twitter:image:alt" content="BillyBot stair carpet calculator for flooring businesses" />
+
+  <!-- Self-hosted variable fonts (Inter + Sora, SIL OFL): no render-blocking third-party CSS -->
+  <link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Sora'; font-style: normal; font-weight: 100 800; font-display: swap; src: url(/fonts/sora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+    /* Live demo embed (real app UI) */
+    .demo-embed { display: flex; justify-content: center; margin-top: 40px; }
+    .phone-stage { width: 328px; }
+    .phone-stage iframe { display: block; width: 100%; aspect-ratio: 410 / 806; border: 0; background: transparent; }
+    .web-stage { width: 760px; max-width: 100%; }
+    .web-stage iframe { display: block; width: 100%; aspect-ratio: 900 / 612; border: 0; background: transparent; }
+    .demo-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 12px; }
+    @media (max-width: 768px) { .phone-stage { width: 290px; } }
+  </style>
+
+  <style>
+    :root {
+      --brand1: #2563EB;
+      --brand2: #3B82F6;
+      --cyan: #38BDF8;
+      --accent1: #F97316;
+      --accent2: #FB923C;
+      --bg: #0B0F1A;
+      --bg2: #0F1526;
+      --text: #E6ECF9;
+      --muted: #98A3B8;
+      --line: rgba(255,255,255,0.08);
+      --radius: 20px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0B0F1A 0%, #0F1526 40%, #0C1221 80%, #0B0F1A 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .grad {
+      background: linear-gradient(135deg, #2563EB 0%, #38BDF8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      color: #fff; font-weight: 800; font-family: Sora, Inter, sans-serif;
+      padding: 15px 30px; border-radius: 999px; border: none; cursor: pointer;
+      transition: transform 0.18s ease; font-size: 15px; letter-spacing: -0.01em;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.glow {
+      box-shadow: 0 0 20px rgba(249,115,22,0.45), 0 0 40px rgba(251,146,60,0.2);
+      animation: pulseOrange 2.5s ease-in-out infinite;
+    }
+    @keyframes pulseOrange {
+      0%, 100% { box-shadow: 0 0 18px rgba(249,115,22,0.45), 0 0 36px rgba(251,146,60,0.2); }
+      50%       { box-shadow: 0 0 32px rgba(249,115,22,0.65), 0 0 64px rgba(251,146,60,0.35); }
+    }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(180deg, rgba(13,17,28,0.92), rgba(13,17,28,0.6) 70%, rgba(13,17,28,0));
+      backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { height: 76px; display: flex; align-items: center; gap: 28px; }
+    .logo { display: flex; align-items: center; gap: 12px; font: 800 20px Sora, Inter; }
+    .logo svg { width: 34px; height: 34px; }
+    .nav-links { display: flex; gap: 26px; margin-left: 8px; font-weight: 600; font-size: 15px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 18px; }
+    .login-link { font-weight: 600; font-size: 15px; color: var(--muted); }
+    .login-link:hover { color: var(--text); }
+
+    /* Breadcrumb */
+    .crumb { font-size: 13px; color: var(--muted); padding: 22px 0 0; }
+    .crumb a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 56px 0 64px; text-align: center; }
+    .eyebrow {
+      display: inline-block; font-family: Sora, Inter; font-weight: 700; font-size: 13px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan);
+      border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; margin-bottom: 22px;
+      background: rgba(56,189,248,0.06);
+    }
+    h1 {
+      font-family: Sora, Inter; font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
+      font-size: clamp(34px, 6vw, 60px); max-width: 920px; margin: 0 auto;
+    }
+    .lede { color: #AFC3FF; font-size: clamp(17px, 2.3vw, 21px); max-width: 760px; margin: 22px auto 0; }
+    .cta-row { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .disclaimer { color: var(--muted); font-size: 14px; margin-top: 16px; }
+
+    /* Sections */
+    section.block { padding: 56px 0; }
+    .section-title { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -0.5px; text-align: center; }
+    .section-sub { color: var(--muted); text-align: center; max-width: 680px; margin: 14px auto 0; font-size: 17px; }
+
+    /* Problem/solution two-up */
+    .twoup { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+    .twoup .glass { padding: 28px; }
+    .twoup h3 { font-family: Sora, Inter; font-weight: 700; font-size: 21px; margin-bottom: 10px; }
+    .twoup p { color: #C3D0EA; }
+    .pk { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+    .pk.bad { color: #fb7185; } .pk.good { color: #4ade80; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; counter-reset: step; }
+    .step { padding: 26px 22px; }
+    .step .n {
+      width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-family: Sora; font-weight: 800; color: #fff; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--brand1), var(--cyan));
+    }
+    .step h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 15px; }
+
+    /* Feature grid */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+    .feature { padding: 26px 24px; }
+    .feature .ic { font-size: 26px; margin-bottom: 14px; }
+    .feature h3 { font-family: Sora, Inter; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .feature p { color: var(--muted); font-size: 15px; }
+
+    /* Comparison table */
+    .cmp { margin-top: 40px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; }
+    thead th { font-family: Sora, Inter; font-weight: 700; font-size: 14px; color: var(--muted); }
+    thead th.win { color: var(--cyan); }
+    td.lbl { color: #C3D0EA; font-weight: 600; }
+    td.old { color: var(--muted); }
+    td.win { color: var(--text); font-weight: 600; }
+    tbody tr:last-child td { border-bottom: 0; }
+
+    /* Pricing strip */
+    .pricestrip { margin-top: 40px; padding: 34px; text-align: center; }
+    .pricestrip .big { font-family: Sora, Inter; font-weight: 800; font-size: 40px; }
+    .pricestrip .big span { font-size: 18px; color: var(--muted); font-weight: 600; }
+    .pricestrip p { color: var(--muted); margin-top: 6px; }
+
+    /* FAQ */
+    .faq-list { display: grid; gap: 12px; max-width: 820px; margin: 40px auto 0; }
+    .faq-item { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .faq-question {
+      width: 100%; text-align: left; background: none; border: 0; color: var(--text); cursor: pointer;
+      font-family: Sora, Inter; font-weight: 600; font-size: 16px; padding: 18px 24px; position: relative;
+    }
+    .faq-question::after { content: "+"; position: absolute; right: 24px; top: 16px; font-size: 22px; color: var(--cyan); transition: transform 0.2s; }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; padding: 0 24px; }
+    .faq-item.active .faq-answer { max-height: 520px; padding: 0 24px 20px; }
+    .faq-answer p { color: #C3D0EA; font-size: 15px; }
+
+    /* CTA band */
+    .ctaband { text-align: center; padding: 56px 28px; margin: 56px 0; }
+    .ctaband h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(26px, 4vw, 40px); letter-spacing: -0.5px; }
+    .ctaband p { color: #AFC3FF; margin: 12px auto 26px; max-width: 560px; }
+
+    /* Prose */
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose p { color: #C3D0EA; margin-top: 16px; font-size: 17px; }
+    .prose a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Footer */
+    footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 15px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+    .footer-links a { color: #475569; font-size: 14px; }
+    .footer-links a:hover { color: var(--text); }
+
+    @media (max-width: 1024px) {
+      .features { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .login-link { display: none; }
+      .twoup, .features, .steps { grid-template-columns: 1fr; }
+      .cmp { overflow-x: auto; }
+    }
+
+    /* ===== Stair carpet calculator (page-specific) ===== */
+    [hidden] { display: none !important; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .hero.hero-tool { padding: 34px 0 30px; }
+    .hero-tool h1 { font-size: clamp(32px, 5.2vw, 52px); }
+    .hero-tool .lede { margin-top: 16px; }
+    .hero-tool .eyebrow { margin-bottom: 18px; }
+    .tool { padding: 0 0 24px; }
+    .calc { padding: 26px; }
+    .calc-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: 28px; align-items: start; }
+    .calc-inputs { min-width: 0; }
+    .calc-h { font-family: Sora, Inter; font-weight: 700; font-size: 20px; letter-spacing: -0.3px; margin-bottom: 14px; }
+    .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+    .fields.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .field { min-width: 0; }
+    .field label, .calc legend { display: block; font-size: 13px; font-weight: 600; color: #C3D0EA; margin-bottom: 6px; }
+    .calc input[type="text"], .calc select {
+      width: 100%; background-color: rgba(11,15,26,0.65); border: 1px solid rgba(255,255,255,0.16); border-radius: 10px;
+      color: var(--text); font: 500 16px/1.3 Inter, system-ui, sans-serif; padding: 11px 12px;
+    }
+    .calc select {
+      -webkit-appearance: none; appearance: none; padding-right: 34px; cursor: pointer;
+      background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+      background-position: calc(100% - 19px) 52%, calc(100% - 14px) 52%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;
+    }
+    .calc select option { background: #0F1526; color: var(--text); }
+    .calc input[type="text"]::placeholder { color: #6B7A93; }
+    .calc input[type="text"]:focus, .calc select:focus { border-color: var(--cyan); outline: none; box-shadow: 0 0 0 3px rgba(56,189,248,0.25); }
+    .calc input[aria-invalid="true"] { border-color: #fb7185; }
+    .calc button:focus-visible, .seg input:focus-visible + label, .faq-question:focus-visible, .prose a:focus-visible, .more summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+    .field-err { color: #fda4af; font-size: 13px; margin-top: 6px; line-height: 1.45; }
+    .hint { color: var(--muted); font-size: 12.5px; margin-top: 6px; line-height: 1.45; }
+    .seg-field, .roll { border: 0; margin: 14px 0 0; min-width: 0; padding: 0; }
+    .seg-field { margin-top: 0; }
+    .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+    .seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .seg label {
+      display: inline-block; padding: 9px 16px; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px;
+      cursor: pointer; font: 700 14px Sora, Inter, sans-serif; color: var(--text); margin: 0;
+    }
+    .seg input:checked + label { background: linear-gradient(135deg, var(--brand1), var(--cyan)); border-color: transparent; color: #fff; }
+    .custom-roll { margin-top: 10px; max-width: 220px; }
+    .more { margin-top: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.02); }
+    .more summary { cursor: pointer; padding: 12px 44px 12px 14px; font: 600 14px Inter, sans-serif; color: #C3D0EA; list-style: none; position: relative; border-radius: 14px; }
+    .more summary::-webkit-details-marker { display: none; }
+    .more summary::after { content: "+"; position: absolute; right: 16px; top: 7px; font-size: 22px; color: var(--cyan); }
+    .more[open] summary::after { content: "\2212"; }
+    .more-body { padding: 0 14px 14px; }
+    .more-body .fields { margin-top: 0; }
+    .landing-field { grid-column: 1 / -1; }
+    .landing-field select { max-width: 320px; }
+    .landing-box { margin-top: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.02); }
+    .landing-box .fields { margin-top: 0; }
+    .fields.landing-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .calc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .calc-actions .btn { padding: 12px 26px; }
+    .btn-quiet {
+      background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
+      padding: 10px 18px; font: 600 14px Inter, sans-serif; cursor: pointer;
+    }
+    .btn-quiet:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
+    .calc-results { border-left: 1px solid var(--line); padding-left: 28px; min-height: 320px; min-width: 0; }
+    .res-kicker { font: 700 12px Sora, Inter, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); }
+    .res-empty p { color: #C3D0EA; margin-top: 10px; font-size: 15px; }
+    .res-empty ul { margin: 10px 0 0 1.1em; color: #fda4af; font-size: 15px; }
+    .res-empty a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+    .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .tile { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; background: rgba(255,255,255,0.025); min-width: 0; }
+    .tile-span { grid-column: 1 / -1; }
+    .tile-main { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(56,189,248,0.08)); border-color: rgba(56,189,248,0.3); }
+    .t-label { display: block; font-size: 12px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+    .t-val { display: block; font: 800 22px/1.2 Sora, Inter, sans-serif; letter-spacing: -0.5px; margin-top: 2px; overflow-wrap: anywhere; }
+    .tile-main .t-val { font-size: 34px; }
+    .t-sub { display: block; font-size: 13px; color: #AFC3FF; margin-top: 2px; }
+    .rollviz { margin-top: 16px; }
+    .roll-wrap { margin: 0 auto; }
+    .roll-box { position: relative; width: 100%; border: 1px dashed rgba(255,255,255,0.3); border-radius: 4px; background: rgba(255,255,255,0.03); overflow: hidden; }
+    .piece { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 3px; font: 700 11px/1.15 Inter, sans-serif; color: #fff; overflow: hidden; padding: 2px; }
+    .piece.c0 { background: rgba(37,99,235,0.55); border: 1px solid rgba(96,165,250,0.95); }
+    .piece.c2 { background: rgba(139,92,246,0.5); border: 1px solid rgba(167,139,250,0.95); }
+    .piece.land { background: rgba(249,115,22,0.42); border: 1px solid rgba(251,146,60,0.95); }
+    .skipband { position: absolute; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(135deg, rgba(251,146,60,0.28) 0 6px, transparent 6px 12px); border-top: 1px dashed rgba(251,146,60,0.8); display: flex; align-items: center; justify-content: center; font: 700 11px Inter, sans-serif; color: #fed7aa; }
+    .roll-dims { display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px; color: var(--muted); margin-bottom: 6px; }
+    .legend { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 13px; color: #C3D0EA; }
+    .legend li { display: flex; align-items: center; gap: 6px; }
+    .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+    .sw.c0 { background: rgba(37,99,235,0.8); } .sw.c2 { background: rgba(139,92,246,0.8); } .sw.land { background: rgba(249,115,22,0.75); }
+    .rollviz figcaption { color: var(--muted); font-size: 13px; margin-top: 8px; line-height: 1.5; }
+    .work-h { font: 700 16px/1.3 Sora, Inter, sans-serif; margin-top: 18px; }
+    .working { margin: 8px 0 0 1.25em; color: #C3D0EA; font-size: 14.5px; line-height: 1.55; }
+    .working li { margin-top: 6px; }
+    .working strong { color: var(--text); }
+    .res-note { color: var(--muted); font-size: 13.5px; margin-top: 14px; line-height: 1.55; }
+    .res-note a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Guide content under the tool */
+    .guide h2 { font-family: Sora, Inter; font-weight: 800; font-size: clamp(24px, 3.2vw, 32px); letter-spacing: -0.5px; line-height: 1.2; margin-top: 52px; }
+    .guide h2:first-child { margin-top: 0; }
+    .guide h3 { font-family: Sora, Inter; font-weight: 700; font-size: 20px; line-height: 1.3; margin-top: 28px; }
+    .guide ul { margin: 14px 0 0 1.2em; color: #C3D0EA; }
+    .guide li { margin-top: 8px; font-size: 17px; }
+    .guide li strong { color: var(--text); }
+    .table-scroll { margin-top: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.02); }
+    .table-scroll table { min-width: 660px; }
+    .guide p.table-cap { font-size: 14px; color: var(--muted); margin-top: 10px; }
+    .guide .btn, .guide .btn:hover { color: #fff; text-decoration: none; }
+    .table-scroll th, .table-scroll td { padding: 10px 12px; font-size: 14px; vertical-align: top; }
+    .table-scroll tbody td { color: #C3D0EA; }
+    .table-scroll tbody td:first-child { color: var(--text); font-weight: 600; }
+    .guide .cta-row { justify-content: flex-start; }
+    .guide .disclaimer { margin-top: 12px; }
+    .faq-answer a, .ctaband p a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+    @media (max-width: 900px) {
+      .calc-grid { grid-template-columns: 1fr; }
+      .calc-results { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 22px; min-height: 0; }
+    }
+    @media (max-width: 560px) {
+      .calc { padding: 16px; }
+      .fields.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .fields.three .field:last-child { grid-column: 1 / -1; }
+      .fields.landing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .more-body .fields { grid-template-columns: 1fr; }
+      .landing-field select { max-width: none; }
+      .tile-main .t-val { font-size: 30px; }
+      .t-val { font-size: 20px; }
+      .hero.hero-tool { padding: 26px 0 24px; }
+      .ctaband { padding: 40px 18px; }
+      .guide li, .prose p { font-size: 16px; }
+    }
+  </style>
+
+  <!-- ===== Structured data (rich results + AI understanding) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://billybot.ai/" },
+          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://billybot.ai/resources/" },
+          { "@type": "ListItem", "position": 3, "name": "Stair Carpet Calculator", "item": "https://billybot.ai/tools/stair-carpet-calculator/" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://billybot.ai/tools/stair-carpet-calculator/#webpage",
+        "url": "https://billybot.ai/tools/stair-carpet-calculator/",
+        "name": "Stair Carpet Calculator with Landings & Gripper | BillyBot",
+        "description": "Stair carpet calculator: enter your steps, tread and riser to get the cut off a 4 m or 5 m roll, the strip layout, landings, gripper and underlay. Free.",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://billybot.ai/#website" },
+        "about": { "@id": "https://billybot.ai/#software" },
+        "primaryImageOfPage": "https://billybot.ai/images/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How much carpet do I need for 13 stairs?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the steps and the roll. For 13 steps 0.9 m wide at 500 mm a step (a 250 mm tread, 200 mm riser and 50 mm allowance), with 5 cm trimming each side, four strips fit across a 4 m roll, so you'd buy a 2 m cut: 8 m² of carpet."}},
+          {"@type": "Question", "name": "How do you measure stairs for carpet?", "acceptedAnswer": {"@type": "Answer", "text": "Start at the top. Count the steps, then measure the width at the widest point, the tread from the back to the front of the nosing and the riser from one tread to the next, and add an allowance for the nosing and trimming. Measure landings and each winder separately."}},
+          {"@type": "Question", "name": "Which way should the pile run on stairs?", "acceptedAnswer": {"@type": "Answer", "text": "Down the stairs. The Carpet and Rug Institute's installation standard notes that most manufacturers recommend it, which is why UK retailers' guides measure stairs from the top down. Check the fitting instructions for your carpet."}},
+          {"@type": "Question", "name": "How many gripper rods do I need for stairs?", "acceptedAnswer": {"@type": "Answer", "text": "Allow a strip at the back of each tread and one at the foot of each riser, each about the stair width. 13 steps 0.9 m wide need 26 strips, or 23.4 m. Interfloor's stair gripper comes in 1.52 m lengths, and each cuts one 0.9 m strip, so you'd need 26 lengths."}},
+          {"@type": "Question", "name": "How much stair runner do I need?", "acceptedAnswer": {"@type": "Answer", "text": "A runner comes at its finished width, so you need one length: the tread, riser and allowance for one step, times the number of steps, plus any landing it crosses. 13 steps at 500 mm is 6.5 m."}},
+          {"@type": "Question", "name": "Can the calculator do winders?", "acceptedAnswer": {"@type": "Answer", "text": "No. Winders are tapered treads, each a different shape, so measure each one at its widest points. The calculator covers straight flights and landings, and BillyBot's cutting plans handle stairs, winders included, as part of the whole job."}},
+          {"@type": "Question", "name": "Why is there so much offcut on stairs?", "acceptedAnswer": {"@type": "Answer", "text": "You buy the full roll width over the length you cut, even where the stairs only use part of it. Fitting as many strips across as possible and tucking a landing under the shorter strips keeps it down, and it's worth trying both roll widths."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container nav">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="tbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+        <circle cx="48" cy="66" r="16" fill="none" stroke="url(#tbBlue)" stroke-width="10"/>
+        <g fill="url(#tbBlue)">
+          <rect x="45" y="34" width="6" height="14" rx="3"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(45 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(90 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(135 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(180 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(225 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(270 48 66)"/>
+          <rect x="45" y="34" width="6" height="14" rx="3" transform="rotate(315 48 66)"/>
+        </g>
+        <circle cx="48" cy="66" r="8" fill="#0B0F1A"/>
+        <path d="M20 52c0-15 12-26 28-26s26 10 28 24v8H20v-6z" fill="url(#tbBlue)" stroke="#1E3A8A" stroke-width="2"/>
+        <path d="M44 28h12a3 3 0 0 1 3 3v4H44z" fill="#1E3A8A"/>
+        <rect x="62" y="54" width="22" height="6" rx="3" fill="#1E3A8A"/>
+      </svg>
+      BillyBot™
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#features">Features</a>
+      <a href="/#how">How it works</a>
+      <a href="/#watch">Watch</a>
+      <a href="/#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="login-link" href="https://app.billybot.ai/auth/login" rel="noopener" data-app-login>Log in</a>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start free trial</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="container">
+  <nav class="crumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/resources/">Resources</a> &rsaquo; <span>Stair Carpet Calculator</span>
+  </nav>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-tool">
+  <div class="container">
+    <span class="eyebrow">Free tool</span>
+    <h1>Stair carpet <span class="grad">calculator</span></h1>
+    <p class="lede">How much carpet do your stairs need? Enter the steps, tread and riser to get the length to cut off a 4&nbsp;m or 5&nbsp;m roll, how the strips fit across it, the landing, gripper and underlay, with the working shown.</p>
+  </div>
+</section>
+
+<!-- ===== THE CALCULATOR ===== -->
+<section class="tool" aria-label="Stair carpet calculator">
+  <div class="container">
+    <form class="calc glass" id="stair-calc" novalidate>
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h2 class="calc-h">Your stairs</h2>
+
+          <fieldset class="seg-field">
+            <legend>What are you fitting?</legend>
+            <div class="seg">
+              <input type="radio" name="sc-mode" id="sc-mode-fitted" value="fitted" checked><label for="sc-mode-fitted">Fitted carpet</label>
+              <input type="radio" name="sc-mode" id="sc-mode-runner" value="runner"><label for="sc-mode-runner">Stair runner</label>
+            </div>
+          </fieldset>
+
+          <div class="fields">
+            <div class="field">
+              <label for="sc-steps">Number of steps</label>
+              <input id="sc-steps" type="text" inputmode="numeric" autocomplete="off" value="13" aria-describedby="sc-steps-hint sc-steps-err">
+              <p class="hint" id="sc-steps-hint">Every step you'll carpet.</p>
+              <p class="field-err" id="sc-steps-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="sc-width" id="sc-width-label">Stair width (m)</label>
+              <input id="sc-width" type="text" inputmode="decimal" autocomplete="off" value="0.90" aria-describedby="sc-width-hint sc-width-err">
+              <p class="hint" id="sc-width-hint">Across the step, at the widest point.</p>
+              <p class="field-err" id="sc-width-err" hidden></p>
+            </div>
+          </div>
+
+          <div class="fields three">
+            <div class="field">
+              <label for="sc-tread">Tread (mm)</label>
+              <input id="sc-tread" type="text" inputmode="decimal" autocomplete="off" value="250" aria-describedby="sc-step-hint sc-tread-err">
+              <p class="field-err" id="sc-tread-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="sc-riser">Riser (mm)</label>
+              <input id="sc-riser" type="text" inputmode="decimal" autocomplete="off" value="200" aria-describedby="sc-step-hint sc-riser-err">
+              <p class="field-err" id="sc-riser-err" hidden></p>
+            </div>
+            <div class="field">
+              <label for="sc-extra">Allowance (mm)</label>
+              <input id="sc-extra" type="text" inputmode="decimal" autocomplete="off" value="50" aria-describedby="sc-step-hint sc-extra-err">
+              <p class="field-err" id="sc-extra-err" hidden></p>
+            </div>
+          </div>
+          <p class="hint" id="sc-step-hint">Tread: back of the tread to the front of the nosing. Riser: top of one tread to the top of the next. Allowance: extra per step for the nosing and trimming (one UK retailer's guide adds 5&nbsp;cm). The figures filled in are an example.</p>
+
+          <fieldset class="roll" id="sc-roll-field">
+            <legend>Roll width</legend>
+            <div class="seg">
+              <input type="radio" name="sc-roll" id="sc-roll-4" value="4" checked><label for="sc-roll-4">4 m</label>
+              <input type="radio" name="sc-roll" id="sc-roll-5" value="5"><label for="sc-roll-5">5 m</label>
+              <input type="radio" name="sc-roll" id="sc-roll-other" value="custom"><label for="sc-roll-other">Other</label>
+            </div>
+            <div class="field custom-roll" id="sc-roll-custom-wrap" hidden>
+              <label for="sc-roll-custom">Roll width (m)</label>
+              <input id="sc-roll-custom" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 3.66" aria-describedby="sc-roll-custom-err">
+              <p class="field-err" id="sc-roll-custom-err" hidden></p>
+            </div>
+          </fieldset>
+
+          <div class="fields">
+            <div class="field landing-field">
+              <label for="sc-landing">Landing</label>
+              <select id="sc-landing">
+                <option value="none">No landing</option>
+                <option value="top">Landing at the top</option>
+                <option value="mid">Landing part-way up</option>
+              </select>
+            </div>
+          </div>
+          <div class="landing-box" id="sc-landing-fields" hidden>
+            <div class="fields landing-grid">
+              <div class="field" id="sc-below-wrap" hidden>
+                <label for="sc-below">Steps below it</label>
+                <input id="sc-below" type="text" inputmode="numeric" autocomplete="off" value="7" aria-describedby="sc-below-err">
+                <p class="field-err" id="sc-below-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="sc-landing-length">Length (m)</label>
+                <input id="sc-landing-length" type="text" inputmode="decimal" autocomplete="off" value="1.20" aria-describedby="sc-landing-hint sc-landing-length-err">
+                <p class="field-err" id="sc-landing-length-err" hidden></p>
+              </div>
+              <div class="field" id="sc-lwidth-wrap">
+                <label for="sc-landing-width">Width (m)</label>
+                <input id="sc-landing-width" type="text" inputmode="decimal" autocomplete="off" value="1.00" aria-describedby="sc-landing-hint sc-landing-width-err">
+                <p class="field-err" id="sc-landing-width-err" hidden></p>
+              </div>
+            </div>
+            <p class="hint" id="sc-landing-hint">Width across the roll. Length from the doorway or wall opposite the top step, over its nose and down to the tread, so leave that step out of the count.</p>
+          </div>
+
+          <details class="more" id="sc-more">
+            <summary>Pattern, price and trimming</summary>
+            <div class="more-body">
+              <div class="fields">
+                <div class="field">
+                  <label for="sc-repeat">Pattern repeat (mm)</label>
+                  <input id="sc-repeat" type="text" inputmode="decimal" autocomplete="off" placeholder="Plain carpet" aria-describedby="sc-repeat-hint sc-repeat-err">
+                  <p class="hint" id="sc-repeat-hint">From the carpet's spec: 64 cm is 640 mm.</p>
+                  <p class="field-err" id="sc-repeat-err" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="sc-price" id="sc-price-label">Price per m² (£)</label>
+                  <input id="sc-price" type="text" inputmode="decimal" autocomplete="off" placeholder="Optional" aria-describedby="sc-price-err">
+                  <p class="field-err" id="sc-price-err" hidden></p>
+                </div>
+                <div class="field" id="sc-trim-wrap">
+                  <label for="sc-trim">Side trimming (mm)</label>
+                  <input id="sc-trim" type="text" inputmode="decimal" autocomplete="off" value="50" aria-describedby="sc-trim-hint sc-trim-err">
+                  <p class="hint" id="sc-trim-hint">Each side of each piece. One UK retailer's guide adds 5 cm either side.</p>
+                  <p class="field-err" id="sc-trim-err" hidden></p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <div class="calc-actions">
+            <button type="button" class="btn" id="sc-calc">Calculate</button>
+            <button type="button" class="btn-quiet" id="sc-reset">Reset</button>
+          </div>
+        </div>
+
+        <div class="calc-results" id="sc-results" aria-live="polite">
+          <h2 class="calc-h">What to buy</h2>
+          <div class="res-empty"><p>Enter your stairs and press Calculate.</p></div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== GUIDE ===== -->
+<section class="block">
+  <div class="container prose guide">
+    <h2>How to measure stairs for carpet</h2>
+    <p>Measure the stairs themselves, starting at the top. Guides such as <a href="https://www.tapi.co.uk/the-ideas-hub/diy-corner/how-to-measure-stairs-and-landing-for-carpet" rel="noopener">Tapi's</a> measure from the top down because that's the way the pile runs.</p>
+    <ul>
+      <li><strong>Steps.</strong> Count every step you'll carpet.</li>
+      <li><strong>Width.</strong> Measure across each step and use the widest.</li>
+      <li><strong>Tread.</strong> From the back of the tread to the front of the nosing. The "going" in <a href="https://www.gov.uk/government/publications/protection-from-falling-collision-and-impact-approved-document-k" rel="noopener">Approved Document K</a> is measured nosing to nosing, so a going taken off drawings comes up short.</li>
+      <li><strong>Riser.</strong> From the top of one tread to the top of the next.</li>
+      <li><strong>Allowance.</strong> <a href="https://www.onlinecarpets.co.uk/pages/a-guide-to-measuring-stairs-and-landings-for-carpet" rel="noopener">Online Carpets' guide</a> adds 5&nbsp;cm a step for fitting and trimming, and 5&nbsp;cm either side of the width. Tapi measures each step in one go instead: from the back of the step, over the nose and down to the back of the next tread.</li>
+      <li><strong>Landings.</strong> Tapi measures a top landing from the doorway or wall opposite the top step, over its nose and down to the tread, so the landing and top step are one piece.</li>
+      <li><strong>Winders.</strong> Approved Document K calls them tapered treads, because the going narrows from one side to the other, so each one is a different shape. Measure each at its widest points.</li>
+    </ul>
+    <p>Carpet per step is the tread plus the riser plus the allowance: 250&nbsp;mm + 200&nbsp;mm + 50&nbsp;mm = 500&nbsp;mm.</p>
+
+    <h2>How the strips come off the roll</h2>
+    <p>Stair carpet runs with its length, the way it comes off the roll, up and down the stairs, as the Carpet and Rug Institute's installation standard, <a href="https://carpet-rug.org/wp-content/uploads/2019/03/CRI-105-STANDARD-For-INSTALLATION-of-RESIDENTIAL-CARPET.pdf" rel="noopener">CRI 105</a>, recommends. So each strip is the stair width plus trimming, and the strips sit side by side across the roll.</p>
+    <p>The calculator fits as many strips across the roll as it can, shares the steps between them evenly and cuts the roll at the longest strip. A landing goes wherever it adds least: beside the strips, under the shorter ones or after them. You pay for the full roll width, so the offcut is part of the price.</p>
+
+    <h3>Worked examples</h3>
+    <p class="table-cap" id="sc-examples-cap">0.90&nbsp;m wide stairs, 250&nbsp;mm tread, 200&nbsp;mm riser, 50&nbsp;mm allowance a step, 50&nbsp;mm trimming each side.</p>
+    <div class="table-scroll">
+      <table aria-labelledby="sc-examples-cap">
+        <thead>
+          <tr><th scope="col">Stairs</th><th scope="col">Roll</th><th scope="col">Strips (steps)</th><th scope="col">Cut</th><th scope="col">Carpet bought</th><th scope="col">Offcut</th><th scope="col">Gripper</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>13 steps, straight</td><td>4 m</td><td>4, 3, 3, 3</td><td>2.00 m</td><td>8.00 m²</td><td>1.50 m²</td><td>26 lengths</td></tr>
+          <tr><td>13 steps, straight</td><td>5 m</td><td>3, 3, 3, 2, 2</td><td>1.50 m</td><td>7.50 m²</td><td>1.00 m²</td><td>26 lengths</td></tr>
+          <tr><td>13 steps + 1.20 × 1.00 m landing</td><td>4 m</td><td>4, 3, 3, 3 + landing</td><td>2.80 m</td><td>11.20 m²</td><td>3.27 m²</td><td>26 lengths + landing</td></tr>
+          <tr><td>14 steps, 1.80 × 0.90 m landing after step 7</td><td>4 m</td><td>4, 3 + 4, 3 + landing</td><td>3.40 m</td><td>13.60 m²</td><td>4.70 m²</td><td>28 lengths + landing</td></tr>
+          <tr><td>14 steps, 1.80 × 0.90 m landing after step 7</td><td>5 m</td><td>4, 3 + 4, 3 + landing</td><td>2.00 m</td><td>10.00 m²</td><td>1.10 m²</td><td>28 lengths + landing</td></tr>
+          <tr><td>13-step runner, 0.60 m wide</td><td>Runner</td><td>One length</td><td>6.50 m</td><td>3.90 m²</td><td>None</td><td>13 lengths</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>A 5&nbsp;m roll takes an extra strip across and shortens both cuts here. Try both widths, as long as the carpet comes in both.</p>
+
+    <h2>Pile direction on stairs</h2>
+    <p>CRI 105 notes that most manufacturers recommend the pile runs down the stairs, and Online Carpets says it should run across the landing and down the stairs the same way. Cutting every piece along the roll keeps them all the same way round. The carpet's own fitting instructions come first.</p>
+
+    <h2>Gripper and underlay on stairs</h2>
+    <p>CRI 105 puts gripper on every tread with the pins towards the riser and, for a waterfall finish, on the risers too with the pins pointing down. <a href="https://www.carpet-underlay-shop.co.uk/blogs/news/how-to-fit-stair-carpet" rel="noopener">Carpet Underlay Shop's guide</a> fixes it at the back of each tread and the base of each riser. The calculator counts both strips per step at the stair width, in the 1.52&nbsp;m lengths <a href="https://www.interfloor.com/accessories/floorworks-gripper-stairs/" rel="noopener">Interfloor sells its stair gripper</a> in: on 0.9&nbsp;m stairs each length cuts one strip, so 13 steps need 26. A landing needs gripper along its edges too.</p>
+    <p>For underlay, Carpet Underlay Shop cuts a piece for each tread to sit inside the gripper, and CRI 105 says separate underlay should go over the stair nose.</p>
+
+    <h2>Landings, patterns and runners</h2>
+    <p>A landing wider than the roll needs a join, and Brintons' installation guide says to keep seams and cross joins away from stair noses.</p>
+    <p>Strips cut side by side all start at the same point in a pattern, but on the stairs each one has to carry on from the step above, so the calculator adds one pattern repeat per row of pieces for lining up. Check the carpet's fitting instructions.</p>
+    <p>A runner comes at its finished width, so you need one length over every step, plus any landing it crosses. If it turns a corner, measure each straight run.</p>
+
+    <h2>Fit stair carpet safely</h2>
+    <p>Loose or worn carpet on stairs is a trip hazard. <a href="https://www.rospa.com/health-and-safety-resources/keeping-kids-safe-hub/falls" rel="noopener">RoSPA's advice</a> is that stairs should be carefully maintained, and damaged or worn carpet repaired or removed. Stair carpet has to be fitted tight so it can't move or lift, so if in doubt, use a professional fitter.</p>
+
+    <h2>Stairs as part of the whole job</h2>
+    <p>This calculator sizes one staircase at a time. BillyBot's cutting plans handle stairs as part of the whole job, and BillyBot, the AI operator for flooring businesses, runs the office side of the business from first enquiry to final invoice. See <a href="/cutting-plan-software/">BillyBot's cutting plan software</a> and <a href="/flooring-quoting-software/">flooring quoting</a>, or size the rooms with the <a href="/tools/carpet-calculator/">carpet calculator</a>.</p>
+    <div class="cta-row">
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try BillyBot free for 14 days</a>
+    </div>
+    <p class="disclaimer">14 days free · Fitters always free · Cancel anytime</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="block">
+  <div class="container">
+    <h2 class="section-title">Stair carpet calculator FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-question" type="button">How much carpet do I need for 13 stairs?</button><div class="faq-answer"><p>It depends on the steps and the roll. For 13 steps 0.9 m wide at 500 mm a step (a 250 mm tread, 200 mm riser and 50 mm allowance), with 5 cm trimming each side, four strips fit across a 4 m roll, so you'd buy a 2 m cut: 8 m² of carpet.</p></div></div>
+      <div class="faq-item"><button class="faq-question" type="button">How do you measure stairs for carpet?</button><div class="faq-answer"><p>Start at the top. Count the steps, then measure the width at the widest point, the tread from the back to the front of the nosing and the riser from one tread to the next, and add an allowance for the nosing and trimming. Measure landings and each winder separately.</p></div></div>
+      <div class="faq-item"><button class="faq-question" type="button">Which way should the pile run on stairs?</button><div class="faq-answer"><p>Down the stairs. The Carpet and Rug Institute's installation standard notes that most manufacturers recommend it, which is why UK retailers' guides measure stairs from the top down. Check the fitting instructions for your carpet.</p></div></div>
+      <div class="faq-item"><button class="faq-question" type="button">How many gripper rods do I need for stairs?</button><div class="faq-answer"><p>Allow a strip at the back of each tread and one at the foot of each riser, each about the stair width. 13 steps 0.9 m wide need 26 strips, or 23.4 m. Interfloor's stair gripper comes in 1.52 m lengths, and each cuts one 0.9 m strip, so you'd need 26 lengths.</p></div></div>
+      <div class="faq-item"><button class="faq-question" type="button">How much stair runner do I need?</button><div class="faq-answer"><p>A runner comes at its finished width, so you need one length: the tread, riser and allowance for one step, times the number of steps, plus any landing it crosses. 13 steps at 500 mm is 6.5 m.</p></div></div>
+      <div class="faq-item"><button class="faq-question" type="button">Can the calculator do winders?</button><div class="faq-answer"><p>No. Winders are tapered treads, each a different shape, so measure each one at its widest points. The calculator covers straight flights and landings, and BillyBot's cutting plans handle stairs, winders included, as part of the whole job.</p></div></div>
+      <div class="faq-item"><button class="faq-question" type="button">Why is there so much offcut on stairs?</button><div class="faq-answer"><p>You buy the full roll width over the length you cut, even where the stairs only use part of it. Fitting as many strips across as possible and tucking a landing under the shorter strips keeps it down, and it's worth trying both roll widths.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="block">
+  <div class="container">
+    <div class="ctaband glass">
+      <h2>Let Billy plan the stairs with the whole job</h2>
+      <p>Floor plans, cutting plans and quotes on your own prices, from first enquiry to final invoice. 14 days free, fitters always free, cancel anytime.</p>
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your free trial</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> BillyBot™. All rights reserved.
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/flooring-quoting-software/">Flooring Quoting Software</a>
+      <a href="/flooring-estimating-software/">Flooring Estimating Software</a>
+      <a href="/cutting-plan-software/">Cutting Plan Software</a>
+      <a href="/flooring-software-comparison/">Flooring Software Compared</a>
+      <a href="/tools/">Free tools</a>
+      <a href="/resources/">Resources</a>
+      <a href="https://app.billybot.ai/terms">Terms</a>
+      <a href="https://app.billybot.ai/privacy">Privacy</a>
+      <a href="mailto:info@billybot.ai">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* BEGIN stair-calc */
+/* Stair carpet maths using the measuring method in UK carpet retailers' guides:
+   carpet per step = tread + riser + an allowance for the nosing and trimming,
+   strips as wide as the stairs (plus trimming) laid side by side across the roll,
+   landings as rectangles. */
+var StairCalc = (function () {
+  'use strict';
+  var GRIPPER_LENGTH_MM = 1520; // gripper sold in 1.52 m (5 ft) lengths
+
+  function parseNumber(raw) {
+    if (typeof raw === 'number') return isFinite(raw) ? raw : NaN;
+    var t = String(raw == null ? '' : raw).replace(/\s+/g, '');
+    if (t === '') return null;
+    if (/^\d+,\d+$/.test(t)) t = t.replace(',', '.');
+    if (!/^-?(\d+\.?\d*|\.\d+)$/.test(t)) return NaN;
+    return parseFloat(t);
+  }
+
+  function stepLengthMm(treadMm, riserMm, extraMm) {
+    return treadMm + riserMm + extraMm;
+  }
+
+  /* Share a flight's steps as evenly as possible over a number of strips. */
+  function shareSteps(steps, strips) {
+    var base = Math.floor(steps / strips);
+    var extra = steps % strips;
+    var out = [];
+    for (var i = 0; i < strips; i++) out.push(base + (i < extra ? 1 : 0));
+    return out;
+  }
+
+  /* Fewest steps per strip that lets every flight's strips sit side by side in `slots`
+     strip widths. Returns [[steps per strip], ...] per flight, or null if they can't. */
+  function stripsForRow(flights, slots) {
+    if (slots < flights.length) return null;
+    var most = Math.max.apply(null, flights);
+    for (var m = 1; m <= most; m++) {
+      var count = 0;
+      for (var i = 0; i < flights.length; i++) count += Math.ceil(flights[i] / m);
+      if (count <= slots) {
+        return flights.map(function (n) { return shareSteps(n, Math.ceil(n / m)); });
+      }
+    }
+    return null;
+  }
+
+  /* Gripper: a strip at the back of each tread and one at the foot of each riser. */
+  function gripperFor(steps, widthMm) {
+    var strips = steps * 2;
+    var metres = (strips * widthMm) / 1000;
+    var perLength = Math.floor(GRIPPER_LENGTH_MM / widthMm);
+    var lengths = perLength >= 1 ? Math.ceil(strips / perLength) : Math.ceil((strips * widthMm) / GRIPPER_LENGTH_MM);
+    return { strips: strips, metres: metres, lengths: lengths, perLength: perLength, lengthMm: GRIPPER_LENGTH_MM };
+  }
+
+  /* Reads raw form values. Returns { values } or { errors: [{ field, message }] }. */
+  function readInputs(raw) {
+    var errors = [];
+    var runner = raw.mode === 'runner';
+    function num(field, label, opts) {
+      var v = parseNumber(raw[field]);
+      if (v === null) {
+        if (opts.optional) return opts.fallback;
+        errors.push({ field: field, message: 'Enter the ' + label + '.' });
+        return null;
+      }
+      if (isNaN(v)) { errors.push({ field: field, message: 'The ' + label + ' needs to be a number, like ' + opts.example + '.' }); return null; }
+      if (opts.integer && Math.floor(v) !== v) { errors.push({ field: field, message: 'The ' + label + ' needs to be a whole number.' }); return null; }
+      if (v < opts.min || v > opts.max) {
+        errors.push({ field: field, message: 'The ' + label + ' should be between ' + opts.min + ' and ' + opts.max + (opts.unit ? ' ' + opts.unit : '') + '.' });
+        return null;
+      }
+      return v;
+    }
+
+    var steps = num('steps', 'number of steps', { min: 1, max: 100, integer: true, example: '13' });
+    var widthM = num('width', runner ? 'runner width' : 'stair width', { min: 0.2, max: 5, unit: 'm', example: runner ? '0.6' : '0.9' });
+    var treadMm = num('tread', 'tread depth', { min: 100, max: 600, unit: 'mm', example: '250' });
+    var riserMm = num('riser', 'riser height', { min: 50, max: 300, unit: 'mm', example: '200' });
+    var extraMm = num('extra', 'nosing and trimming allowance', { min: 0, max: 200, unit: 'mm', example: '50', optional: true, fallback: 0 });
+
+    var rollWidthM = null;
+    var trimMm = 0;
+    if (!runner) {
+      if (raw.roll === '4' || raw.roll === '5') rollWidthM = Number(raw.roll);
+      else rollWidthM = num('rollCustom', 'roll width', { min: 0.5, max: 6, unit: 'm', example: '3.66' });
+      trimMm = num('trim', 'side trimming', { min: 0, max: 150, unit: 'mm', example: '50', optional: true, fallback: 0 });
+    }
+
+    var landing = raw.landing === 'top' || raw.landing === 'mid' ? raw.landing : 'none';
+    var stepsBelow = null;
+    var landingLengthM = null;
+    var landingWidthM = null;
+    if (landing !== 'none') {
+      landingLengthM = num('landingLength', 'landing length', { min: 0.2, max: 10, unit: 'm', example: '1.2' });
+      if (!runner) landingWidthM = num('landingWidth', 'landing width', { min: 0.2, max: 10, unit: 'm', example: '1.0' });
+      if (landing === 'mid') {
+        if (steps !== null && steps < 2) {
+          errors.push({ field: 'steps', message: 'A landing part-way up needs at least 2 steps.' });
+        } else {
+          stepsBelow = num('stepsBelow', 'number of steps below the landing', { min: 1, max: steps !== null ? steps - 1 : 99, integer: true, example: '7' });
+        }
+      }
+    }
+
+    var repeatMm = num('repeat', 'pattern repeat', { min: 0, max: 5000, unit: 'mm', example: '640', optional: true, fallback: 0 });
+    var price = num('price', runner ? 'price per metre' : 'price per m²', { min: 0, max: 10000, example: '32.50', optional: true, fallback: null });
+
+    if (errors.length) return { errors: errors };
+    return {
+      values: {
+        mode: runner ? 'runner' : 'fitted',
+        steps: steps,
+        widthMm: Math.round(widthM * 1000),
+        treadMm: treadMm,
+        riserMm: riserMm,
+        extraMm: extraMm,
+        rollWidthMm: runner ? Math.round(widthM * 1000) : Math.round(rollWidthM * 1000),
+        trimMm: runner ? 0 : trimMm,
+        landing: landing,
+        stepsBelow: stepsBelow,
+        landingLengthMm: landingLengthM === null ? null : Math.round(landingLengthM * 1000),
+        landingWidthMm: runner ? Math.round(widthM * 1000) : (landingWidthM === null ? null : Math.round(landingWidthM * 1000)),
+        repeatMm: repeatMm,
+        price: price,
+        priceUnit: runner ? 'm' : 'm2'
+      }
+    };
+  }
+
+  /* Lays the pieces out in rows across the roll and totals everything. */
+  function planStairs(v) {
+    var runner = v.mode === 'runner';
+    var stepMm = stepLengthMm(v.treadMm, v.riserMm, v.extraMm);
+    var trim = runner ? 0 : v.trimMm;
+    var rollW = v.rollWidthMm;
+    var stripW = v.widthMm + 2 * trim;
+    if (stripW > rollW) {
+      return { ok: false, problem: 'too-wide', message: 'Each strip would be ' + (stripW / 1000).toFixed(2) + ' m wide with trimming, which is wider than the ' + (rollW / 1000).toFixed(2) + ' m roll.' };
+    }
+    var flightNames = v.landing === 'mid' ? ['Lower flight', 'Upper flight'] : ['Flight'];
+    var flights = v.landing === 'mid' ? [v.stepsBelow, v.steps - v.stepsBelow] : [v.steps];
+    var landing = null;
+    if (v.landing !== 'none') {
+      landing = { acrossMm: v.landingWidthMm + 2 * trim, alongMm: v.landingLengthMm + 2 * trim };
+      if (landing.acrossMm > rollW) {
+        return { ok: false, problem: 'landing-too-wide', message: 'The landing would be ' + (landing.acrossMm / 1000).toFixed(2) + ' m across with trimming, which is wider than the ' + (rollW / 1000).toFixed(2) + ' m roll.' };
+      }
+    }
+
+    function assign(piece, extra) {
+      var copy = {};
+      var k;
+      for (k in piece) { if (Object.prototype.hasOwnProperty.call(piece, k)) copy[k] = piece[k]; }
+      for (k in extra) { if (Object.prototype.hasOwnProperty.call(extra, k)) copy[k] = extra[k]; }
+      return copy;
+    }
+    function stripPieces(split) {
+      var pieces = [];
+      for (var f = 0; f < split.length; f++) {
+        for (var s = 0; s < split[f].length; s++) {
+          pieces.push({ kind: 'strip', flight: f, flightName: flightNames[f], strip: s + 1, steps: split[f][s], widthMm: stripW, lengthMm: split[f][s] * stepMm });
+        }
+      }
+      return pieces;
+    }
+    function landingPiece() {
+      return { kind: 'landing', widthMm: landing.acrossMm, lengthMm: landing.alongMm };
+    }
+    /* Rows of pieces laid left to right, one row after another along the roll. */
+    function rowsLayout(rows, how) {
+      var placed = [];
+      var y = 0;
+      for (var r = 0; r < rows.length; r++) {
+        var x = 0;
+        var len = 0;
+        for (var p = 0; p < rows[r].length; p++) {
+          placed.push(assign(rows[r][p], { px: x, py: y, row: r }));
+          x += rows[r][p].widthMm;
+          len = Math.max(len, rows[r][p].lengthMm);
+        }
+        y += len;
+      }
+      return { how: how, pieces: placed, lengthMm: y, rows: rows.length };
+    }
+    /* One row of strips, longest on the left, with the landing tucked under the shorter ones. */
+    function tuckLayout(strips) {
+      var sorted = strips.slice().sort(function (a, b) { return b.lengthMm - a.lengthMm; });
+      var n = sorted.length;
+      var spare = rollW - n * stripW;
+      var best = null;
+      for (var j = 1; j <= n; j++) {
+        var room = (n - j) * stripW + spare;
+        if (room < landing.acrossMm) continue;
+        var y = j < n ? sorted[j].lengthMm : 0;
+        var len = Math.max(sorted[0].lengthMm, y + landing.alongMm);
+        if (!best || len < best.len) best = { j: j, y: y, len: len };
+      }
+      if (!best) return null;
+      var placed = [];
+      for (var i = 0; i < n; i++) placed.push(assign(sorted[i], { px: i * stripW, py: 0, row: 0 }));
+      placed.push(assign(landingPiece(), { px: best.j * stripW, py: best.y, row: 0 }));
+      return { how: best.y > 0 ? 'tucked' : 'beside', pieces: placed, lengthMm: best.len, rows: 1 };
+    }
+
+    var slots = Math.floor(rollW / stripW);
+    var splitRow = stripsForRow(flights, slots);
+    var options = [];
+    if (splitRow) {
+      var strips = stripPieces(splitRow);
+      if (!landing) {
+        options.push({ split: splitRow, plan: rowsLayout([strips], 'row') });
+      } else {
+        var tucked = tuckLayout(strips);
+        if (tucked) options.push({ split: splitRow, plan: tucked });
+        options.push({ split: splitRow, plan: rowsLayout([strips, [landingPiece()]], 'after') });
+        // Fewer, longer strips can leave room for the landing beside them.
+        var splitBeside = stripsForRow(flights, Math.floor((rollW - landing.acrossMm) / stripW));
+        if (splitBeside) options.push({ split: splitBeside, plan: rowsLayout([stripPieces(splitBeside).concat([landingPiece()])], 'beside') });
+      }
+    } else {
+      // Only one strip fits across the roll: each flight is one strip, cut one after another.
+      var splitStacked = flights.map(function (n) { return [n]; });
+      var stacked = stripPieces(splitStacked).map(function (piece) { return [piece]; });
+      if (landing) {
+        if (v.landing === 'mid') stacked = [stacked[0], [landingPiece()]].concat(stacked.slice(1));
+        else stacked.push([landingPiece()]);
+      }
+      options.push({ split: splitStacked, plan: rowsLayout(stacked, 'stacked') });
+    }
+    options.sort(function (a, b) { return a.plan.lengthMm - b.plan.lengthMm || a.plan.rows - b.plan.rows; });
+    var best = options[0];
+    var plan = best.plan;
+    // Patterned carpet: one repeat per row so each piece can be moved along to line up.
+    var patternMm = !runner && v.repeatMm > 0 && plan.pieces.length > 1 ? v.repeatMm * plan.rows : 0;
+    plan.patternMm = patternMm;
+    plan.lengthMm += patternMm;
+
+    var piecesAreaMm2 = 0;
+    for (var i = 0; i < plan.pieces.length; i++) piecesAreaMm2 += plan.pieces[i].widthMm * plan.pieces[i].lengthMm;
+    var boughtAreaMm2 = rollW * plan.lengthMm;
+    var offcutMm2 = Math.max(0, boughtAreaMm2 - piecesAreaMm2);
+    var orderLengthCm = Math.ceil(plan.lengthMm / 10);
+    var orderLengthM = orderLengthCm / 100;
+    var orderAreaM2 = Math.round(orderLengthCm * (rollW / 10)) / 10000;
+    var hasPrice = typeof v.price === 'number' && isFinite(v.price);
+    var priceUnit = v.priceUnit === 'm' ? 'm' : 'm2';
+    var cost = hasPrice ? Math.round((priceUnit === 'm' ? orderLengthM : orderAreaM2) * v.price * 100) / 100 : null;
+
+    return {
+      ok: true,
+      mode: runner ? 'runner' : 'fitted',
+      stepMm: stepMm,
+      trimMm: trim,
+      stripWidthMm: stripW,
+      rollWidthMm: rollW,
+      slots: slots,
+      flights: flights,
+      flightNames: flightNames,
+      split: best.split,
+      stripCount: best.split.reduce(function (s, f) { return s + f.length; }, 0),
+      landing: landing,
+      landingPlacement: landing ? plan.how : null,
+      rows: plan.rows,
+      pieces: plan.pieces,
+      patternMm: plan.patternMm,
+      repeatMm: v.repeatMm,
+      lengthMm: plan.lengthMm,
+      piecesAreaMm2: piecesAreaMm2,
+      boughtAreaMm2: boughtAreaMm2,
+      offcutMm2: offcutMm2,
+      offcutPercent: boughtAreaMm2 > 0 ? Math.round((offcutMm2 / boughtAreaMm2) * 1000) / 10 : 0,
+      gripper: gripperFor(v.steps, v.widthMm),
+      underlayPieces: v.steps,
+      orderLengthM: orderLengthM,
+      orderAreaM2: orderAreaM2,
+      price: hasPrice ? v.price : null,
+      priceUnit: priceUnit,
+      cost: cost
+    };
+  }
+
+  return {
+    GRIPPER_LENGTH_MM: GRIPPER_LENGTH_MM,
+    parseNumber: parseNumber,
+    stepLengthMm: stepLengthMm,
+    shareSteps: shareSteps,
+    stripsForRow: stripsForRow,
+    gripperFor: gripperFor,
+    readInputs: readInputs,
+    planStairs: planStairs
+  };
+})();
+if (typeof module !== 'undefined' && module.exports) module.exports = StairCalc;
+/* END stair-calc */
+</script>
+
+<script>
+/* BEGIN stair-ui */
+(function () {
+  var form = document.getElementById('stair-calc');
+  if (!form || typeof StairCalc === 'undefined') return;
+  function $(id) { return document.getElementById(id); }
+  var results = $('sc-results');
+  var more = $('sc-more');
+  var FIELDS = { steps: 'sc-steps', width: 'sc-width', tread: 'sc-tread', riser: 'sc-riser', extra: 'sc-extra', rollCustom: 'sc-roll-custom', trim: 'sc-trim', stepsBelow: 'sc-below', landingLength: 'sc-landing-length', landingWidth: 'sc-landing-width', repeat: 'sc-repeat', price: 'sc-price' };
+  var IN_MORE = { repeat: true, price: true, trim: true };
+  var DEFAULTS = { 'sc-steps': '13', 'sc-width': '0.90', 'sc-tread': '250', 'sc-riser': '200', 'sc-extra': '50', 'sc-roll-custom': '', 'sc-trim': '50', 'sc-below': '7', 'sc-landing-length': '1.20', 'sc-landing-width': '1.00', 'sc-repeat': '', 'sc-price': '' };
+
+  function checked(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
+  }
+  function m(mm) { return (mm / 1000).toFixed(2); }
+  function m2(mm2) { return (mm2 / 1e6).toFixed(2); }
+  function rollLabel(mm) { return String(Number((mm / 1000).toFixed(2))); }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+  function list(a) { return a.length === 1 ? String(a[0]) : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]; }
+  function money(n) { return '£' + n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  function pct(v, total) { return ((v / total) * 100).toFixed(3) + '%'; }
+  function tile(label, val, sub, cls) {
+    return '<div class="tile' + (cls ? ' ' + cls : '') + '"><span class="t-label">' + label + '</span><span class="t-val">' + val + '</span>' + (sub ? '<span class="t-sub">' + sub + '</span>' : '') + '</div>';
+  }
+
+  function readRaw() {
+    var raw = { mode: checked('sc-mode'), roll: checked('sc-roll'), landing: $('sc-landing').value };
+    Object.keys(FIELDS).forEach(function (k) { raw[k] = $(FIELDS[k]).value; });
+    return raw;
+  }
+
+  function sync() {
+    var runner = checked('sc-mode') === 'runner';
+    var landing = $('sc-landing').value;
+    $('sc-roll-field').hidden = runner;
+    $('sc-roll-custom-wrap').hidden = runner || checked('sc-roll') !== 'custom';
+    $('sc-trim-wrap').hidden = runner;
+    $('sc-width-label').textContent = runner ? 'Runner width (m)' : 'Stair width (m)';
+    $('sc-width-hint').textContent = runner ? 'The width of the runner.' : 'Across the step, at the widest point.';
+    $('sc-price-label').textContent = runner ? 'Price per metre (£)' : 'Price per m² (£)';
+    $('sc-landing-fields').hidden = landing === 'none';
+    $('sc-below-wrap').hidden = landing !== 'mid';
+    $('sc-lwidth-wrap').hidden = runner;
+    var hint = runner
+      ? 'The length of runner across the landing.'
+      : landing === 'mid'
+        ? 'Width across the roll. Length along it, including the drop over the step down to the next tread.'
+        : 'Width across the roll. Length from the doorway or wall opposite the top step, over its nose and down to the tread, so leave that step out of the count.';
+    $('sc-landing-hint').textContent = hint;
+  }
+
+  function clearErrors() {
+    Object.keys(FIELDS).forEach(function (k) {
+      var input = $(FIELDS[k]);
+      var err = $(FIELDS[k] + '-err');
+      input.removeAttribute('aria-invalid');
+      if (err) { err.hidden = true; err.textContent = ''; }
+    });
+  }
+
+  function showErrors(errors) {
+    var items = '';
+    errors.forEach(function (e) {
+      var id = FIELDS[e.field];
+      var input = id && $(id);
+      var err = id && $(id + '-err');
+      if (input) input.setAttribute('aria-invalid', 'true');
+      if (err) { err.textContent = e.message; err.hidden = false; }
+      if (IN_MORE[e.field]) more.open = true;
+      items += '<li>' + esc(e.message) + '</li>';
+    });
+    results.innerHTML = '<h2 class="calc-h">What to buy</h2><div class="res-empty"><p class="res-kicker">Check the measurements</p><ul>' + items + '</ul></div>';
+  }
+
+  function showProblem(p) {
+    results.innerHTML = '<h2 class="calc-h">What to buy</h2><div class="res-empty"><p class="res-kicker">It won’t fit the roll</p>' +
+      '<p>' + esc(p.message) + ' Check the measurement, try a wider roll, or plan a join, keeping it away from the stair nosings.</p>' +
+      '<p><a href="/cutting-plan-software/">BillyBot’s cutting plans</a> handle stairs as part of the whole job.</p></div>';
+  }
+
+  function diagram(p) {
+    var total = p.lengthMm;
+    var ratio = total / p.rollWidthMm;
+    var h = '<figure class="rollviz"><div class="roll-wrap" style="max-width:' + Math.max(160, Math.round(300 / ratio)) + 'px">';
+    h += '<div class="roll-dims"><span>' + rollLabel(p.rollWidthMm) + ' m roll width</span><span>' + p.orderLengthM.toFixed(2) + ' m cut</span></div>';
+    h += '<div class="roll-box" aria-hidden="true" style="aspect-ratio:' + p.rollWidthMm + ' / ' + total + '">';
+    p.pieces.forEach(function (x) {
+      var cls = x.kind === 'landing' ? 'land' : (x.flight === 1 ? 'c2' : 'c0');
+      var label = x.kind === 'landing' ? 'Landing' : String(x.steps);
+      h += '<div class="piece ' + cls + '" style="left:' + pct(x.px, p.rollWidthMm) + ';top:' + pct(x.py, total) + ';width:' + pct(x.widthMm, p.rollWidthMm) + ';height:' + pct(x.lengthMm, total) + '">' + label + '</div>';
+    });
+    if (p.patternMm > 0) h += '<div class="skipband" style="height:' + pct(p.patternMm, total) + '">Pattern</div>';
+    h += '</div></div><ul class="legend">';
+    if (p.flights.length > 1) h += '<li><span class="sw c0"></span>Lower flight</li><li><span class="sw c2"></span>Upper flight</li>';
+    else h += '<li><span class="sw c0"></span>Stair strips</li>';
+    if (p.landing) h += '<li><span class="sw land"></span>Landing</li>';
+    h += '</ul><figcaption>Numbers are the steps on each strip. The roll runs down the page, so every piece has its pile running the same way.</figcaption></figure>';
+    return h;
+  }
+
+  function render(v, p) {
+    var runner = p.mode === 'runner';
+    var g = p.gripper;
+    var t = '<h2 class="calc-h">What to buy</h2><div class="tiles">';
+    if (runner) {
+      t += tile('Runner to buy', p.orderLengthM.toFixed(2) + ' m', m(p.rollWidthMm) + ' m wide = ' + p.orderAreaM2.toFixed(2) + ' m²', 'tile-main');
+      t += tile('Cut into', plural(p.pieces.length, 'length', 'lengths'), 'no side trimming');
+      t += tile('Per step', p.stepMm + ' mm', 'tread + riser + allowance');
+    } else {
+      t += tile('Carpet to buy', p.orderLengthM.toFixed(2) + ' m', 'off a ' + rollLabel(p.rollWidthMm) + ' m roll = ' + p.orderAreaM2.toFixed(2) + ' m²', 'tile-main');
+      t += tile('Cut into', plural(p.stripCount, 'strip', 'strips') + (p.landing ? ' + landing' : ''), m(p.stripWidthMm) + ' m wide');
+      t += tile('Offcut', m2(p.offcutMm2) + ' m²', p.offcutPercent + '% of what you buy');
+    }
+    t += tile('Gripper', plural(g.lengths, 'length', 'lengths'), g.metres.toFixed(1) + ' m in ' + g.strips + ' strips');
+    t += tile('Underlay', plural(v.steps, 'piece', 'pieces'), 'one per tread' + (p.landing ? ', plus the landing' : ''));
+    if (!runner) t += tile('Per step', p.stepMm + ' mm', 'tread + riser + allowance');
+    var cost = p.cost !== null
+      ? tile('Cost', money(p.cost), (runner ? p.orderLengthM.toFixed(2) + ' m' : p.orderAreaM2.toFixed(2) + ' m²') + ' × ' + money(p.price), runner ? 'tile-span' : '')
+      : tile('Cost', 'Add a price', 'under Pattern, price and trimming', runner ? 'tile-span' : '');
+    t += cost + '</div>';
+
+    if (!runner) t += diagram(p);
+
+    var w = [];
+    w.push('Carpet per step: ' + v.treadMm + ' mm tread + ' + v.riserMm + ' mm riser' + (v.extraMm ? ' + ' + v.extraMm + ' mm allowance' : '') + ' = <strong>' + p.stepMm + ' mm</strong>.');
+    if (runner) {
+      w.push('A runner is bought at its finished width, so there’s no side trimming and nothing to cut across a roll.');
+      p.split.forEach(function (runs, f) {
+        var n = p.flights[f];
+        w.push((p.flights.length > 1 ? p.flightNames[f] + ': ' : 'The steps: ') + n + ' × ' + p.stepMm + ' mm = <strong>' + m(n * p.stepMm) + ' m</strong>.');
+      });
+      if (p.landing) w.push('Across the landing: <strong>' + m(p.landing.alongMm) + ' m</strong>.');
+      if (v.repeatMm > 0) w.push('Pattern: nothing is added for a runner, as it runs on in one length. Check how the design meets at any join.');
+      w.push('Buy <strong>' + p.orderLengthM.toFixed(2) + ' m</strong> of ' + m(p.rollWidthMm) + ' m wide runner (' + p.orderAreaM2.toFixed(2) + ' m²).');
+    } else {
+      w.push('Strip width: ' + m(v.widthMm) + ' m' + (p.trimMm ? ' + ' + p.trimMm + ' mm each side' : '') + ' = <strong>' + m(p.stripWidthMm) + ' m</strong>, so ' + plural(p.slots, 'strip fits', 'strips fit') + ' across the ' + rollLabel(p.rollWidthMm) + ' m roll.');
+      p.split.forEach(function (runs, f) {
+        var lead = p.flights.length > 1 ? p.flightNames[f] + ', ' + plural(p.flights[f], 'step', 'steps') : plural(p.flights[f], 'step', 'steps');
+        var lengths = runs.map(function (n) { return m(n * p.stepMm) + ' m'; });
+        if (runs.length === 1) w.push(lead + ': one strip, ' + lengths[0] + ' long.');
+        else w.push(lead + ' shared over ' + runs.length + ' strips of ' + list(runs) + ' steps: ' + list(lengths) + ' long.');
+      });
+      if (p.landing) {
+        var s = 'Landing: ' + m(p.landing.acrossMm - 2 * p.trimMm) + ' m wide × ' + m(p.landing.alongMm - 2 * p.trimMm) + ' m long' + (p.trimMm ? ', + ' + p.trimMm + ' mm all round' : '') + ' = ' + m(p.landing.acrossMm) + ' m across the roll and ' + m(p.landing.alongMm) + ' m along it. ';
+        if (p.landingPlacement === 'tucked') s += 'It fits under the shorter strips.';
+        else if (p.landingPlacement === 'beside') s += 'It fits beside the strips.';
+        else if (p.landingPlacement === 'after') s += 'There isn’t room beside the strips, so it’s cut after them.';
+        else s += 'It’s cut in line with the stairs, as only one piece fits across.';
+        w.push(s);
+      }
+      if (p.patternMm > 0) w.push('Pattern: one ' + p.repeatMm + ' mm repeat for ' + (p.rows > 1 ? 'each of the ' + p.rows + ' rows' : 'the row') + ' of pieces, so each piece can be moved along to line the pattern up: <strong>+' + m(p.patternMm) + ' m</strong>.');
+      else if (v.repeatMm > 0) w.push('Pattern: one piece on its own runs straight on, so nothing is added.');
+      var exact = Math.round(p.orderLengthM * 1000) === p.lengthMm;
+      w.push('Buy <strong>' + p.orderLengthM.toFixed(2) + ' m × ' + rollLabel(p.rollWidthMm) + ' m = ' + p.orderAreaM2.toFixed(2) + ' m²</strong>' + (exact ? '' : ' (rounded up to the centimetre)') + '. The pieces use ' + m2(p.piecesAreaMm2) + ' m², leaving ' + m2(p.offcutMm2) + ' m² of offcut.');
+    }
+    w.push('Gripper: a strip at the back of each tread and at the foot of each riser, ' + g.strips + ' strips of about ' + m(v.widthMm) + ' m = ' + g.metres.toFixed(1) + ' m. ' +
+      (g.perLength >= 1
+        ? 'A 1.52 m length cuts ' + plural(g.perLength, 'strip', 'strips') + ' that long, so <strong>' + plural(g.lengths, 'length', 'lengths') + '</strong>.'
+        : 'Each strip is longer than a 1.52 m length, so about <strong>' + plural(g.lengths, 'length', 'lengths') + '</strong>, joined.') +
+      (p.landing && !runner ? ' The landing also needs gripper along its edges.' : ''));
+    w.push('Underlay: one piece per tread, <strong>' + plural(v.steps, 'piece', 'pieces') + '</strong>' + (p.landing && !runner ? ', plus the landing' : '') + '.');
+    if (p.cost !== null) {
+      w.push('Cost: ' + (runner ? p.orderLengthM.toFixed(2) + ' m' : p.orderAreaM2.toFixed(2) + ' m²') + ' × ' + money(p.price) + ' = <strong>' + money(p.cost) + '</strong>.');
+    }
+    t += '<h3 class="work-h">How it’s worked out</h3><ol class="working"><li>' + w.join('</li><li>') + '</li></ol>';
+    t += '<p class="res-note">Straight flights and landings only. Winders are each a different shape, so measure each one at its widest points. <a href="/cutting-plan-software/">BillyBot’s cutting plans</a> handle stairs as part of the whole job.</p>';
+    results.innerHTML = t;
+  }
+
+  function calculate() {
+    clearErrors();
+    var read = StairCalc.readInputs(readRaw());
+    if (read.errors) { showErrors(read.errors); return; }
+    var plan = StairCalc.planStairs(read.values);
+    if (!plan.ok) { showProblem(plan); return; }
+    render(read.values, plan);
+  }
+
+  form.addEventListener('change', function (e) {
+    sync();
+    if (e.target && e.target.id === 'sc-roll-other' && !$('sc-roll-custom').value.trim()) {
+      $('sc-roll-custom').focus();
+      return;
+    }
+    calculate();
+  });
+  form.addEventListener('submit', function (e) { e.preventDefault(); calculate(); });
+  form.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target && e.target.tagName === 'INPUT' && e.target.type === 'text') { e.preventDefault(); calculate(); }
+  });
+  $('sc-calc').addEventListener('click', calculate);
+  $('sc-reset').addEventListener('click', function () {
+    Object.keys(DEFAULTS).forEach(function (id) { $(id).value = DEFAULTS[id]; });
+    $('sc-mode-fitted').checked = true;
+    $('sc-roll-4').checked = true;
+    $('sc-landing').value = 'none';
+    more.open = false;
+    sync();
+    calculate();
+  });
+  sync();
+  calculate();
+})();
+/* END stair-ui */
+</script>
+
+<script>
+  var IOS_APP_URL = 'https://apps.apple.com/gb/app/billybot/id6758058400';
+  var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // Signup link carries where the visitor came from (page, external referrer, incoming ad/UTM params)
+  function bbSignupUrl() {
+    var p = new URLSearchParams();
+    var page = location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+    try {
+      var q = new URLSearchParams(location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'].forEach(function (k) {
+        if (q.get(k)) p.set(k, q.get(k));
+      });
+      var ref = document.referrer ? new URL(document.referrer).hostname : '';
+      if (ref && ref !== location.hostname) p.set('ref', ref);
+    } catch (e) {}
+    if (!p.get('utm_source')) {
+      p.set('utm_source', 'billybot.ai');
+      p.set('utm_medium', 'website');
+      p.set('utm_campaign', page);
+    } else if (!p.get('utm_content')) {
+      p.set('utm_content', page);
+    }
+    return 'https://app.billybot.ai/auth/signup?' + p.toString();
+  }
+  var SIGNUP_URL = isIOS ? IOS_APP_URL : bbSignupUrl();
+  var LOGIN_URL = isIOS ? IOS_APP_URL : 'https://app.billybot.ai/auth/login';
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) { el.setAttribute('href', SIGNUP_URL); });
+  document.querySelectorAll('[data-app-login]').forEach(function(el) { el.setAttribute('href', LOGIN_URL); });
+
+  document.querySelectorAll('[data-app-signup]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      if (typeof fbq !== 'undefined') { fbq('track', 'ViewContent', { content_name: 'Stair Carpet Calculator CTA' }); }
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.parentElement;
+      var wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function(other) { other.classList.remove('active'); });
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

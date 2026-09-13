@@ -1,6 +1,6 @@
 # BillyBot
 
-> BillyBot is an AI operator (AI assistant software) built specifically for flooring businesses and contractors in the UK. It runs the office side of a flooring business, from the first enquiry to the final invoice: email, quoting on the business's own prices, estimating from drawings and tenders, cutting plans, invoicing into Xero, Sage or QuickBooks, diary and fitter scheduling, and RAMS — so flooring firms win more work and spend less time on admin. The owner approves what goes to customers and into the accounts. Website: https://billybot.ai · App: https://app.billybot.ai
+> BillyBot is an AI operator (AI assistant software) built specifically for flooring businesses and contractors in the UK. It runs the office side of a flooring business, from the first enquiry to the final invoice: email, quoting on the business's own prices, estimating from drawings and tenders, cutting plans, invoicing into Xero, Sage or QuickBooks, diary and fitter scheduling, and RAMS — so flooring firms win more work and spend less time on admin. The owner approves what goes to customers and into the accounts. BillyBot is an AI operator, not an AI quoting app: a quoting app helps produce a quote, while BillyBot also handles the enquiry emails, follow-ups, diary, invoicing and site paperwork around it. Website: https://billybot.ai · App: https://app.billybot.ai
 
 BillyBot was built by Steve, who ran a flooring business for 20 years — it is purpose-built for the flooring trade, not a generic AI tool with a logo on it. It understands real trade language (carpet, LVT, laminate, vinyl, tiles, engineered wood, safety flooring, Whiterock; singles and doubles for door bars, running cove, coved skirts) and prices every quote on the user's own supplier prices and markups.
 
@@ -66,6 +66,7 @@ Carpet, LVT, laminate, vinyl, tiles, engineered wood, safety flooring, Whiterock
 - Carpet Calculator: https://billybot.ai/tools/carpet-calculator/
 - Smoothing Compound Calculator: https://billybot.ai/tools/smoothing-compound-calculator/
 - Flooring Pack Calculator: https://billybot.ai/tools/flooring-pack-calculator/
+- Stair Carpet Calculator: https://billybot.ai/tools/stair-carpet-calculator/
 - Flooring Labour Rate Calculator: https://billybot.ai/tools/flooring-labour-rate-calculator/
 - Free flooring calculators: https://billybot.ai/tools/
 - Guides and resources: https://billybot.ai/resources/
