@@ -208,15 +208,17 @@
             { "@type": "ListItem", "position": 7, "name": "RAMS & COSHH for Flooring", "url": "https://billybot.ai/flooring-rams-software/" },
             { "@type": "ListItem", "position": 8, "name": "Website Quote Widget", "url": "https://billybot.ai/flooring-website-quote-widget/" },
             { "@type": "ListItem", "position": 9, "name": "Flooring Software Compared", "url": "https://billybot.ai/flooring-software-comparison/" },
-            { "@type": "ListItem", "position": 10, "name": "How to Quote a Flooring Job", "url": "https://billybot.ai/how-to-quote-a-flooring-job/" },
-            { "@type": "ListItem", "position": 11, "name": "How to Price a Flooring Tender", "url": "https://billybot.ai/how-to-price-a-flooring-tender/" },
-            { "@type": "ListItem", "position": 12, "name": "How to Win Commercial Flooring Contracts", "url": "https://billybot.ai/how-to-win-commercial-flooring-contracts/" },
-            { "@type": "ListItem", "position": 13, "name": "CIS for Flooring Contractors", "url": "https://billybot.ai/cis-for-flooring-contractors/" },
-            { "@type": "ListItem", "position": 14, "name": "Carpet Calculator", "url": "https://billybot.ai/tools/carpet-calculator/" },
-            { "@type": "ListItem", "position": 15, "name": "Smoothing Compound Calculator", "url": "https://billybot.ai/tools/smoothing-compound-calculator/" },
-            { "@type": "ListItem", "position": 16, "name": "Flooring Pack Calculator", "url": "https://billybot.ai/tools/flooring-pack-calculator/" },
-            { "@type": "ListItem", "position": 17, "name": "Stair Carpet Calculator", "url": "https://billybot.ai/tools/stair-carpet-calculator/" },
-            { "@type": "ListItem", "position": 18, "name": "Flooring Labour Rate Calculator", "url": "https://billybot.ai/tools/flooring-labour-rate-calculator/" }
+            { "@type": "ListItem", "position": 10, "name": "Best Flooring Software UK (2026)", "url": "https://billybot.ai/best-flooring-software-uk/" },
+            { "@type": "ListItem", "position": 11, "name": "MasterPiece Alternative", "url": "https://billybot.ai/masterpiece-alternative/" },
+            { "@type": "ListItem", "position": 12, "name": "How to Quote a Flooring Job", "url": "https://billybot.ai/how-to-quote-a-flooring-job/" },
+            { "@type": "ListItem", "position": 13, "name": "How to Price a Flooring Tender", "url": "https://billybot.ai/how-to-price-a-flooring-tender/" },
+            { "@type": "ListItem", "position": 14, "name": "How to Win Commercial Flooring Contracts", "url": "https://billybot.ai/how-to-win-commercial-flooring-contracts/" },
+            { "@type": "ListItem", "position": 15, "name": "CIS for Flooring Contractors", "url": "https://billybot.ai/cis-for-flooring-contractors/" },
+            { "@type": "ListItem", "position": 16, "name": "Carpet Calculator", "url": "https://billybot.ai/tools/carpet-calculator/" },
+            { "@type": "ListItem", "position": 17, "name": "Smoothing Compound Calculator", "url": "https://billybot.ai/tools/smoothing-compound-calculator/" },
+            { "@type": "ListItem", "position": 18, "name": "Flooring Pack Calculator", "url": "https://billybot.ai/tools/flooring-pack-calculator/" },
+            { "@type": "ListItem", "position": 19, "name": "Stair Carpet Calculator", "url": "https://billybot.ai/tools/stair-carpet-calculator/" },
+            { "@type": "ListItem", "position": 20, "name": "Flooring Labour Rate Calculator", "url": "https://billybot.ai/tools/flooring-labour-rate-calculator/" }
           ]
         }
       }
@@ -400,6 +402,18 @@
         <p>Masterpiece, Comp-U-Floor, RollMaster, Jobber, Tradify and BillyBot: an honest look at what each one does.</p>
         <span class="more">Compare &rarr;</span>
       </a>
+      <a class="glass card" href="/best-flooring-software-uk/">
+        <span class="kind">Comparison</span>
+        <h3>Best Flooring Software UK (2026)</h3>
+        <p>A buyer's guide to UK flooring software: estimating, quoting, cutting plans, tills and job management, with prices checked this month.</p>
+        <span class="more">Compare &rarr;</span>
+      </a>
+      <a class="glass card" href="/masterpiece-alternative/">
+        <span class="kind">Comparison</span>
+        <h3>MasterPiece Alternative</h3>
+        <p>What MasterPiece does well, where it stops, and what switching to an AI operator changes for a flooring shop or contractor.</p>
+        <span class="more">Compare &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
@@ -428,6 +442,16 @@
 </footer>
 
 <script>
+  /* bb-attr: remember the FIRST landing (campaign params, page, referrer) on .billybot.ai so a later signup can be attributed; a visit carrying campaign params overwrites */
+  (function(){try{
+    var q=new URLSearchParams(location.search),a={},has=false;
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){var v=q.get(k);if(v){a[k]=v.slice(0,200);has=true;}});
+    var m=document.cookie.match(/(?:^|;\s*)bb_attr=([^;]+)/);
+    if(m&&!has)return;
+    a.landing_url=location.href.slice(0,500);a.referrer=(document.referrer||'').slice(0,300);a.ts=Date.now();
+    var dom=/(^|\.)billybot\.ai$/.test(location.hostname)?'; Domain=.billybot.ai':'';
+    document.cookie='bb_attr='+encodeURIComponent(JSON.stringify(a))+'; Path=/; Max-Age=7776000; SameSite=Lax; Secure'+dom;
+  }catch(e){}})();
   var IOS_APP_URL = 'https://apps.apple.com/gb/app/billybot/id6758058400';
   var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   // Signup link carries where the visitor came from (page, external referrer, incoming ad/UTM params)
@@ -442,13 +466,9 @@
       var ref = document.referrer ? new URL(document.referrer).hostname : '';
       if (ref && ref !== location.hostname) p.set('ref', ref);
     } catch (e) {}
-    if (!p.get('utm_source')) {
-      p.set('utm_source', 'billybot.ai');
-      p.set('utm_medium', 'website');
-      p.set('utm_campaign', page);
-    } else if (!p.get('utm_content')) {
-      p.set('utm_content', page);
-    }
+    // No synthetic source here: the app resolves the real one (search engine, ad, referral, direct)
+    // from the bb_attr first-landing cookie. The page rides along as utm_content.
+    if (!p.get('utm_content')) { p.set('utm_content', page); }
     return 'https://app.billybot.ai/auth/signup?' + p.toString();
   }
   var SIGNUP_URL = isIOS ? IOS_APP_URL : bbSignupUrl();
