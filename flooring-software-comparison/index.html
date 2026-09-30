@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- ===== Primary SEO ===== -->
-  <title>Flooring Software Comparison UK (2026): MasterPiece &amp; More</title>
-  <meta name="description" content="UK flooring software compared: MasterPiece, Comp-U-Floor, RollMaster, Jobber, Tradify and BillyBot. What each one does, where each stops, and prices." />
+  <title>Flooring Software Comparison UK (2026): Why BillyBot</title>
+  <meta name="description" content="UK flooring software compared by type. For flooring contractors, fitting firms and shops buried in office work, BillyBot is the one to choose. Try it free." />
   <link rel="canonical" href="https://billybot.ai/flooring-software-comparison/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0B0F1A" />
@@ -34,8 +34,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BillyBot" />
-  <meta property="og:title" content="Flooring Software Compared: MasterPiece, Tradify &amp; BillyBot" />
-  <meta property="og:description" content="Legacy tools store your work. BillyBot does it. An honest comparison of BillyBot vs Jobber, Tradify and flooring systems like MasterPiece, Comp-U-Floor and RollMaster." />
+  <meta property="og:title" content="Flooring Software Comparison UK: Why Choose BillyBot" />
+  <meta property="og:description" content="Most flooring software stores your work. BillyBot does it: enquiries, quotes on your own prices, cutting plans and invoices, with you approving what goes out." />
   <meta property="og:url" content="https://billybot.ai/flooring-software-comparison/" />
   <meta property="og:image" content="https://billybot.ai/images/og-image.png" />
   <meta property="og:image:secure_url" content="https://billybot.ai/images/og-image.png" />
@@ -47,8 +47,8 @@
 
   <!-- ===== Twitter / X ===== -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Flooring Software Compared: MasterPiece, Tradify &amp; BillyBot" />
-  <meta name="twitter:description" content="Legacy tools store your work. BillyBot does it. An honest comparison of BillyBot vs Jobber, Tradify and flooring ERPs." />
+  <meta name="twitter:title" content="Flooring Software Comparison UK: Why Choose BillyBot" />
+  <meta name="twitter:description" content="Most flooring software stores your work. BillyBot does it: enquiries, quotes on your own prices, cutting plans and invoices, with you approving what goes out." />
   <meta name="twitter:image" content="https://billybot.ai/images/og-image.png" />
   <meta name="twitter:image:alt" content="BillyBot — flooring software comparison" />
 
@@ -163,7 +163,16 @@
     .threeup p { color: #C3D0EA; font-size: 15px; }
     .threeup .who { color: var(--muted); font-size: 13px; margin-top: 14px; font-style: italic; }
     .pk { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
-    .pk.a { color: #94a3b8; } .pk.b { color: #fbbf24; } .pk.c { color: var(--cyan); }
+    .pk.a { color: #94a3b8; } .pk.c { color: var(--cyan); }
+    .threeup .span { grid-column: 1 / -1; border-color: rgba(56,189,248,0.4); }
+    .ours { color: var(--muted); font-size: 14px; max-width: 760px; margin: 14px auto 0; }
+
+    /* Who it's for */
+    .fit { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+    .fit .glass { padding: 28px; }
+    .fit h3 { font-family: Sora, Inter; font-weight: 700; font-size: 20px; margin-bottom: 10px; }
+    .fit p { color: #C3D0EA; font-size: 15px; }
+    .block .cta-row { margin-top: 32px; }
 
     /* Feature grid */
     .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
@@ -178,9 +187,8 @@
     th, td { padding: 15px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: 14.5px; vertical-align: top; }
     thead th { font-family: Sora, Inter; font-weight: 700; font-size: 14px; color: var(--muted); }
     thead th.win { color: var(--cyan); }
-    td.lbl { color: #C3D0EA; font-weight: 600; }
-    td.old { color: var(--muted); }
-    td.win { color: var(--text); font-weight: 600; background: rgba(56,189,248,0.05); }
+    td.lbl { color: #C3D0EA; font-weight: 600; width: 36%; }
+    td.win { color: var(--text); background: rgba(56,189,248,0.05); }
     th.win { background: rgba(56,189,248,0.06); }
     tbody tr:last-child td { border-bottom: 0; }
 
@@ -226,9 +234,13 @@
     }
     @media (max-width: 768px) {
       .nav-links, .login-link { display: none; }
-      .features { grid-template-columns: 1fr; }
-      .cmp { overflow-x: auto; }
-      table { min-width: 640px; }
+      .features, .fit { grid-template-columns: 1fr; }
+      .cmp.stack thead { display: none; }
+      .cmp.stack tr { display: block; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+      .cmp.stack tbody tr:last-child { border-bottom: 0; }
+      .cmp.stack td { display: block; border: 0; padding: 4px 0; width: auto; background: none; }
+      .cmp.stack td.lbl { font-family: Sora, Inter; font-size: 16px; color: var(--text); padding-bottom: 8px; }
+      .cmp.stack td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cyan); margin-bottom: 2px; }
     }
   </style>
 
@@ -240,58 +252,102 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://billybot.ai/" },
-          { "@type": "ListItem", "position": 2, "name": "Flooring Software Comparison", "item": "https://billybot.ai/flooring-software-comparison/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://billybot.ai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Flooring Software Comparison",
+            "item": "https://billybot.ai/flooring-software-comparison/"
+          }
         ]
       },
       {
         "@type": "WebPage",
         "@id": "https://billybot.ai/flooring-software-comparison/#webpage",
         "url": "https://billybot.ai/flooring-software-comparison/",
-        "name": "Flooring Software Comparison UK (2026): MasterPiece & More",
-        "description": "An honest comparison of BillyBot against general job-management tools like Jobber and Tradify and flooring-specific systems like MasterPiece, Comp-U-Floor and RollMaster.",
+        "name": "Flooring Software Comparison UK (2026): Why BillyBot",
+        "description": "The main kinds of flooring software compared for UK flooring businesses, and why BillyBot, an AI operator that does the office work on your own prices, is the one to choose. BillyBot is our product.",
         "inLanguage": "en-GB",
-        "isPartOf": { "@id": "https://billybot.ai/#website" },
-        "about": { "@id": "https://billybot.ai/#software" },
-        "primaryImageOfPage": "https://billybot.ai/images/og-image.png"
+        "isPartOf": {
+          "@id": "https://billybot.ai/#website"
+        },
+        "about": {
+          "@id": "https://billybot.ai/#software"
+        },
+        "primaryImageOfPage": "https://billybot.ai/images/og-image.png",
+        "dateModified": "2026-09-30"
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "What is the best flooring software in the UK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a UK flooring contractor, fitting firm or flooring shop whose bottleneck is office work, BillyBot is the one to choose, and yes, it's our product. It runs the office side of a flooring business, from first enquiry to final invoice: it reads enquiry emails and drafts replies, quotes on your own supplier prices from voice notes, emails, floor plans and tenders, builds cutting plans, and puts invoices into Xero, Sage or QuickBooks when you confirm. You approve what goes out. Try it free for 14 days on your own jobs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I look for when comparing flooring software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ask what happens between an enquiry landing and the invoice being paid. Does the software read your enquiries, build the quote on your own prices, work in roll widths, cuts and waste, chase quotes that go quiet, keep your fitters informed and put invoices into your accounts? BillyBot does all of that, with you approving what goes out."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "How is BillyBot different from AI quoting apps?",
-            "acceptedAnswer": { "@type": "Answer", "text": "An AI quoting app helps you produce a quote. BillyBot is an AI operator: it reads enquiry emails and drafts replies for your approval, quotes on your own prices from voice notes, emails and drawings, follows up quotes that go quiet, books fittings and tells your fitters, creates invoices in Xero, Sage or QuickBooks when you confirm, drafts job-specific RAMS and answers questions about any job from your records. If a faster quote is all you need, a quote app may be enough. If the office work around the quote is the problem, that's what BillyBot is for." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A quoting app helps you produce a quote. BillyBot is an AI operator: it reads enquiry emails and drafts replies for your approval, quotes on your own prices from voice notes, emails and drawings, flags quotes that go quiet and drafts the follow-up, books fittings and tells your fitters, creates invoices in Xero, Sage or QuickBooks when you confirm, and drafts job-specific RAMS. The quote is one part of the job; BillyBot handles the office work around it too."
+            }
           },
           {
             "@type": "Question",
-            "name": "What is the difference between BillyBot and Jobber or Tradify?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Jobber and Tradify are general trades tools — brilliant, modern places to record jobs, schedule work and send invoices, but they treat a flooring job like any other trade. They have no m² flooring pricing, no roll or cut/drop awareness and no cutting plans, and every quote is only as fast as the human typing it. BillyBot is flooring-native and, more importantly, is an AI operator: it reads your inbox, drafts the quote from a voice note or a forwarded email on your own supplier prices, and hands it to you to approve. The incumbents store your work; Billy does it." }
+            "name": "Does BillyBot understand flooring, or is it a general job app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's built for flooring. It prices in m² on your own supplier prices, works in roll widths, cuts and waste, and understands trade detail like door bars, running cove and coved skirting across carpet, LVT, laminate, vinyl, tiles, engineered wood and safety flooring. Cutting plans are built from the saved floor plan."
+            }
           },
           {
             "@type": "Question",
-            "name": "How does BillyBot compare to flooring systems like MasterPiece, Comp-U-Floor or RollMaster?",
-            "acceptedAnswer": { "@type": "Answer", "text": "They're built around records you keep. Comp-U-Floor and RollMaster are business systems for flooring retailers and dealers, with inventory and point of sale, and MasterPiece focuses on measuring, cut planning and estimating. They're strong at those jobs, but a person still reads the enquiries, types in the details and does the chasing. BillyBot is built for flooring businesses buried in quoting, email and admin: it does that work itself, on your own prices, and you approve what goes out." }
+            "name": "Do I have to change my accounting software to use BillyBot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. BillyBot works alongside Xero, Sage and QuickBooks: quotes and invoices go into them when you confirm, never automatically. If you don't use accounting software, Billy produces branded PDF quotes and invoices instead."
+            }
           },
           {
             "@type": "Question",
-            "name": "Is BillyBot a good alternative to Jobber for a flooring business?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For a flooring contractor, yes. Jobber is excellent generic field-service software, but it doesn't understand flooring pricing, roll widths, cut/drops or cutting plans, and it can't build a quote for you — you still type every line. BillyBot quotes on your real supplier prices and markups, works out materials and waste, and drafts the covering email in your voice, so you reply first and win more of the work you quote for." }
+            "name": "How much does BillyBot cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "£149 per office seat per month, excluding VAT, with everything included and no feature tiers. Annual billing saves two months. Fitters get the iPhone and Android app free, and every seat starts with a 14-day free trial. Cancel anytime."
+            }
           },
           {
             "@type": "Question",
-            "name": "Where are the older tools still stronger than BillyBot?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We're honest about this. If your core need is multi-warehouse roll and remnant inventory, dye-lot tracking and mill catalogue management across several branches, a mature flooring ERP still does that more deeply than BillyBot does today. And Jobber and Tradify have years of polish on scheduling and dispatch. BillyBot's edge is being flooring-native and having AI do the quoting, email and admin — which is why the firms that switch are contractors buried in office work, not big retailers running a warehouse." }
+            "name": "How do I switch to BillyBot from my current software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Connect Gmail or Outlook, connect Xero, Sage or QuickBooks to sync your customer list, and upload your supplier price lists (PDF, Excel or CSV), reviewing them before they're applied. Price new enquiries in BillyBot while jobs already on the go finish where they are, and keep access to your old records until those jobs are done."
+            }
           },
           {
             "@type": "Question",
-            "name": "Do I have to rip out my accounting software to use BillyBot?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. BillyBot works alongside Xero, Sage and QuickBooks — it pushes quotes and invoices straight into them, or generates branded PDFs if you don't use accounting software. You keep your accounts where they are; Billy handles the quoting, email and admin on top." }
-          },
-          {
-            "@type": "Question",
-            "name": "How much does BillyBot cost compared to other flooring software?",
-            "acceptedAnswer": { "@type": "Answer", "text": "BillyBot is £149 per office seat per month, with every fitter getting the mobile app free and a 14-day free trial to start. There are no feature tiers and no big implementation fee — unlike traditional flooring ERPs that often carry setup costs and per-user licences that add up quickly." }
+            "name": "Will Billy send anything to my customers without me?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not unless you choose. Billy prepares quotes, replies and invoices for you to approve. You can switch on auto-send for emails, or tick a box to send follow-ups on a quote if there's no reply. Nothing goes into Xero, Sage or QuickBooks without you confirming it."
+            }
           }
         ]
       }
@@ -348,9 +404,10 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Flooring Software Comparison</span>
-    <h1>Flooring software compared: <span class="grad">which one does the work?</span></h1>
-    <p class="lede">The old software stores your work. BillyBot does it. MasterPiece, Comp-U-Floor and RollMaster are established flooring-specific systems; Jobber and Tradify are modern, general job-management tools. Both are places to record work you still do yourself. BillyBot opens the mail, builds the quote and hands it to you to approve. Here's the honest comparison.</p>
+    <span class="eyebrow">Flooring software comparison</span>
+    <h1>Flooring software compared: <span class="grad">why BillyBot is the one to choose</span></h1>
+    <p class="lede">For UK flooring contractors, fitting firms and flooring shops whose bottleneck is office work, BillyBot is the flooring software to choose. Most flooring software gives you a better place to type in a job; BillyBot does the work around it, from the first enquiry to the final invoice, on your own prices, and you approve what goes out.</p>
+    <p class="ours">BillyBot is our product. This page compares kinds of flooring software, not named products.</p>
     <div class="cta-row">
       <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try BillyBot free for 14 days</a>
     </div>
@@ -358,81 +415,81 @@
   </div>
 </section>
 
-<!-- ===== THE TWO KINDS ===== -->
+<!-- ===== THE KINDS ===== -->
 <section class="block">
   <div class="container">
-    <h2 class="section-title">The kinds of flooring software, and what each one does</h2>
-    <p class="section-sub">Most flooring software is a place to store work, or a faster way to produce one piece of it. An operator does the work around the job.</p>
+    <h2 class="section-title">The kinds of flooring software, and where each one usually stops</h2>
+    <p class="section-sub">Most flooring software is built to store a job, or to speed up one piece of it. When you compare, ask each option what happens between an enquiry landing and the invoice being paid.</p>
     <div class="threeup fourup">
       <div class="glass">
-        <span class="pk a">Type 1 · Flooring-specific systems</span>
-        <h3>MasterPiece, Comp-U-Floor, RollMaster</h3>
-        <p>Long-established flooring software. MasterPiece, from the UK, focuses on measuring, cut planning and estimating, on Windows or as a cloud version for iPad, Mac and Android. Comp-U-Floor and RollMaster are US business systems for flooring retailers and dealers, covering inventory, dye lots and point of sale. Strong at what they do, but you still do the reading, typing and chasing.</p>
-        <p class="who">Best for: retailers and estimators who want dedicated measuring, planning or stock software.</p>
+        <span class="pk a">Measure and estimate</span>
+        <h3>Measure-and-estimate software</h3>
+        <p>Built to measure rooms, plan cuts and cost a job. It usually ends at the estimate: reading the enquiry, chasing the quote, booking the fitting and raising the invoice are still yours to do. Ask whether it reads your inbox or puts invoices into your accounts.</p>
       </div>
       <div class="glass">
-        <span class="pk b">Type 2 · General trades tools</span>
-        <h3>Jobber, Tradify, ServiceM8</h3>
-        <p>Modern, mobile and easy to adopt: quoting, scheduling, dispatch, invoicing and payments. The catch — they're trade-generic. A flooring job looks the same to them as a plumbing job. No m² pricing, no roll/cut logic, no cutting plans.</p>
-        <p class="who">Best for: general home-service trades that don't need flooring detail.</p>
+        <span class="pk a">Shop and stock</span>
+        <h3>Shop and stock systems</h3>
+        <p>Built around the showroom: stock, sales and the till. They usually expect someone to key each job in, so a busy contractor's enquiries, quotes and emails still happen outside them. Ask whether it can price a job from an email, a voice note or a drawing.</p>
       </div>
       <div class="glass">
-        <span class="pk b">Type 3 · AI quote and cutting-plan apps</span>
+        <span class="pk a">General job apps</span>
+        <h3>General job apps built for every kind of business</h3>
+        <p>Scheduling, quotes and invoices for any kind of business. Because they aren't built for flooring, they usually don't work in roll widths, cuts and waste, so a flooring quote still means typing every line. Ask whether it can produce a cutting plan from a floor plan.</p>
+      </div>
+      <div class="glass">
+        <span class="pk a">Quote apps</span>
         <h3>Newer quoting apps</h3>
-        <p>Low-cost apps built to get a quote, an estimate or a cutting plan out faster, often with AI to help. Useful if a quicker quote is all you need. The quote is their job; your inbox, the follow-ups, the diary, invoicing and site paperwork are still yours.</p>
-        <p class="who">Best for: fitters who mainly want quotes and cutting plans done faster.</p>
+        <p>Built to get a quote out faster, sometimes with AI. The quote is usually where they stop: the inbox, follow-ups, diary, invoices and site paperwork stay with you. Ask what the software does after the quote is sent.</p>
       </div>
-      <div class="glass" style="border-color: rgba(56,189,248,0.4);">
-        <span class="pk c">The new kind · AI operator</span>
+      <div class="glass span">
+        <span class="pk c">AI operator for flooring</span>
         <h3>BillyBot</h3>
-        <p>Flooring-native <em>and</em> it does the work itself. Billy reads your inbox, builds the quote from a voice note or forwarded email on your own supplier prices, works out materials, cuts and waste, and drafts the reply in your voice — you just approve.</p>
-        <p class="who">Best for: flooring contractors &amp; fitting teams drowning in quoting and admin.</p>
+        <p>Built for flooring, and it does the work itself. Billy reads your enquiries, builds the quote from a voice note, email, floor plan or tender pack on your own supplier prices, works out cuts and waste, drafts the reply in your voice, books the fitting once you confirm the day, and prepares the invoice for Xero, Sage or QuickBooks. You approve what goes out.</p>
+        <p class="who">Built for flooring contractors, fitting firms and flooring shops that lose evenings to office work.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== BIG COMPARISON TABLE ===== -->
+<!-- ===== QUESTIONS TABLE ===== -->
 <section class="block">
   <div class="container">
-    <h2 class="section-title">Side by side</h2>
-    <p class="section-sub">The same flooring business, three very different days.</p>
-    <div class="cmp glass">
+    <h2 class="section-title">Ten questions to ask any flooring software</h2>
+    <p class="section-sub">Put these to every option on your list. Here's how BillyBot answers them.</p>
+    <div class="cmp stack glass">
       <table>
         <thead>
           <tr>
-            <th>&nbsp;</th>
-            <th>Flooring-specific systems<br><span style="font-weight:400;">(MasterPiece / RollMaster)</span></th>
-            <th>General trades<br><span style="font-weight:400;">(Jobber / Tradify)</span></th>
-            <th class="win">BillyBot</th>
+            <th scope="col">Ask this</th>
+            <th scope="col" class="win">BillyBot's answer</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="lbl">Flooring-native pricing (m², roll/cut, markups)</td><td class="old">Yes, deep</td><td class="old">No — generic</td><td class="win">Yes — on your own prices</td></tr>
-          <tr><td class="lbl">Cutting plans &amp; waste</td><td class="old">Yes, varies by product</td><td class="old">No</td><td class="win">Yes</td></tr>
-          <tr><td class="lbl">Reads &amp; triages your inbox</td><td class="old">No</td><td class="old">No</td><td class="win">Yes — classifies &amp; drafts</td></tr>
-          <tr><td class="lbl">Builds the quote for you</td><td class="old">No — you type it</td><td class="old">No — you type it</td><td class="win">Yes — from voice or email</td></tr>
-          <tr><td class="lbl">Quotes from a photo / tender / floor plan</td><td class="old">Plans traced on screen</td><td class="old">No</td><td class="win">Yes — AI take-off</td></tr>
-          <tr><td class="lbl">Chases leads &amp; proposes bookings</td><td class="old">No</td><td class="old">No</td><td class="win">Yes</td></tr>
-          <tr><td class="lbl">Covering email in your voice</td><td class="old">No</td><td class="old">No</td><td class="win">Yes</td></tr>
-          <tr><td class="lbl">Modern, mobile, fast to adopt</td><td class="old">Varies: desktop, cloud or tablet</td><td class="win" style="background:none;color:var(--text);">Yes</td><td class="win">Yes</td></tr>
-          <tr><td class="lbl">Time to get running</td><td class="old">Set-up and training</td><td class="old">Days</td><td class="win">A shift</td></tr>
-          <tr><td class="lbl">Multi-branch warehouse inventory</td><td class="win" style="background:none;color:var(--text);">Yes, in the retail ERPs</td><td class="old">Basic</td><td class="old">Not the focus</td></tr>
-          <tr><td class="lbl">Who actually does the work</td><td class="old">You do, every step</td><td class="old">You do, every step</td><td class="win">Billy does — you approve</td></tr>
+          <tr><td class="lbl">Does it read and sort my enquiry emails?</td><td class="win" data-label="BillyBot">Yes. Connect Gmail or Outlook: Billy turns enquiries into jobs and drafts replies in your voice for you to approve.</td></tr>
+          <tr><td class="lbl">Can it build the quote for me?</td><td class="win" data-label="BillyBot">Yes, from a voice note, a few typed lines, a forwarded email, a floor plan or a tender pack, priced on your own supplier prices, markups and rates.</td></tr>
+          <tr><td class="lbl">Does it understand flooring?</td><td class="win" data-label="BillyBot">Yes. m² pricing, roll widths, cuts and waste, door bars, running cove and coved skirting, across carpet, LVT, laminate, vinyl, tiles, engineered wood and safety flooring.</td></tr>
+          <tr><td class="lbl">Can it produce cutting plans?</td><td class="win" data-label="BillyBot">Yes. Cutting plans are built from the saved floor plan, using the roll width of the product you've specified and the pile direction you set. Drag pieces to arrange the cuts yourself.</td></tr>
+          <tr><td class="lbl">Can it price tenders and drawings?</td><td class="win" data-label="BillyBot">Yes. Email in a tender pack or PDF drawings and Billy takes off the areas and prices them on your rates, flagging anything that needs checking.</td></tr>
+          <tr><td class="lbl">Will it chase quotes that go quiet?</td><td class="win" data-label="BillyBot">Yes. It tracks which quotes have been sent and viewed, and nudges you to follow up the quiet ones.</td></tr>
+          <tr><td class="lbl">Can customers accept online?</td><td class="win" data-label="BillyBot">Yes. Your customer views the quote through a link, accepts it with a drawn signature and, if you take deposits and have connected card payments, pays a deposit.</td></tr>
+          <tr><td class="lbl">Does it work with my accounts?</td><td class="win" data-label="BillyBot">Yes. Quotes and invoices go into Xero, Sage or QuickBooks when you confirm them, never automatically. No accounting software? Billy produces branded PDFs.</td></tr>
+          <tr><td class="lbl">What about my fitters and site paperwork?</td><td class="win" data-label="BillyBot">Fitters get the iPhone or Android app free, with their bookings, job sheets and RAMS to sign. Billy drafts job-specific RAMS, with COSHH entries for the products used, for you to review.</td></tr>
+          <tr><td class="lbl">Who actually does the work?</td><td class="win" data-label="BillyBot">Billy prepares it and you approve it. Nothing goes to a customer without your approval unless you switch on auto-send.</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="section-sub" style="margin-top:22px; font-size:14px;">We keep this honest — see “where the old tools still win” below.</p>
+    <div class="cta-row">
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Test BillyBot on your own jobs</a>
+    </div>
   </div>
 </section>
 
 <!-- ===== THE CORE DIFFERENCE ===== -->
 <section class="block">
   <div class="container prose" style="text-align:center;">
-    <h2 class="section-title">The real difference: system of record vs AI operator</h2>
-    <p>Every incumbent competes on being a <em>better place to store and enter data</em>. A tidier database. A nicer form. But the quote is still only as fast as the person typing it, and the inbox still only moves when someone sits down to read it.</p>
-    <p>BillyBot competes on a different axis entirely: <strong>doing the operational work itself.</strong> It reads the enquiry, builds the priced quote on your rates, drafts the reply in your voice, and escalates it to you for one-tap approval. You stop being the data-entry clerk for your own business.</p>
-    <p>That's why the switch pitch isn't “our forms are nicer.” It's “you get an evening back.”</p>
+    <h2 class="section-title">The real difference: a place to type, or someone doing the work</h2>
+    <p>A lot of flooring software is built to be a better place to store and enter information: a tidier job record, a nicer form. The quote is still only as fast as the person typing it, and the inbox only moves when someone sits down to read it.</p>
+    <p>BillyBot takes that work on. It reads the enquiry, builds the priced quote on your rates, drafts the reply in your voice and brings it to you to approve. You stop being the data-entry clerk for your own business, win more of the work you quote for and get your evenings back.</p>
   </div>
 </section>
 
@@ -440,25 +497,37 @@
 <section class="block">
   <div class="container">
     <h2 class="section-title">Why flooring firms switch to BillyBot</h2>
-    <p class="section-sub">Especially the owner-plus-fitting-team contractor buried in quoting and email — not the 12-branch retailer running a warehouse.</p>
+    <p class="section-sub">Especially the owner with a fitting team, buried in quoting and email.</p>
     <div class="features">
-      <div class="feature glass"><div class="ic">⏱️</div><h3>It removes the labour, not just the mess</h3><p>Your bottleneck isn't “where do I record the job” — it's that quoting and email eat your evenings. Billy does that work, not just files it.</p></div>
-      <div class="feature glass"><div class="ic">🧵</div><h3>Flooring-native without the ERP weight</h3><p>Real m² pricing, roll/cut awareness and <a href="/cutting-plan-software/" style="color:inherit;">cutting plans</a> Jobber can't do — with no six-week implementation.</p></div>
-      <div class="feature glass"><div class="ic">⚡</div><h3>Live in a shift, not a quarter</h3><p>Point it at your inbox and your pricing and it starts working. No migration project, no training week.</p></div>
-      <div class="feature glass"><div class="ic">💷</div><h3>Your prices, your voice</h3><p>Quotes on your real supplier costs and markups; covering emails that sound like you. Not made-up averages or generic templates.</p></div>
-      <div class="feature glass"><div class="ic">🔄</div><h3>Sits on top of your accounts</h3><p>Keep Xero, Sage or QuickBooks — Billy pushes quotes and invoices straight in. No rip-and-replace.</p></div>
-      <div class="feature glass"><div class="ic">📈</div><h3>It compounds</h3><p>Billy learns your pricing, preferences and style and gets more autonomous over time. A filing cabinet never does.</p></div>
+      <div class="feature glass"><div class="ic">⏱️</div><h3>It takes the work, not just the records</h3><p>Your bottleneck isn't where you record the job. It's that quoting and email eat your evenings. Billy does that work, and you approve it.</p></div>
+      <div class="feature glass"><div class="ic">🧵</div><h3>Built for flooring</h3><p>m² pricing, roll widths, cuts and waste, door bars and cove, with <a href="/cutting-plan-software/" style="color:inherit;">cutting plans</a> built from the floor plan.</p></div>
+      <div class="feature glass"><div class="ic">⚡</div><h3>A quick one-time setup</h3><p>Connect your inbox, add your prices and your team. Upload supplier price lists as PDF, Excel or CSV and review them before they're applied.</p></div>
+      <div class="feature glass"><div class="ic">💷</div><h3>Your prices, your voice</h3><p>Quotes on your real supplier costs, markups and rates, and covering emails written in your own style. Not averages or generic templates.</p></div>
+      <div class="feature glass"><div class="ic">🔄</div><h3>Sits on top of your accounts</h3><p>Keep Xero, Sage or QuickBooks. Quotes and invoices go in when you confirm them, never automatically.</p></div>
+      <div class="feature glass"><div class="ic">📐</div><h3>Tenders and drawings too</h3><p>Email in a tender pack and Billy takes off the areas and prices them on your rates. See <a href="/flooring-estimating-software/" style="color:inherit;">estimating from drawings</a>.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== HONEST: WHERE OLD TOOLS WIN ===== -->
+<!-- ===== WHO IT'S FOR ===== -->
 <section class="block">
-  <div class="container prose" style="text-align:center;">
-    <h2 class="section-title">Where the old tools still win</h2>
-    <p>We'd rather you trust us than oversell. If your core pain is <strong>multi-warehouse roll and remnant inventory, dye-lot tracking and mill-catalogue management across several branches</strong>, a mature flooring ERP like RollMaster still does that more deeply than BillyBot does today. And if what you mainly need is in-home measuring and cut planning on a tablet, MasterPiece is a focused, long-established option. We're not pretending otherwise.</p>
-    <p>Likewise, Jobber and Tradify have years of polish on scheduling, dispatch and payments breadth. BillyBot's edge isn't out-featuring them on generic CRM — it's being flooring-native and having AI do the quoting, email and admin no incumbent touches.</p>
-    <p>So the honest answer to “should I switch?” is: <strong>if you're a flooring contractor losing evenings to quoting and email, yes.</strong> If you're a big retailer whose life depends on warehouse stock control, keep your ERP — and talk to us about running Billy on top of it.</p>
+  <div class="container">
+    <h2 class="section-title">Who BillyBot is for</h2>
+    <div class="fit">
+      <div class="glass">
+        <span class="pk c">Built for</span>
+        <h3>Flooring businesses that lose evenings to office work</h3>
+        <p>Flooring contractors, fitting firms and flooring shops, domestic and commercial, where enquiries, quotes, email and invoices pile up after the working day. BillyBot runs that side of the business, from first enquiry to final invoice, so you win more work and grow without an extra wage.</p>
+      </div>
+      <div class="glass">
+        <span class="pk a">Not built as</span>
+        <h3>A shop till or a stock system</h3>
+        <p>If all you need is a shop till and stock control, BillyBot isn't built as one. It's built to do the office work that wins and runs flooring jobs.</p>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your 14-day free trial</a>
+    </div>
   </div>
 </section>
 
@@ -466,10 +535,10 @@
 <section class="block" id="pricing">
   <div class="container">
     <h2 class="section-title">Simple, transparent pricing</h2>
-    <p class="section-sub">One price per office seat. Your fitters are always free. No implementation fee.</p>
+    <p class="section-sub">One price per office seat. Your fitters are always free.</p>
     <div class="pricestrip glass">
       <div class="big">£149<span>/seat / month</span></div>
-      <p>Everything included — no feature tiers. Unlimited fitters free. 14-day free trial. Cancel anytime. Prices exclude VAT.</p>
+      <p>Everything included, no feature tiers. Annual billing saves two months. Unlimited fitters free. 14-day free trial. Cancel anytime. Prices exclude VAT.</p>
       <div style="margin-top:22px;"><a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Start your free trial</a></div>
     </div>
   </div>
@@ -478,15 +547,16 @@
 <!-- ===== FAQ ===== -->
 <section class="block">
   <div class="container">
-    <h2 class="section-title">Flooring software comparison — FAQ</h2>
+    <h2 class="section-title">Flooring software comparison: FAQ</h2>
     <div class="faq-list">
-      <div class="faq-item"><button class="faq-question">How is BillyBot different from AI quoting apps?</button><div class="faq-answer"><p>An AI quoting app helps you produce a quote. BillyBot is an AI operator: it reads enquiry emails and drafts replies for your approval, quotes on your own prices from voice notes, emails and drawings, follows up quotes that go quiet, books fittings and tells your fitters, creates invoices in Xero, Sage or QuickBooks when you confirm, drafts job-specific RAMS and answers questions about any job from your records. If a faster quote is all you need, a quote app may be enough. If the office work around the quote is the problem, that's what BillyBot is for.</p></div></div>
-      <div class="faq-item"><button class="faq-question">What is the difference between BillyBot and Jobber or Tradify?</button><div class="faq-answer"><p>Jobber and Tradify are general trades tools — brilliant, modern places to record jobs, schedule work and send invoices, but they treat a flooring job like any other trade. They have no m² flooring pricing, no roll or cut/drop awareness and no cutting plans, and every quote is only as fast as the human typing it. BillyBot is flooring-native and, more importantly, is an AI operator: it reads your inbox, drafts the quote from a voice note or a forwarded email on your own supplier prices, and hands it to you to approve. The incumbents store your work; Billy does it.</p></div></div>
-      <div class="faq-item"><button class="faq-question">How does BillyBot compare to flooring systems like MasterPiece, Comp-U-Floor or RollMaster?</button><div class="faq-answer"><p>They're built around records you keep. Comp-U-Floor and RollMaster are business systems for flooring retailers and dealers, with inventory and point of sale, and MasterPiece focuses on measuring, cut planning and estimating. They're strong at those jobs, but a person still reads the enquiries, types in the details and does the chasing. BillyBot is built for flooring businesses buried in quoting, email and admin: it does that work itself, on your own prices, and you approve what goes out.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Is BillyBot a good alternative to Jobber for a flooring business?</button><div class="faq-answer"><p>For a flooring contractor, yes. Jobber is excellent generic field-service software, but it doesn't understand flooring pricing, roll widths, cut/drops or cutting plans, and it can't build a quote for you — you still type every line. BillyBot quotes on your real supplier prices and markups, works out materials and waste, and drafts the covering email in your voice, so you reply first and win more of the work you quote for.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Where are the older tools still stronger than BillyBot?</button><div class="faq-answer"><p>We're honest about this. If your core need is multi-warehouse roll and remnant inventory, dye-lot tracking and mill catalogue management across several branches, a mature flooring ERP still does that more deeply than BillyBot does today. And Jobber and Tradify have years of polish on scheduling and dispatch. BillyBot's edge is being flooring-native and having AI do the quoting, email and admin — which is why the firms that switch are contractors buried in office work, not big retailers running a warehouse.</p></div></div>
-      <div class="faq-item"><button class="faq-question">Do I have to rip out my accounting software to use BillyBot?</button><div class="faq-answer"><p>No. BillyBot works alongside Xero, Sage and QuickBooks — it pushes quotes and invoices straight into them, or generates branded PDFs if you don't use accounting software. You keep your accounts where they are; Billy handles the quoting, email and admin on top.</p></div></div>
-      <div class="faq-item"><button class="faq-question">How much does BillyBot cost compared to other flooring software?</button><div class="faq-answer"><p>BillyBot is £149 per office seat per month, with every fitter getting the mobile app free and a 14-day free trial to start. There are no feature tiers and no big implementation fee — unlike traditional flooring ERPs that often carry setup costs and per-user licences that add up quickly.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">What is the best flooring software in the UK?</button><div class="faq-answer"><p>For a UK flooring contractor, fitting firm or flooring shop whose bottleneck is office work, BillyBot is the one to choose, and yes, it's our product. It runs the office side of a flooring business, from first enquiry to final invoice: it reads enquiry emails and drafts replies, quotes on your own supplier prices from voice notes, emails, floor plans and tenders, builds cutting plans, and puts invoices into Xero, Sage or QuickBooks when you confirm. You approve what goes out. Try it free for 14 days on your own jobs.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">What should I look for when comparing flooring software?</button><div class="faq-answer"><p>Ask what happens between an enquiry landing and the invoice being paid. Does the software read your enquiries, build the quote on your own prices, work in roll widths, cuts and waste, chase quotes that go quiet, keep your fitters informed and put invoices into your accounts? BillyBot does all of that, with you approving what goes out.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">How is BillyBot different from AI quoting apps?</button><div class="faq-answer"><p>A quoting app helps you produce a quote. BillyBot is an AI operator: it reads enquiry emails and drafts replies for your approval, quotes on your own prices from voice notes, emails and drawings, flags quotes that go quiet and drafts the follow-up, books fittings and tells your fitters, creates invoices in Xero, Sage or QuickBooks when you confirm, and drafts job-specific RAMS. The quote is one part of the job; BillyBot handles the office work around it too.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Does BillyBot understand flooring, or is it a general job app?</button><div class="faq-answer"><p>It's built for flooring. It prices in m² on your own supplier prices, works in roll widths, cuts and waste, and understands trade detail like door bars, running cove and coved skirting across carpet, LVT, laminate, vinyl, tiles, engineered wood and safety flooring. Cutting plans are built from the saved floor plan.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Do I have to change my accounting software to use BillyBot?</button><div class="faq-answer"><p>No. BillyBot works alongside Xero, Sage and QuickBooks: quotes and invoices go into them when you confirm, never automatically. If you don't use accounting software, Billy produces branded PDF quotes and invoices instead.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">How much does BillyBot cost?</button><div class="faq-answer"><p>£149 per office seat per month, excluding VAT, with everything included and no feature tiers. Annual billing saves two months. Fitters get the iPhone and Android app free, and every seat starts with a 14-day free trial. Cancel anytime.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">How do I switch to BillyBot from my current software?</button><div class="faq-answer"><p>Connect Gmail or Outlook, connect Xero, Sage or QuickBooks to sync your customer list, and upload your supplier price lists (PDF, Excel or CSV), reviewing them before they're applied. Price new enquiries in BillyBot while jobs already on the go finish where they are, and keep access to your old records until those jobs are done.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Will Billy send anything to my customers without me?</button><div class="faq-answer"><p>Not unless you choose. Billy prepares quotes, replies and invoices for you to approve. You can switch on auto-send for emails, or tick a box to send follow-ups on a quote if there's no reply. Nothing goes into Xero, Sage or QuickBooks without you confirming it.</p></div></div>
     </div>
   </div>
 </section>
@@ -495,8 +565,8 @@
 <section class="block">
   <div class="container prose" style="text-align:center;">
     <h2 class="section-title">See BillyBot in action</h2>
-    <p>Dig into the parts that replace the old tools: <a href="/flooring-quoting-software/">flooring quoting software</a>, <a href="/flooring-estimating-software/">flooring estimating software</a> and <a href="/cutting-plan-software/">cutting plan software</a>. New to pricing up work? Read <a href="/how-to-quote-a-flooring-job/">how to quote a flooring job</a>.</p>
-    <p>Or see the whole thing: the <a href="/">AI operator that runs your flooring back office</a> — quoting, emails, invoicing, RAMS, diary and more.</p>
+    <p>Dig into the parts that do the work: <a href="/flooring-quoting-software/">flooring quoting software</a>, <a href="/flooring-estimating-software/">flooring estimating software</a> and <a href="/cutting-plan-software/">cutting plan software</a>. New to pricing up work? Read <a href="/how-to-quote-a-flooring-job/">how to quote a flooring job</a>.</p>
+    <p>Or see the whole thing: the <a href="/">AI operator that runs your flooring back office</a>, from quoting and email to invoicing, RAMS and the diary.</p>
   </div>
 </section>
 
@@ -505,7 +575,7 @@
   <div class="container">
     <div class="ctaband glass">
       <h2>Stop filling in forms. Start approving work.</h2>
-      <p>Switch from the software that stores your work to the one that does it. 14 days free, fitters always free, cancel anytime.</p>
+      <p>Switch to the flooring software that does the work, not just stores it. 14 days free, fitters always free, cancel anytime.</p>
       <a class="btn glow" href="https://app.billybot.ai/auth/signup" data-app-signup>Try BillyBot free</a>
     </div>
   </div>
